@@ -1,5 +1,6 @@
 export default [
   {
+    image: "src/images/desktop/denta_derm1x.webp",
     category: "DentaDerm",
     title:
       "Діагностика бізнес-процесів, маркетингу, сервісу, розробка стратегії розвитку, менторство",
@@ -33,6 +34,7 @@ export default [
     ],
   },
   {
+    image: "src/images/desktop/medialt1x.webp",
     category: "Medialt",
     title:
       "Діагностика бізнес-процесів, маркетингу, сервісу, розробка стратегії розвитку, менторство",
@@ -68,6 +70,7 @@ export default [
     ],
   },
   {
+    image: "src/images/desktop/cures1x.webp",
     category: "Cures",
     title: "Автоматизація комунікації з пацієнтами",
     about: [
@@ -94,6 +97,7 @@ export default [
     ],
   },
   {
+    image: "src/images/desktop/clinic1x.webp",
     category: "Клініка ім. ак. Юрія Спіженка",
     title:
       "Менторство, діагностика бізнес-процесів, маркетингу та сервісу, розробка стратегії розвитку",
@@ -122,6 +126,7 @@ export default [
     ],
   },
   {
+    image: "src/images/desktop/kmklam1x.webp",
     category: "KMKlab",
     title: "Діагностика маркетингу, сервісу, бізнес-процесів",
     about: [
@@ -150,6 +155,7 @@ export default [
     ],
   },
   {
+    image: "src/images/desktop/symmetrica1x.webp",
     category: "Symmetrica",
     title: "Менторство, діагностика маркетингу, сервісу, бізнес-процесів",
     about: [
