@@ -25,3 +25,9 @@ export const ListItem = styled.li`
     height: 24px;
   }
 `;
+
+export const Comment = styled.p`
+  font-size: 20px;
+  font-weight: 600;
+  line-height: calc(28 / 20);
+`;

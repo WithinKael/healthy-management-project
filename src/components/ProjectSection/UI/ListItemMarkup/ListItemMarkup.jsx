@@ -10,7 +10,7 @@ const ListItemMarkup = ({ dataList }) => {
       <div>
         <Category>{category}</Category>
       </div>
-      <TickList data={{ title, about }} />
+      <TickList title={title} about={about} />
     </ListItemWrapper>
   );
 };

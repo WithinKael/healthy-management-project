@@ -1,6 +1,7 @@
 import data from "./data";
 
-import { Title, List, ListItem } from "./ProjectSection.styled";
+import { Title, List, ListItem, HiddenInfo } from "./ProjectSection.styled";
+import DetailInfo from "./UI/DetailInfo/DetailInfo";
 import ListItemMarkup from "./UI/ListItemMarkup/ListItemMarkup";
 
 const ProjectSection = () => {
@@ -14,6 +15,9 @@ const ProjectSection = () => {
         {data.map((item) => (
           <ListItem key={item.category}>
             <ListItemMarkup dataList={item} />
+            <HiddenInfo>
+              <DetailInfo dataList={item} />
+            </HiddenInfo>
           </ListItem>
         ))}
       </List>
