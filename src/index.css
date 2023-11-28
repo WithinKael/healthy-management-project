@@ -9,9 +9,11 @@
   --primary-bluedark: #1b3641;
   --background-white: #fcfcfc;
   --primary-yellow: #f5d133;
+  --primary-black: #0b0c0c;
   --system-default-10: #f8f8f8;
   --system-default-20: #dedede;
   --background-whitegrey: #f4f4f6;
+  --secondary-red: #961c1c;
   --typography-black: #161717;
   --typography-black-20: rgba(27, 54, 65, 0.2);
   --transition-dur-and-func: 250ms cubic-bezier(0.4, 0, 0.2, 1);
@@ -40,12 +42,9 @@ h4,
 p,
 ul,
 li {
+  list-style: none;
   margin-top: 0;
   margin-bottom: 0;
-}
-
-ul {
-  list-style-type: none;
 }
 
 a {
@@ -54,6 +53,7 @@ a {
 
 img {
   display: block;
+  max-width: 100%;
 }
 
 button {
@@ -65,7 +65,7 @@ button {
 }
 
 .container {
-  width: 100%;
+  width: 1920px;
   margin-left: auto;
   margin-right: auto;
   padding-left: 120px;
