@@ -1,12 +1,6 @@
-import {
-  Category,
-  ListItemWrapper,
-  Title,
-  ListItem,
-  List,
-} from "./ListItemMarkup.styled";
+import { Category, ListItemWrapper } from "./ListItemMarkup.styled";
 
-import icon from "../../../../images/sprite.svg";
+import TickList from "../../../TickList/TickList";
 
 const ListItemMarkup = ({ dataList }) => {
   const { category, title, about = [], image } = dataList;
@@ -16,17 +10,7 @@ const ListItemMarkup = ({ dataList }) => {
       <div>
         <Category>{category}</Category>
       </div>
-      <Title>{title}</Title>
-      <List>
-        {about?.map((item) => (
-          <ListItem key={item}>
-            <svg>
-              <use href={icon + "#icon-done"}></use>
-            </svg>
-            {item}
-          </ListItem>
-        ))}
-      </List>
+      <TickList data={{ title, about }} />
     </ListItemWrapper>
   );
 };
