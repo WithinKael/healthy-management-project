@@ -24,10 +24,14 @@ export const ListItem = styled.li`
   background-color: var(--background-white);
   overflow: hidden;
   position: relative;
+
+  &:hover > div {
+    transform: translateX(0);
+  }
 `;
 
 export const HiddenInfo = styled.div`
-  /* transform: translateY(100%); */
+  transform: translateX(-100%);
   height: 100%;
   width: 100%;
 
@@ -42,4 +46,5 @@ export const HiddenInfo = styled.div`
     ),
     linear-gradient(0deg, rgba(27, 54, 65, 0.8) 0%, rgba(27, 54, 65, 0.8) 100%),
     url(<path-to-image>), lightgray 50% / cover no-repeat;
+  transition: transform var(--transition-dur-and-func);
 `;
