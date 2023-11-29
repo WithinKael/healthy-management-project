@@ -7,6 +7,7 @@ import Hero from "./components/Hero/Hero";
 import WhyChooseUs from "./components/WhyChooseUs/WhyChooseUs";
 import Mentor from "./components/Mentor/Mentor";
 import ProjectSection from "./components/ProjectSection/ProjectSection";
+import ScrollToTop from "./components/ScrollToTop/ScrollToTop";
 
 function App() {
   return (
@@ -22,6 +23,7 @@ function App() {
         <BusinessTools />
       </main>
       <Footer />
+      <ScrollToTop />
     </>
   );
 }
