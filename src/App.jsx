@@ -17,7 +17,6 @@ function App() {
         <AboutStudio />
         <AboutMe />
         <WhyChooseUs />
-        <BusinessTools />
         <Mentor />
         <ProjectSection />
         <BusinessTools />
