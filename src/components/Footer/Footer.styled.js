@@ -22,6 +22,7 @@ export const TeamBtn = styled.a`
 
 export const NavFooter = styled.div`
   display: flex;
+  align-items: center;
   gap: 40px;
 `;
 
