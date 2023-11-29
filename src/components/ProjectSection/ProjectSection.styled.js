@@ -39,12 +39,16 @@ export const HiddenInfo = styled.div`
   top: 0;
   left: 0;
 
-  background: linear-gradient(
+  background-repeat: no-repeat;
+  background-position: center bottom;
+  background-image: linear-gradient(
       0deg,
       rgba(22, 23, 23, 0.5) 0%,
       rgba(22, 23, 23, 0.5) 100%
     ),
     linear-gradient(0deg, rgba(27, 54, 65, 0.8) 0%, rgba(27, 54, 65, 0.8) 100%),
-    url(<path-to-image>), lightgray 50% / cover no-repeat;
+    url(${(props) => props.image || ""});
+  background-size: cover;
+
   transition: transform var(--transition-dur-and-func);
 `;

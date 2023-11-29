@@ -15,7 +15,7 @@ const ProjectSection = () => {
         {data.map((item) => (
           <ListItem key={item.category}>
             <ListItemMarkup dataList={item} />
-            <HiddenInfo>
+            <HiddenInfo image={item.image}>
               <DetailInfo dataList={item} />
             </HiddenInfo>
           </ListItem>
