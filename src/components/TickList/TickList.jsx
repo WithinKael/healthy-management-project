@@ -1,5 +1,5 @@
 import icon from "../../images/sprite.svg";
-import { List, ListItem, Title, Icon } from "./TickList.styled";
+import { List, ListItem, Title, Icon, Comment } from "./TickList.styled";
 
 const TickList = ({ title, about, comment }) => {
   return (
@@ -15,7 +15,7 @@ const TickList = ({ title, about, comment }) => {
           </ListItem>
         ))}
       </List>
-      {comment && <p>{comment}</p>}
+      {comment && <Comment>{comment}</Comment>}
     </>
   );
 };
