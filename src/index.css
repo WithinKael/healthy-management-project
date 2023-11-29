@@ -17,6 +17,7 @@
   --typography-black: #161717;
   --typography-black-20: rgba(27, 54, 65, 0.2);
   --transition-dur-and-func: 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  --typography-white: #F8F8F8;
 }
 
 * {
@@ -29,6 +30,7 @@ html {
 
 body {
   font-family: "Montserrat", sans-serif;
+  background-color: var(--background-whitegrey);
 }
 
 img {
@@ -71,6 +73,10 @@ button {
   margin-right: auto;
   padding-left: 120px;
   padding-right: 120px;
+}
+
+b{
+font-weight: 600;
 }
 
 /* @media screen and (min-width: 768px) {
