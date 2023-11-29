@@ -1,3 +1,5 @@
+import AboutMe from "./components/AboutMe/AboutMe";
+import AboutStudio from "./components/AboutStudio/AboutStudio";
 import BusinessTools from "./components/BusinessTools/BusinessTools";
 // import Footer from "./components/Footer/Footer";
 import Header from "./components/Header/Header";
@@ -11,6 +13,9 @@ function App() {
       <Header />
       <main>
         <Hero />
+        <AboutStudio />
+        <AboutMe />
+        <BusinessTools />
         <Mentor />
         <ProjectSection />
         <BusinessTools />
