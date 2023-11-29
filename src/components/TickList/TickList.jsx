@@ -1,5 +1,5 @@
 import icon from "../../images/sprite.svg";
-import { List, ListItem, Title } from "./TickList.styled";
+import { List, ListItem, Title, Icon } from "./TickList.styled";
 
 const TickList = ({ title, about, comment }) => {
   return (
@@ -8,9 +8,9 @@ const TickList = ({ title, about, comment }) => {
       <List>
         {about?.map((item) => (
           <ListItem key={item}>
-            <svg>
+            <Icon>
               <use href={icon + "#icon-done"}></use>
-            </svg>
+            </Icon>
             {item}
           </ListItem>
         ))}

@@ -31,3 +31,8 @@ export const Comment = styled.p`
   font-weight: 600;
   line-height: calc(28 / 20);
 `;
+
+export const Icon = styled.svg`
+  fill: currentColor;
+  stroke: currentColor;
+`;
