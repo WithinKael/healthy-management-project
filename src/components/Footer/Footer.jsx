@@ -31,20 +31,28 @@ const Footer = () => {
         </NavFooter>
         <ContactsFooter>
           <Social>
-            <SocialItem href="">
+            <SocialItem
+              href="https://www.facebook.com/profile.php?id=61551346490841"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
               <svg width="32" height="32">
                 <use href={`${sprite}#facebook`} />
               </svg>
             </SocialItem>
-            <a href="">
+            <a
+              href="https://www.instagram.com/healthymanagement_ua/"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
               <svg width="40" height="40">
                 <use href={`${sprite}#instagram`} />
               </svg>
             </a>
           </Social>
           <TelEmail>
-            <Item href="mailto:healthymanagemeny@gmail.com">
-              healthymanagemeny@gmail.com
+            <Item href="mailto:managementhealthy@gmail.com">
+              managementhealthy@gmail.com
             </Item>
             <Item href="tel:+380673160556">+380 673 160 556</Item>
           </TelEmail>
