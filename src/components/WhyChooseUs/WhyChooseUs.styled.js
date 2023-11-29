@@ -1,5 +1,11 @@
 import styled from "@emotion/styled";
 
+
+export const SectionChoose = styled.section`
+  padding-top: 80px;
+  padding-bottom: 80px;
+`
+
 export const ContentWrapper = styled.div`
   max-width: 100%;
   height: 680px;
@@ -27,10 +33,21 @@ export const List = styled.ul`
 export const Item = styled.li`
   display: flex;
   justify-content: center;
-  flex-direction: column;
+  align-items: center;
+  column-gap: 24px;
   flex-basis: calc((100% - 24px) / 2);
   padding: 40px;
 `;
+
+export const Svg = styled.svg`
+  width: 80px;
+  height: 80px;
+`;
+
+export const Div = styled.div`
+  display: flex;
+  flex-direction: column;
+`
 
 export const ItemTitle = styled.h3`
   color: var(--system-default-10);
