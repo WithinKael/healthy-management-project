@@ -6,6 +6,8 @@ import Header from "./components/Header/Header";
 import Hero from "./components/Hero/Hero";
 import WhyChooseUs from "./components/WhyChooseUs/WhyChooseUs";
 import Mentor from "./components/Mentor/Mentor";
+import MentoringSession from "./components/MentoringSession/MentoringSession";
+import PersonalSupport from "./components/PersonalSupport/PersonalSupport";
 import ProjectSection from "./components/ProjectSection/ProjectSection";
 import ScrollToTop from "./components/ScrollToTop/ScrollToTop";
 
@@ -19,6 +21,8 @@ function App() {
         <AboutMe />
         <WhyChooseUs />
         <Mentor />
+        <MentoringSession />
+        <PersonalSupport />
         <ProjectSection />
         <BusinessTools />
       </main>
