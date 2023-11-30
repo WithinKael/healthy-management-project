@@ -9,6 +9,7 @@ import Mentor from "./components/Mentor/Mentor";
 import MentoringSession from "./components/MentoringSession/MentoringSession";
 import PersonalSupport from "./components/PersonalSupport/PersonalSupport";
 import ProjectSection from "./components/ProjectSection/ProjectSection";
+import WorkPrinciples from "./components/WorkPrinciples/WorkPrinciples";
 import ScrollToTop from "./components/ScrollToTop/ScrollToTop";
 
 function App() {
@@ -20,6 +21,7 @@ function App() {
         <AboutStudio />
         <AboutMe />
         <WhyChooseUs />
+        <WorkPrinciples />
         <Mentor />
         <MentoringSession />
         <PersonalSupport />
