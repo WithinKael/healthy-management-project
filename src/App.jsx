@@ -7,6 +7,7 @@ import Hero from "./components/Hero/Hero";
 import WhyChooseUs from "./components/WhyChooseUs/WhyChooseUs";
 import Mentor from "./components/Mentor/Mentor";
 import ProjectSection from "./components/ProjectSection/ProjectSection";
+import WorkPrinciples from "./components/WorkPrinciples/WorkPrinciples";
 
 function App() {
   return (
@@ -17,6 +18,7 @@ function App() {
         <AboutStudio />
         <AboutMe />
         <WhyChooseUs />
+        <WorkPrinciples />
         <BusinessTools />
         <Mentor />
         <ProjectSection />
