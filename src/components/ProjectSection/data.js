@@ -1,6 +1,13 @@
+import denta_derm from "../../images/desktop/denta_derm1x.webp";
+import medialt from "../../images/desktop/medialt1x.webp";
+import cures from "../../images/desktop/cures1x.webp";
+import clinic from "../../images/desktop/clinic1x.webp";
+import kmklam from "../../images/desktop/kmklam1x.webp";
+import symmetrica from "../../images/desktop/symmetrica1x.webp";
+
 export default [
   {
-    image: "src/images/desktop/denta_derm1x.webp",
+    image: denta_derm,
     category: "DentaDerm",
     title:
       "Діагностика бізнес-процесів, маркетингу, сервісу, розробка стратегії розвитку, менторство",
@@ -34,7 +41,7 @@ export default [
     ],
   },
   {
-    image: "src/images/desktop/medialt1x.webp",
+    image: medialt,
     category: "Medialt",
     title:
       "Діагностика бізнес-процесів, маркетингу, сервісу, розробка стратегії розвитку, менторство",
@@ -70,7 +77,7 @@ export default [
     ],
   },
   {
-    image: "src/images/desktop/cures1x.webp",
+    image: cures,
     category: "Cures",
     title: "Автоматизація комунікації з пацієнтами",
     about: [
@@ -97,7 +104,7 @@ export default [
     ],
   },
   {
-    image: "src/images/desktop/clinic1x.webp",
+    image: clinic,
     category: "Клініка ім. ак. Юрія Спіженка",
     title:
       "Менторство, діагностика бізнес-процесів, маркетингу та сервісу, розробка стратегії розвитку",
@@ -126,7 +133,7 @@ export default [
     ],
   },
   {
-    image: "src/images/desktop/kmklam1x.webp",
+    image: kmklam,
     category: "KMKlab",
     title: "Діагностика маркетингу, сервісу, бізнес-процесів",
     about: [
@@ -155,7 +162,7 @@ export default [
     ],
   },
   {
-    image: "src/images/desktop/symmetrica1x.webp",
+    image: symmetrica,
     category: "Symmetrica",
     title: "Менторство, діагностика маркетингу, сервісу, бізнес-процесів",
     about: [
