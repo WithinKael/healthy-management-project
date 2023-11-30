@@ -1,30 +1,38 @@
-import s from "./Hero.module.css";
+import {
+  ListItem,
+  SectionHero,
+  SectionHeroDiv,
+  SectionHeroLinks,
+  SectionHeroText,
+  SectionHeroTextUl,
+  SectionHeroTitle,
+} from "./Hero.styled";
 
 const Hero = () => {
   return (
-    <section className={s.sectionHero} id="home">
-      <h1 className={s.sectionHeroTitle}>
-        Бізнес-партнер з розвитку та комунікацій здорового менеджменту
-      </h1>
-      <h3 className={s.sectionHeroText}>
-        Будуємо ефективні стратегії здорового менеджменту для медичних брендів:
-      </h3>
-      <ul className={s.sectionHeroTextUl}>
-        <li className={s.sectionHeroText}>медичний менеджмент і маркетинг,</li>
-        <li className={s.sectionHeroText}>
-          програми управління здоров'ям для підприємств та бізнесу,
-        </li>
-        <li className={s.sectionHeroText}>менторство</li>
-      </ul>
-      <div className={s.sectionHeroDiv}>
-        <a href="consultation" className={s.sectionHeroLinks}>
-          Консультація
-        </a>
-        <a href="services" className={s.sectionHeroLinks}>
-          Послуги
-        </a>
+    <SectionHero id="home">
+      <div className="container">
+        <SectionHeroTitle>
+          Бізнес-партнер з розвитку та комунікацій здорового менеджменту
+        </SectionHeroTitle>
+        <SectionHeroText>
+          Будуємо ефективні стратегії здорового менеджменту для медичних
+          брендів:
+        </SectionHeroText>
+        <SectionHeroTextUl>
+          <ListItem>медичний менеджмент і маркетинг,</ListItem>
+
+          <ListItem>
+            програми управління здоров&apos;ям для підприємств та бізнесу,
+          </ListItem>
+          <ListItem>менторство</ListItem>
+        </SectionHeroTextUl>
+        <SectionHeroDiv>
+          <SectionHeroLinks href="consultation">Консультація</SectionHeroLinks>
+          <SectionHeroLinks href="services">Послуги</SectionHeroLinks>
+        </SectionHeroDiv>
       </div>
-    </section>
+    </SectionHero>
   );
 };
 

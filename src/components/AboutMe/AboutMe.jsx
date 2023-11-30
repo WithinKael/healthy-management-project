@@ -1,18 +1,30 @@
-import s from "./AboutMe.module.css";
-import Foto from "../../images/desktop/olga_picture1x.jpg";
+// import Foto from "../../images/desktop/olga_picture1x.jpg";
 import Fotos from "../../images/desktop/olga_picture1x.webp";
-import Fotos2x from "../../images/desktop/olga_picture@2x.jpg";
-import Fotos1x from "../../images/desktop/olga_picture1x.jpg";
+// import Fotos2x from "../../images/desktop/olga_picture@2x.jpg";
+// import Fotos1x from "../../images/desktop/olga_picture1x.jpg";
 import Icon from "../../images/sprite.svg";
+import {
+  SectionAboutMe,
+  SectionAboutMeAdress,
+  SectionAboutMeDiv,
+  SectionAboutMeDivOl,
+  SectionAboutMeDivWidth,
+  SectionAboutMeHOl,
+  SectionAboutMeLink,
+  SectionAboutMeList,
+  SectionAboutMePol,
+  SectionAboutMeSvg,
+  SectionAboutMeTitle,
+} from "./AboutMe.styled";
 
 const AboutMe = () => {
   return (
-    <section className={s.sectionAboutMe}>
+    <SectionAboutMe>
       <div>
-        <h2 className={s.sectionAboutMeTitle}>Про мене</h2>
-        <div className={s.sectionAboutMeDiv}>
-          <div className={s.sectionAboutMeDivWidth}>
-            <picture>
+        <SectionAboutMeTitle>Про мене</SectionAboutMeTitle>
+        <SectionAboutMeDiv>
+          <SectionAboutMeDivWidth>
+            {/* <picture>
               <source
                 srcSet={`${Fotos} 2x, ${Fotos} 1x`}
                 media="(min-width: 1920px)"
@@ -23,70 +35,80 @@ const AboutMe = () => {
                 media="(min-width: 1920px)"
                 type="image/png"
               />
-              <img src={Foto} alt="Ольга Поліщук" />
-            </picture>
-          </div>
-          <div className={s.sectionAboutMeDivOl}>
-            <h3 className={s.sectionAboutMeHOl}>Ольга Поліщук</h3>
-            <p className={s.sectionAboutMePol}>
+            </picture> */}
+            <img src={Fotos} alt="Ольга Поліщук" />
+          </SectionAboutMeDivWidth>
+          <SectionAboutMeDivOl>
+            <SectionAboutMeHOl>Ольга Поліщук</SectionAboutMeHOl>
+            <SectionAboutMePol>
               CEO and Founder студії стратегічного розвитку
-            </p>
+            </SectionAboutMePol>
             <ul>
-              <li className={s.sectionAboutMeList}>
-                MBA Healthcare management
-              </li>
-              <li className={s.sectionAboutMeList}>
+              <SectionAboutMeList>MBA Healthcare management</SectionAboutMeList>
+              <SectionAboutMeList>
                 Викладачка медичного маркетингу Бізнес-школа УКУ (LvBS)
-              </li>
-              <li className={s.sectionAboutMeList}>
-                Експертка в "Центр Розвитку Громадського Здоров'я УКУ"
-              </li>
-              <li className={s.sectionAboutMeList}>
+              </SectionAboutMeList>
+              <SectionAboutMeList>
+                Експертка в "Центр Розвитку Громадського Здоров&apos;я УКУ"
+              </SectionAboutMeList>
+              <SectionAboutMeList>
                 Бізнес-консультантка, стратег з медичного маркетингу
-              </li>
-              <li className={s.sectionAboutMeList}>
+              </SectionAboutMeList>
+              <SectionAboutMeList>
                 Керівниця проєкту "Стетоскоп" - телеграм канал про медичний
                 менеджмент та маркетингу
-              </li>
-              <li className={s.sectionAboutMeList}>
+              </SectionAboutMeList>
+              <SectionAboutMeList>
                 Більше 18 років досвіду в маркетингу та комунікаціях, з них
                 більше 10 років досвіду в медичному та фармацевтичному бізнесі
                 на керівних посадах
-              </li>
-              <li className={s.sectionAboutMeList}>
+              </SectionAboutMeList>
+              <SectionAboutMeList>
                 Використання принципів доказової медицини
-              </li>
+              </SectionAboutMeList>
             </ul>
-            <ul className={s.sectionAboutMeAdress}>
+            <SectionAboutMeAdress>
               <li>
-                <a href="" className={s.sectionAboutMeLink}>
+                <SectionAboutMeLink
+                  href="https://www.linkedin.com/in/olga-polishchuk-83362140/"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
                   LinkedIn
-                  <svg width="24" height="24" className={s.sectionAboutMeSvg}>
+                  <SectionAboutMeSvg width="24" height="24">
                     <use href={`${Icon}#icon-arrow-up-right`}></use>
-                  </svg>
-                </a>
+                  </SectionAboutMeSvg>
+                </SectionAboutMeLink>
               </li>
               <li>
-                <a href="" className={s.sectionAboutMeLink}>
+                <SectionAboutMeLink
+                  href="https://www.facebook.com/olga.polishchuk.14"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
                   Facebook
-                  <svg width="24" height="24" className={s.sectionAboutMeSvg}>
+                  <SectionAboutMeSvg width="24" height="24">
                     <use href={`${Icon}#icon-arrow-up-right`}></use>
-                  </svg>
-                </a>
+                  </SectionAboutMeSvg>
+                </SectionAboutMeLink>
               </li>
               <li>
-                <a href="" className={s.sectionAboutMeLink}>
+                <SectionAboutMeLink
+                  href="https://www.instagram.com/olga_healthm/"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
                   Instagram
-                  <svg width="24" height="24" className={s.sectionAboutMeSvg}>
+                  <SectionAboutMeSvg width="24" height="24">
                     <use href={`${Icon}#icon-arrow-up-right`}></use>
-                  </svg>
-                </a>
+                  </SectionAboutMeSvg>
+                </SectionAboutMeLink>
               </li>
-            </ul>
-          </div>
-        </div>
+            </SectionAboutMeAdress>
+          </SectionAboutMeDivOl>
+        </SectionAboutMeDiv>
       </div>
-    </section>
+    </SectionAboutMe>
   );
 };
 
