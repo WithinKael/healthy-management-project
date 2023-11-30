@@ -2,7 +2,6 @@ import styled from "@emotion/styled";
 
 export const FooterBg = styled.div`
   padding: 40px 0 0 0;
-  /* border-bottom: 1px solid var(--system-default-20); */
   background-color: var(--background-bluedark);
 `;
 
@@ -17,6 +16,7 @@ export const TeamBtn = styled.a`
   font-size: 16px;
   font-weight: 500;
   line-height: 1.5;
+  border-bottom: 1px solid rgba(244, 244, 246, 0.4);
   color: var(--system-default-10);
 `;
 
@@ -27,10 +27,27 @@ export const NavFooter = styled.div`
 `;
 
 export const NavFooterBtn = styled.a`
+  display: inline-block;
   font-size: 16px;
   font-weight: 500;
   line-height: 1.5;
+  position: relative;
   color: var(--system-default-10);
+
+  &::before {
+    content: "";
+    position: absolute;
+    bottom: -8px;
+    left: 0;
+    width: 100%;
+    height: 1px;
+    opacity: 0;
+    background-color: var(--system-default-10);
+  }
+
+  &:hover::before {
+    opacity: 1;
+  }
 `;
 
 export const ContactsFooter = styled.div`

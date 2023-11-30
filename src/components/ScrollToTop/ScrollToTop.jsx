@@ -8,9 +8,20 @@ const ScrollToTop = () => {
   useEffect(() => {
     const handleScroll = () => {
       const scrollY = window.scrollY;
-      setIsVisible(scrollY > 480);
+      const footer = document.getElementById("footer");
+      const distanceFromBottom =
+        window.innerHeight + window.scrollY - footer.offsetTop;
+      const newBottom = Math.max(80, distanceFromBottom);
+
+      setIsVisible(scrollY > 480 || distanceFromBottom > 80);
+      document.documentElement.style.setProperty(
+        "--scroll-to-top-bottom",
+        `${newBottom}px`
+      );
     };
+
     window.addEventListener("scroll", handleScroll);
+
     return () => {
       window.removeEventListener("scroll", handleScroll);
     };

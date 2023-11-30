@@ -1,5 +1,4 @@
 import sprite from "../../images/icon-footer.svg";
-// import sprite from "../../images/sprite.svg";
 import {
   ContactsFooter,
   FooterBg,
@@ -16,7 +15,7 @@ import {
 
 const Footer = () => {
   return (
-    <FooterBg>
+    <FooterBg id="footer">
       <FooterContainer className="container">
         <svg width="227" height="40">
           <use href={`${sprite}#logo-white`} />
