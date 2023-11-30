@@ -13,13 +13,14 @@ import {
   StyledParagraph,
   StyledPersonalList,
   StyledPersonalListItem,
+  StyledSection,
   StyledSessionParagraph,
   TitleH2,
   TitleH3,
 } from "./MentorSession.styled";
 const MentoringSession = () => {
   return (
-    <section className="container">
+    <StyledSection className="container">
       <PersonalSessionSectionWrapper>
         <MentorSessionWrapper>
           <PersonalWrapper>
@@ -91,7 +92,7 @@ const MentoringSession = () => {
           </StyledContainer>
         </ArrowWrapper>
       </PersonalSessionSectionWrapper>
-    </section>
+    </StyledSection>
   );
 };
 

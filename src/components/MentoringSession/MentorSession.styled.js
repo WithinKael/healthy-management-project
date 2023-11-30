@@ -1,5 +1,10 @@
 import styled from "@emotion/styled";
 
+export const StyledSection = styled.section`
+  padding-top: 80px;
+  padding-bottom: 80px;
+`;
+
 export const PersonalSessionSectionWrapper = styled.div`
   padding: 80px;
   border-radius: 16px;
@@ -24,6 +29,7 @@ export const MentorSessionWrapper = styled.div`
 `;
 
 export const PersonalWrapper = styled.div`
+  min-width: 740px;
   display: flex;
   flex-direction: column;
   gap: 16px;
@@ -39,7 +45,7 @@ export const StyledParagraph = styled.p`
   line-height: 1.4;
 
   position: absolute;
-  width: 100%;
+  min-width: 240px;
   text-align: center;
   top: 50%;
   left: 50%;
@@ -74,13 +80,14 @@ export const ProHourParagraph = styled.p`
   border-radius: 16px;
   background-color: rgba(27, 54, 65, 0.2);
 
-  width: 184px;
+  width: fit-content;
   font-size: 24px;
   font-weight: 500;
   line-height: 1.3;
   padding: 4px 16px;
   color: var(--typography-bluedark);
 `;
+
 export const StyledOrderLink = styled.a`
   display: flex;
   justify-content: center;
