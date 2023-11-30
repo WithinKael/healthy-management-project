@@ -300,7 +300,7 @@ Error generating stack: `+l.message+`
     border-radius: 50%;
   }
 
-  &:first-child::before {
+  &:first-of-type::before {
     top: 26%;
   }
 `,Jt=k.li`
