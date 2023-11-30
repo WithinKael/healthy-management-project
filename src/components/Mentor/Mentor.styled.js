@@ -1,7 +1,8 @@
 import styled from "@emotion/styled";
 
 export const StyledSection = styled.section`
-  margin-bottom: 160px;
+  padding-top: 80px;
+  padding-bottom: 80px;
 `;
 
 export const ImgSectionWrapper = styled.div`
@@ -11,7 +12,7 @@ export const ImgSectionWrapper = styled.div`
 `;
 
 export const MentorstvoWrapper = styled.div`
-  width: 828px;
+  max-width: 828px;
   display: flex;
   flex-direction: column;
   align-items: flex-start;
@@ -20,7 +21,7 @@ export const AboutWrapper = styled.div`
   display: flex;
   flex-direction: column;
   gap: 24px;
-  width: 820px;
+  max-width: 820px;
   height: 392px;
   padding: 40px;
   border-radius: 16px;
@@ -61,6 +62,7 @@ export const ParagraphWrapper = styled.div`
 export const Paragraph = styled.p`
   font-size: 20px;
   font-weight: 500;
+  max-width: 720px;
   line-height: 28px;
   color: var(--typography-bluedark);
 
@@ -139,7 +141,12 @@ export const StyledLi = styled.li`
     background-color: #1b3641;
     border-radius: 50%;
   }
+
+  &:first-child::before {
+    top: 26%;
+  }
 `;
+
 export const StyledLiWhite = styled.li`
   padding-left: 24px;
   position: relative;

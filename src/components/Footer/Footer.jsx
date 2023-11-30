@@ -1,5 +1,65 @@
-export const Footer = () => {
-  return <div className="container">Footer</div>;
+import sprite from "../../images/icon-footer.svg";
+import {
+  ContactsFooter,
+  FooterBg,
+  FooterContainer,
+  Item,
+  NavFooter,
+  NavFooterBtn,
+  Paragraph,
+  Social,
+  SocialItem,
+  TeamBtn,
+  TelEmail,
+} from "./Footer.styled";
+
+const Footer = () => {
+  return (
+    <FooterBg id="footer">
+      <FooterContainer className="container">
+        <svg width="227" height="40">
+          <use href={`${sprite}#logo-white`} />
+        </svg>
+        <TeamBtn href="">created by GoIT students</TeamBtn>
+        <NavFooter>
+          <NavFooterBtn href="">Головна</NavFooterBtn>
+          <NavFooterBtn href="">Про мене</NavFooterBtn>
+          <NavFooterBtn href="">Проєкти</NavFooterBtn>
+          <NavFooterBtn href="">Послуги</NavFooterBtn>
+          <NavFooterBtn href="">Менторство</NavFooterBtn>
+        </NavFooter>
+        <ContactsFooter>
+          <Social>
+            <SocialItem
+              href="https://www.facebook.com/profile.php?id=61551346490841"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              <svg width="32" height="32">
+                <use href={`${sprite}#facebook`} />
+              </svg>
+            </SocialItem>
+            <a
+              href="https://www.instagram.com/healthymanagement_ua/"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              <svg width="40" height="40">
+                <use href={`${sprite}#instagram`} />
+              </svg>
+            </a>
+          </Social>
+          <TelEmail>
+            <Item href="mailto:managementhealthy@gmail.com">
+              managementhealthy@gmail.com
+            </Item>
+            <Item href="tel:+380673160556">+380 673 160 556</Item>
+          </TelEmail>
+        </ContactsFooter>
+      </FooterContainer>
+      <Paragraph>© 2023 healthy managment. All rights reserved</Paragraph>
+    </FooterBg>
+  );
 };
 
 export default Footer;

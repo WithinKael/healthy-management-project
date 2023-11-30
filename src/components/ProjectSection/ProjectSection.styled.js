@@ -26,12 +26,12 @@ export const ListItem = styled.li`
   position: relative;
 
   &:hover > div {
-    transform: translateX(0);
+    opacity: 1;
   }
 `;
 
 export const HiddenInfo = styled.div`
-  transform: translateX(-100%);
+  opacity: 0;
   height: 100%;
   width: 100%;
 
@@ -50,5 +50,5 @@ export const HiddenInfo = styled.div`
     url(${(props) => props.image || ""});
   background-size: cover;
 
-  transition: transform var(--transition-dur-and-func);
+  transition: opacity var(--transition-dur-and-func);
 `;
