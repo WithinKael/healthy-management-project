@@ -70,7 +70,6 @@ Error generating stack: `+i.message+`
   color: var(--system-default-10);
 `,Em=[{id:1,tool:"Матриця стейкхолдерів"},{id:2,tool:"SWOT аналіз"},{id:3,tool:"Bussines model canvas"},{id:4,tool:"Value proposition canvas"},{id:5,tool:"Customer journey map"}],jm=()=>a.jsx("section",{className:"container",children:a.jsxs(km,{children:[a.jsxs(Sm,{children:["Бізнес ",a.jsx("span",{children:"інструменти"}),", які використувуємо в партнерстві"]}),a.jsx(_m,{children:Em.map(e=>a.jsx(Cm,{children:e.tool},e.id))})]})}),Mi="/healthy-management-project/assets/icon-footer-171yZHoS.svg",Nm=N.div`
   padding: 40px 0 0 0;
-  /* border-bottom: 1px solid var(--system-default-20); */
   background-color: var(--background-bluedark);
 `,Pm=N.div`
   display: flex;
@@ -81,16 +80,34 @@ Error generating stack: `+i.message+`
   font-size: 16px;
   font-weight: 500;
   line-height: 1.5;
+  border-bottom: 1px solid rgba(244, 244, 246, 0.4);
   color: var(--system-default-10);
 `,Lm=N.div`
   display: flex;
   align-items: center;
   gap: 40px;
 `,Un=N.a`
+  display: inline-block;
   font-size: 16px;
   font-weight: 500;
   line-height: 1.5;
+  position: relative;
   color: var(--system-default-10);
+
+  &::before {
+    content: "";
+    position: absolute;
+    bottom: -8px;
+    left: 0;
+    width: 100%;
+    height: 1px;
+    opacity: 0;
+    background-color: var(--system-default-10);
+  }
+
+  &:hover::before {
+    opacity: 1;
+  }
 `,zm=N.div`
   display: flex;
   gap: 40px;
@@ -123,7 +140,7 @@ Error generating stack: `+i.message+`
   text-transform: uppercase;
   border-top: 1px solid var(--system-default-20);
   color: var(--system-default-10);
-`,Dm=()=>a.jsxs(Nm,{children:[a.jsxs(Pm,{className:"container",children:[a.jsx("svg",{width:"227",height:"40",children:a.jsx("use",{href:`${Mi}#logo-white`})}),a.jsx(Tm,{href:"",children:"created by GoIT students"}),a.jsxs(Lm,{children:[a.jsx(Un,{href:"",children:"Головна"}),a.jsx(Un,{href:"",children:"Про мене"}),a.jsx(Un,{href:"",children:"Проєкти"}),a.jsx(Un,{href:"",children:"Послуги"}),a.jsx(Un,{href:"",children:"Менторство"})]}),a.jsxs(zm,{children:[a.jsxs(Mm,{children:[a.jsx(Am,{href:"https://www.facebook.com/profile.php?id=61551346490841",target:"_blank",rel:"noopener noreferrer",children:a.jsx("svg",{width:"32",height:"32",children:a.jsx("use",{href:`${Mi}#facebook`})})}),a.jsx("a",{href:"https://www.instagram.com/healthymanagement_ua/",target:"_blank",rel:"noopener noreferrer",children:a.jsx("svg",{width:"40",height:"40",children:a.jsx("use",{href:`${Mi}#instagram`})})})]}),a.jsxs(Om,{children:[a.jsx(Xs,{href:"mailto:managementhealthy@gmail.com",children:"managementhealthy@gmail.com"}),a.jsx(Xs,{href:"tel:+380673160556",children:"+380 673 160 556"})]})]})]}),a.jsx(Rm,{children:"© 2023 healthy managment. All rights reserved"})]}),Im="_header_1xlxp_1",Fm="_fixedHeader_1xlxp_7",$m="_headerDiv_1xlxp_14",Um="_headerNav_1xlxp_23",Hm="_headerNavMenu_1xlxp_29",Vm="_active_1xlxp_43",Wm="_headerAddress_1xlxp_67",pe={header:Im,fixedHeader:Fm,headerDiv:$m,headerNav:Um,headerNavMenu:Hm,active:Vm,headerAddress:Wm},Bm=()=>{const[e,t]=de.useState("home");console.log(e);const n=(r,l)=>{l.preventDefault(),console.log(`Setting active link to: ${r}`),t(r)};return a.jsx("header",{className:`${pe.header} ${pe.fixedHeader}`,children:a.jsxs("div",{className:pe.headerDiv,children:[a.jsx("a",{href:"#home",children:a.jsx("svg",{width:"227",height:"40",children:a.jsx("use",{href:`${qe}#logo-black`})})}),a.jsxs("nav",{className:pe.headerNav,children:[a.jsx("a",{href:"#home",className:`${pe.headerNavMenu} ${e==="home"?pe.active:""}`,onClick:r=>n("home",r),children:"Головна"}),a.jsx("a",{href:"#aboutUs",className:`${pe.headerNavMenu} ${e==="aboutUs"?pe.active:""}`,onClick:r=>n("aboutUs",r),children:"Про нас"}),a.jsx("a",{href:"#services",className:`${pe.headerNavMenu} ${e==="services"?pe.active:""}`,onClick:r=>n("services",r),children:"Послуги"}),a.jsx("a",{href:"#mentoring",className:`${pe.headerNavMenu} ${e==="mentoring"?pe.active:""}`,onClick:r=>n("mentoring",r),children:"Менторство"}),a.jsx("a",{href:"#projects",className:`${pe.headerNavMenu} ${e==="projects"?pe.active:""}`,onClick:r=>n("projects",r),children:"Проєкти"})]}),a.jsx("address",{children:a.jsx("a",{href:"#contact",className:pe.headerAddress,children:"Контакт"})})]})})},Qm="_sectionHero_ic55b_1",Km="_sectionHeroTitle_ic55b_15",Ym="_sectionHeroText_ic55b_29",Xm="_sectionHeroTextUl_ic55b_42",Gm="_sectionHeroDiv_ic55b_55",Zm="_sectionHeroLinks_ic55b_60",Ye={sectionHero:Qm,sectionHeroTitle:Km,sectionHeroText:Ym,sectionHeroTextUl:Xm,sectionHeroDiv:Gm,sectionHeroLinks:Zm},Jm=()=>a.jsxs("section",{className:Ye.sectionHero,id:"home",children:[a.jsx("h1",{className:Ye.sectionHeroTitle,children:"Бізнес-партнер з розвитку та комунікацій здорового менеджменту"}),a.jsx("h3",{className:Ye.sectionHeroText,children:"Будуємо ефективні стратегії здорового менеджменту для медичних брендів:"}),a.jsxs("ul",{className:Ye.sectionHeroTextUl,children:[a.jsx("li",{className:Ye.sectionHeroText,children:"медичний менеджмент і маркетинг,"}),a.jsx("li",{className:Ye.sectionHeroText,children:"програми управління здоров'ям для підприємств та бізнесу,"}),a.jsx("li",{className:Ye.sectionHeroText,children:"менторство"})]}),a.jsxs("div",{className:Ye.sectionHeroDiv,children:[a.jsx("a",{href:"consultation",className:Ye.sectionHeroLinks,children:"Консультація"}),a.jsx("a",{href:"services",className:Ye.sectionHeroLinks,children:"Послуги"})]})]}),qm=N.section`
+`,Dm=()=>a.jsxs(Nm,{id:"footer",children:[a.jsxs(Pm,{className:"container",children:[a.jsx("svg",{width:"227",height:"40",children:a.jsx("use",{href:`${Mi}#logo-white`})}),a.jsx(Tm,{href:"",children:"created by GoIT students"}),a.jsxs(Lm,{children:[a.jsx(Un,{href:"",children:"Головна"}),a.jsx(Un,{href:"",children:"Про мене"}),a.jsx(Un,{href:"",children:"Проєкти"}),a.jsx(Un,{href:"",children:"Послуги"}),a.jsx(Un,{href:"",children:"Менторство"})]}),a.jsxs(zm,{children:[a.jsxs(Mm,{children:[a.jsx(Am,{href:"https://www.facebook.com/profile.php?id=61551346490841",target:"_blank",rel:"noopener noreferrer",children:a.jsx("svg",{width:"32",height:"32",children:a.jsx("use",{href:`${Mi}#facebook`})})}),a.jsx("a",{href:"https://www.instagram.com/healthymanagement_ua/",target:"_blank",rel:"noopener noreferrer",children:a.jsx("svg",{width:"40",height:"40",children:a.jsx("use",{href:`${Mi}#instagram`})})})]}),a.jsxs(Om,{children:[a.jsx(Xs,{href:"mailto:managementhealthy@gmail.com",children:"managementhealthy@gmail.com"}),a.jsx(Xs,{href:"tel:+380673160556",children:"+380 673 160 556"})]})]})]}),a.jsx(Rm,{children:"© 2023 healthy managment. All rights reserved"})]}),Im="_header_1xlxp_1",Fm="_fixedHeader_1xlxp_7",$m="_headerDiv_1xlxp_14",Um="_headerNav_1xlxp_23",Hm="_headerNavMenu_1xlxp_29",Vm="_active_1xlxp_43",Wm="_headerAddress_1xlxp_67",pe={header:Im,fixedHeader:Fm,headerDiv:$m,headerNav:Um,headerNavMenu:Hm,active:Vm,headerAddress:Wm},Bm=()=>{const[e,t]=de.useState("home");console.log(e);const n=(r,l)=>{l.preventDefault(),console.log(`Setting active link to: ${r}`),t(r)};return a.jsx("header",{className:`${pe.header} ${pe.fixedHeader}`,children:a.jsxs("div",{className:pe.headerDiv,children:[a.jsx("a",{href:"#home",children:a.jsx("svg",{width:"227",height:"40",children:a.jsx("use",{href:`${qe}#logo-black`})})}),a.jsxs("nav",{className:pe.headerNav,children:[a.jsx("a",{href:"#home",className:`${pe.headerNavMenu} ${e==="home"?pe.active:""}`,onClick:r=>n("home",r),children:"Головна"}),a.jsx("a",{href:"#aboutUs",className:`${pe.headerNavMenu} ${e==="aboutUs"?pe.active:""}`,onClick:r=>n("aboutUs",r),children:"Про нас"}),a.jsx("a",{href:"#services",className:`${pe.headerNavMenu} ${e==="services"?pe.active:""}`,onClick:r=>n("services",r),children:"Послуги"}),a.jsx("a",{href:"#mentoring",className:`${pe.headerNavMenu} ${e==="mentoring"?pe.active:""}`,onClick:r=>n("mentoring",r),children:"Менторство"}),a.jsx("a",{href:"#projects",className:`${pe.headerNavMenu} ${e==="projects"?pe.active:""}`,onClick:r=>n("projects",r),children:"Проєкти"})]}),a.jsx("address",{children:a.jsx("a",{href:"#contact",className:pe.headerAddress,children:"Контакт"})})]})})},Qm="_sectionHero_ic55b_1",Km="_sectionHeroTitle_ic55b_15",Ym="_sectionHeroText_ic55b_29",Xm="_sectionHeroTextUl_ic55b_42",Gm="_sectionHeroDiv_ic55b_55",Zm="_sectionHeroLinks_ic55b_60",Ye={sectionHero:Qm,sectionHeroTitle:Km,sectionHeroText:Ym,sectionHeroTextUl:Xm,sectionHeroDiv:Gm,sectionHeroLinks:Zm},Jm=()=>a.jsxs("section",{className:Ye.sectionHero,id:"home",children:[a.jsx("h1",{className:Ye.sectionHeroTitle,children:"Бізнес-партнер з розвитку та комунікацій здорового менеджменту"}),a.jsx("h3",{className:Ye.sectionHeroText,children:"Будуємо ефективні стратегії здорового менеджменту для медичних брендів:"}),a.jsxs("ul",{className:Ye.sectionHeroTextUl,children:[a.jsx("li",{className:Ye.sectionHeroText,children:"медичний менеджмент і маркетинг,"}),a.jsx("li",{className:Ye.sectionHeroText,children:"програми управління здоров'ям для підприємств та бізнесу,"}),a.jsx("li",{className:Ye.sectionHeroText,children:"менторство"})]}),a.jsxs("div",{className:Ye.sectionHeroDiv,children:[a.jsx("a",{href:"consultation",className:Ye.sectionHeroLinks,children:"Консультація"}),a.jsx("a",{href:"services",className:Ye.sectionHeroLinks,children:"Послуги"})]})]}),qm=N.section`
   padding-top: 80px;
   padding-bottom: 80px;
 `,bm=N.div`
@@ -410,15 +427,11 @@ Error generating stack: `+i.message+`
   width: 56px;
   height: 56px;
   position: fixed;
-  bottom: 20px;
+  bottom: var(--scroll-to-top-bottom);
   right: 120px;
   transition: bottom 0.3s ease-out;
   padding: 8px;
   background-color: var(--primary-yellow);
   border: none;
   border-radius: 16px;
-
-  /* &:hover {
-    background-color: var(--color-hover);
-  } */
-`,I0=()=>{const[e,t]=de.useState(!1);de.useEffect(()=>{const r=()=>{const l=window.scrollY;t(l>480)};return window.addEventListener("scroll",r),()=>{window.removeEventListener("scroll",r)}},[]);const n=()=>{window.scrollTo({top:0,behavior:"smooth"})};return a.jsx(a.Fragment,{children:e&&a.jsx(D0,{onClick:n,children:a.jsx("svg",{width:"24",height:"24",children:a.jsx("use",{href:`${qe}#icon-arrowup`})})})})};function F0(){return a.jsxs(a.Fragment,{children:[a.jsx(Bm,{}),a.jsxs("main",{children:[a.jsx(Jm,{}),a.jsx(Ch,{}),a.jsx(dh,{}),a.jsx(n0,{}),a.jsx(y0,{}),a.jsx(R0,{}),a.jsx(jm,{})]}),a.jsx(Dm,{}),a.jsx(I0,{})]})}Ai.createRoot(document.getElementById("root")).render(a.jsx(ua.StrictMode,{children:a.jsx(F0,{})}));
+`,I0=()=>{const[e,t]=de.useState(!1);de.useEffect(()=>{const r=()=>{const l=window.scrollY,i=document.getElementById("footer"),o=window.innerHeight+window.scrollY-i.offsetTop,u=Math.max(80,o);t(l>480||o>80),document.documentElement.style.setProperty("--scroll-to-top-bottom",`${u}px`)};return window.addEventListener("scroll",r),()=>{window.removeEventListener("scroll",r)}},[]);const n=()=>{window.scrollTo({top:0,behavior:"smooth"})};return a.jsx(a.Fragment,{children:e&&a.jsx(D0,{onClick:n,children:a.jsx("svg",{width:"24",height:"24",children:a.jsx("use",{href:`${qe}#icon-arrowup`})})})})};function F0(){return a.jsxs(a.Fragment,{children:[a.jsx(Bm,{}),a.jsxs("main",{children:[a.jsx(Jm,{}),a.jsx(Ch,{}),a.jsx(dh,{}),a.jsx(n0,{}),a.jsx(y0,{}),a.jsx(R0,{}),a.jsx(jm,{})]}),a.jsx(Dm,{}),a.jsx(I0,{})]})}Ai.createRoot(document.getElementById("root")).render(a.jsx(ua.StrictMode,{children:a.jsx(F0,{})}));
