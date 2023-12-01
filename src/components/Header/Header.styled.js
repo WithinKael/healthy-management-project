@@ -44,8 +44,8 @@ export const HeaderNavMenu = styled.a`
     position: absolute;
     left: 0;
     right: 0;
-    bottom: -3px;
-    height: 3px;
+    bottom: -5px;
+    height: 2px;
     background-color: var(--typography-bluedark, #1b3641);
   }
 `;

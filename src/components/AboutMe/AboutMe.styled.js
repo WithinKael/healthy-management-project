@@ -71,7 +71,7 @@ export const SectionAboutMeAdress = styled.ul`
   margin-top: 42px;
   display: flex;
   gap: 60px;
-  justify-content: center;
+  justify-content: space-between;
   align-items: baseline;
 `;
 
@@ -93,14 +93,14 @@ export const SectionAboutMeLink = styled.a`
     position: absolute;
     left: 0;
     right: 0;
-    bottom: -3px;
-    height: 3px;
+    bottom: -5px;
+    height: 2px;
     background-color: var(--typography-bluedark, #1b3641);
   }
 `;
 
 export const SectionAboutMeSvg = styled.svg`
-  margin-left: 40px;
+  margin-left: 10px;
 `;
 
 export const SectionAboutMeDivWidth = styled.div`

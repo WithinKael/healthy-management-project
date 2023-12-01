@@ -10,6 +10,7 @@ import {
 
 const Header = () => {
   const [activeLink, setActiveLink] = useState("home");
+
   // const [scrollPosition, setScrollPosition] = useState(0);
 
   const handleSetActiveLink = (link, event) => {
@@ -21,12 +22,16 @@ const Header = () => {
       const rect = section.getBoundingClientRect();
       const scrollTop =
         window.pageYOffset || document.documentElement.scrollTop;
-      const targetOffset = rect.top + scrollTop - 120;
+      const targetOffset = rect.top + scrollTop - 60;
 
       window.scrollTo({
         top: targetOffset,
         behavior: "smooth",
       });
+
+      setTimeout(() => {
+        event.target.blur();
+      }, 1000);
     }
   };
 
@@ -38,14 +43,16 @@ const Header = () => {
       const currentSection = sections.find((section) => {
         const sectionElement = document.getElementById(section);
         if (sectionElement) {
+          // sectionElement.focus()
           const rect = sectionElement.getBoundingClientRect();
           return rect.top <= 120 && rect.bottom >= 120;
         }
-        return false;
+        return sectionElement;
       });
-
+      console.log(currentSection);
       if (currentSection) {
         setActiveLink(currentSection);
+        console.log(currentSection);
       }
     };
 
