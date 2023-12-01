@@ -94,7 +94,7 @@ Error generating stack: `+i.message+`
   margin-top: 42px;
   display: flex;
   gap: 60px;
-  justify-content: center;
+  justify-content: space-between;
   align-items: baseline;
 `,Di=v.a`
   position: relative;
@@ -114,12 +114,12 @@ Error generating stack: `+i.message+`
     position: absolute;
     left: 0;
     right: 0;
-    bottom: -3px;
-    height: 3px;
+    bottom: -5px;
+    height: 2px;
     background-color: var(--typography-bluedark, #1b3641);
   }
 `,$i=v.svg`
-  margin-left: 40px;
+  margin-left: 10px;
 `,_m=v.div`
   width: calc((100% - 24px) / 2);
   border-radius: 16px;
@@ -346,8 +346,8 @@ Error generating stack: `+i.message+`
     position: absolute;
     left: 0;
     right: 0;
-    bottom: -3px;
-    height: 3px;
+    bottom: -5px;
+    height: 2px;
     background-color: var(--typography-bluedark, #1b3641);
   }
 `,o0=v.a`
@@ -371,7 +371,7 @@ Error generating stack: `+i.message+`
     background: var(--background-white, #fcfcfc);
     box-shadow: 0px 0px 16px 0px rgba(27, 54, 65, 0.16);
   }
-`,s0=()=>{const[e,t]=ie.useState("home"),n=(r,l)=>{l.preventDefault();const i=document.getElementById(r);if(i){const o=i.getBoundingClientRect(),s=window.pageYOffset||document.documentElement.scrollTop,a=o.top+s-120;window.scrollTo({top:a,behavior:"smooth"})}};return ie.useEffect(()=>{const r=()=>{const i=["home","aboutUs","services","mentoring","projects"].find(o=>{const s=document.getElementById(o);if(s){const a=s.getBoundingClientRect();return a.top<=120&&a.bottom>=120}return!1});i&&t(i)};return window.addEventListener("scroll",r),()=>{window.removeEventListener("scroll",r)}},[]),u.jsx(r0,{children:u.jsx("div",{className:"container",children:u.jsxs(l0,{children:[u.jsx("a",{href:"#home",children:u.jsx("svg",{width:"227",height:"40",children:u.jsx("use",{href:`${B}#logo-black`})})}),u.jsxs(i0,{children:[u.jsx(An,{href:"#home",className:e==="home"?"active":"",onClick:r=>n("home",r),children:"Головна"}),u.jsx(An,{href:"#aboutUs",className:e==="aboutUs"?"active":"",onClick:r=>n("aboutUs",r),children:"Про нас"}),u.jsx(An,{href:"#services",className:e==="services"?"active":"",onClick:r=>n("services",r),children:"Послуги"}),u.jsx(An,{href:"#mentoring",className:e==="mentoring"?"active":"",onClick:r=>n("mentoring",r),children:"Менторство"}),u.jsx(An,{href:"#projects",className:e==="projects"?"active":"",onClick:r=>n("projects",r),children:"Проєкти"})]}),u.jsx(o0,{href:"#contact",children:"Контакт"})]})})})},u0="/healthy-management-project/assets/hero1x-6AVSlzud.webp",a0=v.section`
+`,s0=()=>{const[e,t]=ie.useState("home"),n=(r,l)=>{l.preventDefault();const i=document.getElementById(r);if(i){const o=i.getBoundingClientRect(),s=window.pageYOffset||document.documentElement.scrollTop,a=o.top+s-60;window.scrollTo({top:a,behavior:"smooth"}),setTimeout(()=>{l.target.blur()},1e3)}};return ie.useEffect(()=>{const r=()=>{const i=["home","aboutUs","services","mentoring","projects"].find(o=>{const s=document.getElementById(o);if(s){const a=s.getBoundingClientRect();return a.top<=120&&a.bottom>=120}return s});console.log(i),i&&(t(i),console.log(i))};return window.addEventListener("scroll",r),()=>{window.removeEventListener("scroll",r)}},[]),u.jsx(r0,{children:u.jsx("div",{className:"container",children:u.jsxs(l0,{children:[u.jsx("a",{href:"#home",children:u.jsx("svg",{width:"227",height:"40",children:u.jsx("use",{href:`${B}#logo-black`})})}),u.jsxs(i0,{children:[u.jsx(An,{href:"#home",className:e==="home"?"active":"",onClick:r=>n("home",r),children:"Головна"}),u.jsx(An,{href:"#aboutUs",className:e==="aboutUs"?"active":"",onClick:r=>n("aboutUs",r),children:"Про нас"}),u.jsx(An,{href:"#services",className:e==="services"?"active":"",onClick:r=>n("services",r),children:"Послуги"}),u.jsx(An,{href:"#mentoring",className:e==="mentoring"?"active":"",onClick:r=>n("mentoring",r),children:"Менторство"}),u.jsx(An,{href:"#projects",className:e==="projects"?"active":"",onClick:r=>n("projects",r),children:"Проєкти"})]}),u.jsx(o0,{href:"#contact",children:"Контакт"})]})})})},u0="/healthy-management-project/assets/hero1x-6AVSlzud.webp",a0=v.section`
   background-repeat: no-repeat;
   background-position: center;
   background-image: url(${u0});
