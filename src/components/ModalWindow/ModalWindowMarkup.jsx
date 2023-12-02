@@ -216,7 +216,7 @@ const ModalWindowMarkup = ({ handleClose, isModalOpen }) => {
                     </a>
                   </TitleName>
                 </NameLinkedinWrapper>
-                <ParagraphDescription>Project Manager</ParagraphDescription>
+                <ParagraphDescription>QA Engineer</ParagraphDescription>
               </TeamListItem>
             </TeamList>
           </ModalWindow>
