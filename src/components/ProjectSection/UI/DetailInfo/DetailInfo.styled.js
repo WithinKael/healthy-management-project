@@ -13,7 +13,7 @@ export const Wrapper = styled.div`
 export const Category = styled.h3`
   font-size: 24px;
   font-weight: 600;
-  line-height: calc(38 / 24);
+  line-height: calc(32 / 24);
   display: inline;
 
   padding: 4px 16px;

@@ -4,7 +4,7 @@ import { List, ListItem, Title, Icon, Comment } from "./TickList.styled";
 const TickList = ({ title, about, comment }) => {
   return (
     <>
-      <Title>{title}</Title>
+      <Title forDetail={true}>{title}</Title>
       <List>
         {about?.map((item) => (
           <ListItem key={item}>

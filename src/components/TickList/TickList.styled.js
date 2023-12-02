@@ -1,9 +1,9 @@
 import styled from "@emotion/styled";
 
 export const Title = styled.h3`
-  font-size: 20px;
+  font-size: ${(props) => (props.forDetail ? "24px" : "20px")};
   font-weight: 600;
-  line-height: calc(28 / 20);
+  line-height: calc(${(props) => (props.forDetail ? 32 / 24 : 28 / 20)});
 `;
 
 export const List = styled.ul`
