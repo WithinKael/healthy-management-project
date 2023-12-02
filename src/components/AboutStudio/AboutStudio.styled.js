@@ -1,111 +1,109 @@
-.sectionAboutStudio {
+import styled from "@emotion/styled";
+
+export const SectionAboutStudio = styled.section`
   max-width: 1920px;
   margin-left: auto;
   margin-right: auto;
   padding: 80px 120px;
-  background-color: var(--background-white);
-}
+  //   background-color: var(--background-white);
+`;
 
-.sectionAboutStudioTitle {
+export const SectionAboutStudioTitle = styled.h2`
   color: var(--typography-black, #161717);
-
-  /* desktop/h2-semibold */
   font-family: Montserrat;
   font-size: 48px;
   font-style: normal;
   font-weight: 600;
   line-height: 56px;
-  margin-bottom: 40px; /* 116.667% */
-}
+  margin-bottom: 40px;
+`;
 
-.sectionAboutStudioDiv {
+export const SectionAboutStudioDiv = styled.div`
   display: flex;
   gap: 24px;
   align-items: center;
-}
+`;
 
-.sectionAboutStudioText {
+export const SectionAboutStudioText = styled.p`
   color: var(--typography-bluedark, #1b3641);
-
-  /* desktop/h4-medium */
   font-family: Montserrat;
   font-size: 20px;
   font-style: normal;
   font-weight: 500;
   line-height: 28px;
-  width: 828px; /* 140% */
-}
+  width: 828px;
+`;
 
-.sectionAboutStudioTextVan {
+export const SectionAboutStudioTextVan = styled.p`
   color: var(--typography-bluedark, #1b3641);
-
-  /* desktop/h5-medium */
   font-family: Montserrat;
   font-size: 16px;
   font-style: normal;
   font-weight: 500;
-  line-height: 24px; /* 150% */
-}
+  line-height: 24px;
+`;
 
-.sectionAboutStudioDivTitle {
+export const SectionAboutStudioDivTitle = styled.div`
   display: flex;
   gap: 16px;
   align-items: center;
-}
+`;
 
-.van {
-  width: 828px;
-}
-
-.divSection {
+export const DivSection = styled.div`
   width: 398px;
   padding: 40px;
   border-radius: 16px;
   background: var(--background-white, #fcfcfc);
-
-  /* shadowlight-black */
   box-shadow: 0px 0px 8px 0px rgba(27, 54, 65, 0.08);
-}
+`;
 
-.sectionAboutStudioValues {
+export const SectionAboutStudioValues = styled.h4`
   color: var(--typography-bluedark, #1b3641);
-
-  /* desktop/h3-semibold */
   font-family: Montserrat;
   font-size: 24px;
   font-style: normal;
   font-weight: 600;
-  line-height: 32px; /* 133.333% */
-}
+  line-height: 32px;
+`;
 
-.divsectionOurMission {
+export const DivSectionOurMission = styled.div`
   width: 398px;
   padding: 40px;
   border-radius: 16px;
   background: var(--background-bluedark, #062136);
-
-  /* shadowlight-black */
   box-shadow: 0px 0px 8px 0px rgba(27, 54, 65, 0.08);
-}
+`;
 
-.sectionAboutStudioOurMission {
+export const SectionAboutStudioOurMission = styled.h4`
   color: var(--typography-white, #f8f8f8);
-
-  /* desktop/h3-semibold */
   font-family: Montserrat;
   font-size: 24px;
   font-style: normal;
   font-weight: 600;
-  line-height: 32px; /* 133.333% */
-}
+  line-height: 32px;
+`;
 
-.sectionAboutStudioOurMissionP {
+export const SectionAboutStudioOurMissionP = styled.p`
   color: var(--typography-white, #f8f8f8);
-
-  /* desktop/h5-medium */
   font-family: Montserrat;
   font-size: 16px;
   font-style: normal;
   font-weight: 500;
-  line-height: 24px; /* 150% */
-}
+  line-height: 24px;
+`;
+
+export const SvgIconStarBlack = styled.svg`
+  fill: var(--primary-bluedark, #1b3641);
+  border-radius: 100px;
+  background: rgba(27, 54, 65, 0.2);
+  width: 32px;
+  height: 32px;
+`;
+
+export const SvgIconStarWhite = styled.svg`
+  fill: var(--background-white, #fcfcfc);
+  border-radius: 100px;
+  background: rgba(244, 244, 246, 0.2);
+  width: 32px;
+  height: 32px;
+`;

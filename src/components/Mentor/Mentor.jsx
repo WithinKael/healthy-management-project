@@ -23,7 +23,7 @@ import {
 
 const Mentor = () => {
   return (
-    <StyledSection className="container">
+    <StyledSection id="mentoring" className="container">
       <ImgSectionWrapper>
         <div>
           <picture>

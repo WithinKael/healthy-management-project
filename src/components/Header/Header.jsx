@@ -1,79 +1,118 @@
-import { useState } from "react";
-import s from "./Hedar.module.css";
+import { useEffect, useState } from "react";
 import logo from "../../images/sprite.svg";
+import {
+  HeaderAddress,
+  Headers,
+  HeaderDiv,
+  HeaderNav,
+  HeaderNavMenu,
+} from "./Header.styled";
 
 const Header = () => {
   const [activeLink, setActiveLink] = useState("home");
-  console.log(activeLink);
+
+  // const [scrollPosition, setScrollPosition] = useState(0);
 
   const handleSetActiveLink = (link, event) => {
     event.preventDefault();
-    console.log(`Setting active link to: ${link}`);
-    setActiveLink(link);
+    // setActiveLink(link);
+
+    const section = document.getElementById(link);
+    if (section) {
+      const rect = section.getBoundingClientRect();
+      const scrollTop =
+        window.pageYOffset || document.documentElement.scrollTop;
+      const targetOffset = rect.top + scrollTop - 60;
+
+      window.scrollTo({
+        top: targetOffset,
+        behavior: "smooth",
+      });
+
+      setTimeout(() => {
+        event.target.blur();
+      }, 1000);
+    }
   };
 
+  useEffect(() => {
+    const handleScroll = () => {
+      // setScrollPosition(window.scrollY);
+
+      const sections = ["home", "aboutUs", "services", "mentoring", "projects"];
+      const currentSection = sections.find((section) => {
+        const sectionElement = document.getElementById(section);
+        if (sectionElement) {
+          // sectionElement.focus()
+          const rect = sectionElement.getBoundingClientRect();
+          return rect.top <= 120 && rect.bottom >= 120;
+        }
+        return sectionElement;
+      });
+      console.log(currentSection);
+      if (currentSection) {
+        setActiveLink(currentSection);
+        console.log(currentSection);
+      }
+    };
+
+    window.addEventListener("scroll", handleScroll);
+
+    return () => {
+      window.removeEventListener("scroll", handleScroll);
+    };
+  }, []);
+
   return (
-    <header className={`${s.header} ${s.fixedHeader}`}>
-      <div className={s.headerDiv}>
-        <a href="#home">
-          <svg width="227" height="40">
-            <use href={`${logo}#logo-black`}></use>
-          </svg>
-        </a>
-        <nav className={s.headerNav}>
-          <a
-            href="#home"
-            className={`${s.headerNavMenu} ${
-              activeLink === "home" ? s.active : ""
-            }`}
-            onClick={(e) => handleSetActiveLink("home", e)}
-          >
-            Головна
+    <Headers>
+      <div className="container">
+        <HeaderDiv>
+          <a href="#home">
+            <svg width="227" height="40">
+              <use href={`${logo}#logo-black`}></use>
+            </svg>
           </a>
-          <a
-            href="#aboutUs"
-            className={`${s.headerNavMenu} ${
-              activeLink === "aboutUs" ? s.active : ""
-            }`}
-            onClick={(e) => handleSetActiveLink("aboutUs", e)}
-          >
-            Про нас
-          </a>
-          <a
-            href="#services"
-            className={`${s.headerNavMenu} ${
-              activeLink === "services" ? s.active : ""
-            }`}
-            onClick={(e) => handleSetActiveLink("services", e)}
-          >
-            Послуги
-          </a>
-          <a
-            href="#mentoring"
-            className={`${s.headerNavMenu} ${
-              activeLink === "mentoring" ? s.active : ""
-            }`}
-            onClick={(e) => handleSetActiveLink("mentoring", e)}
-          >
-            Менторство
-          </a>
-          <a
-            href="#projects"
-            className={`${s.headerNavMenu} ${
-              activeLink === "projects" ? s.active : ""
-            }`}
-            onClick={(e) => handleSetActiveLink("projects", e)}
-          >
-            Проєкти
-          </a>
-        </nav>
-        <address>
-          <a href="#contact" className={s.headerAddress}>
-            Контакт
-          </a>
-        </address>
+          <HeaderNav>
+            <HeaderNavMenu
+              href="#home"
+              className={activeLink === "home" ? "active" : ""}
+              onClick={(e) => handleSetActiveLink("home", e)}
+            >
+              Головна
+            </HeaderNavMenu>
+            <HeaderNavMenu
+              href="#aboutUs"
+              className={activeLink === "aboutUs" ? "active" : ""}
+              onClick={(e) => handleSetActiveLink("aboutUs", e)}
+            >
+              Про нас
+            </HeaderNavMenu>
+            <HeaderNavMenu
+              href="#services"
+              className={activeLink === "services" ? "active" : ""}
+              onClick={(e) => handleSetActiveLink("services", e)}
+            >
+              Послуги
+            </HeaderNavMenu>
+            <HeaderNavMenu
+              href="#mentoring"
+              className={activeLink === "mentoring" ? "active" : ""}
+              onClick={(e) => handleSetActiveLink("mentoring", e)}
+            >
+              Менторство
+            </HeaderNavMenu>
+            <HeaderNavMenu
+              href="#projects"
+              className={activeLink === "projects" ? "active" : ""}
+              onClick={(e) => handleSetActiveLink("projects", e)}
+            >
+              Проєкти
+            </HeaderNavMenu>
+          </HeaderNav>
+          <HeaderAddress href="#contact">Контакт</HeaderAddress>
+        </HeaderDiv>
       </div>
-    </header>
+    </Headers>
   );
 };
 

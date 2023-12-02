@@ -142,7 +142,7 @@ export const StyledLi = styled.li`
     border-radius: 50%;
   }
 
-  &:first-child::before {
+  &:first-of-type::before {
     top: 26%;
   }
 `;

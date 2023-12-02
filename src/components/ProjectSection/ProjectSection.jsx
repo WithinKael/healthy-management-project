@@ -7,6 +7,7 @@ import ListItemMarkup from "./UI/ListItemMarkup/ListItemMarkup";
 const ProjectSection = () => {
   return (
     <section
+      id="projects"
       className="container"
       style={{ paddingTop: "80px", paddingBottom: "80px" }}
     >

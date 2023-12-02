@@ -1,108 +1,109 @@
-.sectionAboutMe {
+import styled from "@emotion/styled";
+
+export const SectionAboutMe = styled.section`
   max-width: 1920px;
   margin-left: auto;
   margin-right: auto;
   padding: 80px 120px;
-  background-color: var(--background-white);
-}
+`;
 
-.sectionAboutMeTitle {
+export const SectionAboutMeTitle = styled.h2`
   margin-bottom: 40px;
   color: var(--typography-bluedark, #1b3641);
-
-  /* desktop/h2-semibold */
-  font-family: Montserrat;
-  font-size: 48px;
-  font-style: normal;
-  font-weight: 600;
-  line-height: 56px; /* 116.667% */
-}
-
-.sectionAboutMeDiv {
-  display: flex;
-  gap: 24px;
-}
-
-.sectionAboutMeDivOl {
-  width: calc((100% - 24px) / 2);
-  padding: 73px;
-  border-radius: 16px;
-  background: var(--background-white, #fcfcfc);
-
-  /* shadowlight-black */
-  box-shadow: 0px 0px 8px 0px rgba(27, 54, 65, 0.08);
-}
-
-.sectionAboutMeHOl {
-  color: var(--typography-black, #161717);
-
-  /* desktop/h2-semibold */
   font-family: Montserrat;
   font-size: 48px;
   font-style: normal;
   font-weight: 600;
   line-height: 56px;
-  margin-bottom: 16px; /* 116.667% */
-}
+`;
 
-.sectionAboutMePol {
+export const SectionAboutMeDiv = styled.div`
+  display: flex;
+  gap: 24px;
+`;
+
+export const SectionAboutMeDivOl = styled.div`
+  width: calc((100% - 24px) / 2);
+  padding: 73px;
+  border-radius: 16px;
+  background: var(--background-white, #fcfcfc);
+  box-shadow: 0px 0px 8px 0px rgba(27, 54, 65, 0.08);
+`;
+
+export const SectionAboutMeHOl = styled.h3`
+  color: var(--typography-black, #161717);
+  font-family: Montserrat;
+  font-size: 48px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: 56px;
+  margin-bottom: 16px;
+`;
+
+export const SectionAboutMePol = styled.p`
   color: var(--typography-bluedark, #1b3641);
-
-  /* desktop/h3-semibold */
   font-family: Montserrat;
   font-size: 24px;
   font-style: normal;
   font-weight: 600;
-  line-height: 32px; /* 133.333% */
+  line-height: 32px;
   margin-bottom: 40px;
-}
+`;
 
-.sectionAboutMeList {
+export const SectionAboutMeList = styled.li`
   color: var(--typography-bluedark, #1b3641);
-
-  /* desktop/h5-medium */
   font-family: Montserrat;
   font-size: 16px;
   font-style: normal;
   font-weight: 500;
-  line-height: 24px; /* 150% */
-}
+  line-height: 24px;
 
-.sectionAboutMeList::before {
-  content: "\2022";
-  color: var(--typography-bluedark, #1b3641);
-  display: inline-block;
-  width: 1em;
-  margin-left: -1em;
-}
+  &::before {
+    content: "\\2022";
+    color: var(--typography-bluedark, #1b3641);
+    display: inline-block;
+    width: 1em;
+    margin-left: -1em;
+  }
+`;
 
-.sectionAboutMeAdress {
+export const SectionAboutMeAdress = styled.ul`
   margin-top: 42px;
   display: flex;
   gap: 60px;
-  justify-content: center;
+  justify-content: space-between;
   align-items: baseline;
-}
+`;
 
-.sectionAboutMeLink {
+export const SectionAboutMeLink = styled.a`
+  position: relative;
   display: flex;
   justify-content: center;
   align-items: center;
   color: var(--typography-bluedark, #1b3641);
-
-  /* desktop/h4-semibold */
   font-family: Montserrat;
   font-size: 20px;
   font-style: normal;
   font-weight: 600;
-  line-height: 28px; /* 140% */
-}
+  line-height: 28px;
+  text-decoration: none; // Убрано стандартное подчеркивание
 
-.sectionAboutMeSvg {
-  margin-left: 40px;
-}
+  &:hover::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: -5px;
+    height: 2px;
+    background-color: var(--typography-bluedark, #1b3641);
+  }
+`;
 
-.sectionAboutMeDivWidth {
+export const SectionAboutMeSvg = styled.svg`
+  margin-left: 10px;
+`;
+
+export const SectionAboutMeDivWidth = styled.div`
   width: calc((100% - 24px) / 2);
   border-radius: 16px;
-}
+`;
