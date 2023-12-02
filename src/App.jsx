@@ -11,6 +11,7 @@ import PersonalSupport from "./components/PersonalSupport/PersonalSupport";
 import ProjectSection from "./components/ProjectSection/ProjectSection";
 import WorkPrinciples from "./components/WorkPrinciples/WorkPrinciples";
 import ScrollToTop from "./components/ScrollToTop/ScrollToTop";
+import ContactsForm from "./components/ContactsForm/ContactsForm";
 
 function App() {
   return (
@@ -27,6 +28,7 @@ function App() {
         <PersonalSupport />
         <ProjectSection />
         <BusinessTools />
+        <ContactsForm />
       </main>
       <Footer />
       <ScrollToTop />
