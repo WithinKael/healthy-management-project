@@ -16,6 +16,7 @@ export const TeamBtn = styled.a`
   font-size: 16px;
   font-weight: 500;
   line-height: 1.5;
+  cursor: pointer;
   border-bottom: 1px solid rgba(244, 244, 246, 0.4);
   color: var(--system-default-10);
 `;
