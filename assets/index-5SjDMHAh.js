@@ -637,7 +637,7 @@ Error generating stack: `+o.message+`
 
   &:hover,
   &focus {
-    font-weight: 600px;
+    font-weight: 600;
     background: var(--background-white);
   }
 `,Qv=w.div`
@@ -789,7 +789,7 @@ Error generating stack: `+o.message+`
 
   &:hover,
   &:focus {
-    font-weight: 600px;
+    font-weight: 600;
   }
 `,ah=w.p`
   font-size: 24px;
