@@ -32,6 +32,7 @@ export const TitleAndIconWrapper = styled.div`
 
 export const Svg = styled.svg`
   width: 24px;
+  cursor: pointer;
 `;
 
 export const TitleH2 = styled.h2`
