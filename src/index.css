@@ -99,3 +99,14 @@ resize: none;
     padding-right: 91px;
   }
 } */
+
+/* @media screen and (min-width: 1920px){
+  .container {
+      min-width: 1920px;
+      width: 100%;
+      margin-left: auto;
+      margin-right: auto;
+      padding-left: 120px;
+      padding-right: 120px;
+    }
+} */

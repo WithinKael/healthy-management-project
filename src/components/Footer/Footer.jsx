@@ -39,11 +39,11 @@ const Footer = () => {
           isModalOpen={isModalOpen}
         />
         <NavFooter>
-          <NavFooterBtn href="">Головна</NavFooterBtn>
-          <NavFooterBtn href="">Про мене</NavFooterBtn>
-          <NavFooterBtn href="">Проєкти</NavFooterBtn>
-          <NavFooterBtn href="">Послуги</NavFooterBtn>
-          <NavFooterBtn href="">Менторство</NavFooterBtn>
+          <NavFooterBtn href="#home">Головна</NavFooterBtn>
+          <NavFooterBtn href="#aboutUs">Про нас</NavFooterBtn>
+          <NavFooterBtn href="#services">Послуги</NavFooterBtn>
+          <NavFooterBtn href="#mentoring">Менторство</NavFooterBtn>
+          <NavFooterBtn href="#projects">Проєкти</NavFooterBtn>
         </NavFooter>
         <ContactsFooter>
           <Social>

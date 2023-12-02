@@ -1,4 +1,4 @@
-// import axios from "axios";
+import axios from "axios";
 import { useEffect, useState } from "react";
 import computerJpg from "../../images/desktop/computer1x.jpg";
 import computerWebp from "../../images/desktop/computer1x.webp";
@@ -23,12 +23,12 @@ const ContactsForm = () => {
         email: "",
         phone: "",
         service: "",
-        message: "",
+        comment: "",
       },
     ];
     return parsedContacts;
   });
-  const { name, email, phone, service, message } = formData;
+  const { name, email, phone, service, comment } = formData;
   const {
     register,
     handleSubmit,
@@ -46,16 +46,19 @@ const ContactsForm = () => {
     setFormData({ ...formData, [event.target.name]: event.target.value });
   };
 
-  const onSubmit = (formData) => {
+  const onSubmit = async (formData) => {
     try {
+      await axios.post(
+        "https://healthy-management.onrender.com/api/senddata",
+        formData
+      );
       console.log(formData);
-      // const response = await axios.post("", formData);
       setFormData({
         name: "",
         email: "",
         phone: "",
         service: "",
-        message: "",
+        comment: "",
       });
       alert("Заявка відправлена!");
     } catch (error) {
@@ -134,25 +137,27 @@ const ContactsForm = () => {
                 <option value="" disabled hidden>
                   Оберіть послугу
                 </option>
-                <option value="mentorship">Менторство та консультації</option>
-                <option value="diagnostics">Діагностика</option>
-                <option value="strategies">Стратегії</option>
-                <option value="training">Навчання</option>
-                <option value="other">Інше</option>
+                <option value="Менторство та консультації">
+                  Менторство та консультації
+                </option>
+                <option value="Діагностика">Діагностика</option>
+                <option value="Стратегії">Стратегії</option>
+                <option value="Навчання">Навчання</option>
+                <option value="Інше">Інше</option>
               </select>
               {errors.service && (
                 <div style={{ color: "red" }}>{errors.service.message}</div>
               )}
               <textarea
-                name="message"
+                name="comment"
                 placeholder="Ваше повідомлення"
-                {...register("message", {
+                {...register("comment", {
                   pattern: {
                     value: /^.{0,500}$/,
                     message: "Максимальна довжина повідомлення 500 символів",
                   },
                 })}
-                value={message}
+                value={comment}
                 onChange={handleChange}
               ></textarea>
               {errors.message && (
