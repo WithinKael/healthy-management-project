@@ -61,4 +61,8 @@ export const Button = styled.button`
   box-shadow: 0px 0px 8px 0px rgba(248, 248, 248, 0.08);
   background-color: var(--background-bluedark);
   color: var(--system-default-10);
+
+  &:hover {
+    font-weight: 600;
+  }
 `;
