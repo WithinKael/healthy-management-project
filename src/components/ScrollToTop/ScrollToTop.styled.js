@@ -9,7 +9,6 @@ export const ScrollToTopButton = styled.button`
   position: fixed;
   bottom: var(--scroll-to-top-bottom);
   right: 120px;
-  transition: bottom 0.3s ease-out;
   padding: 8px;
   background-color: var(--primary-yellow);
   border: none;
