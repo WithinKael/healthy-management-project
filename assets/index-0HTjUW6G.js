@@ -338,6 +338,7 @@ Error generating stack: `+o.message+`
   margin-bottom: 40px;
 `,lv=w.svg`
   width: 24px;
+  cursor: pointer;
 `,sv=w.h2`
   font-size: 24px;
   font-weight: 600;
