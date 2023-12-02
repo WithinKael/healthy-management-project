@@ -8,7 +8,7 @@ export const Backdrop = styled.div`
   height: 100%;
   background-color: rgba(0, 0, 0, 0.5);
   overflow: hidden;
-  z-index: 900;
+  z-index: 1100;
 `;
 
 export const ModalWindow = styled.div`

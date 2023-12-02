@@ -32,7 +32,7 @@ const PersonalSupport = () => {
               Пропрацьовуємо ваші запити та досягаємо посавлених цілей
             </PersonalParagraph>
             <ProHourParagraph>від 2 місяців тісної взаємодії</ProHourParagraph>
-            <StyledOrderLink href="#">Замовити послугу</StyledOrderLink>
+            <StyledOrderLink href="#contact">Замовити послугу</StyledOrderLink>
           </PersonalWrapper>
 
           <QuestionWrapper>

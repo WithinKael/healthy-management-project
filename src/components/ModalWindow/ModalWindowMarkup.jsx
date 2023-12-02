@@ -32,11 +32,23 @@ const ModalWindowMarkup = ({ handleClose, isModalOpen }) => {
   };
 
   useEffect(() => {
+    const body = document.body;
+
+    const handleBodyOverflow = () => {
+      if (isModalOpen) {
+        body.classList.add("body-no-scroll");
+      } else {
+        body.classList.remove("body-no-scroll");
+      }
+    };
+
     const handleKeyDown = (event) => {
       if (event.code === "Escape" && isModalOpen) {
         handleClose();
       }
     };
+
+    handleBodyOverflow();
 
     window.addEventListener("keydown", handleKeyDown);
 
