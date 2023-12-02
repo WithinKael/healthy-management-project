@@ -71,7 +71,11 @@ export const Paragraph = styled.p`
   }
 `;
 
-export const StyledMentorButton = styled.button`
+export const StyledMentorButton = styled.a`
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
   font-size: 16px;
   font-weight: 500;
   line-height: 24px;
@@ -84,6 +88,12 @@ export const StyledMentorButton = styled.button`
   background-color: transparent;
   border: 1px solid var(--background-bluedark);
   box-shadow: 0px 0px 8px 0px rgba(27, 54, 65, 0.08);
+
+  &:hover,
+  &focus {
+    font-weight: 600px;
+    background: var(--background-white);
+  }
 `;
 
 export const DescriptionWrapper = styled.div`
