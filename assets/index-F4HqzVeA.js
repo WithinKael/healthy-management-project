@@ -634,6 +634,12 @@ Error generating stack: `+o.message+`
   background-color: transparent;
   border: 1px solid var(--background-bluedark);
   box-shadow: 0px 0px 8px 0px rgba(27, 54, 65, 0.08);
+
+  &:hover,
+  &focus {
+    font-weight: 600px;
+    background: var(--background-white);
+  }
 `,Qv=w.div`
   display: flex;
   gap: 40px;
@@ -780,6 +786,11 @@ Error generating stack: `+o.message+`
   border-radius: 16px;
   background-color: var(--primary-yellow);
   box-shadow: 0px 0px 8px 0px rgba(248, 248, 248, 0.08);
+
+  &:hover,
+  &:focus {
+    font-weight: 600px;
+  }
 `,ah=w.p`
   font-size: 24px;
   font-weight: 600;
