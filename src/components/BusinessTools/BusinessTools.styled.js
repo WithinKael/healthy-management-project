@@ -1,5 +1,10 @@
 import styled from "@emotion/styled";
 
+export const Section = styled.section`
+  padding-top: 80px;
+  padding-bottom: 80px;
+`;
+
 export const BusinessToolsWrapper = styled.div`
   width: 100%;
   border-radius: 16px;
