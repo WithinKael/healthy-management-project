@@ -49,7 +49,7 @@ const PersonalSupport = () => {
               </StyledPersonalListItem>
               <StyledPersonalListItem>
                 Особисті питання по медичному менеджменту, маркетингу та
-                розвитку, управління здоров´ям
+                розвитку, управління здоров&#39;ям
               </StyledPersonalListItem>
             </StyledPersonalList>
           </QuestionWrapper>
