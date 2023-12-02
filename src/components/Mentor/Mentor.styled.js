@@ -71,7 +71,11 @@ export const Paragraph = styled.p`
   }
 `;
 
-export const StyledMentorButton = styled.button`
+export const StyledMentorButton = styled.a`
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
   font-size: 16px;
   font-weight: 500;
   line-height: 24px;
