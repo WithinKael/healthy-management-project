@@ -1,9 +1,12 @@
 import s from "./ModalMobaileMenu.module.css";
 import Svg from "../../images/svgMobileHeader/symbol-defs.svg";
 import PropTypes from "prop-types";
+import { createPortal } from "react-dom";
+
+const ModalMobail = document.getElementById("modalMobail");
 
 const ModalMobaileMenu = ({ onClose }) => {
-  return (
+  return createPortal(
     <div className={s.mabileMenuContainer}>
       <div className={s.divMobileMenu}>
         <a href="#home">
@@ -27,7 +30,6 @@ const ModalMobaileMenu = ({ onClose }) => {
       <nav className={s.nav}>
         <a className={s.navMenuMobile} href="#home">
           Головна
-          {/* test */}
         </a>
         <a className={s.navMenuMobile} href="#aboutUs">
           Про нас
@@ -42,7 +44,8 @@ const ModalMobaileMenu = ({ onClose }) => {
           Проєкти
         </a>
       </nav>
-    </div>
+    </div>,
+    ModalMobail
   );
 };
 
