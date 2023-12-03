@@ -1,5 +1,6 @@
 import s from "./ModalMobaileMenu.module.css";
 import Svg from "../../images/svgMobileHeader/symbol-defs.svg";
+import PropTypes from "prop-types";
 
 const ModalMobaileMenu = ({ onClose }) => {
   return (
@@ -42,6 +43,10 @@ const ModalMobaileMenu = ({ onClose }) => {
       </nav>
     </div>
   );
+};
+
+ModalMobaileMenu.propTypes = {
+  onClose: PropTypes.func.isRequired,
 };
 
 export default ModalMobaileMenu;
