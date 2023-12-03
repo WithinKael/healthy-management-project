@@ -107,7 +107,7 @@ export const StyledOrderLink = styled.a`
 
   &:hover,
   &:focus {
-    font-weight: 600px;
+    font-weight: 600;
   }
 `;
 
