@@ -27,6 +27,7 @@ const ModalMobaileMenu = ({ onClose }) => {
       <nav className={s.nav}>
         <a className={s.navMenuMobile} href="#home">
           Головна
+          {/* test */}
         </a>
         <a className={s.navMenuMobile} href="#aboutUs">
           Про нас
