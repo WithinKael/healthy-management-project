@@ -53,7 +53,6 @@ export const HeaderNavMenu = styled.a`
 export const HeaderAddress = styled.a`
   display: flex;
   width: 260px;
-  height: 56px;
   padding: 8px 24px;
   justify-content: center;
   align-items: center;
@@ -66,28 +65,10 @@ export const HeaderAddress = styled.a`
   font-style: normal;
   font-weight: 600;
   line-height: 24px;
-  transition: background 0.5s ease, color 0.5s ease;
 
   &:hover,
   &:focus {
     background: var(--background-white, #fcfcfc);
     box-shadow: 0px 0px 16px 0px rgba(27, 54, 65, 0.16);
   }
-`;
-
-export const SvgMobileHeader = styled.svg`
-  stroke: black;
-  width: 40px;
-  height: 40px;
-`;
-
-export const ButtonMobileHeader = styled.button`
-  border: none;
-  padding: 0;
-  margin: 0;
-  text-decoration: none;
-  font-family: inherit;
-  font-size: 100%;
-  cursor: pointer;
-  background: none;
 `;

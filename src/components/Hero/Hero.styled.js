@@ -72,7 +72,6 @@ export const SectionHeroDiv = styled.div`
 export const SectionHeroLinks = styled.a`
   display: flex;
   width: 260px;
-  height: 56px;
   padding: 8px 24px;
   justify-content: center;
   align-items: center;
@@ -87,8 +86,6 @@ export const SectionHeroLinks = styled.a`
   font-style: normal;
   font-weight: 500;
   line-height: 24px;
-  transition: background 0.5s ease, color 0.5s ease;
-
   &:hover,
   &:focus {
     background: var(--primary-yellow);
