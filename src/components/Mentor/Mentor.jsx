@@ -48,7 +48,7 @@ const Mentor = () => {
               та довіру
             </Paragraph>
           </ParagraphWrapper>
-          <StyledMentorButton type="button" href="#">
+          <StyledMentorButton href="#contact">
             Дізнатися вартість
           </StyledMentorButton>
         </MentorstvoWrapper>
@@ -78,8 +78,8 @@ const Mentor = () => {
               </StyledLi>
               <StyledLi>
                 <p>
-                  Про здоров´я працівників та стратегії підвищенння ефективності
-                  бізнесу
+                  Про здоров&#39;я працівників та стратегії підвищенння
+                  ефективності бізнесу
                 </p>
               </StyledLi>
             </StyledAboutUl>
