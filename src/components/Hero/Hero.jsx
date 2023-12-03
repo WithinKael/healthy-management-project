@@ -28,7 +28,7 @@ const Hero = () => {
           <ListItem>менторство</ListItem>
         </SectionHeroTextUl>
         <SectionHeroDiv>
-          <SectionHeroLinks href="consultation">Консультація</SectionHeroLinks>
+          <SectionHeroLinks href="#contact">Консультація</SectionHeroLinks>
           <SectionHeroLinks href="services">Послуги</SectionHeroLinks>
         </SectionHeroDiv>
       </div>

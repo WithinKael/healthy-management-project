@@ -14,9 +14,7 @@ import {
 import { useMediaQuery } from "react-responsive";
 import ModalMobaileMenu from "../ModalMobaileMenu/ModalMobaileMenu";
 
-
 const Header = ({ handleSetActiveLink }) => {
-
   const [activeLink, setActiveLink] = useState("home");
   const [shownModal, setShownModal] = useState(false);
 
@@ -28,46 +26,24 @@ const Header = ({ handleSetActiveLink }) => {
     setShownModal(!shownModal);
   };
 
-  // const [scrollPosition, setScrollPosition] = useState(0);
-
-  // const handleSetActiveLink = (link, event) => {
-  //   event.preventDefault();
-  //   // setActiveLink(link);
-
-  //   const section = document.getElementById(link);
-  //   if (section) {
-  //     const rect = section.getBoundingClientRect();
-  //     const scrollTop =
-  //       window.pageYOffset || document.documentElement.scrollTop;
-  //     const targetOffset = rect.top + scrollTop - 60;
-
-
-  //     window.scrollTo({
-  //       top: targetOffset,
-  //       behavior: "smooth",
-  //     });
-
-  //     setTimeout(() => {
-  //       event.target.blur();
-  //     }, 1000);
-  //   }
-  // };
-
   useEffect(() => {
     const handleScroll = () => {
-      // setScrollPosition(window.scrollY);
-
-      const sections = ["home", "aboutUs", "services", "mentoring", "projects"];
+      const sections = [
+        "home",
+        "aboutUs",
+        "services",
+        "mentoring",
+        "projects",
+        "contact",
+      ];
       const currentSection = sections.find((section) => {
         const sectionElement = document.getElementById(section);
         if (sectionElement) {
-          // sectionElement.focus()
           const rect = sectionElement.getBoundingClientRect();
           return rect.top <= 120 && rect.bottom >= 120;
         }
         return sectionElement;
       });
-      console.log(currentSection);
       if (currentSection) {
         setActiveLink(currentSection);
       }
@@ -137,7 +113,13 @@ const Header = ({ handleSetActiveLink }) => {
               </HeaderNavMenu>
             </HeaderNav>
           )}
-          <HeaderAddress href="#contact">Контакт</HeaderAddress>
+          <HeaderAddress
+            href="#contact"
+            className={activeLink === "contact" ? "active" : ""}
+            onClick={(e) => handleSetActiveLink("contact", e)}
+          >
+            Контакт
+          </HeaderAddress>
           {isMobail && (
             <ButtonMobileHeader type="button" onClick={() => onModal()}>
               <SvgMobileHeader>
