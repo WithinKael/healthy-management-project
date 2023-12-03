@@ -19,6 +19,10 @@
   --typography-white: #f8f8f8;
 }
 
+.body-no-scroll {
+  overflow: hidden;
+}
+
 * {
   box-sizing: border-box;
 }
@@ -30,6 +34,7 @@ html {
 body {
   font-family: "Montserrat", sans-serif;
   background-color: var(--background-whitegrey);
+
 }
 
 img {
@@ -78,6 +83,10 @@ b {
   font-weight: 600;
 }
 
+textarea {
+resize: none;
+}
+
 /* @media screen and (min-width: 768px) {
   .container {
     width: 100%;
@@ -94,4 +103,15 @@ b {
     padding-left: 91px;
     padding-right: 91px;
   }
+} */
+
+/* @media screen and (min-width: 1920px){
+  .container {
+      min-width: 1920px;
+      width: 100%;
+      margin-left: auto;
+      margin-right: auto;
+      padding-left: 120px;
+      padding-right: 120px;
+    }
 } */

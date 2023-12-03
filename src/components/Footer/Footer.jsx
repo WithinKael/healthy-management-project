@@ -1,4 +1,6 @@
+import { useState } from "react";
 import sprite from "../../images/icon-footer.svg";
+
 import {
   ContactsFooter,
   FooterBg,
@@ -12,21 +14,36 @@ import {
   TeamBtn,
   TelEmail,
 } from "./Footer.styled";
+import ModalWindowMarkup from "../ModalWindow/ModalWindowMarkup";
 
 const Footer = () => {
+  const [isModalOpen, setIsModalOpen] = useState(false);
+
+  const handleOpenModal = () => {
+    setIsModalOpen(true);
+  };
+
+  const handleCloseModal = () => {
+    setIsModalOpen(false);
+  };
+
   return (
     <FooterBg id="footer">
       <FooterContainer className="container">
         <svg width="227" height="40">
           <use href={`${sprite}#logo-white`} />
         </svg>
-        <TeamBtn href="">created by GoIT students</TeamBtn>
+        <TeamBtn onClick={handleOpenModal}>created by GoIT students</TeamBtn>
+        <ModalWindowMarkup
+          handleClose={handleCloseModal}
+          isModalOpen={isModalOpen}
+        />
         <NavFooter>
-          <NavFooterBtn href="">Головна</NavFooterBtn>
-          <NavFooterBtn href="">Про мене</NavFooterBtn>
-          <NavFooterBtn href="">Проєкти</NavFooterBtn>
-          <NavFooterBtn href="">Послуги</NavFooterBtn>
-          <NavFooterBtn href="">Менторство</NavFooterBtn>
+          <NavFooterBtn href="#home">Головна</NavFooterBtn>
+          <NavFooterBtn href="#aboutUs">Про нас</NavFooterBtn>
+          <NavFooterBtn href="#services">Послуги</NavFooterBtn>
+          <NavFooterBtn href="#mentoring">Менторство</NavFooterBtn>
+          <NavFooterBtn href="#projects">Проєкти</NavFooterBtn>
         </NavFooter>
         <ContactsFooter>
           <Social>

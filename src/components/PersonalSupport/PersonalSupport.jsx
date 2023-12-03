@@ -32,7 +32,7 @@ const PersonalSupport = () => {
               Пропрацьовуємо ваші запити та досягаємо посавлених цілей
             </PersonalParagraph>
             <ProHourParagraph>від 2 місяців тісної взаємодії</ProHourParagraph>
-            <StyledOrderLink href="#">Замовити послугу</StyledOrderLink>
+            <StyledOrderLink href="#contact">Замовити послугу</StyledOrderLink>
           </PersonalWrapper>
 
           <QuestionWrapper>
@@ -49,7 +49,7 @@ const PersonalSupport = () => {
               </StyledPersonalListItem>
               <StyledPersonalListItem>
                 Особисті питання по медичному менеджменту, маркетингу та
-                розвитку, управління здоров´ям
+                розвитку, управління здоров&#39;ям
               </StyledPersonalListItem>
             </StyledPersonalList>
           </QuestionWrapper>

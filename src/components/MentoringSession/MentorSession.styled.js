@@ -104,6 +104,11 @@ export const StyledOrderLink = styled.a`
   border-radius: 16px;
   background-color: var(--primary-yellow);
   box-shadow: 0px 0px 8px 0px rgba(248, 248, 248, 0.08);
+
+  &:hover,
+  &:focus {
+    font-weight: 600;
+  }
 `;
 
 export const StyledSessionParagraph = styled.p`

@@ -3,12 +3,13 @@ import {
   BusinessToolsWrapper,
   ItemTools,
   ListTools,
+  Section,
 } from "./BusinessTools.styled";
 import { data } from "./data";
 
 const BusinessTools = () => {
   return (
-    <section className="container">
+    <Section className="container">
       <BusinessToolsWrapper>
         <BusinessToolsTitle>
           Бізнес <span>інструменти</span>, які використувуємо в партнерстві
@@ -19,7 +20,7 @@ const BusinessTools = () => {
           })}
         </ListTools>
       </BusinessToolsWrapper>
-    </section>
+    </Section>
   );
 };
 
