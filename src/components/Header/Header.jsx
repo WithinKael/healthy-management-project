@@ -28,27 +28,27 @@ const Header = () => {
 
   // const [scrollPosition, setScrollPosition] = useState(0);
 
-  // const handleSetActiveLink = (link, event) => {
-  //   event.preventDefault();
-  //   // setActiveLink(link);
+  const handleSetActiveLink = (link, event) => {
+    event.preventDefault();
+    // setActiveLink(link);
 
-  //   const section = document.getElementById(link);
-  //   if (section) {
-  //     const rect = section.getBoundingClientRect();
-  //     const scrollTop =
-  //       window.pageYOffset || document.documentElement.scrollTop;
-  //     const targetOffset = rect.top + scrollTop - 70;
+    const section = document.getElementById(link);
+    if (section) {
+      const rect = section.getBoundingClientRect();
+      const scrollTop =
+        window.pageYOffset || document.documentElement.scrollTop;
+      const targetOffset = rect.top + scrollTop - 70;
 
-  //     window.scrollTo({
-  //       top: targetOffset,
-  //       behavior: "smooth",
-  //     });
+      window.scrollTo({
+        top: targetOffset,
+        behavior: "smooth",
+      });
 
-  //     setTimeout(() => {
-  //       event.target.blur();
-  //     }, 1000);
-  //   }
-  // };
+      setTimeout(() => {
+        event.target.blur();
+      }, 1000);
+    }
+  };
 
   useEffect(() => {
     const handleScroll = () => {
@@ -100,35 +100,35 @@ const Header = () => {
               <HeaderNavMenu
                 href="#home"
                 className={activeLink === "home" ? "active" : ""}
-                // onClick={(e) => handleSetActiveLink("home", e)}
+                onClick={(e) => handleSetActiveLink("home", e)}
               >
                 Головна
               </HeaderNavMenu>
               <HeaderNavMenu
                 href="#aboutUs"
                 className={activeLink === "aboutUs" ? "active" : ""}
-                // onClick={(e) => handleSetActiveLink("aboutUs", e)}
+                onClick={(e) => handleSetActiveLink("aboutUs", e)}
               >
                 Про нас
               </HeaderNavMenu>
               <HeaderNavMenu
                 href="#services"
                 className={activeLink === "services" ? "active" : ""}
-                // onClick={(e) => handleSetActiveLink("services", e)}
+                onClick={(e) => handleSetActiveLink("services", e)}
               >
                 Послуги
               </HeaderNavMenu>
               <HeaderNavMenu
                 href="#mentoring"
                 className={activeLink === "mentoring" ? "active" : ""}
-                // onClick={(e) => handleSetActiveLink("mentoring", e)}
+                onClick={(e) => handleSetActiveLink("mentoring", e)}
               >
                 Менторство
               </HeaderNavMenu>
               <HeaderNavMenu
                 href="#projects"
                 className={activeLink === "projects" ? "active" : ""}
-                // onClick={(e) => handleSetActiveLink("projects", e)}
+                onClick={(e) => handleSetActiveLink("projects", e)}
               >
                 Проєкти
               </HeaderNavMenu>
