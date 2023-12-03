@@ -168,9 +168,9 @@ const ModalWindowMarkup = ({ handleClose, isModalOpen }) => {
                 <NameLinkedinWrapper>
                   <img src={valentynWebp} alt="Валентин Гавриленко" />
                   <TitleName>
-                    Frontend Developer
+                    Валентин Гавриленко
                     <a
-                      href="https://www.linkedin.com/in/viktoriia-moryc-61610962/"
+                      href="https://www.linkedin.com/in/valentyn-havrylenko/"
                       target="_blank"
                       rel="noopener noreferrer"
                     >
