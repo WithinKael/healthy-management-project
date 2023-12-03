@@ -14,9 +14,30 @@ import ScrollToTop from "./components/ScrollToTop/ScrollToTop";
 import ContactsForm from "./components/ContactsForm/ContactsForm";
 
 function App() {
+  const handleSetActiveLink = (link, event) => {
+    event.preventDefault();
+
+    const section = document.getElementById(link);
+    if (section) {
+      const rect = section.getBoundingClientRect();
+      const scrollTop =
+        window.pageYOffset || document.documentElement.scrollTop;
+      const targetOffset = rect.top + scrollTop - 60;
+
+      window.scrollTo({
+        top: targetOffset,
+        behavior: "smooth",
+      });
+
+      setTimeout(() => {
+        event.target.blur();
+      }, 1000);
+    }
+  };
+
   return (
     <>
-      <Header />
+      <Header handleSetActiveLink={handleSetActiveLink} />
       <main>
         <Hero />
         <AboutStudio />
@@ -30,7 +51,7 @@ function App() {
         <BusinessTools />
         <ContactsForm />
       </main>
-      <Footer />
+      <Footer handleSetActiveLink={handleSetActiveLink} />
       <ScrollToTop />
     </>
   );

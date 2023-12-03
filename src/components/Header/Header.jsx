@@ -1,4 +1,5 @@
 import { useEffect, useState } from "react";
+import PropTypes from "prop-types";
 import logo from "../../images/sprite.svg";
 import {
   HeaderAddress,
@@ -8,32 +9,32 @@ import {
   HeaderNavMenu,
 } from "./Header.styled";
 
-const Header = () => {
+const Header = ({ handleSetActiveLink }) => {
   const [activeLink, setActiveLink] = useState("home");
 
   // const [scrollPosition, setScrollPosition] = useState(0);
 
-  const handleSetActiveLink = (link, event) => {
-    event.preventDefault();
-    // setActiveLink(link);
+  // const handleSetActiveLink = (link, event) => {
+  //   event.preventDefault();
+  //   // setActiveLink(link);
 
-    const section = document.getElementById(link);
-    if (section) {
-      const rect = section.getBoundingClientRect();
-      const scrollTop =
-        window.pageYOffset || document.documentElement.scrollTop;
-      const targetOffset = rect.top + scrollTop - 60;
+  //   const section = document.getElementById(link);
+  //   if (section) {
+  //     const rect = section.getBoundingClientRect();
+  //     const scrollTop =
+  //       window.pageYOffset || document.documentElement.scrollTop;
+  //     const targetOffset = rect.top + scrollTop - 60;
 
-      window.scrollTo({
-        top: targetOffset,
-        behavior: "smooth",
-      });
+  //     window.scrollTo({
+  //       top: targetOffset,
+  //       behavior: "smooth",
+  //     });
 
-      setTimeout(() => {
-        event.target.blur();
-      }, 1000);
-    }
-  };
+  //     setTimeout(() => {
+  //       event.target.blur();
+  //     }, 1000);
+  //   }
+  // };
 
   useEffect(() => {
     const handleScroll = () => {
@@ -114,6 +115,10 @@ const Header = () => {
       </div>
     </Headers>
   );
+};
+
+Header.propTypes = {
+  handleSetActiveLink: PropTypes.func.isRequired,
 };
 
 export default Header;
