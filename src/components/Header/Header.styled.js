@@ -70,7 +70,7 @@ export const HeaderNavMenu = styled.a`
 
 export const HeaderAddress = styled.a`
   display: flex;
-  max-width: 156px;
+  min-width: 156px;
   height: 48px;
   padding: 8px 24px;
   justify-content: center;
@@ -95,7 +95,7 @@ export const HeaderAddress = styled.a`
 
   @media screen and (min-width: 768px) {
     display: flex;
-    max-width: 260px;
+    min-width: 260px;
     height: 56px;
     padding: 8px 24px;
     justify-content: center;

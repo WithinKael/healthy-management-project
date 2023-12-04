@@ -22,7 +22,15 @@ function App() {
       const rect = section.getBoundingClientRect();
       const scrollTop =
         window.pageYOffset || document.documentElement.scrollTop;
-      const targetOffset = rect.top + scrollTop - 60;
+
+      let targetOffset;
+      const screenWidth = window.innerWidth;
+
+      if (screenWidth <= 375) {
+        targetOffset = rect.top + scrollTop - 80;
+      } else {
+        targetOffset = rect.top + scrollTop - 60;
+      }
 
       window.scrollTo({
         top: targetOffset,

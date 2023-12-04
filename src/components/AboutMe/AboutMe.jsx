@@ -41,16 +41,16 @@ const AboutMe = () => {
 
               <source
                 srcSet={`${OlgaMobWebp}`}
-                media="(max-width: 375px)"
+                media="(min-width: 375px)"
                 type="image/webp"
               />
 
               <source
                 srcSet={`${OlgaMob2x} 2x, ${OlgaMob1x} 1x`}
-                media="(max-width: 375px)"
+                media="(min-width: 375px)"
                 type="image/png"
               />
-              <img src={Fotos} alt="Ольга Поліщук" />
+              <img src={Fotos} alt="Ольга Поліщук" width={"828px"} />
             </picture>
           </SectionAboutMeDivWidth>
           <SectionAboutMeDivOl>

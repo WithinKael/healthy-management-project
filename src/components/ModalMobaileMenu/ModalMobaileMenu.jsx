@@ -5,7 +5,7 @@ import { createPortal } from "react-dom";
 
 const ModalMobail = document.getElementById("modalMobail");
 
-const ModalMobaileMenu = ({ onClose }) => {
+const ModalMobaileMenu = ({ onClose, handleSetActiveLink }) => {
   return createPortal(
     <div className={s.mabileMenuContainer}>
       <div className={s.divMobileMenu}>
@@ -28,19 +28,54 @@ const ModalMobaileMenu = ({ onClose }) => {
         </button>
       </div>
       <nav className={s.nav}>
-        <a className={s.navMenuMobile} href="#home">
+        <a
+          className={s.navMenuMobile}
+          href="#home"
+          onClick={(e) => {
+            onClose();
+            handleSetActiveLink("home", e);
+          }}
+        >
           Головна
         </a>
-        <a className={s.navMenuMobile} href="#aboutUs">
+        <a
+          className={s.navMenuMobile}
+          href="#aboutUs"
+          onClick={(e) => {
+            onClose();
+            handleSetActiveLink("aboutUs", e);
+          }}
+        >
           Про нас
         </a>
-        <a className={s.navMenuMobile} href="#services">
+        <a
+          className={s.navMenuMobile}
+          href="#services"
+          onClick={(e) => {
+            onClose();
+            handleSetActiveLink("aboutUs", e);
+          }}
+        >
           Послуги
         </a>
-        <a className={s.navMenuMobile} href="#mentoring">
+        <a
+          className={s.navMenuMobile}
+          href="#mentoring"
+          onClick={(e) => {
+            onClose();
+            handleSetActiveLink("mentoring", e);
+          }}
+        >
           Менторство
         </a>
-        <a className={s.navMenuMobile} href="#projects">
+        <a
+          className={s.navMenuMobile}
+          href="#projects"
+          onClick={(e) => {
+            onClose();
+            handleSetActiveLink("projects", e);
+          }}
+        >
           Проєкти
         </a>
       </nav>
