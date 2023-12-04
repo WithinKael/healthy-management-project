@@ -11,7 +11,7 @@ import {
 const TickList = ({ title, about, comment, additionalComment = false }) => {
   return (
     <Wrapper>
-      <Title forDetail={true}>{title}</Title>
+      <Title forDetail={additionalComment}>{title}</Title>
       <List>
         {about?.map((item) => (
           <ListItem key={item}>

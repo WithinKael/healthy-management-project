@@ -6,9 +6,9 @@ export const Wrapper = styled.div`
 `;
 
 export const Title = styled.h4`
-  font-size: ${(props) => (props.forDetail ? "16px" : "12px")};
+  font-size: ${(props) => (props.forDetail ? "18px" : "16px")};
   font-weight: 600;
-  line-height: calc(${(props) => (props.forDetail ? 24 / 16 : 24 / 16)});
+  line-height: calc(${(props) => (props.forDetail ? 24 / 18 : 24 / 16)});
 
   @media screen and (min-width: 768px) {
     font-size: ${(props) => (props.forDetail ? "24px" : "20px")};
@@ -41,11 +41,18 @@ export const ListItem = styled.li`
 `;
 
 export const Comment = styled.p`
-  font-size: ${(props) => (props.additionalComment ? "16px" : "20px")};
+  font-size: ${(props) => (props.additionalComment ? "14px" : "16px")};
   font-weight: ${(props) => (props.additionalComment ? 500 : 600)};
   line-height: calc(
-    ${(props) => (props.additionalComment ? 24 / 16 : 28 / 20)}
+    ${(props) => (props.additionalComment ? 18 / 14 : 24 / 16)}
   );
+  @media screen and (min-width: 768px) {
+    font-size: ${(props) => (props.additionalComment ? "16px" : "20px")};
+    font-weight: ${(props) => (props.additionalComment ? 500 : 600)};
+    line-height: calc(
+      ${(props) => (props.additionalComment ? 24 / 16 : 28 / 20)}
+    );
+  }
 `;
 
 export const Icon = styled.svg`

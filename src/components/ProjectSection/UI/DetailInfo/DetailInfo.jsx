@@ -5,7 +5,7 @@ const DetailInfo = ({ dataList: { details, category } }) => {
   return (
     <Wrapper>
       <div>
-        <Category>{category}</Category>
+        <Category symbols={category.length}>{category}</Category>
       </div>
       {details.map((item, id) => (
         <TickList
