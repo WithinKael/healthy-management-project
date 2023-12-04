@@ -6,10 +6,22 @@ export const Headers = styled.header`
   left: 0;
   width: 100%;
   z-index: 1000;
-  padding-top: 40px;
-  padding-bottom: 40px;
+  padding-top: 32px;
+  padding-bottom: 32px;
   border-bottom: 1px solid var(--system-default-20, #dedede);
   background-color: var(--system-default-10);
+
+  @media screen and (min-width: 768px) {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 1000;
+    padding-top: 40px;
+    padding-bottom: 40px;
+    border-bottom: 1px solid var(--system-default-20, #dedede);
+    background-color: var(--system-default-10);
+  }
 `;
 
 export const HeaderDiv = styled.div`
@@ -19,6 +31,12 @@ export const HeaderDiv = styled.div`
   display: flex;
   justify-content: space-between;
   align-items: center;
+
+  @media screen and (min-width: 768px) {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
 `;
 
 export const HeaderNav = styled.nav`
@@ -52,15 +70,16 @@ export const HeaderNavMenu = styled.a`
 
 export const HeaderAddress = styled.a`
   display: flex;
-  width: 260px;
-  height: 56px;
+  max-width: 156px;
+  height: 48px;
   padding: 8px 24px;
   justify-content: center;
   align-items: center;
+  background: var(--primary-bluedark);
   border-radius: 16px;
   border: 1px solid var(--primary-bluedark, #1b3641);
   box-shadow: 0px 0px 8px 0px rgba(27, 54, 65, 0.08);
-  color: var(--typography-bluedark, #1b3641);
+  color: var(--system-default-10);
   font-family: Montserrat;
   font-size: 16px;
   font-style: normal;
@@ -72,6 +91,32 @@ export const HeaderAddress = styled.a`
   &:focus {
     background: var(--background-white, #fcfcfc);
     box-shadow: 0px 0px 16px 0px rgba(27, 54, 65, 0.16);
+  }
+
+  @media screen and (min-width: 768px) {
+    display: flex;
+    max-width: 260px;
+    height: 56px;
+    padding: 8px 24px;
+    justify-content: center;
+    align-items: center;
+    background: var(--background-white);
+    border-radius: 16px;
+    border: 1px solid var(--primary-bluedark, #1b3641);
+    box-shadow: 0px 0px 8px 0px rgba(27, 54, 65, 0.08);
+    color: var(--typography-bluedark, #1b3641);
+    font-family: Montserrat;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: 24px;
+    transition: background 0.5s ease, color 0.5s ease;
+
+    &:hover,
+    &:focus {
+      background: var(--background-white, #fcfcfc);
+      box-shadow: 0px 0px 16px 0px rgba(27, 54, 65, 0.16);
+    }
   }
 `;
 
