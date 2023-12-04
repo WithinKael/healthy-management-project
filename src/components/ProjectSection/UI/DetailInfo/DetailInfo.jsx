@@ -7,12 +7,13 @@ const DetailInfo = ({ dataList: { details, category } }) => {
       <div>
         <Category>{category}</Category>
       </div>
-      {details.map((item) => (
+      {details.map((item, id) => (
         <TickList
           key={item.title}
           title={item.title}
           about={item.about}
           comment={item.comment}
+          additionalComment={id === 0}
         />
       ))}
     </Wrapper>

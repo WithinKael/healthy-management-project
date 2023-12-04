@@ -27,9 +27,11 @@ export const ListItem = styled.li`
 `;
 
 export const Comment = styled.p`
-  font-size: 20px;
-  font-weight: 600;
-  line-height: calc(28 / 20);
+  font-size: ${(props) => (props.additionalComment ? "16px" : "20px")};
+  font-weight: ${(props) => (props.additionalComment ? 500 : 600)};
+  line-height: calc(
+    ${(props) => (props.additionalComment ? 24 / 16 : 28 / 20)}
+  );
 `;
 
 export const Icon = styled.svg`
