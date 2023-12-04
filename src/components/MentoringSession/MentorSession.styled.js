@@ -85,6 +85,7 @@ export const StyledParagraph = styled.p`
 
   @media screen and (min-width: 1920px) {
     justify-content: center;
+    width: 100%;
     font-size: 20px;
     line-height: 1.4;
     top: 50%;
