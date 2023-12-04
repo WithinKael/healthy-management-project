@@ -15,7 +15,9 @@ import { useState } from "react";
 const ProjectSection = () => {
   const screenWidth = useScreenWidth();
 
-  const [projectList, setProjectList] = useState([...data.slice(0, 3)]);
+  const [projectList, setProjectList] = useState(
+    screenWidth === "mobile" ? [...data.slice(0, 3)] : [...data]
+  );
   const handleListChange = () => {
     if (projectList.length > 4) {
       setProjectList((prev) => prev.slice(0, 3));

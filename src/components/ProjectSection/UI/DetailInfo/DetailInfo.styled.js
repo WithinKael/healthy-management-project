@@ -27,3 +27,15 @@ export const Category = styled.h3`
     display: inline;
   }
 `;
+
+export const Icon = styled.svg`
+  fill: currentColor;
+  stroke: currentColor;
+
+  width: 24px;
+  height: 24px;
+
+  position: absolute;
+  right: 28px;
+  top: 28px;
+`;
