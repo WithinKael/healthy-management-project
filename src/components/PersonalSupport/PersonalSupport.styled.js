@@ -2,18 +2,31 @@ import styled from "@emotion/styled";
 
 export const ArrowPersonalWrapper = styled.div`
   display: flex;
-  justify-content: space-between;
-  gap: 24px;
+  flex-direction: column;
+
+  @media screen and (min-width: 1920px) {
+    justify-content: space-between;
+    gap: 24px;
+  }
 `;
 
 export const StyledPersonalArrowSvg = styled.svg`
-  width: 285px;
-  height: 80px;
+  width: 260px;
+  height: 60px;
+
+  @media screen and (min-width: 1920px) {
+    width: 285px;
+    height: 80px;
+  }
 `;
 
 export const StyledPersonalContainer = styled.div`
   position: relative;
-  min-width: 285px;
+  height: 60px;
+
+  @media screen and (min-width: 1920px) {
+    min-width: 285px;
+  }
 `;
 
 export const PersonalSectionWrapper = styled.div`

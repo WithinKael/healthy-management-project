@@ -1,6 +1,9 @@
 import mentorPhoto1 from "../../images/desktop/pic_mentorstvo1x.jpg";
 import mentorPhoto2 from "../../images/desktop/pic_mentorstvo1x.webp";
 import mentorPhoto2x from "../../images/desktop/pic_mentorstvo2x.jpg";
+import mentorPhotoMobWebp from "../../images/mobile/mob_mentor1x.webp";
+import mentorPhotoMob2x from "../../images/mobile/mob_mentor@2x.jpg";
+
 import {
   AboutWrapper,
   DescriptionWrapper,
@@ -31,8 +34,12 @@ const Mentor = () => {
               media="(min-width: 1920px)"
               srcSet={`${mentorPhoto2} 1x, ${mentorPhoto2x} 2x`}
             />
-            <Img src={mentorPhoto1} />
+            <source
+              media="(min-width: 375px)"
+              srcSet={`${mentorPhotoMobWebp} 1x, ${mentorPhotoMob2x} 2x`}
+            />
           </picture>
+          <Img src={mentorPhoto1} alt="Ольга Поліщук" />
         </div>
         <MentorstvoWrapper>
           <TitleH2>Менторство</TitleH2>
