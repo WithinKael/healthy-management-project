@@ -43,7 +43,10 @@ const ContactsForm = () => {
   }, [formData]);
 
   const handleChange = (event) => {
-    setFormData({ ...formData, [event.target.name]: event.target.value });
+    setFormData({
+      ...formData,
+      [event.target.name]: event.target.value,
+    });
   };
 
   const onSubmit = async (formData) => {
@@ -86,7 +89,11 @@ const ContactsForm = () => {
                 placeholder="Ім'я"
                 {...register("name", {
                   required: "Це поле обов'язкове для заповнення",
-                  pattern: /^[a-zA-Zа-яА-ЯґҐєЄіІїЇ'-]{1,64}$/,
+                  pattern: {
+                    value:
+                      /^(?:[a-zA-Zа-яА-ЯґҐєЄіІїЇ'-]{1,32}(?:\s+[a-zA-Zа-яА-ЯґҐєЄіІїЇ'-]{1,32})?|[a-zA-Zа-яА-ЯґҐєЄіІїЇ'-]{1,64})$/,
+                    message: "Поле повинно містити одне або два слова",
+                  },
                 })}
                 value={name}
                 onChange={handleChange}
@@ -100,8 +107,8 @@ const ContactsForm = () => {
                 {...register("email", {
                   required: "Це поле обов'язкове для заповнення",
                   pattern: {
-                    value: /^\w+([.-]?\w+)@\w+([.-]?\w+)(.\w{2,3})+$/,
-                    message: "Введіть коректне емейл",
+                    value: /[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,4}$/,
+                    message: "Введіть коректний емейл",
                   },
                 })}
                 value={email}
@@ -127,7 +134,6 @@ const ContactsForm = () => {
                 <div style={{ color: "red" }}>{errors.phone.message}</div>
               )}
               <select
-                placeholder="Оберіть послугу"
                 {...register("service", {
                   required: "Оберіть послугу",
                 })}
