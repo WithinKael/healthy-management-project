@@ -1,4 +1,4 @@
-// import axios from "axios";
+import axios from "axios";
 import { useEffect, useState } from "react";
 import computerJpg from "../../images/desktop/computer1x.jpg";
 import computerWebp from "../../images/desktop/computer1x.webp";
@@ -23,12 +23,12 @@ const ContactsForm = () => {
         email: "",
         phone: "",
         service: "",
-        message: "",
+        comment: "",
       },
     ];
     return parsedContacts;
   });
-  const { name, email, phone, service, message } = formData;
+  const { name, email, phone, service, comment } = formData;
   const {
     register,
     handleSubmit,
@@ -43,19 +43,25 @@ const ContactsForm = () => {
   }, [formData]);
 
   const handleChange = (event) => {
-    setFormData({ ...formData, [event.target.name]: event.target.value });
+    setFormData({
+      ...formData,
+      [event.target.name]: event.target.value,
+    });
   };
 
-  const onSubmit = (formData) => {
+  const onSubmit = async (formData) => {
     try {
+      await axios.post(
+        "https://healthy-management.onrender.com/api/senddata",
+        formData
+      );
       console.log(formData);
-      // const response = await axios.post("", formData);
       setFormData({
         name: "",
         email: "",
         phone: "",
         service: "",
-        message: "",
+        comment: "",
       });
       alert("Заявка відправлена!");
     } catch (error) {
@@ -83,7 +89,11 @@ const ContactsForm = () => {
                 placeholder="Ім'я"
                 {...register("name", {
                   required: "Це поле обов'язкове для заповнення",
-                  pattern: /^[a-zA-Zа-яА-ЯґҐєЄіІїЇ'-]{1,64}$/,
+                  pattern: {
+                    value:
+                      /^(?:[a-zA-Zа-яА-ЯґҐєЄіІїЇ'-]{1,32}(?:\s+[a-zA-Zа-яА-ЯґҐєЄіІїЇ'-]{1,32})?|[a-zA-Zа-яА-ЯґҐєЄіІїЇ'-]{1,64})$/,
+                    message: "Поле повинно містити одне або два слова",
+                  },
                 })}
                 value={name}
                 onChange={handleChange}
@@ -97,8 +107,8 @@ const ContactsForm = () => {
                 {...register("email", {
                   required: "Це поле обов'язкове для заповнення",
                   pattern: {
-                    value: /^\w+([.-]?\w+)@\w+([.-]?\w+)(.\w{2,3})+$/,
-                    message: "Введіть коректне емейл",
+                    value: /[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,4}$/,
+                    message: "Введіть коректний емейл",
                   },
                 })}
                 value={email}
@@ -124,7 +134,6 @@ const ContactsForm = () => {
                 <div style={{ color: "red" }}>{errors.phone.message}</div>
               )}
               <select
-                placeholder="Оберіть послугу"
                 {...register("service", {
                   required: "Оберіть послугу",
                 })}
@@ -134,25 +143,27 @@ const ContactsForm = () => {
                 <option value="" disabled hidden>
                   Оберіть послугу
                 </option>
-                <option value="mentorship">Менторство та консультації</option>
-                <option value="diagnostics">Діагностика</option>
-                <option value="strategies">Стратегії</option>
-                <option value="training">Навчання</option>
-                <option value="other">Інше</option>
+                <option value="Менторство та консультації">
+                  Менторство та консультації
+                </option>
+                <option value="Діагностика">Діагностика</option>
+                <option value="Стратегії">Стратегії</option>
+                <option value="Навчання">Навчання</option>
+                <option value="Інше">Інше</option>
               </select>
               {errors.service && (
                 <div style={{ color: "red" }}>{errors.service.message}</div>
               )}
               <textarea
-                name="message"
+                name="comment"
                 placeholder="Ваше повідомлення"
-                {...register("message", {
+                {...register("comment", {
                   pattern: {
                     value: /^.{0,500}$/,
                     message: "Максимальна довжина повідомлення 500 символів",
                   },
                 })}
-                value={message}
+                value={comment}
                 onChange={handleChange}
               ></textarea>
               {errors.message && (

@@ -29,7 +29,7 @@ const MentoringSession = () => {
               Вирішення вашого індивідуального запиту
             </PersonalParagraph>
             <ProHourParagraph>від 1 години</ProHourParagraph>
-            <StyledOrderLink href="#">Замовити послугу</StyledOrderLink>
+            <StyledOrderLink href="#contact">Замовити послугу</StyledOrderLink>
           </PersonalWrapper>
 
           <QuestionWrapper>
@@ -56,8 +56,8 @@ const MentoringSession = () => {
               </StyledPersonalListItem>
               <StyledPersonalListItem>
                 Особисте питання по менеджменту та розвитку з питань управління{" "}
-                <br />
-                здоров´ям
+                {/* <br /> */}
+                здоров&#39;ям
               </StyledPersonalListItem>
             </StyledPersonalList>
           </QuestionWrapper>

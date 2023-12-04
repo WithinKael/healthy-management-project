@@ -1,3 +1,4 @@
+import PropTypes from "prop-types";
 import { useState } from "react";
 import sprite from "../../images/icon-footer.svg";
 
@@ -16,7 +17,7 @@ import {
 } from "./Footer.styled";
 import ModalWindowMarkup from "../ModalWindow/ModalWindowMarkup";
 
-const Footer = () => {
+const Footer = ({ handleSetActiveLink }) => {
   const [isModalOpen, setIsModalOpen] = useState(false);
 
   const handleOpenModal = () => {
@@ -39,11 +40,36 @@ const Footer = () => {
           isModalOpen={isModalOpen}
         />
         <NavFooter>
-          <NavFooterBtn href="">Головна</NavFooterBtn>
-          <NavFooterBtn href="">Про мене</NavFooterBtn>
-          <NavFooterBtn href="">Проєкти</NavFooterBtn>
-          <NavFooterBtn href="">Послуги</NavFooterBtn>
-          <NavFooterBtn href="">Менторство</NavFooterBtn>
+          <NavFooterBtn
+            href="#home"
+            onClick={(e) => handleSetActiveLink("home", e)}
+          >
+            Головна
+          </NavFooterBtn>
+          <NavFooterBtn
+            href="#aboutUs"
+            onClick={(e) => handleSetActiveLink("aboutUs", e)}
+          >
+            Про нас
+          </NavFooterBtn>
+          <NavFooterBtn
+            href="#services"
+            onClick={(e) => handleSetActiveLink("services", e)}
+          >
+            Послуги
+          </NavFooterBtn>
+          <NavFooterBtn
+            href="#mentoring"
+            onClick={(e) => handleSetActiveLink("mentoring", e)}
+          >
+            Менторство
+          </NavFooterBtn>
+          <NavFooterBtn
+            href="#projects"
+            onClick={(e) => handleSetActiveLink("projects", e)}
+          >
+            Проєкти
+          </NavFooterBtn>
         </NavFooter>
         <ContactsFooter>
           <Social>
@@ -77,6 +103,10 @@ const Footer = () => {
       <Paragraph>© 2023 healthy managment. All rights reserved</Paragraph>
     </FooterBg>
   );
+};
+
+Footer.propTypes = {
+  handleSetActiveLink: PropTypes.func.isRequired,
 };
 
 export default Footer;
