@@ -1,7 +1,10 @@
 // import Foto from "../../images/desktop/olga_picture1x.jpg";
 import Fotos from "../../images/desktop/olga_picture1x.webp";
-// import Fotos2x from "../../images/desktop/olga_picture@2x.jpg";
-// import Fotos1x from "../../images/desktop/olga_picture1x.jpg";
+import Fotos2x from "../../images/desktop/olga_picture@2x.jpg";
+import Fotos1x from "../../images/desktop/olga_picture1x.jpg";
+import OlgaMob2x from "../../images/mobile/mob_olga_picture@2x.jpg";
+import OlgaMob1x from "../../images/mobile/mob_olga_picture1x.jpg";
+import OlgaMobWebp from "../../images/mobile/mob_olga_picture1x.webp";
 import Icon from "../../images/sprite.svg";
 import {
   SectionAboutMe,
@@ -24,19 +27,31 @@ const AboutMe = () => {
         <SectionAboutMeTitle>Про мене</SectionAboutMeTitle>
         <SectionAboutMeDiv>
           <SectionAboutMeDivWidth>
-            {/* <picture>
+            <picture>
               <source
                 srcSet={`${Fotos} 2x, ${Fotos} 1x`}
-                media="(min-width: 1920px)"
+                media="(min-width: 768px)"
                 type="image/webp"
               />
               <source
                 srcSet={`${Fotos2x} 2x, ${Fotos1x} 1x`}
-                media="(min-width: 1920px)"
+                media="(min-width: 768px)"
                 type="image/png"
               />
-            </picture> */}
-            <img src={Fotos} alt="Ольга Поліщук" />
+
+              <source
+                srcSet={`${OlgaMobWebp}`}
+                media="(max-width: 375px)"
+                type="image/webp"
+              />
+
+              <source
+                srcSet={`${OlgaMob2x} 2x, ${OlgaMob1x} 1x`}
+                media="(max-width: 375px)"
+                type="image/png"
+              />
+              <img src={Fotos} alt="Ольга Поліщук" />
+            </picture>
           </SectionAboutMeDivWidth>
           <SectionAboutMeDivOl>
             <SectionAboutMeHOl>Ольга Поліщук</SectionAboutMeHOl>
