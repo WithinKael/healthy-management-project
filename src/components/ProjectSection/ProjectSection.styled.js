@@ -1,5 +1,14 @@
 import styled from "@emotion/styled";
 
+export const SectionWrapper = styled.section`
+  padding-top: 40px;
+  padding-bottom: 40px;
+  @media screen and (min-width: 768px) {
+    padding-top: 80px;
+    padding-bottom: 80px;
+  }
+`;
+
 export const Title = styled.h2`
   font-size: 48px;
   font-weight: 600;
@@ -12,43 +21,28 @@ export const List = styled.ul`
   display: flex;
   gap: 24px;
   flex-wrap: wrap;
-`;
-
-export const ListItem = styled.li`
-  width: calc((100% - (2 * 24px)) / 3);
-  padding: 40px;
-  border-radius: 16px;
-  height: 808px;
-
-  box-shadow: 0px 0px 8px 0px rgba(27, 54, 65, 0.08);
-  background-color: var(--background-white);
-  overflow: hidden;
-  position: relative;
-
-  &:hover > div {
-    opacity: 1;
+  @media screen and (min-width: 768px) {
   }
 `;
 
-export const HiddenInfo = styled.div`
-  opacity: 0;
-  height: 100%;
-  width: 100%;
+export const ActionBtn = styled.span`
+  font-size: 14px;
+  font-weight: 600;
+  line-height: calc(18 / 14);
+  margin-top: 4px;
+  padding-top: 20px;
 
-  position: absolute;
-  top: 0;
-  left: 0;
+  display: flex;
+  gap: 14px;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+`;
 
-  background-repeat: no-repeat;
-  background-position: center bottom;
-  background-image: linear-gradient(
-      0deg,
-      rgba(22, 23, 23, 0.5) 0%,
-      rgba(22, 23, 23, 0.5) 100%
-    ),
-    linear-gradient(0deg, rgba(27, 54, 65, 0.8) 0%, rgba(27, 54, 65, 0.8) 100%),
-    url(${(props) => props.image || ""});
-  background-size: cover;
+export const Icon = styled.svg`
+  fill: currentColor;
+  stroke: currentColor;
 
-  transition: opacity var(--transition-dur-and-func);
+  width: 24px;
+  height: 24px;
 `;
