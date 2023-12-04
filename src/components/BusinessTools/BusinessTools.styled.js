@@ -34,7 +34,7 @@ export const ListTools = styled.ul`
 export const ItemTools = styled.li`
   display: flex;
   align-items: center;
-  width: 284px;
+  width: calc((100% - (24px * 4)) / 5);
   padding: 24px;
   font-size: 20px;
   font-weight: 600;
