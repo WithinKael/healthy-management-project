@@ -1,4 +1,8 @@
-import { Category, ListItemWrapper } from "./ListItemMarkup.styled";
+import {
+  Category,
+  ListItemWrapper,
+  StyledImage,
+} from "./ListItemMarkup.styled";
 
 import TickList from "../../../TickList/TickList";
 
@@ -6,9 +10,9 @@ const ListItemMarkup = ({ dataList }) => {
   const { category, title, about = [], image } = dataList;
   return (
     <ListItemWrapper>
-      <img src={image} alt={title} />
+      <StyledImage src={image} alt={title} />
       <div>
-        <Category>{category}</Category>
+        <Category symbols={category.length}>{category}</Category>
       </div>
       <TickList title={title} about={about} />
     </ListItemWrapper>

@@ -12,21 +12,30 @@ export const List = styled.ul`
   display: flex;
   gap: 24px;
   flex-wrap: wrap;
+  @media screen and (min-width: 768px) {
+  }
 `;
 
 export const ListItem = styled.li`
-  width: calc((100% - (2 * 24px)) / 3);
-  padding: 40px;
-  border-radius: 16px;
-  height: 808px;
+  width: 100%;
+  padding: 24px;
+  border-radius: 8px;
+  height: 772px;
 
   box-shadow: 0px 0px 8px 0px rgba(27, 54, 65, 0.08);
   background-color: var(--background-white);
+
   overflow: hidden;
   position: relative;
+  @media screen and (min-width: 768px) {
+    width: calc((100% - (2 * 24px)) / 3);
+    padding: 40px;
+    border-radius: 16px;
+    height: 808px;
 
-  &:hover > div {
-    opacity: 1;
+    &:hover > div {
+      opacity: 1;
+    }
   }
 `;
 

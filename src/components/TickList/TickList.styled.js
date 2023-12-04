@@ -1,9 +1,14 @@
 import styled from "@emotion/styled";
 
-export const Title = styled.h3`
-  font-size: ${(props) => (props.forDetail ? "24px" : "20px")};
+export const Title = styled.h4`
+  font-size: ${(props) => (props.forDetail ? "16px" : "12px")};
   font-weight: 600;
-  line-height: calc(${(props) => (props.forDetail ? 32 / 24 : 28 / 20)});
+  line-height: calc(${(props) => (props.forDetail ? 24 / 16 : 24 / 16)});
+
+  @media screen and (min-width: 768px) {
+    font-size: ${(props) => (props.forDetail ? "24px" : "20px")};
+    line-height: calc(${(props) => (props.forDetail ? 32 / 24 : 28 / 20)});
+  }
 `;
 
 export const List = styled.ul`
@@ -13,9 +18,9 @@ export const List = styled.ul`
 `;
 
 export const ListItem = styled.li`
-  font-size: 16px;
+  font-size: 14px;
   font-weight: 500;
-  line-height: calc(24 / 16);
+  line-height: calc(18 / 14);
 
   display: flex;
   gap: 8px;
@@ -23,6 +28,10 @@ export const ListItem = styled.li`
   & > svg {
     max-width: 24px;
     height: 24px;
+  }
+  @media screen and (min-width: 768px) {
+    font-size: 16px;
+    line-height: calc(24 / 16);
   }
 `;
 
