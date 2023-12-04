@@ -18,7 +18,11 @@ import {
   TitleH2,
   TitleH3,
 } from "./MentorSession.styled";
+import { useMediaQuery } from "@react-hook/media-query";
+
 const MentoringSession = () => {
+  const isMobile = useMediaQuery("(max-width: 768px)");
+
   return (
     <StyledSection className="container">
       <PersonalSessionSectionWrapper>
@@ -66,7 +70,7 @@ const MentoringSession = () => {
           Шлях проведення менторської сесії
         </StyledSessionParagraph>
         <ArrowWrapper>
-          <StyledContainer>
+          {/* <StyledContainer>
             <StyledArrowSvg>
               <use href={`${sprite}#icon-rectangle`} />
             </StyledArrowSvg>
@@ -88,6 +92,57 @@ const MentoringSession = () => {
             <StyledArrowSvg>
               <use href={`${sprite}#icon-rectangle`} />
             </StyledArrowSvg>
+            <StyledParagraph>Рекомендації</StyledParagraph>
+          </StyledContainer> */}
+          <StyledContainer>
+            {isMobile ? (
+              <StyledArrowSvg>
+                <use href={`${sprite}#icon-rectangle-mob`} />
+              </StyledArrowSvg>
+            ) : (
+              <StyledArrowSvg>
+                <use href={`${sprite}#icon-rectangle`} />
+              </StyledArrowSvg>
+            )}
+            <StyledParagraph>Заповнення брифу</StyledParagraph>
+          </StyledContainer>
+
+          <StyledContainer>
+            {isMobile ? (
+              <StyledArrowSvg>
+                <use href={`${sprite}#icon-rectangle-mob`} />
+              </StyledArrowSvg>
+            ) : (
+              <StyledArrowSvg>
+                <use href={`${sprite}#icon-rectangle`} />
+              </StyledArrowSvg>
+            )}
+            <StyledParagraph>Діагностика ситуації</StyledParagraph>
+          </StyledContainer>
+
+          <StyledContainer>
+            {isMobile ? (
+              <StyledArrowSvg>
+                <use href={`${sprite}#icon-rectangle-mob`} />
+              </StyledArrowSvg>
+            ) : (
+              <StyledArrowSvg>
+                <use href={`${sprite}#icon-rectangle`} />
+              </StyledArrowSvg>
+            )}
+            <StyledParagraph>Проведення сесії</StyledParagraph>
+          </StyledContainer>
+
+          <StyledContainer>
+            {isMobile ? (
+              <StyledArrowSvg>
+                <use href={`${sprite}#icon-rectangle-mob`} />
+              </StyledArrowSvg>
+            ) : (
+              <StyledArrowSvg>
+                <use href={`${sprite}#icon-rectangle`} />
+              </StyledArrowSvg>
+            )}
             <StyledParagraph>Рекомендації</StyledParagraph>
           </StyledContainer>
         </ArrowWrapper>
