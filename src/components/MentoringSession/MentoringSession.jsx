@@ -56,8 +56,8 @@ const MentoringSession = () => {
               </StyledPersonalListItem>
               <StyledPersonalListItem>
                 Особисте питання по менеджменту та розвитку з питань управління{" "}
-                <br />
-                здоров´ям
+                {/* <br /> */}
+                здоров&#39;ям
               </StyledPersonalListItem>
             </StyledPersonalList>
           </QuestionWrapper>
