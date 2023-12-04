@@ -54,6 +54,8 @@ export const StyledPersonalParagraph = styled.p`
   color: var(--typography-white);
 
   @media screen and (min-width: 1920px) {
+    width: 100%;
+    justify-content: center;
     top: 70%;
     font-size: 20px;
     line-height: 1.4;
