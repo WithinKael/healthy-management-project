@@ -33,3 +33,9 @@ export const StyledImage = styled.img`
     height: 300px;
   }
 `;
+export const DetailsBtn = styled.span`
+  font-size: 14px;
+  font-weight: 600;
+  line-height: calc(18 / 14);
+  text-align: center;
+`;
