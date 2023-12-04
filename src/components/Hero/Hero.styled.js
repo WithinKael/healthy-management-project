@@ -138,7 +138,7 @@ export const SectionHeroDiv = styled.div`
 export const SectionHeroLinks = styled.a`
   display: flex;
   flex-direction: row;
-  max-width: 327px;
+  min-width: 327px;
   height: 56px;
   padding: 8px 24px;
   justify-content: center;
@@ -164,7 +164,7 @@ export const SectionHeroLinks = styled.a`
 
   @media screen and (min-width: 768px) {
     display: flex;
-    max-width: 260px;
+    min-width: 260px;
     height: 56px;
     padding: 8px 24px;
     justify-content: center;

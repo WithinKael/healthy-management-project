@@ -129,7 +129,12 @@ const Header = ({ handleSetActiveLink }) => {
           )}
         </HeaderDiv>
       </div>
-      {isMobail && shownModal && <ModalMobaileMenu onClose={onModal} />}
+      {isMobail && shownModal && (
+        <ModalMobaileMenu
+          onClose={onModal}
+          handleSetActiveLink={handleSetActiveLink}
+        />
+      )}
     </Headers>
   );
 };
