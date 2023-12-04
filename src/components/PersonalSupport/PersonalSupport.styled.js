@@ -3,8 +3,10 @@ import styled from "@emotion/styled";
 export const ArrowPersonalWrapper = styled.div`
   display: flex;
   flex-direction: column;
+  gap: 3px;
 
   @media screen and (min-width: 1920px) {
+    flex-direction: row;
     justify-content: space-between;
     gap: 24px;
   }
@@ -37,16 +39,23 @@ export const PersonalSectionWrapper = styled.div`
 `;
 
 export const StyledPersonalParagraph = styled.p`
-  font-size: 20px;
+  display: flex;
+  font-size: 16px;
   font-weight: 600;
-  line-height: 1.4;
+  line-height: 1.5;
+  min-width: 200px;
 
   position: absolute;
-  width: 100%;
   text-align: center;
   top: 50%;
-  left: 48%;
+  left: 50%;
   transform: translate(-50%, -50%);
   z-index: 2;
   color: var(--typography-white);
+
+  @media screen and (min-width: 1920px) {
+    top: 70%;
+    font-size: 20px;
+    line-height: 1.4;
+  }
 `;
