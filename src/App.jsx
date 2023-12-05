@@ -12,6 +12,7 @@ import ProjectSection from "./components/ProjectSection/ProjectSection";
 import WorkPrinciples from "./components/WorkPrinciples/WorkPrinciples";
 import ScrollToTop from "./components/ScrollToTop/ScrollToTop";
 import ContactsForm from "./components/ContactsForm/ContactsForm";
+import Services from "./components/Services/Services";
 
 function App() {
   const handleSetActiveLink = (link, event) => {
@@ -51,7 +52,8 @@ function App() {
         <AboutStudio />
         <AboutMe />
         <WhyChooseUs />
-        <WorkPrinciples /> *
+        <WorkPrinciples />
+        <Services />
         <Mentor />
         <MentoringSession />
         <PersonalSupport />
