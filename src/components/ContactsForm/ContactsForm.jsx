@@ -12,6 +12,7 @@ import {
   Img,
   Title,
 } from "./ContactsForm.styled";
+import sprite from "../../images/icon-footer.svg";
 import { useForm } from "react-hook-form";
 
 const ContactsForm = () => {
@@ -84,9 +85,15 @@ const ContactsForm = () => {
           <FormWrapper>
             <h3>Залишайте ваші контактні дані і ми з вами зв&apos;яжемось</h3>
             <Forma onSubmit={handleSubmit(onSubmit)}>
+              <label>
+                Ім’я
+                <svg width="8" height="8">
+                  <use href={`${sprite}#star`} />
+                </svg>
+              </label>
               <input
                 type="text"
-                placeholder="Ім'я"
+                placeholder="Введіть своє ім’я"
                 {...register("name", {
                   required: "Це поле обов'язкове для заповнення",
                   pattern: {
@@ -101,9 +108,15 @@ const ContactsForm = () => {
               {errors.name && (
                 <div style={{ color: "red" }}>{errors.name.message}</div>
               )}
+              <label>
+                Емейл
+                <svg width="8" height="8">
+                  <use href={`${sprite}#star`} />
+                </svg>
+              </label>
               <input
                 type="email"
-                placeholder="Емейл"
+                placeholder="Введіть емейл"
                 {...register("email", {
                   required: "Це поле обов'язкове для заповнення",
                   pattern: {
@@ -117,9 +130,15 @@ const ContactsForm = () => {
               {errors.email && (
                 <div style={{ color: "red" }}>{errors.email.message}</div>
               )}
+              <label>
+                Номер телефону
+                <svg width="8" height="8">
+                  <use href={`${sprite}#star`} />
+                </svg>
+              </label>
               <input
                 type="tel"
-                placeholder="Номер телефону"
+                placeholder="Введіть номер телефону"
                 {...register("phone", {
                   required: "Це поле обов'язкове для заповнення",
                   pattern: {
@@ -133,6 +152,12 @@ const ContactsForm = () => {
               {errors.phone && (
                 <div style={{ color: "red" }}>{errors.phone.message}</div>
               )}
+              <label>
+                Послуга
+                <svg width="8" height="8">
+                  <use href={`${sprite}#star`} />
+                </svg>
+              </label>
               <select
                 {...register("service", {
                   required: "Оберіть послугу",
@@ -154,9 +179,10 @@ const ContactsForm = () => {
               {errors.service && (
                 <div style={{ color: "red" }}>{errors.service.message}</div>
               )}
+              <label>Повідомлення</label>
               <textarea
                 name="comment"
-                placeholder="Ваше повідомлення"
+                placeholder="Введіть ваше повідомлення"
                 {...register("comment", {
                   pattern: {
                     value: /^.{0,500}$/,
@@ -166,8 +192,8 @@ const ContactsForm = () => {
                 value={comment}
                 onChange={handleChange}
               ></textarea>
-              {errors.message && (
-                <div style={{ color: "red" }}>{errors.message.message}</div>
+              {errors.comment && (
+                <div style={{ color: "red" }}>{errors.comment.message}</div>
               )}
               <Button type="submit">Надіслати</Button>
             </Forma>

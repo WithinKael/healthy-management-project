@@ -20,8 +20,11 @@ import {
   StyledPersonalContainer,
   StyledPersonalParagraph,
 } from "./PersonalSupport.styled";
+import { useMediaQuery } from "@react-hook/media-query";
 
 const PersonalSupport = () => {
+  const isMobile = useMediaQuery("(max-width: 768px)");
+
   return (
     <StyledSection className="container">
       <PersonalSessionSectionWrapper>
@@ -55,13 +58,19 @@ const PersonalSupport = () => {
           </QuestionWrapper>
         </MentorSessionWrapper>
         <StyledSessionParagraph>
-          Шлях проведення менторськогог супроводу
+          Шлях проведення менторського супроводу
         </StyledSessionParagraph>
         <ArrowPersonalWrapper>
-          <StyledPersonalContainer>
-            <StyledPersonalArrowSvg>
-              <use href={`${sprite}#icon-rectangle2`} />
-            </StyledPersonalArrowSvg>
+          {/* <StyledPersonalContainer>
+            {isMobile ? (
+              <StyledPersonalArrowSvg>
+                <use href={`${sprite}#icon-rectangle2`} />
+              </StyledPersonalArrowSvg>
+            ) : (
+              <StyledPersonalArrowSvg>
+                <use href={`${sprite}#icon-rectangle-mob`} />
+              </StyledPersonalArrowSvg>
+            )}
             <StyledPersonalParagraph>Заповнення брифу</StyledPersonalParagraph>
           </StyledPersonalContainer>
           <StyledPersonalContainer>
@@ -90,6 +99,74 @@ const PersonalSupport = () => {
             <StyledPersonalArrowSvg>
               <use href={`${sprite}#icon-rectangle2`} />
             </StyledPersonalArrowSvg>
+            <StyledPersonalParagraph>Рекомендації</StyledPersonalParagraph>
+          </StyledPersonalContainer> */}
+          <StyledPersonalContainer>
+            {isMobile ? (
+              <StyledPersonalArrowSvg>
+                <use href={`${sprite}#icon-rectangle-mob`} />
+              </StyledPersonalArrowSvg>
+            ) : (
+              <StyledPersonalArrowSvg>
+                <use href={`${sprite}#icon-rectangle2`} />
+              </StyledPersonalArrowSvg>
+            )}
+            <StyledPersonalParagraph>Заповнення брифу</StyledPersonalParagraph>
+          </StyledPersonalContainer>
+
+          <StyledPersonalContainer>
+            {isMobile ? (
+              <StyledPersonalArrowSvg>
+                <use href={`${sprite}#icon-rectangle-mob`} />
+              </StyledPersonalArrowSvg>
+            ) : (
+              <StyledPersonalArrowSvg>
+                <use href={`${sprite}#icon-rectangle2`} />
+              </StyledPersonalArrowSvg>
+            )}
+            <StyledPersonalParagraph>
+              Діагностика ситуації
+            </StyledPersonalParagraph>
+          </StyledPersonalContainer>
+
+          <StyledPersonalContainer>
+            {isMobile ? (
+              <StyledPersonalArrowSvg>
+                <use href={`${sprite}#icon-rectangle-mob`} />
+              </StyledPersonalArrowSvg>
+            ) : (
+              <StyledPersonalArrowSvg>
+                <use href={`${sprite}#icon-rectangle2`} />
+              </StyledPersonalArrowSvg>
+            )}
+            <StyledPersonalParagraph>
+              Визначення зон росту
+            </StyledPersonalParagraph>
+          </StyledPersonalContainer>
+
+          <StyledPersonalContainer>
+            {isMobile ? (
+              <StyledPersonalArrowSvg>
+                <use href={`${sprite}#icon-rectangle-mob`} />
+              </StyledPersonalArrowSvg>
+            ) : (
+              <StyledPersonalArrowSvg>
+                <use href={`${sprite}#icon-rectangle2`} />
+              </StyledPersonalArrowSvg>
+            )}
+            <StyledPersonalParagraph>Менторинг</StyledPersonalParagraph>
+          </StyledPersonalContainer>
+
+          <StyledPersonalContainer>
+            {isMobile ? (
+              <StyledPersonalArrowSvg>
+                <use href={`${sprite}#icon-rectangle-mob`} />
+              </StyledPersonalArrowSvg>
+            ) : (
+              <StyledPersonalArrowSvg>
+                <use href={`${sprite}#icon-rectangle2`} />
+              </StyledPersonalArrowSvg>
+            )}
             <StyledPersonalParagraph>Рекомендації</StyledPersonalParagraph>
           </StyledPersonalContainer>
         </ArrowPersonalWrapper>

@@ -172,10 +172,9 @@
 </symbol>
 
 
-<!-- <symbol id="icon-rectangle2" viewBox="0 0 113 32" height="80">
-<path d="M0.32 6.586c0-3.53 2.858-6.393 6.387-6.4l91.93-0.18c1.977-0.004 3.845 0.906 5.060 2.466l7.477 9.594c1.802 2.313 1.802 5.555 0 7.868l-7.482 9.6c-1.212 1.556-3.075 2.466-5.048 2.466h-91.925c-3.535 0-6.4-2.865-6.4-6.4v-19.014z" fill="#062136"></path>
-</symbol> -->
-
+<symbol id="icon-rectangle-mob" viewBox="0 0 158 32" height="56">
+<path d="M0 9.329c0-5.044 4.086-9.136 9.13-9.143l129.284-0.181c2.292-0.003 4.502 0.855 6.191 2.404l11.148 10.222c1.976 1.812 1.976 4.927 0 6.739l-11.153 10.227c-1.686 1.546-3.891 2.404-6.179 2.404h-129.279c-5.049 0-9.143-4.093-9.143-9.143v-13.528z" fill="#062136"></path>
+</symbol>
 </symbol>
 
 <symbol id="icon-rectangle2" viewBox="0 0 113 32">
@@ -196,7 +195,7 @@
 </symbol>
 
 <symbol id="icon-close" viewBox="0 0 32 32" width="24" height="24">
-<path stroke-linejoin="round" stroke-linecap="round" stroke-miterlimit="4" stroke-width="2.6667" d="M8 8l16 16M8 24l16-16"></path>
+<path stroke-linejoin="round" stroke-linecap="round" stroke-miterlimit="4" stroke-width="2.6667" d="M8 8l16 16M8 24l16-16" stroke="#062136"></path>
 </symbol>
 
 </defs>

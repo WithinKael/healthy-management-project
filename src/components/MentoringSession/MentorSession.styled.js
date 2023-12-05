@@ -24,16 +24,20 @@ export const PersonalSessionSectionWrapper = styled.div`
 export const ArrowWrapper = styled.div`
   display: flex;
   flex-direction: column;
-  gap: 6px;
+  gap: 3px;
 
   @media screen and (min-width: 1290px) {
+    flex-direction: row;
     justify-content: space-between;
   }
 `;
 
 export const StyledContainer = styled.div`
   position: relative;
-  min-width: 370px;
+
+  @media screen and (min-width: 1920px) {
+    min-width: 370px;
+  }
 `;
 
 export const MentorSessionWrapper = styled.div`
@@ -65,13 +69,13 @@ export const QuestionWrapper = styled.div`
 `;
 
 export const StyledParagraph = styled.p`
+  display: flex;
   font-size: 16px;
   font-weight: 600;
   line-height: 1.5;
+  min-width: 200px;
 
-  display: flex;
   position: absolute;
-  width: 270px;
   text-align: center;
   top: 50%;
   left: 50%;
@@ -80,6 +84,8 @@ export const StyledParagraph = styled.p`
   color: var(--typography-white);
 
   @media screen and (min-width: 1920px) {
+    justify-content: center;
+    width: 100%;
     font-size: 20px;
     line-height: 1.4;
     top: 50%;
