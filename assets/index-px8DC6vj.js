@@ -2018,18 +2018,21 @@ Valid keys: `+JSON.stringify(Object.keys(M),null,"  "));var F=S(ee,E,X,ne,Z+"."+
   background: var(--background-white);
   padding: 40px;
   border-radius: 16px;
-`,q2=j.button`
+`,q2=j.a`
   width: 260px;
   height: 56px;
-  color: var(--typography-bluedark);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 8px 24px;
+  border: none;
   font-size: 16px;
   font-weight: 500;
-  border: none;
   line-height: 24px;
-  border-radius: 16px;
+  color: var(--typography-bluedark);
   background: var(--primary-yellow);
+  border-radius: 16px;
   box-shadow: 0px 0px 8px 0px rgba(248, 248, 248, 0.08);
-  padding: 8px 24px;
   margin-left: auto;
   margin-right: auto;
-`,jo="/healthy-management-project/assets/icon-2-FNpGPcjZ.svg",Bl=[{title:"Менторство та консультації",about:["Для власників та менеджерів з питань менеджменту та розвитку, медичного маркетингу та комунікацій, з питань програм управління здоров'ям","Стейхолдерам та парнерам з питань медичного менеджменту та маркетингу"],path:jo},{title:"Діагностика",about:["Аудит бізнес-процесів","Аудит маркетингу та сервісу","Аудит системи комунікацій та Сustomer Journey Map"],path:jo},{title:"Стратегії",about:["Проведення стратегічних сесій","Розробка стратегії розвитку та маркетингу ","Розробка стратегій внутрішніх комунікацій","Розробка стратегій управління здоров'ям"],path:jo},{title:"Навчання",about:["Медичний маркетинг","Комунікації та сервіс"],path:jo}],Z2=()=>l.jsx(H2,{className:"container",children:l.jsxs(Q2,{children:[l.jsx(Y2,{children:"Послуги"}),l.jsxs(K2,{children:["Будуємо ефективні ",l.jsx(X2,{children:"стратегії здорового менеджменту"})," для бізнесів. Розвивайте свій бізнес за допомогою ефективних стратегій здорового менеджменту."]}),l.jsx(G2,{children:Bl==null?void 0:Bl.map(e=>l.jsxs(J2,{children:[l.jsx(Bu,{title:e.title,about:e.about,additionalComment:!0}),l.jsx("img",{src:e.path})]},e.title))}),l.jsx(q2,{children:"Замовити консультацію"})]})});function ek(){const e=(t,n)=>{n.preventDefault();const r=document.getElementById(t);if(r){const i=r.getBoundingClientRect(),o=window.pageYOffset||document.documentElement.scrollTop;let s;window.innerWidth<=375?s=i.top+o-80:s=i.top+o-60,window.scrollTo({top:s,behavior:"smooth"}),setTimeout(()=>{n.target.blur()},1e3)}};return l.jsxs(l.Fragment,{children:[l.jsx(Nh,{handleSetActiveLink:e}),l.jsxs("main",{children:[l.jsx(bv,{}),l.jsx(S0,{}),l.jsx(u0,{}),l.jsx(Rv,{}),l.jsx(U1,{}),l.jsx(Z2,{}),l.jsx(Hv,{}),l.jsx(qv,{}),l.jsx(e1,{}),l.jsx(O1,{}),l.jsx(P0,{}),l.jsx(W2,{})]}),l.jsx(Rh,{handleSetActiveLink:e}),l.jsx(V1,{})]})}Vl.createRoot(document.getElementById("root")).render(l.jsx(ht.StrictMode,{children:l.jsx(ek,{})}));
+`,jo="/healthy-management-project/assets/icon-2-FNpGPcjZ.svg",Bl=[{title:"Менторство та консультації",about:["Для власників та менеджерів з питань менеджменту та розвитку, медичного маркетингу та комунікацій, з питань програм управління здоров'ям","Стейхолдерам та парнерам з питань медичного менеджменту та маркетингу"],path:jo},{title:"Діагностика",about:["Аудит бізнес-процесів","Аудит маркетингу та сервісу","Аудит системи комунікацій та Сustomer Journey Map"],path:jo},{title:"Стратегії",about:["Проведення стратегічних сесій","Розробка стратегії розвитку та маркетингу ","Розробка стратегій внутрішніх комунікацій","Розробка стратегій управління здоров'ям"],path:jo},{title:"Навчання",about:["Медичний маркетинг","Комунікації та сервіс"],path:jo}],Z2=()=>l.jsx(H2,{className:"container",children:l.jsxs(Q2,{children:[l.jsx(Y2,{children:"Послуги"}),l.jsxs(K2,{children:["Будуємо ефективні ",l.jsx(X2,{children:"стратегії здорового менеджменту"})," для бізнесів. Розвивайте свій бізнес за допомогою ефективних стратегій здорового менеджменту."]}),l.jsx(G2,{children:Bl==null?void 0:Bl.map(e=>l.jsx(J2,{children:l.jsx(Bu,{title:e.title,about:e.about,additionalComment:!0})},e.title))}),l.jsx(q2,{href:"#contact",children:"Замовити консультацію"})]})});function ek(){const e=(t,n)=>{n.preventDefault();const r=document.getElementById(t);if(r){const i=r.getBoundingClientRect(),o=window.pageYOffset||document.documentElement.scrollTop;let s;window.innerWidth<=375?s=i.top+o-80:s=i.top+o-60,window.scrollTo({top:s,behavior:"smooth"}),setTimeout(()=>{n.target.blur()},1e3)}};return l.jsxs(l.Fragment,{children:[l.jsx(Nh,{handleSetActiveLink:e}),l.jsxs("main",{children:[l.jsx(bv,{}),l.jsx(S0,{}),l.jsx(u0,{}),l.jsx(Rv,{}),l.jsx(U1,{}),l.jsx(Z2,{}),l.jsx(Hv,{}),l.jsx(qv,{}),l.jsx(e1,{}),l.jsx(O1,{}),l.jsx(P0,{}),l.jsx(W2,{})]}),l.jsx(Rh,{handleSetActiveLink:e}),l.jsx(V1,{})]})}Vl.createRoot(document.getElementById("root")).render(l.jsx(ht.StrictMode,{children:l.jsx(ek,{})}));
