@@ -50,18 +50,21 @@ export const ServicesItem = styled.li`
   border-radius: 16px;
 `;
 
-export const ServicesBtn = styled.button`
+export const ServicesBtn = styled.a`
   width: 260px;
   height: 56px;
-  color: var(--typography-bluedark);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 8px 24px;
+  border: none;
   font-size: 16px;
   font-weight: 500;
-  border: none;
   line-height: 24px;
-  border-radius: 16px;
+  color: var(--typography-bluedark);
   background: var(--primary-yellow);
+  border-radius: 16px;
   box-shadow: 0px 0px 8px 0px rgba(248, 248, 248, 0.08);
-  padding: 8px 24px;
   margin-left: auto;
   margin-right: auto;
 `;

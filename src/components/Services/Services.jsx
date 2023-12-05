@@ -29,11 +29,10 @@ const Services = () => {
                 about={element.about}
                 additionalComment={true}
               />
-              <img src={element.path}></img>
             </ServicesItem>
           ))}
         </ServicesList>
-        <ServicesBtn>Замовити консультацію</ServicesBtn>
+        <ServicesBtn href="#contact">Замовити консультацію</ServicesBtn>
       </ServicesContentWrapper>
     </SectionServices>
   );
