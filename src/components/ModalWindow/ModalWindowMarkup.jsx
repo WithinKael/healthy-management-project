@@ -119,7 +119,6 @@ const ModalWindowMarkup = ({ handleClose, isModalOpen }) => {
                     />
                   </ModalImgWrapper>
                   <NameAndPositionWrapper>
-                    {" "}
                     <TitleName>
                       <a
                         href="https://www.linkedin.com/in/juliakopytko/"
