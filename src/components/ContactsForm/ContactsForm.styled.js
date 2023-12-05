@@ -95,6 +95,24 @@ export const Input = styled.input`
   box-shadow: 0px 0px 8px 0px rgba(27, 54, 65, 0.08);
   border: 1px solid
     ${(props) => (props.errors ? "var(--secondary-red)" : "none")};
+
+  &:hover {
+    box-shadow: 0px 0px 16px 0px rgba(27, 54, 65, 0.16);
+  }
+
+  &:focus {
+    outline: none;
+    border: 1px solid var(--typography-grey);
+    background: var(--background-white);
+    box-shadow: 0px 0px 8px 0px rgba(27, 54, 65, 0.08);
+  }
+
+  &::placeholder {
+    font-size: 16px;
+    font-weight: 500;
+    line-height: 1.5;
+    color: var(--typography-grey);
+  }
 `;
 
 export const Select = styled.select`
@@ -112,6 +130,22 @@ export const Select = styled.select`
     ${(props) => (props.errors ? "var(--secondary-red)" : "none")};
   background: var(--background-white);
   box-shadow: 0px 0px 8px 0px rgba(27, 54, 65, 0.08);
+
+  &:hover {
+    box-shadow: 0px 0px 16px 0px rgba(27, 54, 65, 0.16);
+  }
+
+  &:focus {
+    outline: none;
+    border: 1px solid var(--typography-grey);
+    background: var(--background-white);
+    box-shadow: 0px 0px 8px 0px rgba(27, 54, 65, 0.08);
+  }
+
+  & > option {
+    color: #333;
+    background-color: #fff;
+  }
 `;
 
 export const Textarea = styled.textarea`
@@ -128,6 +162,24 @@ export const Textarea = styled.textarea`
     ${(props) => (props.errors ? "var(--secondary-red)" : "none")};
   background: var(--background-white);
   box-shadow: 0px 0px 8px 0px rgba(27, 54, 65, 0.08);
+
+  &:hover {
+    box-shadow: 0px 0px 16px 0px rgba(27, 54, 65, 0.16);
+  }
+
+  &:focus {
+    outline: none;
+    border: 1px solid var(--typography-grey);
+    background: var(--background-white);
+    box-shadow: 0px 0px 8px 0px rgba(27, 54, 65, 0.08);
+  }
+
+  &::placeholder {
+    font-size: 16px;
+    font-weight: 500;
+    line-height: 1.5;
+    color: var(--typography-grey);
+  }
 `;
 
 export const TextError = styled.p`

@@ -9,5 +9,3 @@ const Star = () => {
 };
 
 export default Star;
-
-// style={{ verticalAlign: "super" }}
