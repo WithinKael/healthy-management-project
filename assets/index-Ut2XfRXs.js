@@ -1694,40 +1694,68 @@ Valid keys: `+JSON.stringify(Object.keys(M),null,"  "));var F=S(ee,E,X,ne,Z+"."+
   line-height: calc(18 / 14);
   text-align: center;
 `,T1=({dataList:e,onClick:t})=>{const n=Bs(),{category:r,title:i,about:o=[],image:s}=e;return l.jsxs(E1,{onClick:t,children:[l.jsx(b1,{src:s,alt:i}),l.jsx("div",{children:l.jsx(_1,{symbols:r.length,children:r})}),l.jsx(Bu,{title:i,about:o}),n==="mobile"&&l.jsx(C1,{children:"Детальніше"})]})},P1=({item:e})=>{const[t,n]=ue.useState(!1),r=Bs(),i=()=>{r==="mobile"&&n(o=>!o)};return l.jsxs(f1,{children:[l.jsx(T1,{dataList:e,onClick:i}),l.jsx(p1,{isVisible:t,onClick:i,image:e.image,className:!t&&r==="mobile"?"visually-hidden":"",children:l.jsx(j1,{dataList:e})})]})},O1=()=>{const e=Bs(),[t,n]=ue.useState(e==="mobile"?[...Tl.slice(0,3)]:[...Tl]),r=()=>{t.length>4?n(i=>i.slice(0,3)):n([...Tl])};return l.jsxs(l1,{id:"projects",className:"container",style:{paddingTop:"80px",paddingBottom:"80px"},children:[l.jsx(a1,{children:"Проєкти"}),l.jsx(u1,{children:t.map(i=>l.jsx(P1,{item:i},i.category))}),e==="mobile"&&l.jsxs(c1,{onClick:r,children:[t.length>3?"Менше проєктів":"Більше проєктів",l.jsx(d1,{children:l.jsx("use",{href:K+`${t.length>3?"#icon-arrowup":"#icon-arrowdown"}`})})]})]})},R1=j.section`
-  padding-top: 80px;
-  padding-bottom: 80px;
   display: flex;
+  flex-direction: column;
+  padding-top: 24px;
+  padding-bottom: 24px;
   gap: 24px;
+
+  @media screen and (min-width: 1920px) {
+    flex-direction: row;
+    padding-top: 80px;
+    padding-bottom: 80px;
+  }
 `,M1=j.div`
-  padding: 80px;
-  max-width: 828px;
-  height: 664px;
-  box-shadow: 0px 0px 8px 0px rgba(27, 54, 65, 0.08);
+  padding: 24px;
   border-radius: 16px;
   background: var(--background-white);
+
+  @media screen and (min-width: 1920px) {
+    padding: 80px;
+    max-width: 828px;
+    box-shadow: 0px 0px 8px 0px rgba(27, 54, 65, 0.08);
+  }
 `,A1=j.div`
   display: flex;
   flex-direction: column;
-  gap: 40px;
-  margin-bottom: 40px;
+  gap: 16px;
+  margin-bottom: 24px;
+
+  @media screen and (min-width: 1920px) {
+    gap: 40px;
+    margin-bottom: 40px;
+  }
 `,N1=j.h2`
-  color: var(--typography-black);
-  font-size: 48px;
+  color: var(--typography-bluedark);
+  font-size: 24px;
   font-weight: 600;
-  line-height: 56px;
+  line-height: 32px;
+
+  @media screen and (min-width: 1920px) {
+    font-size: 48px;
+    line-height: 56px;
+  }
 `,z1=j.h2`
   color: var(--typography-bluedark);
-  font-family: Montserrat;
-  font-size: 20px;
-  font-style: normal;
   font-weight: 500;
-  line-height: 28px;
+  font-size: 16px;
+  line-height: 24px;
+
+  @media screen and (min-width: 1920px) {
+    font-size: 20px;
+    line-height: 28px;
+  }
 `,L1=j.ul`
   display: flex;
   flex-direction: column;
-  gap: 24px;
+  gap: 16px;
+
+  @media screen and (min-width: 1920px) {
+    gap: 24px;
+  }
 `,Pl=j.li`
   display: flex;
+  align-items: center;
   gap: 16px;
   border-radius: 16px;
   background: var(--background-whitegrey);
@@ -1738,13 +1766,26 @@ Valid keys: `+JSON.stringify(Object.keys(M),null,"  "));var F=S(ee,E,X,ne,Z+"."+
   fill: var(--background-white);
   stroke-width: 4px;
 `,Rl=j.p`
+  width: 207px;
   color: var(--typography-bluedark);
-  font-size: 20px;
   font-weight: 500;
-  line-height: 28px;
+  font-size: 16px;
+  line-height: 24px;
+
+  @media screen and (min-width: 1920px) {
+    width: 100%;
+    font-size: 20px;
+    line-height: 28px;
+  }
 `,D1=j.img`
-  width: 828px;
-  height: 664px;
+  width: 100%;
+  height: 327px;
+  border-radius: 16px;
+
+  @media screen and (min-width: 1920px) {
+    width: 828px;
+    height: 664px;
+  }
 `,F1="/healthy-management-project/assets/olga_with_book1x-kIN8FAVO.webp",I1="/healthy-management-project/assets/olga_with_book1x-KTuULWu1.jpg",$1="/healthy-management-project/assets/olga_with_book2x-lES61yI6.jpg",U1=()=>l.jsxs(R1,{className:"container",children:[l.jsxs(M1,{children:[l.jsxs(A1,{children:[l.jsx(N1,{children:"Принципи роботи"}),l.jsx(z1,{children:"Наші принципи роботи полягають у співдії з ціннісними брендами та командами, які готові до чесної співпраці, щоб сприяти досягненню поставлених цілей. Готові ділитися власним досвідом та створювати стратегії здорового менеджменту та розвитку, маркетингу та сервісу"})]}),l.jsxs(L1,{children:[l.jsxs(Pl,{children:[l.jsx(Ol,{children:l.jsx("use",{href:`${K}#icon-done-yellow`})}),l.jsx(Rl,{children:"Більше 18 років досвіду в маркетингу та комунікаціях"})]}),l.jsxs(Pl,{children:[l.jsx(Ol,{children:l.jsx("use",{href:`${K}#icon-done-yellow`})}),l.jsx(Rl,{children:"Глибоке розуміння бізнес-процесів медичних закладів"})]}),l.jsxs(Pl,{children:[l.jsx(Ol,{children:l.jsx("use",{href:`${K}#icon-done-yellow`})}),l.jsx(Rl,{children:"Використання принципів доказової медицини"})]})]})]}),l.jsxs("picture",{children:[l.jsx("source",{srcSet:`${$1} 2x, ${I1} 1x`,media:"(min-width: 1920px)"}),l.jsx(D1,{src:F1,alt:"Ольга Поліщук"})]})]}),B1=j.button`
   display: flex;
   align-items: center;
