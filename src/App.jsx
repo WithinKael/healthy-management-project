@@ -51,7 +51,7 @@ function App() {
         <AboutStudio />
         <AboutMe />
         <WhyChooseUs />
-        <WorkPrinciples />
+        <WorkPrinciples /> *
         <Mentor />
         <MentoringSession />
         <PersonalSupport />
