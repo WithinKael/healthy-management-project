@@ -70,30 +70,6 @@ const MentoringSession = () => {
           Шлях проведення менторської сесії
         </StyledSessionParagraph>
         <ArrowWrapper>
-          {/* <StyledContainer>
-            <StyledArrowSvg>
-              <use href={`${sprite}#icon-rectangle`} />
-            </StyledArrowSvg>
-            <StyledParagraph>Заповнення брифу</StyledParagraph>
-          </StyledContainer>
-          <StyledContainer>
-            <StyledArrowSvg>
-              <use href={`${sprite}#icon-rectangle`} />
-            </StyledArrowSvg>
-            <StyledParagraph>Діагностика ситуації</StyledParagraph>
-          </StyledContainer>
-          <StyledContainer>
-            <StyledArrowSvg>
-              <use href={`${sprite}#icon-rectangle`} />
-            </StyledArrowSvg>
-            <StyledParagraph>Проведення сесії</StyledParagraph>
-          </StyledContainer>
-          <StyledContainer>
-            <StyledArrowSvg>
-              <use href={`${sprite}#icon-rectangle`} />
-            </StyledArrowSvg>
-            <StyledParagraph>Рекомендації</StyledParagraph>
-          </StyledContainer> */}
           <StyledContainer>
             {isMobile ? (
               <StyledArrowSvg>
