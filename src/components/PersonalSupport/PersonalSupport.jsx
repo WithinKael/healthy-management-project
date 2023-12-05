@@ -58,7 +58,7 @@ const PersonalSupport = () => {
           </QuestionWrapper>
         </MentorSessionWrapper>
         <StyledSessionParagraph>
-          Шлях проведення менторськогог супроводу
+          Шлях проведення менторського супроводу
         </StyledSessionParagraph>
         <ArrowPersonalWrapper>
           {/* <StyledPersonalContainer>

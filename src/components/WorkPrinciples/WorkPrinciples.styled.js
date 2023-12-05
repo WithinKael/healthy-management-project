@@ -1,52 +1,80 @@
 import styled from "@emotion/styled";
 
 export const SectionPrinciples = styled.section`
-  padding-top: 80px;
-  padding-bottom: 80px;
   display: flex;
+  flex-direction: column;
+  padding-top: 24px;
+  padding-bottom: 24px;
   gap: 24px;
+
+  @media screen and (min-width: 1920px) {
+    flex-direction: row;
+    padding-top: 80px;
+    padding-bottom: 80px;
+  }
 `;
 
 export const PrinciplesDiv = styled.div`
-  padding: 80px;
-  max-width: 828px;
-  height: 664px;
-  box-shadow: 0px 0px 8px 0px rgba(27, 54, 65, 0.08);
+  padding: 24px;
   border-radius: 16px;
   background: var(--background-white);
+
+  @media screen and (min-width: 1920px) {
+    padding: 80px;
+    max-width: 828px;
+    box-shadow: 0px 0px 8px 0px rgba(27, 54, 65, 0.08);
+  }
 `;
 
 export const PrinciplesContentWrapper = styled.div`
   display: flex;
   flex-direction: column;
-  gap: 40px;
-  margin-bottom: 40px;
+  gap: 16px;
+  margin-bottom: 24px;
+
+  @media screen and (min-width: 1920px) {
+    gap: 40px;
+    margin-bottom: 40px;
+  }
 `;
 
 export const PrinciplesTitle = styled.h2`
-  color: var(--typography-black);
-  font-size: 48px;
+  color: var(--typography-bluedark);
+  font-size: 24px;
   font-weight: 600;
-  line-height: 56px;
+  line-height: 32px;
+
+  @media screen and (min-width: 1920px) {
+    font-size: 48px;
+    line-height: 56px;
+  }
 `;
 
 export const PrinciplesText = styled.h2`
   color: var(--typography-bluedark);
-  font-family: Montserrat;
-  font-size: 20px;
-  font-style: normal;
   font-weight: 500;
-  line-height: 28px;
+  font-size: 16px;
+  line-height: 24px;
+
+  @media screen and (min-width: 1920px) {
+    font-size: 20px;
+    line-height: 28px;
+  }
 `;
 
 export const PrinciplesList = styled.ul`
   display: flex;
   flex-direction: column;
-  gap: 24px;
+  gap: 16px;
+
+  @media screen and (min-width: 1920px) {
+    gap: 24px;
+  }
 `;
 
 export const ListItem = styled.li`
   display: flex;
+  align-items: center;
   gap: 16px;
   border-radius: 16px;
   background: var(--background-whitegrey);
@@ -61,13 +89,26 @@ export const SvgDone = styled.svg`
 `;
 
 export const ListItemText = styled.p`
+  width: 207px;
   color: var(--typography-bluedark);
-  font-size: 20px;
   font-weight: 500;
-  line-height: 28px;
+  font-size: 16px;
+  line-height: 24px;
+
+  @media screen and (min-width: 1920px) {
+    width: 100%;
+    font-size: 20px;
+    line-height: 28px;
+  }
 `;
 
 export const Image = styled.img`
-  width: 828px;
-  height: 664px;
+  width: 100%;
+  height: 327px;
+  border-radius: 16px;
+
+  @media screen and (min-width: 1920px) {
+    width: 828px;
+    height: 664px;
+  }
 `;

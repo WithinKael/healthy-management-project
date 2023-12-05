@@ -13,6 +13,9 @@ import {
   TitleH2,
   TitleAndIconWrapper,
   Svg,
+  ModalImg,
+  ModalImgWrapper,
+  NameAndPositionWrapper,
 } from "./ModalWindow.styled";
 import {
   julia2x,
@@ -82,179 +85,221 @@ const ModalWindowMarkup = ({ handleClose, isModalOpen }) => {
             <TeamList>
               <TeamListItem>
                 <NameLinkedinWrapper>
-                  <img
-                    src={viktoriiaWebp}
-                    srcSet={`${viktoriiaWebp} 1x, ${viktoriia2x} 2x`}
-                    alt="Вікторія Мориц"
-                  />
-                  <TitleName>
-                    Вікторія Мориц
-                    <a
-                      href="https://www.linkedin.com/in/viktoriia-moryc-61610962/"
-                      target="_blank"
-                      rel="noopener noreferrer"
-                    >
-                      <svg width="24" height="24">
-                        <use href={`${sprite}#icon-linkedin`} />
-                      </svg>
-                    </a>
-                  </TitleName>
+                  <ModalImgWrapper>
+                    <ModalImg
+                      src={viktoriiaWebp}
+                      srcSet={`${viktoriiaWebp} 1x, ${viktoriia2x} 2x`}
+                      alt="Вікторія Мориц"
+                    />
+                  </ModalImgWrapper>
+                  <NameAndPositionWrapper>
+                    <TitleName>
+                      <a
+                        href="https://www.linkedin.com/in/viktoriia-moryc-61610962/"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                      >
+                        Вікторія Мориц
+                        <svg width="24" height="24">
+                          <use href={`${sprite}#icon-linkedin`} />
+                        </svg>
+                      </a>
+                    </TitleName>
+                    <ParagraphDescription>Project Manager</ParagraphDescription>
+                  </NameAndPositionWrapper>
                 </NameLinkedinWrapper>
-                <ParagraphDescription>Project Manager</ParagraphDescription>
               </TeamListItem>
               <TeamListItem>
                 <NameLinkedinWrapper>
-                  <img
-                    src={juliaWebp}
-                    srcSet={`${juliaWebp} 1x, ${julia2x} 2x`}
-                    alt="Юлія Копитко"
-                  />
-                  <TitleName>
-                    Юлія Копитко
-                    <a
-                      href="https://www.linkedin.com/in/juliakopytko/"
-                      target="_blank"
-                      rel="noopener noreferrer"
-                    >
-                      <svg width="24" height="24">
-                        <use href={`${sprite}#icon-linkedin`} />
-                      </svg>
-                    </a>
-                  </TitleName>
+                  <ModalImgWrapper>
+                    <ModalImg
+                      src={juliaWebp}
+                      srcSet={`${juliaWebp} 1x, ${julia2x} 2x`}
+                      alt="Юлія Копитко"
+                    />
+                  </ModalImgWrapper>
+                  <NameAndPositionWrapper>
+                    <TitleName>
+                      <a
+                        href="https://www.linkedin.com/in/juliakopytko/"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                      >
+                        Юлія Копитко
+                        <svg width="24" height="24">
+                          <use href={`${sprite}#icon-linkedin`} />
+                        </svg>
+                      </a>
+                    </TitleName>
+                    <ParagraphDescription>UX/UI Designer</ParagraphDescription>
+                  </NameAndPositionWrapper>
                 </NameLinkedinWrapper>
-                <ParagraphDescription>UX/UI Designer</ParagraphDescription>
               </TeamListItem>
               <TeamListItem>
                 <NameLinkedinWrapper>
-                  <img
-                    src={yaroslavWebp}
-                    srcSet={`${yaroslavWebp} 1x, ${yaroslav2x} 2x`}
-                    alt="Ярослав Лі"
-                  />
-                  <TitleName>
-                    Ярослав Лі
-                    <a
-                      href="https://www.linkedin.com/in/yaroslav-lee-b7070b294"
-                      target="_blank"
-                      rel="noopener noreferrer"
-                    >
-                      <svg width="24" height="24">
-                        <use href={`${sprite}#icon-linkedin`} />
-                      </svg>
-                    </a>
-                  </TitleName>
+                  <ModalImgWrapper>
+                    <ModalImg
+                      src={yaroslavWebp}
+                      srcSet={`${yaroslavWebp} 1x, ${yaroslav2x} 2x`}
+                      alt="Ярослав Лі"
+                    />
+                  </ModalImgWrapper>
+                  <NameAndPositionWrapper>
+                    <TitleName>
+                      <a
+                        href="https://www.linkedin.com/in/yaroslav-lee-b7070b294"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                      >
+                        Ярослав Лі
+                        <svg width="24" height="24">
+                          <use href={`${sprite}#icon-linkedin`} />
+                        </svg>
+                      </a>
+                    </TitleName>
+                    <ParagraphDescription>
+                      Frontend Developer
+                    </ParagraphDescription>
+                  </NameAndPositionWrapper>
                 </NameLinkedinWrapper>
-                <ParagraphDescription>Frontend Developer</ParagraphDescription>
               </TeamListItem>
               <TeamListItem>
                 <NameLinkedinWrapper>
-                  <img
-                    src={yelyzavetaWebp}
-                    srcSet={`${yelyzavetaWebp} 1x, ${yelyzaveta2x} 2x`}
-                    alt="Єлизавета Доманська"
-                  />
-                  <TitleName>
-                    Єлизавета Доманська
-                    <a
-                      href="https://www.linkedin.com/in/yelyzaveta-domanska-2185a5292/"
-                      target="_blank"
-                      rel="noopener noreferrer"
-                    >
-                      <svg width="24" height="24">
-                        <use href={`${sprite}#icon-linkedin`} />
-                      </svg>
-                    </a>
-                  </TitleName>
+                  <ModalImgWrapper>
+                    <ModalImg
+                      src={yelyzavetaWebp}
+                      srcSet={`${yelyzavetaWebp} 1x, ${yelyzaveta2x} 2x`}
+                      alt="Єлизавета Доманська"
+                    />
+                  </ModalImgWrapper>
+                  <NameAndPositionWrapper>
+                    <TitleName>
+                      <a
+                        href="https://www.linkedin.com/in/yelyzaveta-domanska-2185a5292/"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                      >
+                        Єлизавета Доманська
+                        <svg width="24" height="24">
+                          <use href={`${sprite}#icon-linkedin`} />
+                        </svg>
+                      </a>
+                    </TitleName>
+                    <ParagraphDescription>
+                      Frontend Developer
+                    </ParagraphDescription>
+                  </NameAndPositionWrapper>
                 </NameLinkedinWrapper>
-                <ParagraphDescription>Frontend Developer</ParagraphDescription>
               </TeamListItem>
               <TeamListItem>
                 <NameLinkedinWrapper>
-                  <img
-                    src={oleksandrWebp}
-                    srcSet={`${oleksandrWebp} 1x, ${oleksandr2x} 2x`}
-                    alt="Олександр Наталуха"
-                  />
-                  <TitleName>
-                    Олександр Наталуха
-                    <a
-                      href="https://www.linkedin.com/in/oleksandr-natalukha"
-                      target="_blank"
-                      rel="noopener noreferrer"
-                    >
-                      <svg width="24" height="24">
-                        <use href={`${sprite}#icon-linkedin`} />
-                      </svg>
-                    </a>
-                  </TitleName>
+                  <ModalImgWrapper>
+                    <ModalImg
+                      src={oleksandrWebp}
+                      srcSet={`${oleksandrWebp} 1x, ${oleksandr2x} 2x`}
+                      alt="Олександр Наталуха"
+                    />
+                  </ModalImgWrapper>
+                  <NameAndPositionWrapper>
+                    <TitleName>
+                      <a
+                        href="https://www.linkedin.com/in/oleksandr-natalukha"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                      >
+                        Олександр Наталуха
+                        <svg width="24" height="24">
+                          <use href={`${sprite}#icon-linkedin`} />
+                        </svg>
+                      </a>
+                    </TitleName>
+                    <ParagraphDescription>
+                      Frontend Developer
+                    </ParagraphDescription>
+                  </NameAndPositionWrapper>
                 </NameLinkedinWrapper>
-                <ParagraphDescription>Frontend Developer</ParagraphDescription>
               </TeamListItem>
               <TeamListItem>
                 <NameLinkedinWrapper>
-                  <img
-                    src={valentynWebp}
-                    srcSet={`${valentynWebp} 1x, ${valentyn2x} 2x`}
-                    alt="Валентин Гавриленко"
-                  />
-                  <TitleName>
-                    Валентин Гавриленко
-                    <a
-                      href="https://www.linkedin.com/in/valentyn-havrylenko/"
-                      target="_blank"
-                      rel="noopener noreferrer"
-                    >
-                      <svg width="24" height="24">
-                        <use href={`${sprite}#icon-linkedin`} />
-                      </svg>
-                    </a>
-                  </TitleName>
+                  <ModalImgWrapper>
+                    <ModalImg
+                      src={valentynWebp}
+                      srcSet={`${valentynWebp} 1x, ${valentyn2x} 2x`}
+                      alt="Валентин Гавриленко"
+                    />
+                  </ModalImgWrapper>
+                  <NameAndPositionWrapper>
+                    <TitleName>
+                      <a
+                        href="https://www.linkedin.com/in/valentyn-havrylenko/"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                      >
+                        Валентин Гавриленко
+                        <svg width="24" height="24">
+                          <use href={`${sprite}#icon-linkedin`} />
+                        </svg>
+                      </a>
+                    </TitleName>
+                    <ParagraphDescription>
+                      Frontend Developer
+                    </ParagraphDescription>
+                  </NameAndPositionWrapper>
                 </NameLinkedinWrapper>
-                <ParagraphDescription>Frontend Developer</ParagraphDescription>
               </TeamListItem>
               <TeamListItem>
                 <NameLinkedinWrapper>
-                  <img
-                    src={vyacheslavWebp}
-                    srcSet={`${vyacheslavWebp} 1x, ${vyacheslav2x} 2x`}
-                    alt="В´ячеслав Павлюк"
-                  />
-                  <TitleName>
-                    В&#39;ячеслав Павлюк
-                    <a
-                      href="https://www.linkedin.com/in/vyacheslav-pavlyuk/"
-                      target="_blank"
-                      rel="noopener noreferrer"
-                    >
-                      <svg width="24" height="24">
-                        <use href={`${sprite}#icon-linkedin`} />
-                      </svg>
-                    </a>
-                  </TitleName>
+                  <ModalImgWrapper>
+                    <ModalImg
+                      src={vyacheslavWebp}
+                      srcSet={`${vyacheslavWebp} 1x, ${vyacheslav2x} 2x`}
+                      alt="В´ячеслав Павлюк"
+                    />
+                  </ModalImgWrapper>
+                  <NameAndPositionWrapper>
+                    <TitleName>
+                      <a
+                        href="https://www.linkedin.com/in/vyacheslav-pavlyuk/"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                      >
+                        В&#39;ячеслав Павлюк
+                        <svg width="24" height="24">
+                          <use href={`${sprite}#icon-linkedin`} />
+                        </svg>
+                      </a>
+                    </TitleName>
+                    <ParagraphDescription>
+                      Fullstack Developer
+                    </ParagraphDescription>
+                  </NameAndPositionWrapper>
                 </NameLinkedinWrapper>
-                <ParagraphDescription>Fullstack Developer</ParagraphDescription>
               </TeamListItem>
               <TeamListItem>
                 <NameLinkedinWrapper>
-                  <img
-                    src={olhaWebp}
-                    srcSet={`${olhaWebp} 1x, ${olha2x} 2x`}
-                    alt="Ольга Абент"
-                  />
-                  <TitleName>
-                    Ольга Абент
-                    <a
-                      href="https://www.linkedin.com/in/abentolga/"
-                      target="_blank"
-                      rel="noopener noreferrer"
-                    >
-                      <svg width="24" height="24">
-                        <use href={`${sprite}#icon-linkedin`} />
-                      </svg>
-                    </a>
-                  </TitleName>
+                  <ModalImgWrapper>
+                    <ModalImg
+                      src={olhaWebp}
+                      srcSet={`${olhaWebp} 1x, ${olha2x} 2x`}
+                      alt="Ольга Абент"
+                    />
+                  </ModalImgWrapper>
+                  <NameAndPositionWrapper>
+                    <TitleName>
+                      <a
+                        href="https://www.linkedin.com/in/abentolga/"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                      >
+                        Ольга Абент
+                        <svg width="24" height="24">
+                          <use href={`${sprite}#icon-linkedin`} />
+                        </svg>
+                      </a>
+                    </TitleName>
+                    <ParagraphDescription>QA Engineer</ParagraphDescription>
+                  </NameAndPositionWrapper>
                 </NameLinkedinWrapper>
-                <ParagraphDescription>QA Engineer</ParagraphDescription>
               </TeamListItem>
             </TeamList>
           </ModalWindow>

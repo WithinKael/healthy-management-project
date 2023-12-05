@@ -1,4 +1,4 @@
-import mentorPhoto1 from "../../images/desktop/pic_mentorstvo1x.jpg";
+import MediaQuery from "react-responsive";
 import mentorPhoto2 from "../../images/desktop/pic_mentorstvo1x.webp";
 import mentorPhoto2x from "../../images/desktop/pic_mentorstvo2x.jpg";
 import mentorPhotoMobWebp from "../../images/mobile/mob_mentor1x.webp";
@@ -8,7 +8,6 @@ import {
   AboutWrapper,
   DescriptionWrapper,
   ForWHoWrapper,
-  Img,
   ImgSectionWrapper,
   MentorstvoWrapper,
   Paragraph,
@@ -29,23 +28,55 @@ const Mentor = () => {
     <StyledSection id="mentoring" className="container">
       <ImgSectionWrapper>
         <div>
-          <picture>
+          {/* <picture>
             <source
-              media="(min-width: 1920px)"
               srcSet={`${mentorPhoto2} 1x, ${mentorPhoto2x} 2x`}
+              type="image/webp"
+              media="(min-width: 1920px)"
             />
             <source
-              media="(min-width: 375px)"
               srcSet={`${mentorPhotoMobWebp} 1x, ${mentorPhotoMob2x} 2x`}
+              type="image/webp"
+              media="(min-width: 375px)"
             />
-          </picture>
-          <Img src={mentorPhoto1} alt="Ольга Поліщук" />
+            <Img
+              src={mentorPhoto1}
+              alt="Ольга Поліщук - ваш ментор в медичній галузі"
+            />
+          </picture> */}
+
+          {/* THIS CODE */}
+          {/* <img
+            srcSet={`${mentorPhoto2} 1920w, ${mentorPhotoMobWebp} 375w`}
+            sizes="(min-width: 1920px) 1920px, (min-width: 375px) 375px"
+            src={mentorPhoto1}
+            alt="Ольга Поліщук"
+          /> */}
+          {/* THIS CODE */}
+
+          <MediaQuery minWidth={1920}>
+            <img
+              srcSet={`${mentorPhoto2} 1920w, ${mentorPhoto2x} 2x`}
+              sizes="(min-width: 1920px) 1920px"
+              src={mentorPhoto2}
+              alt="Ольга Поліщук - ваш ментор в медичній галузі"
+            />
+          </MediaQuery>
+
+          <MediaQuery minWidth={375} maxWidth={1919}>
+            <img
+              srcSet={`${mentorPhotoMobWebp} 375w, ${mentorPhotoMob2x} 2x`}
+              sizes="(min-width: 375px) 375px"
+              src={mentorPhotoMobWebp}
+              alt="Ольга Поліщук - ваш ментор в медичній галузі"
+            />
+          </MediaQuery>
         </div>
         <MentorstvoWrapper>
           <TitleH2>Менторство</TitleH2>
           <ParagraphWrapper>
             <Paragraph>
-              <b>Менторство в медичній галузі</b>- почути іншу думку,
+              <b>Менторство в медичній галузі</b> - почути іншу думку,
               підтвердити власні гіпотези, зрозуміти вектор розвитку, отримати
               підтримку та пораду з питань менеджменту і медичного маркетингу
             </Paragraph>

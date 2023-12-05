@@ -68,6 +68,14 @@ export const TitleName = styled.h3`
   line-height: 24px;
   text-align: center;
   color: var(--typography-white);
+
+  a {
+    text-decoration: none;
+    color: inherit;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+  }
 `;
 
 export const ParagraphDescription = styled.p`
@@ -85,4 +93,24 @@ export const NameLinkedinWrapper = styled.div`
   display: flex;
   flex-direction: column;
   justify-content: center;
+`;
+
+export const NameAndPositionWrapper = styled.div`
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+`;
+
+export const ModalImgWrapper = styled.div`
+  border-radius: 8px;
+  overflow: hidden;
+`;
+
+export const ModalImg = styled.img`
+  border-radius: 8px;
+
+  &:hover {
+    transform: scale(1.1);
+    border-radius: 8px;
+  }
 `;

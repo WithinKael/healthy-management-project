@@ -7,67 +7,119 @@ export const StyledSection = styled.section`
 
 export const ImgSectionWrapper = styled.div`
   display: flex;
+  flex-direction: column;
   gap: 24px;
-  margin-bottom: 40px;
+
+  @media screen and (min-width: 1920px) {
+    gap: 24px;
+    margin-bottom: 40px;
+    flex-direction: row;
+  }
 `;
 
 export const MentorstvoWrapper = styled.div`
-  max-width: 828px;
   display: flex;
   flex-direction: column;
-  align-items: flex-start;
+  gap: 16px;
+
+  @media screen and (min-width: 1920px) {
+    max-width: 828px;
+    align-items: flex-start;
+  }
 `;
 export const AboutWrapper = styled.div`
   display: flex;
   flex-direction: column;
-  gap: 24px;
-  max-width: 820px;
-  height: 392px;
-  padding: 40px;
+  padding: 24px;
+  gap: 16px;
+
   border-radius: 16px;
   background: var(--background-white);
   box-shadow: 0px 0px 8px 0px rgba(27, 54, 65, 0.08);
+
+  @media screen and (min-width: 1920px) {
+    gap: 24px;
+    max-width: 820px;
+    height: 392px;
+    padding: 40px;
+  }
 `;
 
-export const Img = styled.img`
-  width: 828px;
-  height: 468px;
-`;
+// export const Img = styled.img`
+//   width: 327px;
+
+//   @media screen and (min-width: 1920px) {
+//     width: 828px;
+//     height: 468px;
+//   }
+// `;
 
 export const TitleH2 = styled.h2`
-  font-size: 48px;
+  font-size: 24px;
   font-weight: 600;
-  line-height: 56px;
-  margin-bottom: 40px;
+  line-height: 32px;
   color: var(--typography-black);
+
+  @media screen and (min-width: 1920px) {
+    font-size: 48px;
+    line-height: 56px;
+    margin-bottom: 40px;
+  }
 `;
 
 export const TitleH3 = styled.h3`
-  font-size: 24px;
+  font-size: 18px;
   font-weight: 600;
-  line-height: 32px;
+  line-height: 24px;
   color: var(--typography-bluedark);
+
+  @media screen and (min-width: 1920px) {
+    font-size: 24px;
+    line-height: 32px;
+  }
 `;
+
 export const TitleH3White = styled.h3`
-  font-size: 24px;
+  font-size: 18px;
   font-weight: 600;
-  line-height: 32px;
+  line-height: 24px;
   color: var(--typography-white);
+
+  @media screen and (min-width: 1920px) {
+    font-size: 24px;
+    line-height: 32px;
+  }
 `;
 
 export const ParagraphWrapper = styled.div`
-  margin-bottom: 80px;
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+  min-width: 320px;
+
+  @media screen and (min-width: 1920px) {
+    margin-bottom: 80px;
+  }
 `;
 
 export const Paragraph = styled.p`
-  font-size: 20px;
+  font-size: 16px;
   font-weight: 500;
-  max-width: 720px;
-  line-height: 28px;
+  line-height: 24px;
   color: var(--typography-bluedark);
 
-  &:not(:last-child) {
-    margin-bottom: 16px;
+  &:not(:first-of-type) {
+    margin-bottom: 8px;
+  }
+
+  @media screen and (min-width: 1920px) {
+    font-size: 20px;
+    max-width: 720px;
+    line-height: 28px;
+
+    &:not(:last-child) {
+      margin-bottom: 16px;
+    }
   }
 `;
 
@@ -75,43 +127,61 @@ export const StyledMentorButton = styled.a`
   display: flex;
   justify-content: center;
   align-items: center;
+  margin-bottom: 24px;
 
-  font-size: 16px;
+  font-size: 14px;
   font-weight: 500;
-  line-height: 24px;
+  line-height: 20px;
+  padding: 8px 24px;
   color: var(--typography-bluedark);
 
-  width: 260px;
   height: 56px;
-  padding: 8px 24px;
   border-radius: 16px;
   background-color: transparent;
   border: 1px solid var(--background-bluedark);
   box-shadow: 0px 0px 8px 0px rgba(27, 54, 65, 0.08);
 
-  &:hover,
-  &focus {
-    font-weight: 600;
-    background: var(--background-white);
+  @media screen and (min-width: 1920px) {
+    font-size: 16px;
+    line-height: 24px;
+
+    width: 260px;
+
+    &:hover,
+    &focus {
+      font-weight: 600;
+      background: var(--background-white);
+    }
   }
 `;
 
 export const DescriptionWrapper = styled.div`
   display: flex;
-  gap: 40px;
+  flex-direction: column;
+  gap: 24px;
+
+  @media screen and (min-width: 1920px) {
+    gap: 40px;
+    flex-direction: row;
+  }
 `;
 
 export const ForWHoWrapper = styled.div`
   display: flex;
   flex-direction: column;
   align-items: flex-start;
+  gap: 16px;
 
-  padding: 40px;
-  gap: 24px;
-  flex: 1 0 0;
+  padding: 24px;
   border-radius: 16px;
   box-shadow: 0px 0px 8px 0px rgba(27, 54, 65, 0.08);
   background-color: var(--background-bluedark);
+
+  @media screen and (min-width: 1920px) {
+    padding: 40px;
+    gap: 24px;
+    flex: 1 0 0;
+  }
 `;
 
 export const StyledAboutUl = styled.ul`
@@ -119,57 +189,93 @@ export const StyledAboutUl = styled.ul`
   flex-direction: column;
   gap: 8px;
 
-  font-size: 16px;
+  font-size: 14px;
   font-weight: 500;
-  line-height: 24px;
+  line-height: 20px;
   color: var(--typography-bluedark);
+
+  @media screen and (min-width: 1920px) {
+    font-size: 16px;
+    line-height: 24px;
+  }
 `;
 
 export const StyledForWhoUl = styled.ul`
   display: flex;
   flex-direction: column;
   gap: 8px;
+  margin-bottom: 8px;
 
-  font-size: 16px;
+  font-size: 14px;
   font-weight: 500;
-  line-height: 24px;
-  color: #f8f8f8;
+  line-height: 20px;
+  color: var(--typography-white);
+
+  @media screen and (min-width: 1920px) {
+    font-size: 16px;
+    line-height: 24px;
+    margin-bottom: 0px;
+  }
 `;
 
 export const StyledLi = styled.li`
-  padding-left: 24px;
-  position: relative;
+  display: flex;
+  gap: 10px;
 
   &::before {
-    content: "";
-    position: absolute;
-    left: 6px;
-    top: 50%;
-    transform: translateY(-50%);
-    width: 3px;
-    height: 3px;
-    background-color: #1b3641;
-    border-radius: 50%;
+    content: "\\2022";
+    color: var(--primary-bluedark);
+    display: inline-block;
+    margin-left: 0.5em;
   }
 
-  &:first-of-type::before {
-    top: 26%;
+  @media screen and (min-width: 1920px) {
+    padding-left: 24px;
+    position: relative;
+
+    &::before {
+      content: "";
+      position: absolute;
+      left: 6px;
+      top: 50%;
+      transform: translateY(-50%);
+      width: 3px;
+      height: 3px;
+      background-color: #1b3641;
+      border-radius: 50%;
+    }
+
+    &:first-of-type::before {
+      top: 26%;
+    }
   }
 `;
 
 export const StyledLiWhite = styled.li`
-  padding-left: 24px;
-  position: relative;
+  display: flex;
+  gap: 10px;
 
   &::before {
-    content: "";
-    position: absolute;
-    left: 6px;
-    top: 50%;
-    transform: translateY(-50%);
-    width: 3px;
-    height: 3px;
-    background-color: var(--typography-white);
-    border-radius: 50%;
+    content: "\\2022";
+    display: inline-block;
+    margin-left: 0.5em;
+    color: var(--typography-white);
+  }
+
+  @media screen and (min-width: 1920px) {
+    padding-left: 24px;
+    position: relative;
+
+    &::before {
+      content: "";
+      position: absolute;
+      left: 6px;
+      top: 50%;
+      transform: translateY(-50%);
+      width: 3px;
+      height: 3px;
+      border-radius: 50%;
+      background-color: var(--typography-white);
+    }
   }
 `;
