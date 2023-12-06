@@ -1,10 +1,10 @@
 // import Foto from "../../images/desktop/olga_picture1x.jpg";
 import MediaQuery from "react-responsive";
 import Fotos from "../../images/desktop/olga_picture1x.webp";
-// import Fotos2x from "../../images/desktop/olga_picture@2x.jpg";
-// import Fotos1x from "../../images/desktop/olga_picture1x.jpg";
-// import OlgaMob2x from "../../images/mobile/mob_olga_picture@2x.jpg";
-// import OlgaMob1x from "../../images/mobile/mob_olga_picture1x.jpg";
+import Fotos2x from "../../images/desktop/olga_picture@2x.jpg";
+import Fotos1x from "../../images/desktop/olga_picture1x.jpg";
+import OlgaMob2x from "../../images/mobile/mob_olga_picture@2x.jpg";
+import OlgaMob1x from "../../images/mobile/mob_olga_picture1x.jpg";
 import OlgaMobWebp from "../../images/mobile/mob_olga_picture1x.webp";
 import Icon from "../../images/sprite.svg";
 import {
@@ -54,10 +54,20 @@ const AboutMe = () => {
               <img src={Fotos} alt="Ольга Поліщук" width={"828px"} />
             </picture> */}
             <MediaQuery maxWidth={767}>
-              <img srcSet={`${OlgaMobWebp}`} alt="Ольга Поліщук" />
+              <img
+                srcSet={`${OlgaMob2x} 2x, ${OlgaMob1x} 1x`}
+                sizes="(max-width: 767px) 100vw"
+                src={OlgaMobWebp}
+                alt="Ольга Поліщук"
+              />
             </MediaQuery>
             <MediaQuery minWidth={768}>
-              <img srcSet={`${Fotos} `} alt="Ольга Поліщук" />
+              <img
+                srcSet={`${Fotos2x} 2x, ${Fotos1x} 1x`}
+                sizes="(min-width: 768px) 100vw"
+                src={Fotos}
+                alt="Ольга Поліщук"
+              />
             </MediaQuery>
           </SectionAboutMeDivWidth>
           <SectionAboutMeDivOl>
