@@ -1873,7 +1873,7 @@ Valid keys: `+JSON.stringify(Object.keys(M),null,"  "));var F=S(ee,E,X,ne,Z+"."+
   align-self: stretch;
   border-radius: 16px;
   border: none;
-  background: var(--background-white);
+  background-color: var(--background-white);
   box-shadow: 0px 0px 8px 0px rgba(27, 54, 65, 0.08);
   border: 1px solid
     ${e=>e.errors?"var(--secondary-red)":"none"};
