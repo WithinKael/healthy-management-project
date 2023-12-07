@@ -2,9 +2,9 @@ import axios from "axios";
 import { useEffect } from "react";
 import Select from "react-select";
 import useLocalStorage from "./helpers";
-import computerJpg from "../../images/desktop/computer1x.jpg";
+import computerJpg from "../../images/desktop/computer1x.webp";
 import computerWebp from "../../images/desktop/computer1x.webp";
-import computer2x from "../../images/desktop/computer@2x.jpg";
+import computer2x from "../../images/desktop/computer@2x.webp";
 import {
   Button,
   ContactBlock,
