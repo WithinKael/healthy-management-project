@@ -1,5 +1,6 @@
 import axios from "axios";
 import { useEffect } from "react";
+import Select from "react-select";
 import useLocalStorage from "./helpers";
 import computerJpg from "../../images/desktop/computer1x.jpg";
 import computerWebp from "../../images/desktop/computer1x.webp";
@@ -14,14 +15,14 @@ import {
   Input,
   Label,
   LabelTextarea,
-  Select,
   StarLabel,
   Text,
   TextError,
   Textarea,
   Title,
 } from "./ContactsForm.styled";
-import { useForm } from "react-hook-form";
+import { useForm, Controller } from "react-hook-form";
+import customStyles from "./SelectFormStyle";
 import Star from "./Star";
 
 const ContactsForm = () => {
@@ -36,15 +37,28 @@ const ContactsForm = () => {
   const {
     register,
     handleSubmit,
+    control,
+    setValue,
     formState: { errors },
+    reset,
   } = useForm({
     mode: "all",
+    shouldFocusError: false,
+    defaultValues: {},
   });
 
   useEffect(() => {
     const stringifiedContacts = JSON.stringify(formData);
     localStorage.setItem("key", stringifiedContacts);
   }, [formData]);
+
+  const handleChangeSelect = (selectedOption) => {
+    setValue("service", selectedOption?.value || "");
+    setFormData({
+      ...formData,
+      service: selectedOption?.value || "",
+    });
+  };
 
   const handleChange = (event) => {
     setFormData({
@@ -67,11 +81,23 @@ const ContactsForm = () => {
         service: "",
         comment: "",
       });
+      reset();
       alert("Заявка відправлена!");
     } catch (error) {
       alert("Помилка при відправці заявки");
     }
   };
+
+  const options = [
+    {
+      value: "Менторство та консультації",
+      label: "Менторство та консультації",
+    },
+    { value: "Діагностика", label: "Діагностика" },
+    { value: "Стратегії", label: "Стратегії" },
+    { value: "Навчання", label: "Навчання" },
+    { value: "Інше", label: "Інше" },
+  ];
 
   return (
     <section className="container" id="contact">
@@ -166,25 +192,28 @@ const ContactsForm = () => {
               <Label>
                 Послуга
                 <Star />
-                <Select
-                  {...register("service", {
-                    required: "Оберіть послугу",
-                  })}
+                <Controller
+                  name="service"
+                  control={control}
+                  shouldUnregister={false}
+                  render={({ field }) => (
+                    <Select
+                      {...register("service", {
+                        required: "Оберіть послугу",
+                      })}
+                      placeholder="Оберіть послугу"
+                      {...field}
+                      options={options}
+                      styles={customStyles}
+                      errors={errors.service}
+                      onChange={handleChangeSelect}
+                      value={options.find(
+                        (option) => option.value === formData.service
+                      )}
+                    />
+                  )}
                   value={service}
-                  onChange={handleChange}
-                  errors={errors.service}
-                >
-                  <option value="" disabled hidden>
-                    Оберіть послугу
-                  </option>
-                  <option value="Менторство та консультації">
-                    Менторство та консультації
-                  </option>
-                  <option value="Діагностика">Діагностика</option>
-                  <option value="Стратегії">Стратегії</option>
-                  <option value="Навчання">Навчання</option>
-                  <option value="Інше">Інше</option>
-                </Select>
+                />
                 {errors.service && (
                   <TextError>
                     <Star />
