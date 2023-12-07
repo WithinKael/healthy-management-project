@@ -11,7 +11,7 @@ export const ImgSectionWrapper = styled.div`
   gap: 24px;
 
   @media screen and (min-width: 1920px) {
-    gap: 24px;
+    gap: 40px;
     margin-bottom: 40px;
     flex-direction: row;
   }
