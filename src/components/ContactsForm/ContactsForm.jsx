@@ -13,7 +13,7 @@ import {
   ContactWrapper,
   FormWrapper,
   Forma,
-  // Img,
+  Img,
   Input,
   InputTel,
   Label,
@@ -72,11 +72,15 @@ const ContactsForm = () => {
 
   const onSubmit = async (formData) => {
     try {
+      const formattedData = {
+        ...formData,
+        phone: formData.phone.replace(/\D/g, "").slice(2),
+      };
       await axios.post(
         "https://healthy-management.onrender.com/api/senddata",
-        formData
+        formattedData
       );
-      console.log(formData);
+      console.log(formattedData);
       setFormData({
         name: "",
         email: "",
@@ -113,7 +117,7 @@ const ContactsForm = () => {
         <ContactBlock>
           <div>
             <MediaQuery minWidth={1920}>
-              <img
+              <Img
                 srcSet={`${computerWebp} 1920w, ${computer2x} 2x`}
                 sizes="(min-width: 1920px) 1920px"
                 src={computerWebp}
@@ -122,7 +126,7 @@ const ContactsForm = () => {
             </MediaQuery>
 
             <MediaQuery minWidth={300} maxWidth={1919}>
-              <img
+              <Img
                 srcSet={`${mobileWebp} 375w, ${mobile2x} 2x`}
                 sizes="(min-width: 375px) 375px"
                 src={mobileWebp}
