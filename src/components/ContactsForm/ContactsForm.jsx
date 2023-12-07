@@ -1,17 +1,19 @@
-import axios from "axios";
+// import axios from "axios";
 import { useEffect } from "react";
 import Select from "react-select";
+import MediaQuery from "react-responsive";
 import useLocalStorage from "./helpers";
-import computerJpg from "../../images/desktop/computer1x.webp";
 import computerWebp from "../../images/desktop/computer1x.webp";
 import computer2x from "../../images/desktop/computer@2x.webp";
+import mobileWebp from "../../images/mobile/mob_computer1x.webp";
+import mobile2x from "../../images/mobile/mob_computer@2x.webp";
 import {
   Button,
   ContactBlock,
   ContactWrapper,
   FormWrapper,
   Forma,
-  Img,
+  // Img,
   Input,
   InputTel,
   Label,
@@ -70,10 +72,10 @@ const ContactsForm = () => {
 
   const onSubmit = async (formData) => {
     try {
-      await axios.post(
-        "https://healthy-management.onrender.com/api/senddata",
-        formData
-      );
+      // await axios.post(
+      //   "https://healthy-management.onrender.com/api/senddata",
+      //   formData
+      // );
       console.log(formData);
       setFormData({
         name: "",
@@ -91,6 +93,10 @@ const ContactsForm = () => {
 
   const options = [
     {
+      value: "",
+      label: "Оберіть послугу",
+    },
+    {
       value: "Менторство та консультації",
       label: "Менторство та консультації",
     },
@@ -105,13 +111,32 @@ const ContactsForm = () => {
       <ContactWrapper>
         <Title>Контакт</Title>
         <ContactBlock>
-          <picture>
+          <div>
+            <MediaQuery minWidth={1920}>
+              <img
+                srcSet={`${computerWebp} 1920w, ${computer2x} 2x`}
+                sizes="(min-width: 1920px) 1920px"
+                src={computerWebp}
+                alt="notebook"
+              />
+            </MediaQuery>
+
+            <MediaQuery minWidth={300} maxWidth={1919}>
+              <img
+                srcSet={`${mobileWebp} 375w, ${mobile2x} 2x`}
+                sizes="(min-width: 375px) 375px"
+                src={mobileWebp}
+                alt="notebook"
+              />
+            </MediaQuery>
+          </div>
+          {/* <picture>
             <source
               media="(min-width: 1920px)"
               srcSet={`${computerWebp} 1x, ${computer2x} 2x`}
             />
             <Img src={computerJpg} />
-          </picture>
+          </picture> */}
           <FormWrapper>
             <Text>
               Залишайте ваші контактні дані і ми з вами зв&apos;яжемось
@@ -176,7 +201,7 @@ const ContactsForm = () => {
                   {...register("phone", {
                     required: "Це поле обов'язкове для заповнення",
                     pattern: {
-                      value: /^0\d{9}$/,
+                      value: /^\+\d{2}\(\d{3}\)\d{3}-\d{2}-\d{2}$/,
                       message: "Введіть коректний номер телефона",
                     },
                   })}
@@ -209,12 +234,9 @@ const ContactsForm = () => {
                       styles={customStyles}
                       errors={errors.service}
                       onChange={handleChangeSelect}
-                      value={options.find(
-                        (option) => option.value === formData.service
-                      )}
+                      value={options.find((option) => option.value === service)}
                     />
                   )}
-                  value={service}
                 />
                 {errors.service && (
                   <TextError>
