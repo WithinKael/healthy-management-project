@@ -44,10 +44,22 @@ export const ServicesList = styled.ul`
 `;
 
 export const ServicesItem = styled.li`
+  position: relative;
   width: calc((100% - (24px * 3)) / 4);
   background: var(--background-white);
   padding: 40px;
   border-radius: 16px;
+`;
+
+export const IconDiv = styled.div`
+  position: absolute;
+  width: 80px;
+  height: 80px;
+  border-radius: 16px;
+  padding: 16px;
+  background: var(--primary-yellow);
+  left: 258px;
+  top: -24px;
 `;
 
 export const ServicesBtn = styled.a`
@@ -67,4 +79,14 @@ export const ServicesBtn = styled.a`
   box-shadow: 0px 0px 8px 0px rgba(248, 248, 248, 0.08);
   margin-left: auto;
   margin-right: auto;
+
+  &:hover {
+    box-shadow: 0px 0px 16px 0px rgba(248, 248, 248, 0.16);
+    font-weight: 600;
+  }
+
+  &:focus {
+    box-shadow: 0px 0px 16px 0px rgba(248, 248, 248, 0.16);
+    font-weight: 600;
+  }
 `;
