@@ -13,6 +13,7 @@ import {
   Forma,
   Img,
   Input,
+  InputTel,
   Label,
   LabelTextarea,
   StarLabel,
@@ -168,7 +169,8 @@ const ContactsForm = () => {
               <Label>
                 Номер телефону
                 <Star />
-                <Input
+                <InputTel
+                  mask="+38(099)999-99-99"
                   type="tel"
                   placeholder="Введіть номер телефону"
                   {...register("phone", {
