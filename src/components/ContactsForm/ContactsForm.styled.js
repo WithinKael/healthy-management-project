@@ -115,39 +115,6 @@ export const Input = styled.input`
   }
 `;
 
-export const Select = styled.select`
-  width: 100%;
-  display: flex;
-  height: 56px;
-  padding: 0px 16px;
-  align-items: center;
-  gap: 8px;
-  flex-shrink: 0;
-  align-self: stretch;
-  border-radius: 16px;
-  border: none;
-  border: 1px solid
-    ${(props) => (props.errors ? "var(--secondary-red)" : "none")};
-  background: var(--background-white);
-  box-shadow: 0px 0px 8px 0px rgba(27, 54, 65, 0.08);
-
-  &:hover {
-    box-shadow: 0px 0px 16px 0px rgba(27, 54, 65, 0.16);
-  }
-
-  &:focus {
-    outline: none;
-    border: 1px solid var(--typography-grey);
-    background: var(--background-white);
-    box-shadow: 0px 0px 8px 0px rgba(27, 54, 65, 0.08);
-  }
-
-  & > option {
-    color: #333;
-    background-color: #fff;
-  }
-`;
-
 export const Textarea = styled.textarea`
   width: 100%;
   display: flex;
