@@ -1,4 +1,4 @@
-// import axios from "axios";
+import axios from "axios";
 import { useEffect } from "react";
 import Select from "react-select";
 import MediaQuery from "react-responsive";
@@ -72,10 +72,10 @@ const ContactsForm = () => {
 
   const onSubmit = async (formData) => {
     try {
-      // await axios.post(
-      //   "https://healthy-management.onrender.com/api/senddata",
-      //   formData
-      // );
+      await axios.post(
+        "https://healthy-management.onrender.com/api/senddata",
+        formData
+      );
       console.log(formData);
       setFormData({
         name: "",
