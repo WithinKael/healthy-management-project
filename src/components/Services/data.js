@@ -1,5 +1,6 @@
-import icon from "../../images/svg/Icon.svg";
-import icon2 from '../../images/svg/icon-2.svg'
+
+import icon from "../../images/svg/icon.svg";
+import icon2 from "../../images/svg/icon-2.svg";
 import icon3 from "../../images/svg/icon-3.svg";
 import icon4 from "../../images/svg/icon-4.svg";
 
