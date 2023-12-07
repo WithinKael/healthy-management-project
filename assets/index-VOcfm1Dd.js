@@ -1005,7 +1005,7 @@ Valid keys: `+JSON.stringify(Object.keys(F),null,"  "));var $=k(le,O,te,ae,se+".
   gap: 24px;
 
   @media screen and (min-width: 1920px) {
-    gap: 40px;
+    gap: 24px;
     margin-bottom: 40px;
     flex-direction: row;
   }
