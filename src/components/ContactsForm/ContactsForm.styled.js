@@ -1,5 +1,6 @@
 import styled from "@emotion/styled";
 import Star from "./Star";
+import InputMask from "react-input-mask";
 
 export const ContactWrapper = styled.div`
   padding: 80px 0;
@@ -21,7 +22,7 @@ export const ContactBlock = styled.div`
 `;
 
 export const Img = styled.img`
-  max-width: 828px;
+  width: 100%;
   height: 100%;
 `;
 
@@ -115,10 +116,11 @@ export const Input = styled.input`
   }
 `;
 
-export const Select = styled.select`
-  width: 100%;
+export const InputTel = styled(InputMask)`
   display: flex;
+  width: 100%;
   height: 56px;
+  margin-top: 8px;
   padding: 0px 16px;
   align-items: center;
   gap: 8px;
@@ -126,10 +128,10 @@ export const Select = styled.select`
   align-self: stretch;
   border-radius: 16px;
   border: none;
+  background-color: var(--background-white);
+  box-shadow: 0px 0px 8px 0px rgba(27, 54, 65, 0.08);
   border: 1px solid
     ${(props) => (props.errors ? "var(--secondary-red)" : "none")};
-  background: var(--background-white);
-  box-shadow: 0px 0px 8px 0px rgba(27, 54, 65, 0.08);
 
   &:hover {
     box-shadow: 0px 0px 16px 0px rgba(27, 54, 65, 0.16);
@@ -142,9 +144,11 @@ export const Select = styled.select`
     box-shadow: 0px 0px 8px 0px rgba(27, 54, 65, 0.08);
   }
 
-  & > option {
-    color: #333;
-    background-color: #fff;
+  &::placeholder {
+    font-size: 16px;
+    font-weight: 500;
+    line-height: 1.5;
+    color: var(--typography-grey);
   }
 `;
 

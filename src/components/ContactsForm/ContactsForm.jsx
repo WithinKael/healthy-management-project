@@ -1,9 +1,12 @@
 import axios from "axios";
 import { useEffect } from "react";
+import Select from "react-select";
+import MediaQuery from "react-responsive";
 import useLocalStorage from "./helpers";
-import computerJpg from "../../images/desktop/computer1x.jpg";
 import computerWebp from "../../images/desktop/computer1x.webp";
-import computer2x from "../../images/desktop/computer@2x.jpg";
+import computer2x from "../../images/desktop/computer@2x.webp";
+import mobileWebp from "../../images/mobile/mob_computer1x.webp";
+import mobile2x from "../../images/mobile/mob_computer@2x.webp";
 import {
   Button,
   ContactBlock,
@@ -12,16 +15,17 @@ import {
   Forma,
   Img,
   Input,
+  InputTel,
   Label,
   LabelTextarea,
-  Select,
   StarLabel,
   Text,
   TextError,
   Textarea,
   Title,
 } from "./ContactsForm.styled";
-import { useForm } from "react-hook-form";
+import { useForm, Controller } from "react-hook-form";
+import customStyles from "./SelectFormStyle";
 import Star from "./Star";
 
 const ContactsForm = () => {
@@ -36,15 +40,28 @@ const ContactsForm = () => {
   const {
     register,
     handleSubmit,
+    control,
+    setValue,
     formState: { errors },
+    reset,
   } = useForm({
     mode: "all",
+    shouldFocusError: false,
+    defaultValues: {},
   });
 
   useEffect(() => {
     const stringifiedContacts = JSON.stringify(formData);
     localStorage.setItem("key", stringifiedContacts);
   }, [formData]);
+
+  const handleChangeSelect = (selectedOption) => {
+    setValue("service", selectedOption?.value || "");
+    setFormData({
+      ...formData,
+      service: selectedOption?.value || "",
+    });
+  };
 
   const handleChange = (event) => {
     setFormData({
@@ -55,11 +72,15 @@ const ContactsForm = () => {
 
   const onSubmit = async (formData) => {
     try {
+      const formattedData = {
+        ...formData,
+        phone: formData.phone.replace(/\D/g, "").slice(2),
+      };
       await axios.post(
         "https://healthy-management.onrender.com/api/senddata",
-        formData
+        formattedData
       );
-      console.log(formData);
+      console.log(formattedData);
       setFormData({
         name: "",
         email: "",
@@ -67,24 +88,59 @@ const ContactsForm = () => {
         service: "",
         comment: "",
       });
+      reset();
       alert("Заявка відправлена!");
     } catch (error) {
       alert("Помилка при відправці заявки");
     }
   };
 
+  const options = [
+    {
+      value: "",
+      label: "Оберіть послугу",
+    },
+    {
+      value: "Менторство та консультації",
+      label: "Менторство та консультації",
+    },
+    { value: "Діагностика", label: "Діагностика" },
+    { value: "Стратегії", label: "Стратегії" },
+    { value: "Навчання", label: "Навчання" },
+    { value: "Інше", label: "Інше" },
+  ];
+
   return (
     <section className="container" id="contact">
       <ContactWrapper>
         <Title>Контакт</Title>
         <ContactBlock>
-          <picture>
+          <div>
+            <MediaQuery minWidth={1920}>
+              <Img
+                srcSet={`${computerWebp} 1920w, ${computer2x} 2x`}
+                sizes="(min-width: 1920px) 1920px"
+                src={computerWebp}
+                alt="notebook"
+              />
+            </MediaQuery>
+
+            <MediaQuery minWidth={300} maxWidth={1919}>
+              <Img
+                srcSet={`${mobileWebp} 375w, ${mobile2x} 2x`}
+                sizes="(min-width: 375px) 375px"
+                src={mobileWebp}
+                alt="notebook"
+              />
+            </MediaQuery>
+          </div>
+          {/* <picture>
             <source
               media="(min-width: 1920px)"
               srcSet={`${computerWebp} 1x, ${computer2x} 2x`}
             />
             <Img src={computerJpg} />
-          </picture>
+          </picture> */}
           <FormWrapper>
             <Text>
               Залишайте ваші контактні дані і ми з вами зв&apos;яжемось
@@ -142,13 +198,14 @@ const ContactsForm = () => {
               <Label>
                 Номер телефону
                 <Star />
-                <Input
+                <InputTel
+                  mask="+38(099)999-99-99"
                   type="tel"
                   placeholder="Введіть номер телефону"
                   {...register("phone", {
                     required: "Це поле обов'язкове для заповнення",
                     pattern: {
-                      value: /^0\d{9}$/,
+                      value: /^\+\d{2}\(\d{3}\)\d{3}-\d{2}-\d{2}$/,
                       message: "Введіть коректний номер телефона",
                     },
                   })}
@@ -166,25 +223,25 @@ const ContactsForm = () => {
               <Label>
                 Послуга
                 <Star />
-                <Select
-                  {...register("service", {
-                    required: "Оберіть послугу",
-                  })}
-                  value={service}
-                  onChange={handleChange}
-                  errors={errors.service}
-                >
-                  <option value="" disabled hidden>
-                    Оберіть послугу
-                  </option>
-                  <option value="Менторство та консультації">
-                    Менторство та консультації
-                  </option>
-                  <option value="Діагностика">Діагностика</option>
-                  <option value="Стратегії">Стратегії</option>
-                  <option value="Навчання">Навчання</option>
-                  <option value="Інше">Інше</option>
-                </Select>
+                <Controller
+                  name="service"
+                  control={control}
+                  shouldUnregister={false}
+                  render={({ field }) => (
+                    <Select
+                      {...register("service", {
+                        required: "Оберіть послугу",
+                      })}
+                      placeholder="Оберіть послугу"
+                      {...field}
+                      options={options}
+                      styles={customStyles}
+                      errors={errors.service}
+                      onChange={handleChangeSelect}
+                      value={options.find((option) => option.value === service)}
+                    />
+                  )}
+                />
                 {errors.service && (
                   <TextError>
                     <Star />

@@ -7,7 +7,7 @@ export const SectionHero = styled.section`
   background-position: center;
   background-image: url(${HeroMobaile1x});
   background-size: cover;
-  margin-top: 110px;
+  margin-top: 130px;
   padding-top: 40px;
   padding-bottom: 40px;
 

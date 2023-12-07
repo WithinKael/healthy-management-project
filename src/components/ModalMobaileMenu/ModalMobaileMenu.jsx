@@ -54,7 +54,7 @@ const ModalMobaileMenu = ({ onClose, handleSetActiveLink }) => {
             href="#services"
             onClick={(e) => {
               onClose();
-              handleSetActiveLink("aboutUs", e);
+              handleSetActiveLink("services", e);
             }}
           >
             Послуги

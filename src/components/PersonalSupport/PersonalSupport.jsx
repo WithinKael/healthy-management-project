@@ -61,46 +61,6 @@ const PersonalSupport = () => {
           Шлях проведення менторського супроводу
         </StyledSessionParagraph>
         <ArrowPersonalWrapper>
-          {/* <StyledPersonalContainer>
-            {isMobile ? (
-              <StyledPersonalArrowSvg>
-                <use href={`${sprite}#icon-rectangle2`} />
-              </StyledPersonalArrowSvg>
-            ) : (
-              <StyledPersonalArrowSvg>
-                <use href={`${sprite}#icon-rectangle-mob`} />
-              </StyledPersonalArrowSvg>
-            )}
-            <StyledPersonalParagraph>Заповнення брифу</StyledPersonalParagraph>
-          </StyledPersonalContainer>
-          <StyledPersonalContainer>
-            <StyledPersonalArrowSvg>
-              <use href={`${sprite}#icon-rectangle2`} />
-            </StyledPersonalArrowSvg>
-            <StyledPersonalParagraph>
-              Діагностика ситуації
-            </StyledPersonalParagraph>
-          </StyledPersonalContainer>
-          <StyledPersonalContainer>
-            <StyledPersonalArrowSvg>
-              <use href={`${sprite}#icon-rectangle2`} />
-            </StyledPersonalArrowSvg>
-            <StyledPersonalParagraph>
-              Визначення зон росту
-            </StyledPersonalParagraph>
-          </StyledPersonalContainer>
-          <StyledPersonalContainer>
-            <StyledPersonalArrowSvg>
-              <use href={`${sprite}#icon-rectangle2`} />
-            </StyledPersonalArrowSvg>
-            <StyledPersonalParagraph>Менторинг</StyledPersonalParagraph>
-          </StyledPersonalContainer>
-          <StyledPersonalContainer>
-            <StyledPersonalArrowSvg>
-              <use href={`${sprite}#icon-rectangle2`} />
-            </StyledPersonalArrowSvg>
-            <StyledPersonalParagraph>Рекомендації</StyledPersonalParagraph>
-          </StyledPersonalContainer> */}
           <StyledPersonalContainer>
             {isMobile ? (
               <StyledPersonalArrowSvg>
