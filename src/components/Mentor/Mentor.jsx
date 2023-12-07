@@ -63,7 +63,7 @@ const Mentor = () => {
             />
           </MediaQuery>
 
-          <MediaQuery minWidth={375} maxWidth={1919}>
+          <MediaQuery minWidth={300} maxWidth={1919}>
             <img
               srcSet={`${mentorPhotoMobWebp} 375w, ${mentorPhotoMob2x} 2x`}
               sizes="(min-width: 375px) 375px"

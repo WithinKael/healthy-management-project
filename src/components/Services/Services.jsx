@@ -13,7 +13,7 @@ import { servicesData } from "./data";
 
 const Services = () => {
   return (
-    <SectionServices className="container">
+    <SectionServices className="container" id="services">
       <ServicesContentWrapper>
         <ServicesTitle>Послуги</ServicesTitle>
         <ServicesText>

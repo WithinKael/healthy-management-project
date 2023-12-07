@@ -27,7 +27,7 @@ function App() {
       let targetOffset;
       const screenWidth = window.innerWidth;
 
-      if (screenWidth <= 375) {
+      if (screenWidth <= 768) {
         targetOffset = rect.top + scrollTop - 80;
       } else {
         targetOffset = rect.top + scrollTop - 60;

@@ -29,7 +29,7 @@ const Hero = () => {
         </SectionHeroTextUl>
         <SectionHeroDiv>
           <SectionHeroLinks href="#contact">Консультація</SectionHeroLinks>
-          <SectionHeroLinks href="services">Послуги</SectionHeroLinks>
+          <SectionHeroLinks href="#services">Послуги</SectionHeroLinks>
         </SectionHeroDiv>
       </div>
     </SectionHero>
