@@ -7,7 +7,7 @@ export const SectionHero = styled.section`
   background-position: center;
   background-image: url(${HeroMobaile1x});
   background-size: cover;
-  margin-top: 110px;
+  margin-top: 130px;
   padding-top: 40px;
   padding-bottom: 40px;
 
@@ -138,7 +138,7 @@ export const SectionHeroDiv = styled.div`
 export const SectionHeroLinks = styled.a`
   display: flex;
   flex-direction: row;
-  min-width: 327px;
+  max-width: 327px;
   height: 56px;
   padding: 8px 24px;
   justify-content: center;

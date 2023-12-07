@@ -1,15 +1,15 @@
 import styled from "@emotion/styled";
 
 export const SectionAboutMe = styled.section`
-  max-width: 375px;
-  margin-left: auto;
-  margin-right: auto;
-  padding: 24px;
+  // max-width: 375px;
+  // margin-left: auto;
+  // margin-right: auto;
+  // padding: 24px;
 
   @media screen and (min-width: 768px) {
-    max-width: 1920px;
-    margin-left: auto;
-    margin-right: auto;
+    // max-width: 1920px;
+    // margin-left: auto;
+    // margin-right: auto;
     padding: 80px 120px;
   }
 `;

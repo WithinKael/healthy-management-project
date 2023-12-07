@@ -28,23 +28,6 @@ const Mentor = () => {
     <StyledSection id="mentoring" className="container">
       <ImgSectionWrapper>
         <div>
-          {/* <picture>
-            <source
-              srcSet={`${mentorPhoto2} 1x, ${mentorPhoto2x} 2x`}
-              type="image/webp"
-              media="(min-width: 1920px)"
-            />
-            <source
-              srcSet={`${mentorPhotoMobWebp} 1x, ${mentorPhotoMob2x} 2x`}
-              type="image/webp"
-              media="(min-width: 375px)"
-            />
-            <Img
-              src={mentorPhoto1}
-              alt="Ольга Поліщук - ваш ментор в медичній галузі"
-            />
-          </picture> */}
-
           {/* THIS CODE */}
           {/* <img
             srcSet={`${mentorPhoto2} 1920w, ${mentorPhotoMobWebp} 375w`}
@@ -63,7 +46,7 @@ const Mentor = () => {
             />
           </MediaQuery>
 
-          <MediaQuery minWidth={375} maxWidth={1919}>
+          <MediaQuery minWidth={300} maxWidth={1919}>
             <img
               srcSet={`${mentorPhotoMobWebp} 375w, ${mentorPhotoMob2x} 2x`}
               sizes="(min-width: 375px) 375px"
