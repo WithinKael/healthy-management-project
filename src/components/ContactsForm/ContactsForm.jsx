@@ -2,7 +2,7 @@ import axios from "axios";
 import { useEffect } from "react";
 import Select from "react-select";
 import MediaQuery from "react-responsive";
-import useLocalStorage from "./helpers";
+import useLocalStorage, { options } from "./helpers";
 import computerWebp from "../../images/desktop/computer1x.webp";
 import computer2x from "../../images/desktop/computer@2x.webp";
 import mobileWebp from "../../images/mobile/mob_computer1x.webp";
@@ -37,6 +37,7 @@ const ContactsForm = () => {
     comment: "",
   });
   const { name, email, phone, service, comment } = formData;
+  const selectedService = options.find((option) => option.value === service);
   const {
     register,
     handleSubmit,
@@ -76,10 +77,10 @@ const ContactsForm = () => {
         ...formData,
         phone: formData.phone.replace(/\D/g, "").slice(2),
       };
-      await axios.post(
-        "https://healthy-management.onrender.com/api/senddata",
-        formattedData
-      );
+      // await axios.post(
+      //   "https://healthy-management.onrender.com/api/senddata",
+      //   formattedData
+      // );
       console.log(formattedData);
       setFormData({
         name: "",
@@ -94,21 +95,6 @@ const ContactsForm = () => {
       alert("Помилка при відправці заявки");
     }
   };
-
-  const options = [
-    {
-      value: "",
-      label: "Оберіть послугу",
-    },
-    {
-      value: "Менторство та консультації",
-      label: "Менторство та консультації",
-    },
-    { value: "Діагностика", label: "Діагностика" },
-    { value: "Стратегії", label: "Стратегії" },
-    { value: "Навчання", label: "Навчання" },
-    { value: "Інше", label: "Інше" },
-  ];
 
   return (
     <section className="container" id="contact">
@@ -238,7 +224,7 @@ const ContactsForm = () => {
                       styles={customStyles}
                       errors={errors.service}
                       onChange={handleChangeSelect}
-                      value={options.find((option) => option.value === service)}
+                      value={selectedService}
                     />
                   )}
                 />
