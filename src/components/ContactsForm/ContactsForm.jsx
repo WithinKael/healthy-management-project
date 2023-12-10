@@ -7,6 +7,7 @@ import computerWebp from "../../images/desktop/computer1x.webp";
 import computer2x from "../../images/desktop/computer@2x.webp";
 import mobileWebp from "../../images/mobile/mob_computer1x.webp";
 import mobile2x from "../../images/mobile/mob_computer@2x.webp";
+import MaskedInput from "react-text-mask";
 import {
   Button,
   ContactBlock,
@@ -15,7 +16,6 @@ import {
   Forma,
   Img,
   Input,
-  InputTel,
   Label,
   LabelTextarea,
   StarLabel,
@@ -204,10 +204,9 @@ const ContactsForm = () => {
               <Label>
                 Номер телефону
                 <Star />
-                <InputTel
-                  // mask="+38(099)999-99-99"
-                  mask={phoneMask}
+                <Input
                   type="tel"
+                  mask={phoneMask}
                   placeholder="Введіть номер телефону"
                   {...register("phone", {
                     required: "Це поле обов'язкове для заповнення",
@@ -219,6 +218,14 @@ const ContactsForm = () => {
                   value={phone}
                   onChange={handleChange}
                   errors={errors.phone}
+                  render={({ ref, ...props }) => (
+                    <MaskedInput
+                      {...props}
+                      ref={(e) => {
+                        ref(e);
+                      }}
+                    />
+                  )}
                 />
                 {errors.phone && (
                   <TextError>
