@@ -18,12 +18,14 @@ import {
   Input,
   InputTel,
   Label,
+  LabelEmailPhone,
   LabelTextarea,
   StarLabel,
   Text,
   TextError,
   Textarea,
   Title,
+  WrapEmailPhone,
 } from "./ContactsForm.styled";
 import { useForm, Controller } from "react-hook-form";
 import customStyles from "./SelectFormStyle";
@@ -105,10 +107,11 @@ const ContactsForm = () => {
           <div>
             <MediaQuery minWidth={1920}>
               <Img
-                srcSet={`${computerWebp} 1920w, ${computer2x} 2x`}
-                sizes="(min-width: 1920px) 1920px"
+                srcSet={`${computer2x} 2x, ${computerWebp} 1x`}
+                sizes="(min-width: 1920px) 100vw"
                 src={computerWebp}
                 alt="notebook"
+                loading="lazy"
               />
             </MediaQuery>
 
@@ -129,9 +132,7 @@ const ContactsForm = () => {
             <Img src={computerJpg} />
           </picture> */}
           <FormWrapper>
-            <Text>
-              Залишайте ваші контактні дані і ми з вами зв&apos;яжемось
-            </Text>
+            <Text>Залишайте контактні дані і ми з вами зв&apos;яжемось</Text>
             <Forma onSubmit={handleSubmit(onSubmit)}>
               <Label>
                 Ім’я
@@ -144,7 +145,7 @@ const ContactsForm = () => {
                     pattern: {
                       value:
                         /^(?:[a-zA-Zа-яА-ЯґҐєЄіІїЇ'-]{1,32}(?:\s+[a-zA-Zа-яА-ЯґҐєЄіІїЇ'-]{1,32})?|[a-zA-Zа-яА-ЯґҐєЄіІїЇ'-]{1,64})$/,
-                      message: "поле повинно містити одне або два слова",
+                      message: "Поле повинно містити одне або два слова",
                     },
                   })}
                   value={name}
@@ -158,55 +159,58 @@ const ContactsForm = () => {
                   </TextError>
                 )}
               </Label>
-              <Label>
-                Емейл
-                <Star />
-                <Input
-                  type="email"
-                  placeholder="Введіть емейл"
-                  {...register("email", {
-                    required: "Це поле обов'язкове для заповнення",
-                    pattern: {
-                      value: /[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,4}$/,
-                      message: "Введіть коректний емейл",
-                    },
-                  })}
-                  value={email}
-                  onChange={handleChange}
-                  errors={errors.email}
-                />
-                {errors.email && (
-                  <TextError>
-                    <Star />
-                    {errors.email.message}
-                  </TextError>
-                )}
-              </Label>
-              <Label>
-                Номер телефону
-                <Star />
-                <InputTel
-                  type="tel"
-                  mask="+38(099)999-99-99"
-                  placeholder="Введіть номер телефону"
-                  {...register("phone", {
-                    required: "Це поле обов'язкове для заповнення",
-                    pattern: {
-                      value: /^\+\d{2}\(\d{3}\)\d{3}-\d{2}-\d{2}$/,
-                      message: "Введіть коректний номер телефона",
-                    },
-                  })}
-                  value={phone}
-                  onChange={handleChange}
-                  errors={errors.phone}
-                />
-                {errors.phone && (
-                  <TextError>
-                    <Star />
-                    {errors.phone.message}
-                  </TextError>
-                )}
-              </Label>
+              <WrapEmailPhone>
+                <LabelEmailPhone>
+                  Емейл
+                  <Star />
+                  <Input
+                    type="email"
+                    placeholder="Введіть емейл"
+                    {...register("email", {
+                      required: "Це поле обов'язкове для заповнення",
+                      pattern: {
+                        value: /[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,4}$/,
+                        message: "Введіть коректний емейл",
+                      },
+                    })}
+                    value={email}
+                    onChange={handleChange}
+                    errors={errors.email}
+                  />
+                  {errors.email && (
+                    <TextError>
+                      <Star />
+                      {errors.email.message}
+                    </TextError>
+                  )}
+                </LabelEmailPhone>
+                <LabelEmailPhone>
+                  Номер телефону
+                  <Star />
+                  <InputTel
+                    type="tel"
+                    mask="+38(099)999-99-99"
+                    placeholder="Введіть номер телефону"
+                    {...register("phone", {
+                      required: "Це поле обов'язкове для заповнення",
+                      pattern: {
+                        value: /^\+\d{2}\(\d{3}\)\d{3}-\d{2}-\d{2}$/,
+                        message: "Введіть коректний номер телефона",
+                      },
+                    })}
+                    value={phone}
+                    onChange={handleChange}
+                    errors={errors.phone}
+                  />
+                  {errors.phone && (
+                    <TextError>
+                      <Star />
+                      {errors.phone.message}
+                    </TextError>
+                  )}
+                </LabelEmailPhone>
+              </WrapEmailPhone>
+
               <Label>
                 Послуга
                 <Star />
@@ -268,5 +272,3 @@ const ContactsForm = () => {
 };
 
 export default ContactsForm;
-
-// =================================================================

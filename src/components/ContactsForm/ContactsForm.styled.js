@@ -15,10 +15,10 @@ export const Title = styled.h2`
 `;
 
 export const ContactBlock = styled.div`
-  width: 100%;
-  height: auto;
   display: flex;
   gap: 24px;
+  width: 100%;
+  max-height: 860px;
 `;
 
 export const Img = styled.img`
@@ -39,7 +39,7 @@ export const FormWrapper = styled.div`
 `;
 
 export const Text = styled.h3`
-  font-size: 20px;
+  font-size: 24px;
   font-weight: 600;
   line-height: 1.33;
   color: var(--primary-bluedark);
@@ -54,7 +54,7 @@ export const Forma = styled.form`
 
 export const Label = styled.label`
   display: flex;
-  height: 112px;
+  height: 104px;
   align-content: flex-start;
   flex-wrap: wrap;
   gap: 4px;
@@ -69,7 +69,8 @@ export const LabelTextarea = styled.label`
   display: flex;
   align-content: flex-start;
   flex-wrap: wrap;
-  gap: 10px;
+  width: 100%;
+  gap: 4px;
   font-size: 16px;
   font-weight: 600;
   line-height: 1.5;
@@ -116,9 +117,30 @@ export const Input = styled.input`
   }
 `;
 
+export const WrapEmailPhone = styled.div`
+  display: flex;
+  gap: 8px;
+`;
+
+export const LabelEmailPhone = styled.label`
+  display: flex;
+  height: 104px;
+  width: 100%;
+  max-width: 330px;
+  align-content: flex-start;
+  flex-wrap: wrap;
+  gap: 4px;
+  margin-bottom: 8px;
+  font-size: 16px;
+  font-weight: 600;
+  line-height: 1.5;
+  color: var(--primary-bluedark);
+`;
+
 export const InputTel = styled(InputMask)`
   display: flex;
   width: 100%;
+  max-width: 330px;
   height: 56px;
   margin-top: 8px;
   padding: 0px 16px;
@@ -155,10 +177,9 @@ export const InputTel = styled(InputMask)`
 export const Textarea = styled.textarea`
   width: 100%;
   display: flex;
-  height: 180px;
+  height: 168px;
   padding: 16px;
   align-items: flex-start;
-
   align-self: stretch;
   border: none;
   border-radius: 16px;
