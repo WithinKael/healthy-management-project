@@ -1,36 +1,37 @@
-import s from "./ModalMobaileMenu.module.css";
 import Svg from "../../images/svgMobileHeader/symbol-defs.svg";
 import PropTypes from "prop-types";
 import { createPortal } from "react-dom";
+import {
+  ButtonMenuMobile,
+  ContactMenu,
+  DivMobileMenu,
+  MobileMenuContainer,
+  Nav,
+  NavMenuMobile,
+  SvgMenu,
+} from "./ModalMobaileMenu.js";
 
 const ModalMobail = document.getElementById("modalMobail");
 
 const ModalMobaileMenu = ({ onClose, handleSetActiveLink }) => {
   return createPortal(
-    <div className={s.mabileMenuContainer}>
+    <MobileMenuContainer>
       <div className="container">
-        <div className={s.divMobileMenu}>
+        <DivMobileMenu>
           <a href="#home">
             <svg width="40" height="40">
               <use href={`${Svg}#icon-g10`}></use>
             </svg>
           </a>
-          <a className={s.contactMenu} href="#contact">
-            Контакт
-          </a>
-          <button
-            className={s.buttonMenuMobile}
-            type="button"
-            onClick={() => onClose()}
-          >
-            <svg className={s.svgMenu} width="40" height="40">
+          <ContactMenu href="#contact">Контакт</ContactMenu>
+          <ButtonMenuMobile type="button" onClick={() => onClose()}>
+            <SvgMenu width="40" height="40">
               <use href={`${Svg}#icon-close`}></use>
-            </svg>
-          </button>
-        </div>
-        <nav className={s.nav}>
-          <a
-            className={s.navMenuMobile}
+            </SvgMenu>
+          </ButtonMenuMobile>
+        </DivMobileMenu>
+        <Nav>
+          <NavMenuMobile
             href="#home"
             onClick={(e) => {
               onClose();
@@ -38,9 +39,8 @@ const ModalMobaileMenu = ({ onClose, handleSetActiveLink }) => {
             }}
           >
             Головна
-          </a>
-          <a
-            className={s.navMenuMobile}
+          </NavMenuMobile>
+          <NavMenuMobile
             href="#aboutUs"
             onClick={(e) => {
               onClose();
@@ -48,9 +48,8 @@ const ModalMobaileMenu = ({ onClose, handleSetActiveLink }) => {
             }}
           >
             Про нас
-          </a>
-          <a
-            className={s.navMenuMobile}
+          </NavMenuMobile>
+          <NavMenuMobile
             href="#services"
             onClick={(e) => {
               onClose();
@@ -58,9 +57,8 @@ const ModalMobaileMenu = ({ onClose, handleSetActiveLink }) => {
             }}
           >
             Послуги
-          </a>
-          <a
-            className={s.navMenuMobile}
+          </NavMenuMobile>
+          <NavMenuMobile
             href="#mentoring"
             onClick={(e) => {
               onClose();
@@ -68,9 +66,8 @@ const ModalMobaileMenu = ({ onClose, handleSetActiveLink }) => {
             }}
           >
             Менторство
-          </a>
-          <a
-            className={s.navMenuMobile}
+          </NavMenuMobile>
+          <NavMenuMobile
             href="#projects"
             onClick={(e) => {
               onClose();
@@ -78,10 +75,10 @@ const ModalMobaileMenu = ({ onClose, handleSetActiveLink }) => {
             }}
           >
             Проєкти
-          </a>
-        </nav>
+          </NavMenuMobile>
+        </Nav>
       </div>
-    </div>,
+    </MobileMenuContainer>,
     ModalMobail
   );
 };
