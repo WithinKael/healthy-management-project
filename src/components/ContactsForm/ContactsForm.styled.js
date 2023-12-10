@@ -1,6 +1,5 @@
 import styled from "@emotion/styled";
 import Star from "./Star";
-import InputMask from "react-input-mask";
 
 export const ContactWrapper = styled.div`
   padding: 80px 0;
@@ -81,42 +80,6 @@ export const StarLabel = styled(Star)`
 `;
 
 export const Input = styled.input`
-  display: flex;
-  width: 100%;
-  height: 56px;
-  margin-top: 8px;
-  padding: 0px 16px;
-  align-items: center;
-  gap: 8px;
-  flex-shrink: 0;
-  align-self: stretch;
-  border-radius: 16px;
-  border: none;
-  background-color: var(--background-white);
-  box-shadow: 0px 0px 8px 0px rgba(27, 54, 65, 0.08);
-  border: 1px solid
-    ${(props) => (props.errors ? "var(--secondary-red)" : "none")};
-
-  &:hover {
-    box-shadow: 0px 0px 16px 0px rgba(27, 54, 65, 0.16);
-  }
-
-  &:focus {
-    outline: none;
-    border: 1px solid var(--typography-grey);
-    background: var(--background-white);
-    box-shadow: 0px 0px 8px 0px rgba(27, 54, 65, 0.08);
-  }
-
-  &::placeholder {
-    font-size: 16px;
-    font-weight: 500;
-    line-height: 1.5;
-    color: var(--typography-grey);
-  }
-`;
-
-export const InputTel = styled(InputMask)`
   display: flex;
   width: 100%;
   height: 56px;
