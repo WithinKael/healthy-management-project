@@ -36,31 +36,6 @@ const AboutMe = () => {
         <SectionAboutMeTitle>Про мене</SectionAboutMeTitle>
         <SectionAboutMeDiv>
           <SectionAboutMeDivWidth>
-            {/* <picture>
-              <source
-                srcSet={`${Fotos} 2x, ${Fotos} 1x`}
-                media="(min-width: 768px)"
-                type="image/webp"
-              />
-              <source
-                srcSet={`${Fotos2x} 2x, ${Fotos1x} 1x`}
-                media="(min-width: 768px)"
-                type="image/png"
-              />
-
-              <source
-                srcSet={`${OlgaMobWebp}`}
-                media="(min-width: 375px)"
-                type="image/webp"
-              />
-
-              <source
-                srcSet={`${OlgaMob2x} 2x, ${OlgaMob1x} 1x`}
-                media="(min-width: 375px)"
-                type="image/png"
-              />
-              <img src={Fotos} alt="Ольга Поліщук" width={"828px"} />
-            </picture> */}
             <MediaQuery maxWidth={767}>
               <SectionAboutMeImg
                 srcSet={`${OlgaMob2x} 2x, ${OlgaMob1x} 1x`}
