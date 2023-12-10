@@ -29,6 +29,26 @@ import customStyles from "./SelectFormStyle";
 import Star from "./Star";
 
 const ContactsForm = () => {
+  const phoneMask = [
+    "+",
+    "3",
+    "8",
+    "(",
+    /[0-9]/,
+    /[0-9]/,
+    /[0-9]/,
+    ")",
+    /[0-9]/,
+    /[0-9]/,
+    /[0-9]/,
+    "-",
+    /[0-9]/,
+    /[0-9]/,
+    "-",
+    /[0-9]/,
+    /[0-9]/,
+  ];
+
   const [formData, setFormData] = useLocalStorage("key", {
     name: "",
     email: "",
@@ -195,7 +215,8 @@ const ContactsForm = () => {
                 Номер телефону
                 <Star />
                 <InputTel
-                  mask="+38(099)999-99-99"
+                  // mask="+38(099)999-99-99"
+                  mask={phoneMask}
                   type="tel"
                   placeholder="Введіть номер телефону"
                   {...register("phone", {

@@ -1,6 +1,7 @@
 import styled from "@emotion/styled";
 import Star from "./Star";
-import InputMask from "react-input-mask";
+// import InputMask from "react-input-mask";
+import InputMask from "react-text-mask";
 
 export const ContactWrapper = styled.div`
   padding: 80px 0;
