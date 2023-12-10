@@ -65,7 +65,7 @@ export const SectionAboutMeDiv = styled.div`
 `;
 
 export const SectionAboutMeImg = styled.img`
-  border-radius: 16px;
+  border-radius: 18px;
 `;
 
 export const SectionAboutMeDivOl = styled.div`
@@ -78,7 +78,7 @@ export const SectionAboutMeDivOl = styled.div`
 
   @media screen and (min-width: 768px) {
     // width: calc((100% - 24px) / 2);
-    max-width: 828px;
+    min-width: 688px;
     padding: 73px;
   }
 
@@ -87,7 +87,7 @@ export const SectionAboutMeDivOl = styled.div`
     padding: 40px;
   }
   @media screen and (min-width: 1920px) {
-    min-width: 628px;
+    min-width: 828px;
     padding: 80px;
   }
 `;
@@ -290,14 +290,14 @@ export const SectionAboutMeDivWidth = styled.div`
 
   @media screen and (min-width: 768px) {
     // width: calc((100% - 24px) / 2);
-    max-width: 688px;
+    min-width: 688px;
     border-radius: 16px;
   }
 
   @media screen and (min-width: 1440px) {
-    max-width: 628px;
+    min-width: 628px;
   }
   @media screen and (min-width: 1920px) {
-    max-width: 828px;
+    min-width: 828px;
   }
 `;
