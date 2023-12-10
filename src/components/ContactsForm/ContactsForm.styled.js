@@ -22,10 +22,10 @@ export const ContactBlock = styled.div`
   gap: 24px;
 `;
 
-// export const Img = styled.img`
-//   width: 100%;
-//   height: 100%;
-// `;
+export const Img = styled.img`
+  width: 100%;
+  height: 100%;
+`;
 
 export const FormWrapper = styled.div`
   display: flex;

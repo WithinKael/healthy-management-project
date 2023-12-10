@@ -1,4 +1,8 @@
-import icon from "../../images/svg/icon-2.svg";
+
+import icon from "../../images/svg/icon.svg";
+import icon2 from "../../images/svg/icon-2.svg";
+import icon3 from "../../images/svg/icon-3.svg";
+import icon4 from "../../images/svg/icon-4.svg";
 
 export const servicesData = [
   {
@@ -16,7 +20,7 @@ export const servicesData = [
       "Аудит маркетингу та сервісу",
       "Аудит системи комунікацій та Сustomer Journey Map",
     ],
-    path: icon,
+    path: icon2,
   },
   {
     title: "Стратегії",
@@ -26,11 +30,11 @@ export const servicesData = [
       "Розробка стратегій внутрішніх комунікацій",
       "Розробка стратегій управління здоров'ям",
     ],
-    path: icon,
+    path: icon3,
   },
   {
     title: "Навчання",
     about: ["Медичний маркетинг", "Комунікації та сервіс"],
-    path: icon,
+    path: icon4,
   },
 ];

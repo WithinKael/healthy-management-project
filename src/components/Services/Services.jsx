@@ -1,5 +1,6 @@
 import TickList from "../TickList/TickList";
 import {
+  IconDiv,
   SectionServices,
   ServicesBtn,
   ServicesContentWrapper,
@@ -29,6 +30,9 @@ const Services = () => {
                 about={element.about}
                 additionalComment={true}
               />
+              <IconDiv>
+                <img src={element.path} alt="" />
+              </IconDiv>
             </ServicesItem>
           ))}
         </ServicesList>

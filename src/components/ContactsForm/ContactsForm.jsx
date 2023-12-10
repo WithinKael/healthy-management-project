@@ -2,7 +2,7 @@ import axios from "axios";
 import { useEffect } from "react";
 import Select from "react-select";
 import MediaQuery from "react-responsive";
-import useLocalStorage from "./helpers";
+import useLocalStorage, { options } from "./helpers";
 import computerWebp from "../../images/desktop/computer1x.webp";
 import computer2x from "../../images/desktop/computer@2x.webp";
 import mobileWebp from "../../images/mobile/mob_computer1x.webp";
@@ -13,7 +13,7 @@ import {
   ContactWrapper,
   FormWrapper,
   Forma,
-  // Img,
+  Img,
   Input,
   InputTel,
   Label,
@@ -57,6 +57,7 @@ const ContactsForm = () => {
     comment: "",
   });
   const { name, email, phone, service, comment } = formData;
+  const selectedService = options.find((option) => option.value === service);
   const {
     register,
     handleSubmit,
@@ -92,11 +93,15 @@ const ContactsForm = () => {
 
   const onSubmit = async (formData) => {
     try {
+      const formattedData = {
+        ...formData,
+        phone: formData.phone.replace(/\D/g, "").slice(2),
+      };
       await axios.post(
         "https://healthy-management.onrender.com/api/senddata",
-        formData
+        formattedData
       );
-      console.log(formData);
+      console.log(formattedData);
       setFormData({
         name: "",
         email: "",
@@ -111,21 +116,6 @@ const ContactsForm = () => {
     }
   };
 
-  const options = [
-    {
-      value: "",
-      label: "Оберіть послугу",
-    },
-    {
-      value: "Менторство та консультації",
-      label: "Менторство та консультації",
-    },
-    { value: "Діагностика", label: "Діагностика" },
-    { value: "Стратегії", label: "Стратегії" },
-    { value: "Навчання", label: "Навчання" },
-    { value: "Інше", label: "Інше" },
-  ];
-
   return (
     <section className="container" id="contact">
       <ContactWrapper>
@@ -133,7 +123,7 @@ const ContactsForm = () => {
         <ContactBlock>
           <div>
             <MediaQuery minWidth={1920}>
-              <img
+              <Img
                 srcSet={`${computerWebp} 1920w, ${computer2x} 2x`}
                 sizes="(min-width: 1920px) 1920px"
                 src={computerWebp}
@@ -142,7 +132,7 @@ const ContactsForm = () => {
             </MediaQuery>
 
             <MediaQuery minWidth={300} maxWidth={1919}>
-              <img
+              <Img
                 srcSet={`${mobileWebp} 375w, ${mobile2x} 2x`}
                 sizes="(min-width: 375px) 375px"
                 src={mobileWebp}
@@ -255,7 +245,7 @@ const ContactsForm = () => {
                       styles={customStyles}
                       errors={errors.service}
                       onChange={handleChangeSelect}
-                      value={options.find((option) => option.value === service)}
+                      value={selectedService}
                     />
                   )}
                 />
@@ -298,3 +288,5 @@ const ContactsForm = () => {
 };
 
 export default ContactsForm;
+
+// =================================================================

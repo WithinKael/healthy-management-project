@@ -25,4 +25,19 @@ const useLocalStorage = (key, initialValue) => {
   return [storedValue, setValue];
 };
 
+export const options = [
+  {
+    value: "",
+    label: "Оберіть послугу",
+  },
+  {
+    value: "Менторство та консультації",
+    label: "Менторство та консультації",
+  },
+  { value: "Діагностика", label: "Діагностика" },
+  { value: "Стратегії", label: "Стратегії" },
+  { value: "Навчання", label: "Навчання" },
+  { value: "Інше", label: "Інше" },
+];
+
 export default useLocalStorage;
