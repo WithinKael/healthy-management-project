@@ -18,8 +18,8 @@ const Header = ({ handleSetActiveLink }) => {
   const [activeLink, setActiveLink] = useState("home");
   const [shownModal, setShownModal] = useState(false);
 
-  const isMobail = useMediaQuery({ query: "(max-width: 767px)" });
-  const isTablet = useMediaQuery({ query: "(min-width: 768px)" });
+  const isMobail = useMediaQuery({ query: "(max-width: 1439px)" });
+  const isTablet = useMediaQuery({ query: "(min-width: 1440px)" });
   // const isDesctop = useMediaQuery({ query: "(max-width: 1440px)" });
 
   const onModal = () => {

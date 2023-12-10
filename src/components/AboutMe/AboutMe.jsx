@@ -6,6 +6,12 @@ import Fotos1x from "../../images/desktop/olga_picture1x.jpg";
 import OlgaMob2x from "../../images/mobile/mob_olga_picture@2x.jpg";
 import OlgaMob1x from "../../images/mobile/mob_olga_picture1x.jpg";
 import OlgaMobWebp from "../../images/mobile/mob_olga_picture1x.webp";
+import OlgaTab1x from "../../images/tablet/olga_picture@1x.jpg";
+import OlgaTab2x from "../../images/tablet/olga_picture@2x.jpg";
+import OlgaTabWebp from "../../images/tablet/olga_picture@1x.webp";
+import OlgaDesktop14401x from "../../images/desktop1440/olga_picture@1x.jpg";
+import OlgaDesktop14402x from "../../images/desktop1440/olga_picture@2x.jpg";
+import OlgaDesktop1440Webp from "../../images/desktop1440/olga_picture@1x.webp";
 import Icon from "../../images/sprite.svg";
 import {
   SectionAboutMe,
@@ -14,11 +20,13 @@ import {
   SectionAboutMeDivOl,
   SectionAboutMeDivWidth,
   SectionAboutMeHOl,
+  SectionAboutMeImg,
   SectionAboutMeLink,
   SectionAboutMeList,
   SectionAboutMePol,
   SectionAboutMeSvg,
   SectionAboutMeTitle,
+  SectionAboutMeUl,
 } from "./AboutMe.styled";
 
 const AboutMe = () => {
@@ -54,17 +62,33 @@ const AboutMe = () => {
               <img src={Fotos} alt="Ольга Поліщук" width={"828px"} />
             </picture> */}
             <MediaQuery maxWidth={767}>
-              <img
+              <SectionAboutMeImg
                 srcSet={`${OlgaMob2x} 2x, ${OlgaMob1x} 1x`}
                 sizes="(max-width: 767px) 100vw"
                 src={OlgaMobWebp}
                 alt="Ольга Поліщук"
               />
             </MediaQuery>
-            <MediaQuery minWidth={768}>
-              <img
+            <MediaQuery minWidth={768} maxWidth={1439}>
+              <SectionAboutMeImg
+                srcSet={`${OlgaTab2x} 2x, ${OlgaTab1x} 1x`}
+                sizes="(min-width: 768px) 100vw (max-width: 1439px) 100vw"
+                src={OlgaTabWebp}
+                alt="Ольга Поліщук"
+              />
+            </MediaQuery>
+            <MediaQuery minWidth={1440} maxWidth={1919}>
+              <SectionAboutMeImg
+                srcSet={`${OlgaDesktop14402x} 2x, ${OlgaDesktop14401x} 1x`}
+                sizes="(min-width: 1440px) 100vw (max-width: 1919px) 100vw"
+                src={OlgaDesktop1440Webp}
+                alt="Ольга Поліщук"
+              />
+            </MediaQuery>
+            <MediaQuery minWidth={1920}>
+              <SectionAboutMeImg
                 srcSet={`${Fotos2x} 2x, ${Fotos1x} 1x`}
-                sizes="(min-width: 768px) 100vw"
+                sizes="(min-width: 1920px) 100vw"
                 src={Fotos}
                 alt="Ольга Поліщук"
               />
@@ -75,7 +99,7 @@ const AboutMe = () => {
             <SectionAboutMePol>
               CEO and Founder студії стратегічного розвитку
             </SectionAboutMePol>
-            <ul>
+            <SectionAboutMeUl>
               <SectionAboutMeList>MBA Healthcare management</SectionAboutMeList>
               <SectionAboutMeList>
                 Викладачка медичного маркетингу Бізнес-школа УКУ (LvBS)
@@ -99,15 +123,15 @@ const AboutMe = () => {
               <SectionAboutMeList>
                 Використання принципів доказової медицини
               </SectionAboutMeList>
-            </ul>
+            </SectionAboutMeUl>
             <SectionAboutMeAdress>
               <li>
                 <SectionAboutMeLink
-                  href="https://www.linkedin.com/in/olga-polishchuk-83362140/"
+                  href="https://www.instagram.com/olga_healthm/"
                   target="_blank"
                   rel="noopener noreferrer"
                 >
-                  LinkedIn
+                  Instagram
                   <SectionAboutMeSvg width="24" height="24">
                     <use href={`${Icon}#icon-arrow-up-right`}></use>
                   </SectionAboutMeSvg>
@@ -125,13 +149,14 @@ const AboutMe = () => {
                   </SectionAboutMeSvg>
                 </SectionAboutMeLink>
               </li>
+
               <li>
                 <SectionAboutMeLink
-                  href="https://www.instagram.com/olga_healthm/"
+                  href="https://www.linkedin.com/in/olga-polishchuk-83362140/"
                   target="_blank"
                   rel="noopener noreferrer"
                 >
-                  Instagram
+                  LinkedIn
                   <SectionAboutMeSvg width="24" height="24">
                     <use href={`${Icon}#icon-arrow-up-right`}></use>
                   </SectionAboutMeSvg>

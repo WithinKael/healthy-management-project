@@ -29,6 +29,12 @@ function App() {
 
       if (screenWidth <= 768) {
         targetOffset = rect.top + scrollTop - 80;
+      }
+      if (screenWidth > 768 || screenWidth <= 1440) {
+        targetOffset = rect.top + scrollTop - 80;
+      }
+      if (screenWidth > 1440 || screenWidth <= 1920) {
+        targetOffset = rect.top + scrollTop - 80;
       } else {
         targetOffset = rect.top + scrollTop - 60;
       }

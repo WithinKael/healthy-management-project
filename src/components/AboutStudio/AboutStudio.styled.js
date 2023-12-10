@@ -1,25 +1,22 @@
 import styled from "@emotion/styled";
 
 export const SectionAboutStudio = styled.section`
-  // max-width: 375px;
-  // margin-left: auto;
-  // margin-right: auto;
-  // padding: 40px 24px;
   padding-top: 40px;
   padding-bottom: 40px;
 
   @media screen and (min-width: 768px) {
-    // max-width: 1920px;
-    // margin-left: auto;
-    // margin-right: auto;
-    padding: 80px 120px;
+  }
+  @media screen and (min-width: 1440px) {
+  }
+
+  @media screen and (min-width: 1920px) {
+    padding-top: 80px;
+    padding-bottom: 80px;
   }
 `;
 
 export const SectionAboutStudioTitle = styled.h2`
-  color: var(--typography-bluedark, #1b3641);
-
-  /* mobile/h2-semibold */
+  color: var(--typography-bluedark);
   font-family: Montserrat;
   font-size: 32px;
   font-style: normal;
@@ -28,11 +25,18 @@ export const SectionAboutStudioTitle = styled.h2`
   margin-bottom: 16px;
 
   @media screen and (min-width: 768px) {
-    color: var(--typography-black, #161717);
-    font-family: Montserrat;
-    font-size: 48px;
-    font-style: normal;
+    font-size: 32px;
     font-weight: 600;
+    line-height: 48px;
+  }
+
+  @media screen and (min-width: 1440px) {
+    font-size: 36px;
+    margin-bottom: 24px;
+  }
+
+  @media screen and (min-width: 1920px) {
+    font-size: 48px;
     line-height: 56px;
     margin-bottom: 40px;
   }
@@ -45,10 +49,19 @@ export const SectionAboutStudioDiv = styled.div`
   align-items: center;
 
   @media screen and (min-width: 768px) {
-    display: flex;
     flex-direction: row;
     gap: 24px;
-    align-items: center;
+
+    flex-wrap: wrap;
+    // margin-bottom: 40px;
+  }
+
+  @media screen and (min-width: 1440px) {
+    flex-wrap: nowrap;
+    gap: 24px;
+  }
+  @media screen and (min-width: 1920px) {
+    flex-direction: row;
   }
 `;
 
@@ -64,11 +77,19 @@ export const SectionAboutStudioText = styled.p`
   max-width: 327px;
 
   @media screen and (min-width: 768px) {
-    color: var(--primary-bluedark);
-    font-family: Montserrat;
+    // width: 100%;
+    font-size: 18px;
+    line-height: 28px;
+    max-width: 688px;
+  }
+
+  @media screen and (min-width: 1440px) {
+    line-height: 22px;
+    max-width: 628px;
+  }
+
+  @media screen and (min-width: 1920px) {
     font-size: 20px;
-    font-style: normal;
-    font-weight: 500;
     line-height: 28px;
     max-width: 828px;
   }
@@ -76,8 +97,6 @@ export const SectionAboutStudioText = styled.p`
 
 export const SectionAboutStudioTextVan = styled.p`
   color: var(--typography-bluedark);
-
-  /* mobile/h5-medium */
   font-family: Montserrat;
   font-size: 14px;
   font-style: normal;
@@ -85,11 +104,16 @@ export const SectionAboutStudioTextVan = styled.p`
   line-height: 18px;
 
   @media screen and (min-width: 768px) {
-    color: var(--primary-bluedark);
-    font-family: Montserrat;
+    font-size: 15px;
+    line-height: 24px;
+  }
+
+  @media screen and (min-width: 1440px) {
+    font-size: 15px;
+    line-height: 18px;
+  }
+  @media screen and (min-width: 1920px) {
     font-size: 16px;
-    font-style: normal;
-    font-weight: 500;
     line-height: 24px;
   }
 `;
@@ -109,11 +133,18 @@ export const DivSection = styled.div`
   box-shadow: 0px 0px 8px 0px rgba(27, 54, 65, 0.08);
 
   @media screen and (min-width: 768px) {
+    max-width: 332px;
+    padding: 40px;
+  }
+
+  @media screen and (min-width: 1440px) {
+    padding: 24px;
+    max-width: 302px;
+  }
+
+  @media screen and (min-width: 1920px) {
     max-width: 398px;
     padding: 40px;
-    border-radius: 16px;
-    background: var(--background-white);
-    box-shadow: 0px 0px 8px 0px rgba(27, 54, 65, 0.08);
   }
 `;
 
@@ -126,11 +157,16 @@ export const SectionAboutStudioValues = styled.h4`
   line-height: 32px;
 
   @media screen and (min-width: 768px) {
-    color: var(--primary-bluedark);
-    font-family: Montserrat;
+    font-size: 20px;
+    line-height: 32px;
+  }
+
+  @media screen and (min-width: 1440px) {
+    line-height: 24px;
+  }
+
+  @media screen and (min-width: 1920px) {
     font-size: 24px;
-    font-style: normal;
-    font-weight: 600;
     line-height: 32px;
   }
 `;
@@ -143,11 +179,18 @@ export const DivSectionOurMission = styled.div`
   box-shadow: 0px 0px 8px 0px rgba(27, 54, 65, 0.08);
 
   @media screen and (min-width: 768px) {
+    max-width: 332px;
+    padding: 40px;
+  }
+
+  @media screen and (min-width: 1440px) {
+    padding: 24px;
+    max-width: 302px;
+  }
+
+  @media screen and (min-width: 1920px) {
     max-width: 398px;
     padding: 40px;
-    border-radius: 16px;
-    background: var(--background-bluedark);
-    box-shadow: 0px 0px 8px 0px rgba(27, 54, 65, 0.08);
   }
 `;
 
@@ -160,11 +203,15 @@ export const SectionAboutStudioOurMission = styled.h4`
   line-height: 32px;
 
   @media screen and (min-width: 768px) {
-    color: var(--system-default-10);
-    font-family: Montserrat;
+    font-size: 20px;
+  }
+
+  @media screen and (min-width: 1440px) {
+    line-height: 24px;
+  }
+
+  @media screen and (min-width: 1920px) {
     font-size: 24px;
-    font-style: normal;
-    font-weight: 600;
     line-height: 32px;
   }
 `;
@@ -178,11 +225,16 @@ export const SectionAboutStudioOurMissionP = styled.p`
   line-height: 18px;
 
   @media screen and (min-width: 768px) {
-    color: var(--system-default-10);
-    font-family: Montserrat;
+    font-size: 15px;
+    line-height: 24px;
+  }
+
+  @media screen and (min-width: 1440px) {
+    line-height: 18px;
+  }
+
+  @media screen and (min-width: 1920px) {
     font-size: 16px;
-    font-style: normal;
-    font-weight: 500;
     line-height: 24px;
   }
 `;
