@@ -2,7 +2,8 @@ import {
   ListItem,
   SectionHero,
   SectionHeroDiv,
-  SectionHeroLinks,
+  SectionHeroLinksContact,
+  SectionHeroLinksServices,
   SectionHeroText,
   SectionHeroTextUl,
   SectionHeroTitle,
@@ -28,8 +29,12 @@ const Hero = () => {
           <ListItem>менторство</ListItem>
         </SectionHeroTextUl>
         <SectionHeroDiv>
-          <SectionHeroLinks href="#contact">Консультація</SectionHeroLinks>
-          <SectionHeroLinks href="#services">Послуги</SectionHeroLinks>
+          <SectionHeroLinksContact href="#contact">
+            Консультація
+          </SectionHeroLinksContact>
+          <SectionHeroLinksServices href="#services">
+            Послуги
+          </SectionHeroLinksServices>
         </SectionHeroDiv>
       </div>
     </SectionHero>

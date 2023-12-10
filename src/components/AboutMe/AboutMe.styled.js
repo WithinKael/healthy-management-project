@@ -7,10 +7,17 @@ export const SectionAboutMe = styled.section`
   // padding: 24px;
 
   @media screen and (min-width: 768px) {
-    // max-width: 1920px;
-    // margin-left: auto;
-    // margin-right: auto;
-    padding: 80px 120px;
+    padding-top: 40px;
+    padding-bottom: 40px;
+  }
+
+  @media screen and (min-width: 1440px) {
+    padding-top: 40px;
+    padding-bottom: 40px;
+  }
+  @media screen and (min-width: 1920px) {
+    padding-top: 80px;
+    padding-bottom: 80px;
   }
 `;
 
@@ -24,12 +31,18 @@ export const SectionAboutMeTitle = styled.h2`
   line-height: 40px;
 
   @media screen and (min-width: 768px) {
+    margin-bottom: 16px;
+    font-size: 36px;
+
+    line-height: 48px;
+  }
+
+  @media screen and (min-width: 1440px) {
+    margin-bottom: 16px;
+  }
+  @media screen and (min-width: 1920px) {
     margin-bottom: 40px;
-    color: var(--primary-bluedark);
-    font-family: Montserrat;
     font-size: 48px;
-    font-style: normal;
-    font-weight: 600;
     line-height: 56px;
   }
 `;
@@ -40,10 +53,19 @@ export const SectionAboutMeDiv = styled.div`
   gap: 24px;
 
   @media screen and (min-width: 768px) {
-    display: flex;
-    flex-direction: row;
-    gap: 24px;
   }
+
+  @media screen and (min-width: 1440px) {
+    flex-direction: row;
+    justify-content: space-between;
+  }
+  @media screen and (min-width: 1920px) {
+  //   justify-content: space-between;
+  // }
+`;
+
+export const SectionAboutMeImg = styled.img`
+  border-radius: 16px;
 `;
 
 export const SectionAboutMeDivOl = styled.div`
@@ -58,9 +80,15 @@ export const SectionAboutMeDivOl = styled.div`
     // width: calc((100% - 24px) / 2);
     max-width: 828px;
     padding: 73px;
-    border-radius: 16px;
-    background: var(--background-white, #fcfcfc);
-    box-shadow: 0px 0px 8px 0px rgba(27, 54, 65, 0.08);
+  }
+
+  @media screen and (min-width: 1440px) {
+    min-width: 628px;
+    padding: 40px;
+  }
+  @media screen and (min-width: 1920px) {
+    min-width: 628px;
+    padding: 80px;
   }
 `;
 
@@ -74,6 +102,13 @@ export const SectionAboutMeHOl = styled.h3`
   margin-bottom: 16px;
 
   @media screen and (min-width: 768px) {
+    line-height: 48px;
+  }
+
+  @media screen and (min-width: 1440px) {
+    font-size: 36px;
+  }
+  @media screen and (min-width: 1920px) {
     color: var(--typography-black);
     font-family: Montserrat;
     font-size: 48px;
@@ -94,6 +129,14 @@ export const SectionAboutMePol = styled.p`
   margin-bottom: 24px;
 
   @media screen and (min-width: 768px) {
+    margin-bottom: 16px;
+  }
+
+  @media screen and (min-width: 1440px) {
+    line-height: 24px;
+    margin-bottom: 24px;
+  }
+  @media screen and (min-width: 1920px) {
     color: var(--primary-bluedark);
     font-family: Montserrat;
     font-size: 24px;
@@ -102,6 +145,10 @@ export const SectionAboutMePol = styled.p`
     line-height: 32px;
     margin-bottom: 40px;
   }
+`;
+
+export const SectionAboutMeUl = styled.ul`
+  padding-left: 23px;
 `;
 
 export const SectionAboutMeList = styled.li`
@@ -121,6 +168,15 @@ export const SectionAboutMeList = styled.li`
   }
 
   @media screen and (min-width: 768px) {
+    font-size: 15px;
+    line-height: 24px;
+  }
+
+  @media screen and (min-width: 1440px) {
+    line-height: 18px;
+  }
+
+  @media screen and (min-width: 1920px) {
     color: var(--primary-bluedark);
     font-family: Montserrat;
     font-size: 16px;
@@ -147,6 +203,18 @@ export const SectionAboutMeAdress = styled.ul`
   align-items: center;
 
   @media screen and (min-width: 768px) {
+    margin-top: 16px;
+
+    flex-direction: row;
+    // gap: 60px;
+
+    align-items: baseline;
+  }
+
+  @media screen and (min-width: 1440px) {
+    margin-top: 24px;
+  }
+  @media screen and (min-width: 1920px) {
     margin-top: 42px;
     display: flex;
     flex-direction: row;
@@ -201,6 +269,14 @@ export const SectionAboutMeLink = styled.a`
       background-color: var(--primary-bluedark);
     }
   }
+
+  @media screen and (min-width: 1400px) {
+    font-size: 18px;
+
+    line-height: 22px;
+  }
+  @media screen and (min-width: 1920px) {
+  }
 `;
 
 export const SectionAboutMeSvg = styled.svg`
@@ -214,7 +290,14 @@ export const SectionAboutMeDivWidth = styled.div`
 
   @media screen and (min-width: 768px) {
     // width: calc((100% - 24px) / 2);
-    max-width: 828px;
+    max-width: 688px;
     border-radius: 16px;
+  }
+
+  @media screen and (min-width: 1440px) {
+    max-width: 628px;
+  }
+  @media screen and (min-width: 1920px) {
+    max-width: 828px;
   }
 `;
