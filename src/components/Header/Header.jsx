@@ -12,7 +12,7 @@ import {
   ButtonMobileHeader,
 } from "./Header.styled";
 import { useMediaQuery } from "react-responsive";
-import ModalMobaileMenu from "../ModalMobaileMenu/ModalMobaileMenu";
+import ModalMobaileMenu from "../ModalMobaileMenu/ModalMobaileMenu.jsx";
 
 const Header = ({ handleSetActiveLink }) => {
   const [activeLink, setActiveLink] = useState("home");

@@ -90,14 +90,11 @@ export const HeaderAddress = styled.a`
 
   &:hover,
   &:focus {
-    &:hover,
-    &:focus {
-      font-size: 16px;
-      font-weight: 600;
-      line-height: 24px;
-      background: var(--background-white, #fcfcfc);
-      box-shadow: 0px 0px 16px 0px rgba(27, 54, 65, 0.16);
-    }
+    font-size: 16px;
+    font-weight: 600;
+    line-height: 24px;
+    background: var(--background-white, #fcfcfc);
+    box-shadow: 0px 0px 16px 0px rgba(27, 54, 65, 0.16);
   }
 
   @media screen and (min-width: 768px) {
