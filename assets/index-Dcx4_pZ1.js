@@ -115,7 +115,7 @@ Valid keys: `+JSON.stringify(Object.keys(F),null,"  "));var $=E(le,O,te,ae,se+".
   //   justify-content: space-between;
   // }
 `,Vo=C.img`
-  border-radius: 16px;
+  border-radius: 18px;
 `,sw=C.div`
   max-width: 327px;
   // width: calc((100% - 24px) / 2);
@@ -126,7 +126,7 @@ Valid keys: `+JSON.stringify(Object.keys(F),null,"  "));var $=E(le,O,te,ae,se+".
 
   @media screen and (min-width: 768px) {
     // width: calc((100% - 24px) / 2);
-    max-width: 828px;
+    min-width: 688px;
     padding: 73px;
   }
 
@@ -135,7 +135,7 @@ Valid keys: `+JSON.stringify(Object.keys(F),null,"  "));var $=E(le,O,te,ae,se+".
     padding: 40px;
   }
   @media screen and (min-width: 1920px) {
-    min-width: 628px;
+    min-width: 828px;
     padding: 80px;
   }
 `,aw=C.h3`
@@ -322,15 +322,15 @@ Valid keys: `+JSON.stringify(Object.keys(F),null,"  "));var $=E(le,O,te,ae,se+".
 
   @media screen and (min-width: 768px) {
     // width: calc((100% - 24px) / 2);
-    max-width: 688px;
+    min-width: 688px;
     border-radius: 16px;
   }
 
   @media screen and (min-width: 1440px) {
-    max-width: 628px;
+    min-width: 628px;
   }
   @media screen and (min-width: 1920px) {
-    max-width: 828px;
+    min-width: 828px;
   }
 `,fw=()=>c.jsx(rw,{className:"container",children:c.jsxs("div",{children:[c.jsx(iw,{children:"Про мене"}),c.jsxs(ow,{children:[c.jsxs(dw,{children:[c.jsx(Vn,{maxWidth:767,children:c.jsx(Vo,{srcSet:`${Wx} 2x, ${Qx} 1x`,sizes:"(max-width: 767px) 100vw",src:Yx,alt:"Ольга Поліщук"})}),c.jsx(Vn,{minWidth:768,maxWidth:1439,children:c.jsx(Vo,{srcSet:`${Gx} 2x, ${Kx} 1x`,sizes:"(min-width: 768px) 100vw (max-width: 1439px) 100vw",src:Xx,alt:"Ольга Поліщук"})}),c.jsx(Vn,{minWidth:1440,maxWidth:1919,children:c.jsx(Vo,{srcSet:`${Jx} 2x, ${qx} 1x`,sizes:"(min-width: 1440px) 100vw (max-width: 1919px) 100vw",src:Zx,alt:"Ольга Поліщук"})}),c.jsx(Vn,{minWidth:1920,children:c.jsx(Vo,{srcSet:`${Bx} 2x, ${Hx} 1x`,sizes:"(min-width: 1920px) 100vw",src:Ux,alt:"Ольга Поліщук"})})]}),c.jsxs(sw,{children:[c.jsx(aw,{children:"Ольга Поліщук"}),c.jsx(lw,{children:"CEO and Founder студії стратегічного розвитку"}),c.jsxs(uw,{children:[c.jsx(Zn,{children:"MBA Healthcare management"}),c.jsx(Zn,{children:"Викладачка медичного маркетингу Бізнес-школа УКУ (LvBS)"}),c.jsx(Zn,{children:`Експертка в "Центр Розвитку Громадського Здоров'я УКУ"`}),c.jsx(Zn,{children:"Бізнес-консультантка, стратег з медичного маркетингу"}),c.jsx(Zn,{children:'Керівниця проєкту "Стетоскоп" - телеграм канал про медичний менеджмент та маркетингу'}),c.jsx(Zn,{children:"Більше 18 років досвіду в маркетингу та комунікаціях, з них більше 10 років досвіду в медичному та фармацевтичному бізнесі на керівних посадах"}),c.jsx(Zn,{children:"Використання принципів доказової медицини"})]}),c.jsxs(cw,{children:[c.jsx("li",{children:c.jsxs(vl,{href:"https://www.instagram.com/olga_healthm/",target:"_blank",rel:"noopener noreferrer",children:["Instagram",c.jsx(yl,{width:"24",height:"24",children:c.jsx("use",{href:`${re}#icon-arrow-up-right`})})]})}),c.jsx("li",{children:c.jsxs(vl,{href:"https://www.facebook.com/olga.polishchuk.14",target:"_blank",rel:"noopener noreferrer",children:["Facebook",c.jsx(yl,{width:"24",height:"24",children:c.jsx("use",{href:`${re}#icon-arrow-up-right`})})]})}),c.jsx("li",{children:c.jsxs(vl,{href:"https://www.linkedin.com/in/olga-polishchuk-83362140/",target:"_blank",rel:"noopener noreferrer",children:["LinkedIn",c.jsx(yl,{width:"24",height:"24",children:c.jsx("use",{href:`${re}#icon-arrow-up-right`})})]})})]})]})]})]})}),pw=C.section`
   padding-top: 40px;
