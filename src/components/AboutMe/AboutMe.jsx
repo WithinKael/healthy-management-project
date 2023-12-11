@@ -1,17 +1,16 @@
-// import Foto from "../../images/desktop/olga_picture1x.jpg";
 import MediaQuery from "react-responsive";
-import Fotos from "../../images/desktop/olga_picture1x.webp";
-import Fotos2x from "../../images/desktop/olga_picture@2x.jpg";
-import Fotos1x from "../../images/desktop/olga_picture1x.jpg";
-import OlgaMob2x from "../../images/mobile/mob_olga_picture@2x.jpg";
+import OlgaDesktopWebp19201x from "../../images/desktop/olga_picture1x.webp";
+import OlgaDesktopWebp19202x from "../../images/desktop/olga_picture2x.webp";
+import OlgaDesktop19201x from "../../images/desktop/olga_picture1x.jpg";
 import OlgaMob1x from "../../images/mobile/mob_olga_picture1x.jpg";
-import OlgaMobWebp from "../../images/mobile/mob_olga_picture1x.webp";
+import OlgaMobWebp1x from "../../images/mobile/mob_olga_picture1x.webp";
+import OlgaMobWebp2x from "../../images/mobile/mob_olga_picture2x.webp";
 import OlgaTab1x from "../../images/tablet/olga_picture@1x.jpg";
-import OlgaTab2x from "../../images/tablet/olga_picture@2x.jpg";
-import OlgaTabWebp from "../../images/tablet/olga_picture@1x.webp";
+import OlgaTabWebp1x from "../../images/tablet/olga_picture@1x.webp";
+import OlgaTabWebp2x from "../../images/tablet/olga_picture@2x.webp";
 import OlgaDesktop14401x from "../../images/desktop1440/olga_picture@1x.jpg";
-import OlgaDesktop14402x from "../../images/desktop1440/olga_picture@2x.jpg";
-import OlgaDesktop1440Webp from "../../images/desktop1440/olga_picture@1x.webp";
+import OlgaDesktop1440Webp1x from "../../images/desktop1440/olga_picture@1x.webp";
+import OlgaDesktop1440Webp2x from "../../images/desktop1440/olga_picture@2x.webp";
 import Icon from "../../images/sprite.svg";
 import {
   SectionAboutMe,
@@ -38,33 +37,36 @@ const AboutMe = () => {
           <SectionAboutMeDivWidth>
             <MediaQuery maxWidth={767}>
               <SectionAboutMeImg
-                srcSet={`${OlgaMob2x} 2x, ${OlgaMob1x} 1x`}
+                srcSet={`${OlgaMobWebp2x} 2x, ${OlgaMobWebp1x} 1x`}
                 sizes="(max-width: 767px) 100vw"
-                src={OlgaMobWebp}
+                src={OlgaMob1x}
                 alt="Ольга Поліщук"
               />
             </MediaQuery>
             <MediaQuery minWidth={768} maxWidth={1439}>
               <SectionAboutMeImg
-                srcSet={`${OlgaTab2x} 2x, ${OlgaTab1x} 1x`}
+                srcSet={`${OlgaTabWebp2x} 2x, ${OlgaTabWebp1x} 1x`}
+                type="image/webp"
                 sizes="(min-width: 768px) 100vw (max-width: 1439px) 100vw"
-                src={OlgaTabWebp}
+                src={OlgaTab1x}
                 alt="Ольга Поліщук"
               />
             </MediaQuery>
             <MediaQuery minWidth={1440} maxWidth={1919}>
               <SectionAboutMeImg
-                srcSet={`${OlgaDesktop14402x} 2x, ${OlgaDesktop14401x} 1x`}
+                srcSet={`${OlgaDesktop1440Webp2x} 2x, ${OlgaDesktop1440Webp1x} 1x`}
+                type="image/webp"
                 sizes="(min-width: 1440px) 100vw (max-width: 1919px) 100vw"
-                src={OlgaDesktop1440Webp}
+                src={`${OlgaDesktop14401x}`}
                 alt="Ольга Поліщук"
               />
             </MediaQuery>
             <MediaQuery minWidth={1920}>
               <SectionAboutMeImg
-                srcSet={`${Fotos2x} 2x, ${Fotos1x} 1x`}
+                srcSet={`${OlgaDesktopWebp19202x} 2x, ${OlgaDesktopWebp19201x} 1x`}
+                type="image/webp"
                 sizes="(min-width: 1920px) 100vw"
-                src={Fotos}
+                src={OlgaDesktop19201x}
                 alt="Ольга Поліщук"
               />
             </MediaQuery>
