@@ -240,17 +240,19 @@ export const SectionAboutStudioOurMissionP = styled.p`
 `;
 
 export const SvgIconStarBlack = styled.svg`
-  fill: var(--primary-bluedark, #1b3641);
+  fill: var(--primary-bluedark);
   border-radius: 100px;
   background: rgba(27, 54, 65, 0.2);
   width: 32px;
   height: 32px;
+  padding: 3px;
 `;
 
 export const SvgIconStarWhite = styled.svg`
-  fill: var(--background-white, #fcfcfc);
+  fill: var(--background-white);
   border-radius: 100px;
   background: rgba(244, 244, 246, 0.2);
   width: 32px;
   height: 32px;
+  padding: 3px;
 `;
