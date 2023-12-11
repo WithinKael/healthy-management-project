@@ -1,8 +1,12 @@
 import styled from "@emotion/styled";
-import Foto from "../../images/desktop/hero1x.webp";
+import HeroDesktop1920Foto1x from "../../images/desktop/hero1x.webp";
+import HeroDesktop1920Foto2x from "../../images/desktop/hero@2x.jpg";
 import HeroMobaile1x from "../../images/mobile/hero1x.jpg";
+import HeroMobaile2x from "../../images/mobile/hero@2x.jpg";
 import HeroTabletFoto from "../../images/tablet/hero@1x.jpg";
+import HeroTabletFoto2x from "../../images/tablet/hero@2x.jpg";
 import HeroDesktop1440Foto from "../../images/desktop1440/hero@1x.jpg";
+import HeroDesktop1440Foto2x from "../../images/desktop1440/hero@2x.jpg";
 
 export const SectionHero = styled.section`
   background-repeat: no-repeat;
@@ -13,11 +17,23 @@ export const SectionHero = styled.section`
   padding-top: 40px;
   padding-bottom: 40px;
 
+  @media (min-device-pixel-ratio: 2),
+    (min-resolution: 192dpi),
+    (min-resolution: 2dppx) {
+    background-image: url(${HeroMobaile2x});
+  }
+
   @media screen and (min-width: 768px) {
     background-image: url(${HeroTabletFoto});
     margin-top: 120px;
     padding-top: 234px;
     padding-bottom: 234px;
+
+    @media (min-device-pixel-ratio: 2),
+      (min-resolution: 192dpi),
+      (min-resolution: 2dppx) {
+      background-image: url(${HeroTabletFoto2x});
+    }
   }
 
   @media screen and (min-width: 1440px) {
@@ -25,14 +41,26 @@ export const SectionHero = styled.section`
     margin-top: 120px;
     padding-top: 236px;
     padding-bottom: 236px;
+
+    @media (min-device-pixel-ratio: 2),
+      (min-resolution: 192dpi),
+      (min-resolution: 2dppx) {
+      background-image: url(${HeroDesktop1440Foto2x});
+    }
   }
 
   @media screen and (min-width: 1920px) {
-    background-image: url(${Foto});
+    background-image: url(${HeroDesktop1920Foto1x});
 
     margin-top: 120px;
     padding-top: 296px;
     padding-bottom: 296px;
+
+    @media (min-device-pixel-ratio: 2),
+      (min-resolution: 192dpi),
+      (min-resolution: 2dppx) {
+      background-image: url(${HeroDesktop1920Foto2x});
+    }
   }
 `;
 
