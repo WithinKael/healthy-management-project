@@ -18,9 +18,10 @@ const Header = ({ handleSetActiveLink }) => {
   const [activeLink, setActiveLink] = useState("home");
   const [shownModal, setShownModal] = useState(false);
 
-  const isMobail = useMediaQuery({ query: "(max-width: 1439px)" });
+  const isMobailSvg = useMediaQuery({ query: "(max-width: 767px)" });
+  const isTabletSvg = useMediaQuery({ query: "(min-width: 768px)" });
+  const isMobailAndTablet = useMediaQuery({ query: "(max-width: 1439px)" });
   const isTablet = useMediaQuery({ query: "(min-width: 1440px)" });
-  // const isDesctop = useMediaQuery({ query: "(max-width: 1440px)" });
 
   const onModal = () => {
     setShownModal(!shownModal);
@@ -60,7 +61,7 @@ const Header = ({ handleSetActiveLink }) => {
     <Headers>
       <div className="container">
         <HeaderDiv>
-          {isMobail && (
+          {isMobailAndTablet && (
             <a href="#home">
               <svg width="40" height="40">
                 <use href={`${svgMobile}#icon-g10`}></use>
@@ -120,16 +121,26 @@ const Header = ({ handleSetActiveLink }) => {
           >
             Контакт
           </HeaderAddress>
-          {isMobail && (
+          {isMobailSvg && (
             <ButtonMobileHeader type="button" onClick={() => onModal()}>
               <SvgMobileHeader>
                 <use href={`${svgMobile}#icon-menuburger`}></use>
               </SvgMobileHeader>
             </ButtonMobileHeader>
           )}
+
+          {isTabletSvg && (
+            <ButtonMobileHeader type="button" onClick={() => onModal()}>
+              <SvgMobileHeader>
+                <use
+                  href={`${svgMobile}#icon-menuburgerhorizontaltablet`}
+                ></use>
+              </SvgMobileHeader>
+            </ButtonMobileHeader>
+          )}
         </HeaderDiv>
       </div>
-      {isMobail && shownModal && (
+      {isMobailAndTablet && shownModal && (
         <ModalMobaileMenu
           onClose={onModal}
           handleSetActiveLink={handleSetActiveLink}
