@@ -14,11 +14,16 @@ import {
   SocialItem,
   TeamBtn,
   TelEmail,
+  Text,
 } from "./Footer.styled";
 import ModalWindowMarkup from "../ModalWindow/ModalWindowMarkup";
+import { useMediaQuery } from "@react-hook/media-query";
 
 const Footer = ({ handleSetActiveLink }) => {
   const [isModalOpen, setIsModalOpen] = useState(false);
+  const isTabletScreen = useMediaQuery(
+    "(min-width: 1440px) and (max-width: 1919px)"
+  );
 
   const handleOpenModal = () => {
     setIsModalOpen(true);
@@ -34,43 +39,92 @@ const Footer = ({ handleSetActiveLink }) => {
         <svg width="227" height="40">
           <use href={`${sprite}#logo-white`} />
         </svg>
-        <TeamBtn onClick={handleOpenModal}>created by GoIT students</TeamBtn>
-        <ModalWindowMarkup
-          handleClose={handleCloseModal}
-          isModalOpen={isModalOpen}
-        />
-        <NavFooter>
-          <NavFooterBtn
-            href="#home"
-            onClick={(e) => handleSetActiveLink("home", e)}
-          >
-            Головна
-          </NavFooterBtn>
-          <NavFooterBtn
-            href="#aboutUs"
-            onClick={(e) => handleSetActiveLink("aboutUs", e)}
-          >
-            Про нас
-          </NavFooterBtn>
-          <NavFooterBtn
-            href="#services"
-            onClick={(e) => handleSetActiveLink("services", e)}
-          >
-            Послуги
-          </NavFooterBtn>
-          <NavFooterBtn
-            href="#mentoring"
-            onClick={(e) => handleSetActiveLink("mentoring", e)}
-          >
-            Менторство
-          </NavFooterBtn>
-          <NavFooterBtn
-            href="#projects"
-            onClick={(e) => handleSetActiveLink("projects", e)}
-          >
-            Проєкти
-          </NavFooterBtn>
-        </NavFooter>
+        {isTabletScreen ? (
+          <>
+            <NavFooter>
+              <NavFooterBtn
+                href="#home"
+                onClick={(e) => handleSetActiveLink("home", e)}
+              >
+                Головна
+              </NavFooterBtn>
+              <NavFooterBtn
+                href="#aboutUs"
+                onClick={(e) => handleSetActiveLink("aboutUs", e)}
+              >
+                Про нас
+              </NavFooterBtn>
+              <NavFooterBtn
+                href="#services"
+                onClick={(e) => handleSetActiveLink("services", e)}
+              >
+                Послуги
+              </NavFooterBtn>
+              <NavFooterBtn
+                href="#mentoring"
+                onClick={(e) => handleSetActiveLink("mentoring", e)}
+              >
+                Менторство
+              </NavFooterBtn>
+              <NavFooterBtn
+                href="#projects"
+                onClick={(e) => handleSetActiveLink("projects", e)}
+              >
+                Проєкти
+              </NavFooterBtn>
+            </NavFooter>
+            <TeamBtn onClick={handleOpenModal}>
+              created by GoIT students
+            </TeamBtn>
+            <ModalWindowMarkup
+              handleClose={handleCloseModal}
+              isModalOpen={isModalOpen}
+            />
+          </>
+        ) : (
+          <>
+            <TeamBtn onClick={handleOpenModal}>
+              created by GoIT students
+            </TeamBtn>
+            <ModalWindowMarkup
+              handleClose={handleCloseModal}
+              isModalOpen={isModalOpen}
+            />
+            <NavFooter>
+              <NavFooterBtn
+                href="#home"
+                onClick={(e) => handleSetActiveLink("home", e)}
+              >
+                Головна
+              </NavFooterBtn>
+              <NavFooterBtn
+                href="#aboutUs"
+                onClick={(e) => handleSetActiveLink("aboutUs", e)}
+              >
+                Про нас
+              </NavFooterBtn>
+              <NavFooterBtn
+                href="#services"
+                onClick={(e) => handleSetActiveLink("services", e)}
+              >
+                Послуги
+              </NavFooterBtn>
+              <NavFooterBtn
+                href="#mentoring"
+                onClick={(e) => handleSetActiveLink("mentoring", e)}
+              >
+                Менторство
+              </NavFooterBtn>
+              <NavFooterBtn
+                href="#projects"
+                onClick={(e) => handleSetActiveLink("projects", e)}
+              >
+                Проєкти
+              </NavFooterBtn>
+            </NavFooter>
+          </>
+        )}
+
         <ContactsFooter>
           <Social>
             <SocialItem
@@ -93,14 +147,16 @@ const Footer = ({ handleSetActiveLink }) => {
             </a>
           </Social>
           <TelEmail>
-            <Item href="mailto:managementhealthy@gmail.com">
-              managementhealthy@gmail.com
+            <Item href="mailto:healthy.managements@gmail.com">
+              healthy.managements@gmail.com
             </Item>
             <Item href="tel:+380673160556">+380 673 160 556</Item>
           </TelEmail>
         </ContactsFooter>
       </FooterContainer>
-      <Paragraph>© 2023 healthy managment. All rights reserved</Paragraph>
+      <Paragraph>
+        <Text>© 2023 healthy management. All rights reserved</Text>
+      </Paragraph>
     </FooterBg>
   );
 };
