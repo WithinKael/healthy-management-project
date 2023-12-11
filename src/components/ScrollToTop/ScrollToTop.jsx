@@ -37,13 +37,11 @@ const ScrollToTop = () => {
   return (
     <>
       {isVisible && (
-        <section className="container">
-          <ScrollToTopButton onClick={scrollToTop}>
-            <svg width="24" height="24">
-              <use href={`${sprite}#icon-arrowup`} />
-            </svg>
-          </ScrollToTopButton>
-        </section>
+        <ScrollToTopButton onClick={scrollToTop}>
+          <svg width="24" height="24">
+            <use href={`${sprite}#icon-arrowup`} />
+          </svg>
+        </ScrollToTopButton>
       )}
     </>
   );
