@@ -1,14 +1,23 @@
 import styled from "@emotion/styled";
 
 export const StyledSection = styled.section`
-  padding-top: 80px;
-  padding-bottom: 80px;
+  padding: 40px 24px;
+
+  @media screen and (min-width: 1920px) {
+    padding-top: 80px;
+    padding-bottom: 80px;
+  }
 `;
 
 export const ImgSectionWrapper = styled.div`
   display: flex;
   flex-direction: column;
   gap: 24px;
+
+  @media screen and (min-width: 768px) {
+    justify-content: center;
+    align-items: center;
+  }
 
   @media screen and (min-width: 1920px) {
     gap: 40px;
@@ -22,11 +31,17 @@ export const MentorstvoWrapper = styled.div`
   flex-direction: column;
   gap: 16px;
 
+  @media screen and (min-width: 768px) {
+    max-width: 688px;
+    gap: 24px;
+  }
+
   @media screen and (min-width: 1920px) {
     max-width: 828px;
     align-items: flex-start;
   }
 `;
+
 export const AboutWrapper = styled.div`
   display: flex;
   flex-direction: column;
@@ -36,6 +51,10 @@ export const AboutWrapper = styled.div`
   border-radius: 16px;
   background: var(--background-white);
   box-shadow: 0px 0px 8px 0px rgba(27, 54, 65, 0.08);
+
+  @media screen and (min-width: 768px) {
+    max-width: 332px;
+  }
 
   @media screen and (min-width: 1920px) {
     gap: 24px;
@@ -60,6 +79,11 @@ export const TitleH2 = styled.h2`
   line-height: 32px;
   color: var(--typography-black);
 
+  @media screen and (min-width: 768px) {
+    font-size: 32px;
+    line-height: 40px;
+  }
+
   @media screen and (min-width: 1920px) {
     font-size: 48px;
     line-height: 56px;
@@ -73,6 +97,11 @@ export const TitleH3 = styled.h3`
   line-height: 24px;
   color: var(--typography-bluedark);
 
+  @media screen and (min-width: 768px) {
+    font-size: 20px;
+    line-height: 28px;
+  }
+
   @media screen and (min-width: 1920px) {
     font-size: 24px;
     line-height: 32px;
@@ -84,6 +113,11 @@ export const TitleH3White = styled.h3`
   font-weight: 600;
   line-height: 24px;
   color: var(--typography-white);
+
+  @media screen and (min-width: 768px) {
+    font-size: 20px;
+    line-height: 28px;
+  }
 
   @media screen and (min-width: 1920px) {
     font-size: 24px;
@@ -110,6 +144,10 @@ export const Paragraph = styled.p`
 
   &:not(:first-of-type) {
     margin-bottom: 8px;
+  }
+
+  @media screen and (min-width: 768px) {
+    font-size: 18px;
   }
 
   @media screen and (min-width: 1920px) {
@@ -141,11 +179,17 @@ export const StyledMentorButton = styled.a`
   border: 1px solid var(--background-bluedark);
   box-shadow: 0px 0px 8px 0px rgba(27, 54, 65, 0.08);
 
+  @media screen and (min-width: 768px) {
+    width: 260px;
+    margin-bottom: 16px;
+
+    font-size: 15px;
+    line-height: 22px;
+  }
+
   @media screen and (min-width: 1920px) {
     font-size: 16px;
     line-height: 24px;
-
-    width: 260px;
 
     &:hover,
     &focus {
@@ -160,9 +204,14 @@ export const DescriptionWrapper = styled.div`
   flex-direction: column;
   gap: 24px;
 
+  @media screen and (min-width: 768px) {
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+  }
+
   @media screen and (min-width: 1920px) {
     gap: 40px;
-    flex-direction: row;
   }
 `;
 
@@ -176,6 +225,11 @@ export const ForWHoWrapper = styled.div`
   border-radius: 16px;
   box-shadow: 0px 0px 8px 0px rgba(27, 54, 65, 0.08);
   background-color: var(--background-bluedark);
+
+  @media screen and (min-width: 768px) {
+    max-width: 332px;
+    height: 462px;
+  }
 
   @media screen and (min-width: 1920px) {
     padding: 40px;
@@ -194,6 +248,11 @@ export const StyledAboutUl = styled.ul`
   line-height: 20px;
   color: var(--typography-bluedark);
 
+  @media screen and (min-width: 768px) {
+    font-size: 15px;
+    line-height: 22px;
+  }
+
   @media screen and (min-width: 1920px) {
     font-size: 16px;
     line-height: 24px;
@@ -211,10 +270,15 @@ export const StyledForWhoUl = styled.ul`
   line-height: 20px;
   color: var(--typography-white);
 
+  @media screen and (min-width: 768px) {
+    font-size: 15px;
+    line-height: 22px;
+    margin-bottom: 0px;
+  }
+
   @media screen and (min-width: 1920px) {
     font-size: 16px;
     line-height: 24px;
-    margin-bottom: 0px;
   }
 `;
 

@@ -3,6 +3,9 @@ import mentorPhoto2 from "../../images/desktop/pic_mentorstvo1x.webp";
 import mentorPhoto2x from "../../images/desktop/pic_mentorstvo2x.jpg";
 import mentorPhotoMobWebp from "../../images/mobile/mob_mentor1x.webp";
 import mentorPhotoMob2x from "../../images/mobile/mob_mentor@2x.jpg";
+import mentor768Jpg1x from "../../images/tablet/pic_mentorstvo_768_1x.jpg";
+import mentor768WebP1x from "../../images/tablet/pic_mentorstvo_768_1x.webp";
+import mentor768WebP2x from "../../images/tablet/pic_mentorstvo_768@2x.webp";
 
 import {
   AboutWrapper,
@@ -46,11 +49,19 @@ const Mentor = () => {
             />
           </MediaQuery>
 
-          <MediaQuery minWidth={300} maxWidth={1919}>
+          <MediaQuery minWidth={300} maxWidth={767}>
             <img
               srcSet={`${mentorPhotoMobWebp} 375w, ${mentorPhotoMob2x} 2x`}
               sizes="(min-width: 375px) 375px"
               src={mentorPhotoMobWebp}
+              alt="Ольга Поліщук - ваш ментор в медичній галузі"
+            />
+          </MediaQuery>
+          <MediaQuery minWidth={768} maxWidth={1439}>
+            <img
+              srcSet={`${mentor768WebP1x} 688w, ${mentor768WebP2x} 2x`}
+              sizes="(min-width: 768px) 768px"
+              src={mentor768Jpg1x}
               alt="Ольга Поліщук - ваш ментор в медичній галузі"
             />
           </MediaQuery>
