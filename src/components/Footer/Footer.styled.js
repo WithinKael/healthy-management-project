@@ -1,44 +1,109 @@
 import styled from "@emotion/styled";
 
 export const FooterBg = styled.div`
-  padding: 40px 0 0 0;
+  /* padding: 40px 0; */
   background-color: var(--background-bluedark);
+
+  @media screen and (min-width: 768px) {
+  }
+
+  @media screen and (min-width: 1440px) {
+  }
+
+  @media screen and (min-width: 1920px) {
+  }
 `;
 
 export const FooterContainer = styled.div`
   display: flex;
+  padding: 40px 24px;
+  flex-direction: column;
+  justify-content: center;
   align-items: center;
-  justify-content: space-between;
-  margin-bottom: 40px;
+  gap: 32px;
+  background: var(--background-bluedark);
+
+  @media screen and (min-width: 768px) {
+    padding: 32px 40px;
+    flex-direction: row;
+    align-content: center;
+    gap: 16px 80px;
+    align-self: stretch;
+    flex-wrap: wrap;
+  }
+
+  @media screen and (min-width: 1440px) {
+    padding: 32px 80px;
+    flex-direction: row;
+    align-content: center;
+    gap: 24px 56px;
+  }
+
+  @media screen and (min-width: 1920px) {
+    padding: 40px 120px;
+    justify-content: space-between;
+  }
 `;
 
 export const TeamBtn = styled.a`
-  font-size: 16px;
+  font-size: 14px;
   font-weight: 500;
-  line-height: 1.5;
+  line-height: 1.42;
   cursor: pointer;
   border-bottom: 1px solid rgba(244, 244, 246, 0.4);
   color: var(--system-default-10);
+
+  @media screen and (min-width: 768px) {
+    font-size: 15px;
+    line-height: 1.47;
+  }
+
+  @media screen and (min-width: 1440px) {
+    line-height: 1.2;
+  }
+
+  @media screen and (min-width: 1920px) {
+    font-size: 16px;
+    line-height: 1.5;
+  }
 `;
 
 export const NavFooter = styled.div`
   display: flex;
+  flex-direction: column;
+  justify-content: center;
   align-items: center;
-  gap: 40px;
+  gap: 16px;
+  align-self: stretch;
+
+  @media screen and (min-width: 768px) {
+    flex-direction: row;
+    gap: 40px;
+  }
+
+  /* @media screen and (min-width: 1440px) {
+  } */
+
+  /* @media screen and (min-width: 1920px) {
+  } */
 `;
 
 export const NavFooterBtn = styled.a`
-  display: inline-block;
-  font-size: 16px;
+  display: flex;
+  padding: 8px 0px;
+  justify-content: center;
+  align-items: center;
+  gap: 8px;
+  font-size: 14px;
   font-weight: 500;
-  line-height: 1.5;
+  line-height: 1.42;
   position: relative;
   color: var(--system-default-10);
 
   &::before {
     content: "";
     position: absolute;
-    bottom: -8px;
+    bottom: -4px;
     left: 0;
     width: 100%;
     height: 1px;
@@ -49,47 +114,154 @@ export const NavFooterBtn = styled.a`
   &:hover::before {
     opacity: 1;
   }
+
+  @media screen and (min-width: 768px) {
+    font-size: 15px;
+    line-height: 1.47;
+  }
+
+  @media screen and (min-width: 1440px) {
+    line-height: 1.2;
+  }
+
+  @media screen and (min-width: 1920px) {
+    font-size: 16px;
+    line-height: 1.5;
+
+    &::before {
+      bottom: -8px;
+    }
+  }
 `;
 
 export const ContactsFooter = styled.div`
   display: flex;
-  gap: 40px;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 16px;
+  align-self: stretch;
+
+  @media screen and (min-width: 768px) {
+    flex-direction: row;
+    gap: 40px;
+  }
+
+  /* @media screen and (min-width: 1440px) {
+  } */
+
+  @media screen and (min-width: 1920px) {
+  }
 `;
 
 export const Social = styled.div`
   display: flex;
+  align-items: flex-end;
   gap: 16px;
-  align-items: center;
+
+  /* @media screen and (min-width: 768px) {
+  }
+
+  @media screen and (min-width: 1440px) {
+  } */
+
+  /* @media screen and (min-width: 1920px) {
+  } */
 `;
+
 export const SocialItem = styled.a`
   padding: 8px;
 
   & svg {
+    display: flex;
+
+    justify-content: center;
+    align-items: center;
     border-radius: 10px;
     background-color: var(--background-white);
     opacity: 0.8;
   }
+
+  /* @media screen and (min-width: 768px) {
+  }
+
+  @media screen and (min-width: 1440px) {
+  }
+
+  @media screen and (min-width: 1920px) {
+  } */
 `;
 
 export const TelEmail = styled.div`
   display: flex;
   flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 8px;
+  align-self: stretch;
+
+  @media screen and (min-width: 768px) {
+    flex-direction: row;
+    gap: 24px;
+  }
+
+  /* @media screen and (min-width: 1440px) {
+  } */
+
+  @media screen and (min-width: 1920px) {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 0;
+  }
 `;
 
 export const Item = styled.a`
-  font-size: 16px;
+  font-size: 14px;
   font-weight: 500;
-  line-height: 1.5;
-  color: var(--system-default-10);
+  line-height: 1.43;
+  color: var(--typography-white);
+
+  @media screen and (min-width: 768px) {
+    font-size: 15px;
+    line-height: 1.2;
+  }
+
+  /* @media screen and (min-width: 1440px) {
+  } */
+
+  @media screen and (min-width: 1920px) {
+    font-size: 16px;
+    line-height: 1.5;
+  }
 `;
 
-export const Paragraph = styled.p`
-  padding: 16px 0;
-  text-align: center;
+export const Paragraph = styled.div`
+  display: flex;
+  padding: 16px 24px;
+
+  justify-content: center;
+  align-items: center;
+  border-top: 1px solid var(--system-default-20);
+  background: var(--background-bluedark);
+`;
+
+export const Text = styled.p`
+  width: 327px;
   font-size: 12px;
   font-weight: 600;
-  line-height: 1.67;
+  line-height: 1.5;
   text-transform: uppercase;
-  border-top: 1px solid var(--system-default-20);
+  text-align: center;
   color: var(--system-default-10);
+
+  @media screen and (min-width: 768px) {
+    width: 100%;
+  }
+
+  @media screen and (min-width: 1440px) {
+    line-height: 1.67;
+  }
+
+  /* @media screen and (min-width: 1920px) {
+  } */
 `;
