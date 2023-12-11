@@ -1,8 +1,17 @@
 import MediaQuery from "react-responsive";
 import mentorPhoto2 from "../../images/desktop/pic_mentorstvo1x.webp";
 import mentorPhoto2x from "../../images/desktop/pic_mentorstvo2x.jpg";
+import mentorPhotoJgeg1x from "../../images/desktop/pic_mentorstvo1x.jpg";
 import mentorPhotoMobWebp from "../../images/mobile/mob_mentor1x.webp";
 import mentorPhotoMob2x from "../../images/mobile/mob_mentor@2x.jpg";
+import mentorPhotoMobJpg1x from "../../images/mobile/mob_mentor1x.jpg";
+import mentor768Jpg1x from "../../images/tablet/pic_mentorstvo_768_1x.jpg";
+import mentor768WebP1x from "../../images/tablet/pic_mentorstvo_768_1x.webp";
+import mentor768WebP2x from "../../images/tablet/pic_mentorstvo_768@2x.webp";
+
+import mentor1440WebP1x from "../../images/desktop1440/pic_mentorstvo_1440_1x.webp";
+import mentor1440WebP2x from "../../images/desktop1440/pic_mentorstvo_1440@2x.webp";
+import mentor1440Jpg1x from "../../images/desktop1440/pic_mentorstvo_1440_1x.jpg";
 
 import {
   AboutWrapper,
@@ -39,18 +48,34 @@ const Mentor = () => {
 
           <MediaQuery minWidth={1920}>
             <img
-              srcSet={`${mentorPhoto2} 1920w, ${mentorPhoto2x} 2x`}
+              srcSet={`${mentorPhoto2} 1x, ${mentorPhoto2x} 2x`}
               sizes="(min-width: 1920px) 1920px"
-              src={mentorPhoto2}
+              src={mentorPhotoJgeg1x}
               alt="Ольга Поліщук - ваш ментор в медичній галузі"
             />
           </MediaQuery>
 
-          <MediaQuery minWidth={300} maxWidth={1919}>
+          <MediaQuery minWidth={300} maxWidth={767}>
             <img
-              srcSet={`${mentorPhotoMobWebp} 375w, ${mentorPhotoMob2x} 2x`}
+              srcSet={`${mentorPhotoMobWebp} 1x, ${mentorPhotoMob2x} 2x`}
               sizes="(min-width: 375px) 375px"
-              src={mentorPhotoMobWebp}
+              src={mentorPhotoMobJpg1x}
+              alt="Ольга Поліщук - ваш ментор в медичній галузі"
+            />
+          </MediaQuery>
+          <MediaQuery minWidth={768} maxWidth={1439}>
+            <img
+              srcSet={`${mentor768WebP1x} 1x, ${mentor768WebP2x} 2x`}
+              sizes="(min-width: 768px) 768px"
+              src={mentor768Jpg1x}
+              alt="Ольга Поліщук - ваш ментор в медичній галузі"
+            />
+          </MediaQuery>
+          <MediaQuery minWidth={1440} maxWidth={1919}>
+            <img
+              srcSet={`${mentor1440WebP1x} 1x, ${mentor1440WebP2x} 2x`}
+              sizes="(min-width: 1440px) 100vw (max-width: 1919px) 100vw"
+              src={mentor1440Jpg1x}
               alt="Ольга Поліщук - ваш ментор в медичній галузі"
             />
           </MediaQuery>

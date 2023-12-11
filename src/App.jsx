@@ -52,23 +52,23 @@ function App() {
 
   return (
     <>
-      <Header handleSetActiveLink={handleSetActiveLink} />
+      {/* <Header handleSetActiveLink={handleSetActiveLink} /> */}
       <main>
-        <Hero />
+        {/* <Hero />
         <AboutStudio />
         <AboutMe />
         <WhyChooseUs />
         <WorkPrinciples />
-        <Services />
+        <Services /> */}
         <Mentor />
         <MentoringSession />
         <PersonalSupport />
-        <ProjectSection />
+        {/* <ProjectSection />
         <BusinessTools />
-        <ContactsForm />
+        <ContactsForm /> */}
       </main>
-      <Footer handleSetActiveLink={handleSetActiveLink} />
-      <ScrollToTop />
+      {/* <Footer handleSetActiveLink={handleSetActiveLink} />
+      <ScrollToTop /> */}
     </>
   );
 }
