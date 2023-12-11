@@ -123,6 +123,10 @@ export const SvgMobileHeader = styled.svg`
   stroke: black;
   width: 40px;
   height: 40px;
+
+  @media screen and (min-width: 768px) {
+    width: 70px;
+  }
 `;
 
 export const ButtonMobileHeader = styled.button`
