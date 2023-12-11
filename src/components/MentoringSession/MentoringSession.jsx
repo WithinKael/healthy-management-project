@@ -1,3 +1,4 @@
+import MediaQuery from "react-responsive";
 import sprite from "../../images/sprite.svg";
 import {
   ArrowWrapper,
@@ -18,11 +19,8 @@ import {
   TitleH2,
   TitleH3,
 } from "./MentorSession.styled";
-import { useMediaQuery } from "@react-hook/media-query";
 
 const MentoringSession = () => {
-  const isMobile = useMediaQuery("(max-width: 768px)");
-
   return (
     <StyledSection className="container">
       <PersonalSessionSectionWrapper>
@@ -71,54 +69,78 @@ const MentoringSession = () => {
         </StyledSessionParagraph>
         <ArrowWrapper>
           <StyledContainer>
-            {isMobile ? (
+            <MediaQuery minWidth={330} maxWidth={767}>
               <StyledArrowSvg>
                 <use href={`${sprite}#icon-rectangle-mob`} />
               </StyledArrowSvg>
-            ) : (
+            </MediaQuery>
+            <MediaQuery minWidth={768} maxWidth={1439}>
+              <StyledArrowSvg>
+                <use href={`${sprite}#icon-rectangle-tab`} />
+              </StyledArrowSvg>
+            </MediaQuery>
+            <MediaQuery minWidth={1440}>
               <StyledArrowSvg>
                 <use href={`${sprite}#icon-rectangle`} />
               </StyledArrowSvg>
-            )}
+            </MediaQuery>
             <StyledParagraph>Заповнення брифу</StyledParagraph>
           </StyledContainer>
 
           <StyledContainer>
-            {isMobile ? (
+            <MediaQuery minWidth={330} maxWidth={767}>
               <StyledArrowSvg>
                 <use href={`${sprite}#icon-rectangle-mob`} />
               </StyledArrowSvg>
-            ) : (
+            </MediaQuery>
+            <MediaQuery minWidth={768} maxWidth={1439}>
+              <StyledArrowSvg>
+                <use href={`${sprite}#icon-rectangle-tab`} />
+              </StyledArrowSvg>
+            </MediaQuery>
+            <MediaQuery minWidth={1440}>
               <StyledArrowSvg>
                 <use href={`${sprite}#icon-rectangle`} />
               </StyledArrowSvg>
-            )}
+            </MediaQuery>
             <StyledParagraph>Діагностика ситуації</StyledParagraph>
           </StyledContainer>
 
           <StyledContainer>
-            {isMobile ? (
+            <MediaQuery minWidth={330} maxWidth={767}>
               <StyledArrowSvg>
                 <use href={`${sprite}#icon-rectangle-mob`} />
               </StyledArrowSvg>
-            ) : (
+            </MediaQuery>
+            <MediaQuery minWidth={768} maxWidth={1439}>
+              <StyledArrowSvg>
+                <use href={`${sprite}#icon-rectangle-tab`} />
+              </StyledArrowSvg>
+            </MediaQuery>
+            <MediaQuery minWidth={1440}>
               <StyledArrowSvg>
                 <use href={`${sprite}#icon-rectangle`} />
               </StyledArrowSvg>
-            )}
+            </MediaQuery>
             <StyledParagraph>Проведення сесії</StyledParagraph>
           </StyledContainer>
 
           <StyledContainer>
-            {isMobile ? (
+            <MediaQuery minWidth={330} maxWidth={767}>
               <StyledArrowSvg>
                 <use href={`${sprite}#icon-rectangle-mob`} />
               </StyledArrowSvg>
-            ) : (
+            </MediaQuery>
+            <MediaQuery minWidth={768} maxWidth={1439}>
+              <StyledArrowSvg>
+                <use href={`${sprite}#icon-rectangle-tab`} />
+              </StyledArrowSvg>
+            </MediaQuery>
+            <MediaQuery minWidth={1440}>
               <StyledArrowSvg>
                 <use href={`${sprite}#icon-rectangle`} />
               </StyledArrowSvg>
-            )}
+            </MediaQuery>
             <StyledParagraph>Рекомендації</StyledParagraph>
           </StyledContainer>
         </ArrowWrapper>

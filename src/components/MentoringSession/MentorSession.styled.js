@@ -1,8 +1,14 @@
 import styled from "@emotion/styled";
 
 export const StyledSection = styled.section`
-  padding-top: 24px;
-  padding-bottom: 24px;
+  padding: 40px 24px;
+
+  @media screen and (min-width: 768px) {
+    padding: 40px;
+  }
+  @media screen and (min-width: 1440px) {
+    padding: 40px 80px;
+  }
 
   @media screen and (min-width: 1920px) {
     padding-top: 80px;
@@ -16,6 +22,10 @@ export const PersonalSessionSectionWrapper = styled.div`
   box-shadow: 0px 0px 8px 0px rgba(27, 54, 65, 0.08);
   background: var(--background-white);
 
+  @media screen and (min-width: 768px) {
+    padding: 40px;
+  }
+
   @media screen and (min-width: 1920px) {
     padding: 80px;
   }
@@ -26,7 +36,18 @@ export const ArrowWrapper = styled.div`
   flex-direction: column;
   gap: 3px;
 
-  @media screen and (min-width: 1290px) {
+  @media screen and (min-width: 768px) {
+    flex-direction: row;
+    flex-wrap: wrap;
+    row-gap: 16px;
+    column-gap: 24px;
+  }
+
+  @media screen and (min-width: 1440px) {
+    justify-content: space-between;
+  }
+
+  @media screen and (min-width: 1920px) {
     flex-direction: row;
     justify-content: space-between;
   }
@@ -63,7 +84,7 @@ export const PersonalWrapper = styled.div`
 `;
 
 export const QuestionWrapper = styled.div`
-  @media screen and (min-width: 1920px) {
+  @media screen and (min-width: 768px) {
     padding: 24px;
   }
 `;
@@ -83,6 +104,11 @@ export const StyledParagraph = styled.p`
   z-index: 2;
   color: var(--typography-white);
 
+  @media screen and (min-width: 768px) {
+    font-size: 15px;
+    left: 42%;
+  }
+
   @media screen and (min-width: 1920px) {
     justify-content: center;
     width: 100%;
@@ -99,6 +125,11 @@ export const TitleH2 = styled.h2`
   font-weight: 600;
   line-height: 32px;
 
+  @media screen and (min-width: 768px) {
+    font-size: 32px;
+    line-height: 40px;
+  }
+
   @media screen and (min-width: 1920px) {
     font-size: 48px;
     line-height: 56px;
@@ -112,6 +143,12 @@ export const TitleH3 = styled.h3`
   margin-bottom: 24px;
   color: var(--typography-bluedark);
 
+  @media screen and (min-width: 768px) {
+    font-size: 20px;
+    line-height: 1.4;
+    margin-bottom: 16px;
+  }
+
   @media screen and (min-width: 1920px) {
     font-size: 24px;
     margin-bottom: 16px;
@@ -123,9 +160,13 @@ export const PersonalParagraph = styled.p`
   line-height: 24px;
   color: var(--typography-bluedark);
 
+  @media screen and (min-width: 768px) {
+    font-size: 18px;
+    font-weight: 500;
+  }
+
   @media screen and (min-width: 1920px) {
     font-size: 20px;
-    font-weight: 500;
     line-height: 1.4;
   }
 `;
@@ -140,11 +181,17 @@ export const ProHourParagraph = styled.p`
   border-radius: 16px;
   padding: 4px 16px;
   color: var(--typography-bluedark);
-  background-color: rgba(27, 54, 65, 0.2);
+  background: rgba(6, 33, 54, 0.1);
+
+  @media screen and (min-width: 768px) {
+    font-size: 20px;
+    font-weight: 500;
+    line-height: 28px;
+    margin-bottom: 8px;
+  }
 
   @media screen and (min-width: 1920px) {
     font-size: 24px;
-    font-weight: 500;
     line-height: 1.3;
   }
 `;
@@ -171,9 +218,16 @@ export const StyledOrderLink = styled.a`
     font-weight: 600;
   }
 
+  @media screen and (min-width: 768px) {
+    font-size: 15px;
+    line-height: 1.5;
+    margin-bottom: 16px;
+
+    width: 260px;
+  }
+
   @media screen and (min-width: 1920px) {
     font-size: 16px;
-    line-height: 1.5;
     margin-top: 28px;
     width: 260px;
   }
@@ -186,6 +240,10 @@ export const StyledSessionParagraph = styled.p`
   margin-bottom: 16px;
 
   color: var(--typography-bluedark);
+
+  @media screen and (min-width: 768px) {
+    margin-bottom: 16px;
+  }
 
   @media screen and (min-width: 1920px) {
     font-size: 24px;
@@ -203,6 +261,11 @@ export const StyledPersonalList = styled.ul`
   line-height: 20px;
   margin-bottom: 24px;
   color: var(--typography-bluedark);
+
+  @media screen and (min-width: 768px) {
+    font-size: 15px;
+    line-height: 22px;
+  }
 
   @media screen and (min-width: 1920px) {
     font-size: 16px;
@@ -244,8 +307,20 @@ export const StyledPersonalListItem = styled.li`
 `;
 
 export const StyledArrowSvg = styled.svg`
-  width: 266px;
-  height: 56px;
+  @media screen and (min-width: 330px) {
+    width: 260px;
+    height: 60px;
+  }
+
+  @media screen and (min-width: 768px) {
+    width: 292px;
+    height: 64px;
+  }
+
+  @media screen and (min-width: 1440px) {
+    width: 282px;
+    height: 72px;
+  }
 
   @media screen and (min-width: 1920px) {
     width: 370px;
