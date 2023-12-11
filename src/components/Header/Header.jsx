@@ -19,7 +19,9 @@ const Header = ({ handleSetActiveLink }) => {
   const [shownModal, setShownModal] = useState(false);
 
   const isMobailSvg = useMediaQuery({ query: "(max-width: 767px)" });
-  const isTabletSvg = useMediaQuery({ query: "(min-width: 768px)" });
+  const isTabletSvg = useMediaQuery({
+    query: "(min-width: 768px) and (max-width: 1439px)",
+  });
   const isMobailAndTablet = useMediaQuery({ query: "(max-width: 1439px)" });
   const isTablet = useMediaQuery({ query: "(min-width: 1440px)" });
 
