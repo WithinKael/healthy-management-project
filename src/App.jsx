@@ -52,7 +52,7 @@ function App() {
 
   return (
     <>
-      <Header handleSetActiveLink={handleSetActiveLink} />
+      {/* <Header handleSetActiveLink={handleSetActiveLink} /> */}
       <main>
         {/* <Hero />
         <AboutStudio />

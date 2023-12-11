@@ -3,6 +3,14 @@ import styled from "@emotion/styled";
 export const StyledSection = styled.section`
   padding: 40px 24px;
 
+  @media screen and (min-width: 768px) {
+    padding: 40px;
+  }
+
+  @media screen and (min-width: 1440px) {
+    padding: 40px 80px;
+  }
+
   @media screen and (min-width: 1920px) {
     padding-top: 80px;
     padding-bottom: 80px;
@@ -19,10 +27,14 @@ export const ImgSectionWrapper = styled.div`
     align-items: center;
   }
 
+  @media screen and (min-width: 1440px) {
+    flex-direction: row;
+    margin-bottom: 24px;
+  }
+
   @media screen and (min-width: 1920px) {
     gap: 40px;
     margin-bottom: 40px;
-    flex-direction: row;
   }
 `;
 
@@ -34,6 +46,10 @@ export const MentorstvoWrapper = styled.div`
   @media screen and (min-width: 768px) {
     max-width: 688px;
     gap: 24px;
+  }
+
+  @media screen and (min-width: 1440px) {
+    max-width: 628px;
   }
 
   @media screen and (min-width: 1920px) {
@@ -54,6 +70,11 @@ export const AboutWrapper = styled.div`
 
   @media screen and (min-width: 768px) {
     max-width: 332px;
+  }
+
+  @media screen and (min-width: 1440px) {
+    max-width: 628px;
+    height: 292px;
   }
 
   @media screen and (min-width: 1920px) {
@@ -84,6 +105,11 @@ export const TitleH2 = styled.h2`
     line-height: 40px;
   }
 
+  @media screen and (min-width: 1440px) {
+    font-size: 36px;
+    line-height: 48px;
+  }
+
   @media screen and (min-width: 1920px) {
     font-size: 48px;
     line-height: 56px;
@@ -102,6 +128,10 @@ export const TitleH3 = styled.h3`
     line-height: 28px;
   }
 
+  @media screen and (min-width: 1440px) {
+    line-height: 24px;
+  }
+
   @media screen and (min-width: 1920px) {
     font-size: 24px;
     line-height: 32px;
@@ -117,6 +147,9 @@ export const TitleH3White = styled.h3`
   @media screen and (min-width: 768px) {
     font-size: 20px;
     line-height: 28px;
+  }
+  @media screen and (min-width: 1440px) {
+    line-height: 24px;
   }
 
   @media screen and (min-width: 1920px) {
@@ -148,6 +181,14 @@ export const Paragraph = styled.p`
 
   @media screen and (min-width: 768px) {
     font-size: 18px;
+  }
+
+  @media screen and (min-width: 1440px) {
+    line-height: 22px;
+
+    &:not(:first-of-type) {
+      margin-bottom: 0px;
+    }
   }
 
   @media screen and (min-width: 1920px) {
@@ -185,6 +226,10 @@ export const StyledMentorButton = styled.a`
 
     font-size: 15px;
     line-height: 22px;
+  }
+
+  @media screen and (min-width: 1440px) {
+    margin-bottom: 0px;
   }
 
   @media screen and (min-width: 1920px) {
@@ -227,8 +272,12 @@ export const ForWHoWrapper = styled.div`
   background-color: var(--background-bluedark);
 
   @media screen and (min-width: 768px) {
-    max-width: 332px;
     height: 462px;
+  }
+
+  @media screen and (min-width: 1440px) {
+    width: 628px;
+    height: 292px;
   }
 
   @media screen and (min-width: 1920px) {
@@ -253,6 +302,10 @@ export const StyledAboutUl = styled.ul`
     line-height: 22px;
   }
 
+  @media screen and (min-width: 1440px) {
+    line-height: 18px;
+  }
+
   @media screen and (min-width: 1920px) {
     font-size: 16px;
     line-height: 24px;
@@ -274,6 +327,10 @@ export const StyledForWhoUl = styled.ul`
     font-size: 15px;
     line-height: 22px;
     margin-bottom: 0px;
+  }
+
+  @media screen and (min-width: 1440px) {
+    line-height: 18px;
   }
 
   @media screen and (min-width: 1920px) {
