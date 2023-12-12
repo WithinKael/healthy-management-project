@@ -13,6 +13,7 @@ import WorkPrinciples from "./components/WorkPrinciples/WorkPrinciples";
 import ScrollToTop from "./components/ScrollToTop/ScrollToTop";
 import ContactsForm from "./components/ContactsForm/ContactsForm";
 import Services from "./components/Services/Services";
+import { useEffect } from "react";
 
 function App() {
   const handleSetActiveLink = (link, event) => {
@@ -49,6 +50,10 @@ function App() {
       }, 1000);
     }
   };
+
+  useEffect(() => {
+    fetch("https://healthy-management.onrender.com/api/wakeup");
+  }, []);
 
   return (
     <>

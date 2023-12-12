@@ -3,8 +3,8 @@ import styled from "@emotion/styled";
 export const SectionPrinciples = styled.section`
   display: flex;
   flex-direction: column;
-  padding-top: 24px;
-  padding-bottom: 24px;
+  padding-top: 40px;
+  padding-bottom: 40px;
   gap: 24px;
 
   @media screen and (min-width: 1920px) {
@@ -53,8 +53,8 @@ export const PrinciplesTitle = styled.h2`
 export const PrinciplesText = styled.h2`
   color: var(--typography-bluedark);
   font-weight: 500;
-  font-size: 16px;
-  line-height: 24px;
+  font-size: 15px;
+  line-height: 22px;
 
   @media screen and (min-width: 1920px) {
     font-size: 20px;
@@ -89,26 +89,15 @@ export const SvgDone = styled.svg`
 `;
 
 export const ListItemText = styled.p`
-  width: 207px;
   color: var(--typography-bluedark);
+  width: 207px;
   font-weight: 500;
-  font-size: 16px;
-  line-height: 24px;
+  font-size: 15px;
+  line-height: 22px;
 
   @media screen and (min-width: 1920px) {
     width: 100%;
     font-size: 20px;
     line-height: 28px;
-  }
-`;
-
-export const Image = styled.img`
-  width: 100%;
-  height: 327px;
-  border-radius: 16px;
-
-  @media screen and (min-width: 1920px) {
-    width: 828px;
-    height: 664px;
   }
 `;

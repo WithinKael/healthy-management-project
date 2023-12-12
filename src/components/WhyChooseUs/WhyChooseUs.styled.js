@@ -1,8 +1,8 @@
 import styled from "@emotion/styled";
 
 export const SectionChoose = styled.section`
-  padding-top: 24px;
-  padding-bottom: 24px;
+  padding-top: 40px;
+  padding-bottom: 40px;
 
   @media screen and (min-width: 1920px) {
     padding-top: 80px;
@@ -58,8 +58,8 @@ export const Item = styled.li`
 `;
 
 export const Svg = styled.svg`
-  width: 80px;
-  height: 80px;
+  width: 64px;
+  height: 64px;
 `;
 
 export const Div = styled.div`
@@ -70,7 +70,7 @@ export const Div = styled.div`
 export const ItemTitle = styled.h3`
   width: 100%;
   font-weight: 600;
-  font-size: 18px;
+  font-size: 16px;
   line-height: 24px;
   margin-bottom: 8px;
   color: var(--system-default-10);
