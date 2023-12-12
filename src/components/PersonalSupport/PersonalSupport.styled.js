@@ -17,7 +17,7 @@ export const ArrowPersonalWrapper = styled.div`
   }
 
   @media screen and (min-width: 1920px) {
-    justify-content: space-between;
+    width: max-content;
   }
 `;
 
@@ -86,10 +86,13 @@ export const StyledPersonalParagraph = styled.p`
   }
 
   @media screen and (min-width: 1920px) {
+    display: flex;
+    justify-content: flex-start;
+    left: 60%;
     width: 100%;
-    justify-content: center;
-    top: 70%;
-    font-size: 20px;
+    top: 66%;
+
+    font-size: 16px;
     line-height: 1.4;
   }
 `;
