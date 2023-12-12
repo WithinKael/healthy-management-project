@@ -1554,8 +1554,7 @@ Valid keys: `+JSON.stringify(Object.keys(F),null,"  "));var $=C(le,O,ne,ae,se+".
   }
 
   @media screen and (min-width: 1920px) {
-    padding-top: 80px;
-    padding-bottom: 80px;
+    padding: 80px 120px;
   }
 `,o2=j.div`
   display: flex;
@@ -1573,7 +1572,7 @@ Valid keys: `+JSON.stringify(Object.keys(F),null,"  "));var $=C(le,O,ne,ae,se+".
   }
 
   @media screen and (min-width: 1920px) {
-    gap: 40px;
+    gap: 24px;
     margin-bottom: 40px;
   }
 `,s2=j.div`
@@ -1638,7 +1637,7 @@ Valid keys: `+JSON.stringify(Object.keys(F),null,"  "));var $=C(le,O,ne,ae,se+".
   @media screen and (min-width: 1920px) {
     font-size: 48px;
     line-height: 56px;
-    margin-bottom: 40px;
+    margin-bottom: 16px;
   }
 `,u2=j.h3`
   font-size: 18px;
@@ -1684,7 +1683,8 @@ Valid keys: `+JSON.stringify(Object.keys(F),null,"  "));var $=C(le,O,ne,ae,se+".
   min-width: 320px;
 
   @media screen and (min-width: 1920px) {
-    margin-bottom: 80px;
+    gap: 20px;
+    margin-bottom: 56px;
   }
 `,rp=j.p`
   font-size: 16px;
@@ -1710,12 +1710,8 @@ Valid keys: `+JSON.stringify(Object.keys(F),null,"  "));var $=C(le,O,ne,ae,se+".
 
   @media screen and (min-width: 1920px) {
     font-size: 20px;
-    max-width: 720px;
+    max-width: 828px;
     line-height: 28px;
-
-    &:not(:last-child) {
-      margin-bottom: 16px;
-    }
   }
 `,d2=j.a`
   display: flex;
@@ -1750,6 +1746,7 @@ Valid keys: `+JSON.stringify(Object.keys(F),null,"  "));var $=C(le,O,ne,ae,se+".
   @media screen and (min-width: 1920px) {
     font-size: 16px;
     line-height: 24px;
+    margin-bottom: 80px;
 
     &:hover,
     &focus {
@@ -1792,6 +1789,7 @@ Valid keys: `+JSON.stringify(Object.keys(F),null,"  "));var $=C(le,O,ne,ae,se+".
   }
 
   @media screen and (min-width: 1920px) {
+    height: auto;
     padding: 40px;
     gap: 24px;
     flex: 1 0 0;
@@ -1913,8 +1911,7 @@ Valid keys: `+JSON.stringify(Object.keys(F),null,"  "));var $=C(le,O,ne,ae,se+".
   }
 
   @media screen and (min-width: 1920px) {
-    padding-top: 80px;
-    padding-bottom: 80px;
+    padding: 80px 120px;
   }
 `,Bg=j.div`
   padding: 24px;
@@ -1947,7 +1944,7 @@ Valid keys: `+JSON.stringify(Object.keys(F),null,"  "));var $=C(le,O,ne,ae,se+".
 
   @media screen and (min-width: 1920px) {
     flex-direction: row;
-    justify-content: space-between;
+    width: max-content;
   }
 `,Ho=j.div`
   position: relative;
@@ -1998,12 +1995,12 @@ Valid keys: `+JSON.stringify(Object.keys(F),null,"  "));var $=C(le,O,ne,ae,se+".
   }
 
   @media screen and (min-width: 1920px) {
-    justify-content: center;
+    ustify-content: flex-start;
     width: 100%;
-    font-size: 20px;
+    font-size: 16px;
     line-height: 1.4;
-    top: 50%;
-    left: 50%;
+    top: 48%;
+    left: 60%;
   }
 `,Kg=j.h2`
   color: var(--typography-black);
@@ -2213,7 +2210,7 @@ Valid keys: `+JSON.stringify(Object.keys(F),null,"  "));var $=C(le,O,ne,ae,se+".
   }
 
   @media screen and (min-width: 1920px) {
-    justify-content: space-between;
+    width: max-content;
   }
 `,st=j.svg`
   @media screen and (min-width: 330px) {
@@ -2274,10 +2271,13 @@ Valid keys: `+JSON.stringify(Object.keys(F),null,"  "));var $=C(le,O,ne,ae,se+".
   }
 
   @media screen and (min-width: 1920px) {
+    display: flex;
+    justify-content: flex-start;
+    left: 60%;
     width: 100%;
-    justify-content: center;
-    top: 70%;
-    font-size: 20px;
+    top: 66%;
+
+    font-size: 16px;
     line-height: 1.4;
   }
 `,y2=()=>u.jsx(Wg,{className:"container",children:u.jsxs(Bg,{children:[u.jsxs(Hg,{children:[u.jsxs(Qg,{children:[u.jsx(Kg,{children:"Персональний супровід"}),u.jsx(Xg,{children:"Пропрацьовуємо ваші запити та досягаємо посавлених цілей"}),u.jsx(qg,{children:"від 2 місяців тісної взаємодії"}),u.jsx(Jg,{href:"#contact",children:"Замовити послугу"})]}),u.jsxs(Yg,{children:[u.jsx(Gg,{children:"Питання, з якими можете звернутися"}),u.jsxs(ev,{children:[u.jsx(Ut,{children:"Зануритись в бізнес-процеси та зрозуміти, де є точки зростання"}),u.jsx(Ut,{children:"Зрозуміти що таке маркетинг та як він працює у вашому бізнесі"}),u.jsx(Ut,{children:"Супровід розробки та впровадження стратегій"}),u.jsx(Ut,{children:"Особисті питання по медичному менеджменту, маркетингу та розвитку, управління здоров'ям"})]})]})]}),u.jsx(Zg,{children:"Шлях проведення менторського супроводу"}),u.jsxs(x2,{children:[u.jsxs(gi,{children:[u.jsx(ue,{minWidth:330,maxWidth:767,children:u.jsx(st,{children:u.jsx("use",{href:`${K}#icon-rectangle-mob`})})}),u.jsx(ue,{minWidth:768,maxWidth:1439,children:u.jsx(st,{children:u.jsx("use",{href:`${K}#icon-rectangle-tab`})})}),u.jsx(ue,{minWidth:1440,children:u.jsx(st,{children:u.jsx("use",{href:`${K}#icon-rectangle2`})})}),u.jsx(vi,{children:"Заповнення брифу"})]}),u.jsxs(gi,{children:[u.jsx(ue,{minWidth:330,maxWidth:767,children:u.jsx(st,{children:u.jsx("use",{href:`${K}#icon-rectangle-mob`})})}),u.jsx(ue,{minWidth:768,maxWidth:1439,children:u.jsx(st,{children:u.jsx("use",{href:`${K}#icon-rectangle-tab`})})}),u.jsx(ue,{minWidth:1440,children:u.jsx(st,{children:u.jsx("use",{href:`${K}#icon-rectangle2`})})}),u.jsx(vi,{children:"Діагностика ситуації"})]}),u.jsxs(gi,{children:[u.jsx(ue,{minWidth:330,maxWidth:767,children:u.jsx(st,{children:u.jsx("use",{href:`${K}#icon-rectangle-mob`})})}),u.jsx(ue,{minWidth:768,maxWidth:1439,children:u.jsx(st,{children:u.jsx("use",{href:`${K}#icon-rectangle-tab`})})}),u.jsx(ue,{minWidth:1440,children:u.jsx(st,{children:u.jsx("use",{href:`${K}#icon-rectangle2`})})}),u.jsx(vi,{children:"Визначення зон росту"})]}),u.jsxs(gi,{children:[u.jsx(ue,{minWidth:330,maxWidth:767,children:u.jsx(st,{children:u.jsx("use",{href:`${K}#icon-rectangle-mob`})})}),u.jsx(ue,{minWidth:768,maxWidth:1439,children:u.jsx(st,{children:u.jsx("use",{href:`${K}#icon-rectangle-tab`})})}),u.jsx(ue,{minWidth:1440,children:u.jsx(st,{children:u.jsx("use",{href:`${K}#icon-rectangle2`})})}),u.jsx(vi,{children:"Менторинг"})]}),u.jsxs(gi,{children:[u.jsx(ue,{minWidth:330,maxWidth:767,children:u.jsx(st,{children:u.jsx("use",{href:`${K}#icon-rectangle-mob`})})}),u.jsx(ue,{minWidth:768,maxWidth:1439,children:u.jsx(st,{children:u.jsx("use",{href:`${K}#icon-rectangle-tab`})})}),u.jsx(ue,{minWidth:1440,children:u.jsx(st,{children:u.jsx("use",{href:`${K}#icon-rectangle2`})})}),u.jsx(vi,{children:"Рекомендації"})]})]})]})}),Ia=()=>{const e=gn.useMediaQuery({maxWidth:767}),t=gn.useMediaQuery({minWidth:768,maxWidth:1439}),n=gn.useMediaQuery({minWidth:1440,maxWidth:1919}),r=gn.useMediaQuery({minWidth:1920});return e&&"mobile"||t&&"tablet"||n&&"desktop"||r&&"largeDesktop"},w2="/healthy-management-project/assets/denta_derm1x-JWCICTe_.webp",b2="/healthy-management-project/assets/medialt1x-5LMkh0v8.webp",S2="/healthy-management-project/assets/cures1x--AoJBOWJ.webp",k2="/healthy-management-project/assets/clinic1x-YgK5Wnno.webp",j2="/healthy-management-project/assets/kmklam1x-FlPeEOTs.webp",C2="/healthy-management-project/assets/symmetrica1x-hhcOddzB.webp",wl=[{image:w2,category:"DentaDerm",title:"Діагностика бізнес-процесів, маркетингу, сервісу, розробка стратегії розвитку, менторство",about:["Діагностика бізнес-процесів та маркетингу","Стратегія розвитку","Підбір команди маркетингу","Менторство"],details:[{title:"Завдання:",about:["Розробка стратегії розвитку","Розробка нового сайту клініки","Пошук команди маркетингу"],comment:"Дії в результаті розробки стратегії розвитку передбачали роботу над проєктом в новому позиціонуванні,  пошук зовнішньої та внутрішньої команди для реалізації нового сайту, ведення соцмереж"},{title:"В результаті роботи над проєктом:",about:["Розроблені вектори розвитку","Розроблений та впроваджений новий сайт","Підібрана команда маркетингового супроводу"],comment:"В результаті співпраці партнер отримав комплексне бачення просування, сформована команда маркетингу"}]},{image:b2,category:"Medialt",title:"Діагностика бізнес-процесів, маркетингу, сервісу, розробка стратегії розвитку, менторство",about:["Аудит ринку та конкурентів","Аудит маркетингу та сервісу","Розробка стратегії розвитку"],details:[{title:"Завдання:",about:["Розробка стратегії розвитку"]},{title:"Робота над задачою була розділена на два етапи:",about:["Аналіз конкурентів, ринку, виявлення зовнішніх можливостей та загроз","Аналіз сервісу медичного центру, аналіз роботи контакт центру, маркетингу, наявної бази пацієнтів та внутрішніх бізнес-процесів"]},{title:"В результаті комплексного аудиту підготували стратегію розвитку, яка передбачала рекомендації щодо:",about:["Управління маркетингом","Оптимізації роботи сервісу","Можливості МІС","Етапи розвитку напрямків та клініки вцілому"],comment:"В результаті співпраці - за 5 місяців ріст обороту в два рази"}]},{image:S2,category:"Cures",title:"Автоматизація комунікації з пацієнтами",about:["Створення та запуск 20 чат-ботів для клінік","Проведення консультацій та аудитів комунікацій клінік з пацієнтами","Розробка персональних протоколів спілкування з пацієнтами"],details:[{title:"Завдання:",about:["Автоматизація комунікації з пацієнтами"]},{title:"В результаті роботи над проєктом:",about:["Розвиток проєкту по створенню чат-ботів для медичних центрів","Розробка протоколів супроводу та опитувальників для клінік","Проведення зустрічей та комунікацій з клініками","Розробка алгоритмів та запуск чат-ботів"],comment:"В результаті співпраці над проєктом запуск 20 чат-ботів для медичних центрів"}]},{image:k2,category:"Клініка ім. ак. Юрія Спіженка",title:"Менторство, діагностика бізнес-процесів, маркетингу та сервісу, розробка стратегії розвитку",about:["Діагностика бізнес-процесів","Аудит маркетингу та сервісу","Розробка стратегії розвитку та маркетингу","Розробка та впровадження комунікаційної стратегії","Ведення маркетингових активностей "],details:[{title:"Завдання:",about:["Рестарт клініки у воєний час"]},{title:"Робота над задачею була розділена на три етапи:",about:["Діагностика конкурентів, ринку, виявлення зовнішніх можливостей та загроз","Діагностика сервісу медичного центру, аналіз роботи контакт центру, маркетингу, наявної бази пацієнтів та внутрішніх бізнес-процесів","Розробка та впровадження стратегії маркетингу, комунікації та сервісу, супровід рекламних кампаній, оптимізація бізнес-процесів"],comment:"В результаті співпраці над проєктом: збільшення доходу клініки, вихід на довоєний об’єм"}]},{image:j2,category:"KMKlab",title:"Діагностика маркетингу, сервісу, бізнес-процесів",about:["Аудит маркетингу та інструментів комунікацій","Аудит сервісу","Розробка рекомендацій щодо розвитку"],details:[{title:"Завдання:",about:["Аудит поточної маркетингової стратегії","Аудит сервісу","Формування рекомендацій по розвитку"]},{title:"Робота над задачою була розділена на два етапи:",about:["Відвідування всіх відділень лабораторій з метою формування рекомендацій по кожній локації","Аналіз поточної ситуації маркетингу та комунікацій, ведення соціальних мереж"],comment:"В результаті співпраці проаналізовано роботу відділу маркетингу та підрядників та надані рекомендації щодо структури відділу, сформовані подальші  кроки  маркетингової  та сервісної стратегії"}]},{image:C2,category:"Symmetrica",title:"Менторство, діагностика маркетингу, сервісу, бізнес-процесів",about:["Аудит маркетингу та сервісу","Розробка рекомендацій щодо розвитку","Оптимізація бізнес-процесів"],details:[{title:"Завдання:",about:["Діагностика поточної маркетингової діяльності та комунікацій","Аудит сервісу","Аудит роботи підрядників","Формування рекомендацій по розвитку"]},{title:"В результаті роботи над проєктом:",about:["Проведений поточний аудит шляху пацієнта, виявлені точки зростання сервісу","Проаналізовано роботу відділу маркетингу і підрядників та надані рекомендації щодо структури відділу","Надані рекомендації щодо формування подальших кроків маркетингової  та сервісної стратегії","Сформовані конверсійні показники та вектори руху","Надана менторська підтримка"]}]}],E2=j.section`
