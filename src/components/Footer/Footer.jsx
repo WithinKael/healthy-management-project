@@ -36,9 +36,11 @@ const Footer = ({ handleSetActiveLink }) => {
   return (
     <FooterBg id="footer">
       <FooterContainer className="container">
-        <svg width="227" height="40">
-          <use href={`${sprite}#logo-white`} />
-        </svg>
+        <a href="#home">
+          <svg width="227" height="40">
+            <use href={`${sprite}#logo-white`} />
+          </svg>
+        </a>
         {isTabletScreen ? (
           <>
             <NavFooter>

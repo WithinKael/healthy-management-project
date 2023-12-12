@@ -8,7 +8,7 @@ export const ScrollToTopButton = styled.button`
   height: 44px;
   position: fixed;
   bottom: var(--scroll-to-top-bottom);
-  right: 40px;
+  right: 24px;
   padding: 8px;
   background-color: var(--primary-yellow);
   box-shadow: 0px 0px 8px 0px rgba(27, 54, 65, 0.08);
@@ -21,7 +21,7 @@ export const ScrollToTopButton = styled.button`
   }
 
   @media screen and (min-width: 768px) {
-    right: 80px;
+    right: 40px;
   }
 
   @media screen and (min-width: 1440px) {
