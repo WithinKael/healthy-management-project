@@ -12,8 +12,7 @@ export const StyledSection = styled.section`
   }
 
   @media screen and (min-width: 1920px) {
-    padding-top: 80px;
-    padding-bottom: 80px;
+    padding: 80px 120px;
   }
 `;
 
@@ -33,7 +32,7 @@ export const ImgSectionWrapper = styled.div`
   }
 
   @media screen and (min-width: 1920px) {
-    gap: 40px;
+    gap: 24px;
     margin-bottom: 40px;
   }
 `;
@@ -113,7 +112,7 @@ export const TitleH2 = styled.h2`
   @media screen and (min-width: 1920px) {
     font-size: 48px;
     line-height: 56px;
-    margin-bottom: 40px;
+    margin-bottom: 16px;
   }
 `;
 
@@ -165,7 +164,8 @@ export const ParagraphWrapper = styled.div`
   min-width: 320px;
 
   @media screen and (min-width: 1920px) {
-    margin-bottom: 80px;
+    gap: 20px;
+    margin-bottom: 56px;
   }
 `;
 
@@ -193,12 +193,8 @@ export const Paragraph = styled.p`
 
   @media screen and (min-width: 1920px) {
     font-size: 20px;
-    max-width: 720px;
+    max-width: 828px;
     line-height: 28px;
-
-    &:not(:last-child) {
-      margin-bottom: 16px;
-    }
   }
 `;
 
@@ -235,6 +231,7 @@ export const StyledMentorButton = styled.a`
   @media screen and (min-width: 1920px) {
     font-size: 16px;
     line-height: 24px;
+    margin-bottom: 80px;
 
     &:hover,
     &focus {
@@ -281,6 +278,7 @@ export const ForWHoWrapper = styled.div`
   }
 
   @media screen and (min-width: 1920px) {
+    height: auto;
     padding: 40px;
     gap: 24px;
     flex: 1 0 0;

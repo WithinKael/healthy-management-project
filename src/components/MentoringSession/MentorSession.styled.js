@@ -11,8 +11,7 @@ export const StyledSection = styled.section`
   }
 
   @media screen and (min-width: 1920px) {
-    padding-top: 80px;
-    padding-bottom: 80px;
+    padding: 80px 120px;
   }
 `;
 
@@ -49,7 +48,7 @@ export const ArrowWrapper = styled.div`
 
   @media screen and (min-width: 1920px) {
     flex-direction: row;
-    justify-content: space-between;
+    width: max-content;
   }
 `;
 
@@ -110,12 +109,12 @@ export const StyledParagraph = styled.p`
   }
 
   @media screen and (min-width: 1920px) {
-    justify-content: center;
+    ustify-content: flex-start;
     width: 100%;
-    font-size: 20px;
+    font-size: 16px;
     line-height: 1.4;
-    top: 50%;
-    left: 50%;
+    top: 48%;
+    left: 60%;
   }
 `;
 
