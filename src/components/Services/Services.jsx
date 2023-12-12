@@ -31,7 +31,7 @@ const Services = () => {
                 additionalComment={true}
               />
               <IconDiv>
-                <img src={element.path} alt="" />
+                <img src={element.path} alt={element.path} />
               </IconDiv>
             </ServicesItem>
           ))}

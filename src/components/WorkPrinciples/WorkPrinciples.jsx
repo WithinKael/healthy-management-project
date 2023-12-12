@@ -1,5 +1,4 @@
 import {
-  Image,
   ListItem,
   ListItemText,
   PrinciplesContentWrapper,
@@ -10,10 +9,20 @@ import {
   SectionPrinciples,
   SvgDone,
 } from "./WorkPrinciples.styled";
-import FotoWithBook from "../../images/desktop/olga_with_book1x.webp";
-import FotoWithBook1x from "../../images/desktop/olga_with_book1x.jpg";
-import FotoWithBook2x from "../../images/desktop/olga_with_book2x.jpg";
 import sprite from "../../images/sprite.svg";
+import MediaQuery from "react-responsive";
+import MobFotoWithBook1x from "../../images/mobile/mob_olga_with_book1x.webp";
+import MobFotoWithBook2x from "../../images/mobile/mob_olga_with_book@2x.jpg";
+import MobFotoWithBook from "../../images/mobile/mob_olga_with_book1x.jpg";
+import FotoWithBook1x from "../../images/desktop/olga_with_book1x.webp";
+import FotoWithBook2x from "../../images/desktop/olga_with_book2x.webp";
+import FotoWithBookDefault from "../../images/desktop/olga_with_book1x.jpg";
+import Tablet1x from "../../images/tablet/olga_with_book_768_1x.webp";
+import Tablet2x from "../../images/tablet/olga_with_book_768@2x.webp";
+import TabletDefault from "../../images/tablet/olga_with_book_768_1x.jpg";
+import MediumFotoWithBook1x from "../../images/desktop1440/olga_with_book_1440_1x.webp";
+import MediumFotoWithBook2x from "../../images/desktop1440/olga_with_book_1440@2x.webp";
+import MediumFotoWithBookDefault from "../../images/desktop1440/olga_with_book_1440@2x.webp";
 
 const WorkPrinciples = () => {
   return (
@@ -55,13 +64,38 @@ const WorkPrinciples = () => {
           </ListItem>
         </PrinciplesList>
       </PrinciplesDiv>
-      <picture>
-        <source
-          srcSet={`${FotoWithBook2x} 2x, ${FotoWithBook1x} 1x`}
-          media="(min-width: 1920px)"
+      <MediaQuery minWidth={375} maxWidth={767}>
+        <img
+          srcSet={`${MobFotoWithBook1x} 1x, ${MobFotoWithBook2x} 2x`}
+          src={MobFotoWithBook}
+          alt="Ольга Поліщук - ваш ментор в медичній галузі"
+          loading="lazy"
         />
-        <Image src={FotoWithBook} alt="Ольга Поліщук" />
-      </picture>
+      </MediaQuery>
+      <MediaQuery minWidth={768} maxWidth={1439}>
+        <img
+          srcSet={`${Tablet1x} 1x, ${Tablet2x} 2x`}
+          src={TabletDefault}
+          alt="Ольга Поліщук - ваш ментор в медичній галузі"
+          loading="lazy"
+        />
+      </MediaQuery>
+      <MediaQuery minWidth={1440} maxWidth={1919}>
+        <img
+          srcSet={`${MediumFotoWithBook1x} 1x, ${MediumFotoWithBook2x} 2x`}
+          src={MediumFotoWithBookDefault}
+          alt="Ольга Поліщук - ваш ментор в медичній галузі"
+          loading="lazy"
+        />
+      </MediaQuery>
+      <MediaQuery minWidth={1920}>
+        <img
+          srcSet={`${FotoWithBook1x} 1x, ${FotoWithBook2x} 2x`}
+          src={FotoWithBookDefault}
+          alt="Ольга Поліщук - ваш ментор в медичній галузі"
+          loading="lazy"
+        />
+      </MediaQuery>
     </SectionPrinciples>
   );
 };
