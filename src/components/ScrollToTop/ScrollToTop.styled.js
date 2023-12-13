@@ -4,8 +4,8 @@ export const ScrollToTopButton = styled.button`
   display: flex;
   align-items: center;
   justify-content: center;
-  width: 44px;
-  height: 44px;
+  width: 40px;
+  height: 40px;
   position: fixed;
   bottom: var(--scroll-to-top-bottom);
   right: 24px;
@@ -25,12 +25,14 @@ export const ScrollToTopButton = styled.button`
   }
 
   @media screen and (min-width: 1440px) {
-    width: 56px;
-    height: 56px;
+    width: 48px;
+    height: 48px;
     right: 80px;
   }
 
   @media screen and (min-width: 1920px) {
+    width: 56px;
+    height: 56px;
     right: 120px;
   }
 `;

@@ -1,17 +1,22 @@
 const selectStyles = {
+  container: (provided) => ({
+    ...provided,
+    width: "100%",
+  }),
+
   control: (provided, state) => {
     const isError = state.selectProps.errors;
 
     return {
       ...provided,
       display: "flex",
-      width: "668px",
-      height: "56px",
-      marginTop: "8px",
-      padding: "0px 16px",
+      height: "48px",
+      padding: "12px 16px",
       alignItems: "center",
       flexShrink: "0",
+      gap: "8px",
       alignSelf: "stretch",
+      alignContent: "flex-start",
       borderRadius: "16px",
       outline: "none",
       border: `1px solid ${isError ? "var(--secondary-red)" : "transparent"}`,
@@ -27,29 +32,54 @@ const selectStyles = {
         background: "var(--background-white)",
         boxShadow: "0px 0px 8px 0px rgba(27, 54, 65, 0.08)",
       },
+
+      "@media screen and (min-width: 768px)": {
+        height: "56px",
+      },
+
+      "@media screen and (min-width: 1440px)": {
+        padding: "14px 16px",
+      },
+
+      "@media screen and (min-width: 1920px)": {
+        padding: "12px 16px",
+      },
     };
   },
 
   dropdownIndicator: (provided) => ({
     ...provided,
-    color: "#062136",
+    color: "#161717",
+    padding: "0",
   }),
 
   indicatorSeparator: () => ({
-    color: "red",
+    display: "none",
   }),
 
   option: (provided) => ({
     ...provided,
     display: "flex",
     alignItems: "flex-start",
+    fontSize: "14px",
+    lineHeight: "1.43",
     fontWeight: "400",
     backgroundColor: "var(--background-white)",
     color: "#1B3641",
+
     "&:hover": {
       backgroundColor: "rgba(27, 54, 65, 0.2)",
-      borderRadius: "16px",
       fontWeight: "600",
+    },
+
+    "@media screen and (min-width: 768px)": {
+      fontSize: "15px",
+      lineHeight: "1.47",
+    },
+
+    "@media screen and (min-width: 1920px)": {
+      fontSize: "16px",
+      lineHeight: "1.5",
     },
   }),
 
@@ -63,11 +93,30 @@ const selectStyles = {
     color: "var(--primary-bluedark)",
     backgroundColor: "var(--background-white)",
   }),
+
   singleValue: (provided) => ({
     ...provided,
-    fontSize: "16px",
-    fontWeight: "400",
+    fontSize: "14px",
+    fontWeight: "500",
+    lineHeight: "1.43",
+    textAlign: "start",
+    flex: "1 0 0",
     color: "var(--primary-bluedark)",
+
+    "@media screen and (min-width: 768px)": {
+      fontSize: "15px",
+      lineHeight: "1.47",
+    },
+
+    "@media screen and (min-width: 1920px)": {
+      fontSize: "16px",
+      lineHeight: "1.5",
+    },
+  }),
+
+  valueContainer: (provided) => ({
+    ...provided,
+    padding: "0",
   }),
 };
 
