@@ -8,19 +8,21 @@ import { useScreenWidth } from "../../../../hooks/useScreenWidth";
 
 import TickList from "../../../TickList/TickList";
 
-const ListItemMarkup = ({ dataList, onClick }) => {
+const ListItemMarkup = ({ dataList }) => {
   const screenWidth = useScreenWidth();
   const { category, title, about = [], image } = dataList;
 
   return (
-    <ListItemWrapper onClick={onClick}>
-      <StyledImage src={image} alt={title} />
-      <div>
-        <Category symbols={category.length}>{category}</Category>
-      </div>
-      <TickList title={title} about={about} variant="project" />
+    <>
+      <ListItemWrapper>
+        <StyledImage src={image} alt={title} />
+        <div>
+          <Category symbols={category.length}>{category}</Category>
+        </div>
+        <TickList title={title} about={about} variant="project" />
+      </ListItemWrapper>
       {screenWidth === "mobile" && <DetailsBtn>Детальніше</DetailsBtn>}
-    </ListItemWrapper>
+    </>
   );
 };
 

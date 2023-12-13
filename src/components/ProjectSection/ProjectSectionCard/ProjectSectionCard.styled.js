@@ -1,6 +1,10 @@
 import styled from "@emotion/styled";
 
 export const ListItem = styled.li`
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+
   width: 100%;
   padding: 24px;
   border-radius: 16px;
