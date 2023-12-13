@@ -1,4 +1,5 @@
-import styled from "@emotion/styled";
+import styled, { css } from "@emotion/styled";
+
 export const Wrapper = styled.div`
   display: flex;
   flex-direction: column;
@@ -6,26 +7,92 @@ export const Wrapper = styled.div`
 `;
 
 export const Title = styled.h4`
-  font-size: ${(props) => (props.forDetail ? "18px" : "16px")};
   font-weight: 600;
-  line-height: calc(${(props) => (props.forDetail ? 24 / 18 : 24 / 16)});
 
-  @media screen and (min-width: 768px) {
-    font-size: ${(props) => (props.forDetail ? "24px" : "20px")};
-    line-height: calc(${(props) => (props.forDetail ? 32 / 24 : 28 / 20)});
-  }
+  /* Вариант "project" */
+  ${({ variant }) =>
+    variant === "project" &&
+    css`
+      font-size: 15px;
+      line-height: calc(22 / 15);
+
+      @media screen and (min-width: 768px) {
+        font-size: 18px;
+        line-height: calc(24 / 18);
+      }
+      @media screen and (min-width: 1440px) {
+        font-size: 18px;
+        line-height: calc(22 / 18);
+      }
+      @media screen and (min-width: 1920px) {
+        font-size: 20px;
+        line-height: calc(28 / 20);
+      }
+    `}
+
+  /* Вариант "projectDetail" */
+  ${({ variant }) =>
+    variant === "projectDetail" &&
+    css`
+      font-size: 16px;
+      line-height: calc(24 / 16);
+
+      @media screen and (min-width: 768px) {
+        font-size: 20px;
+        line-height: calc(28 / 20);
+      }
+      @media screen and (min-width: 1440px) {
+        font-size: 20px;
+        line-height: calc(24 / 20);
+      }
+      @media screen and (min-width: 1920px) {
+        font-size: 24px;
+        line-height: calc(32 / 24);
+      }
+    `}
+
+    /* Вариант "services" */
+  ${({ variant }) =>
+    variant === "services" &&
+    css`
+      font-size: 24px;
+      line-height: calc(32 / 24);
+
+      @media screen and (min-width: 768px) {
+        font-size: 20px;
+        line-height: calc(28 / 20);
+      }
+      @media screen and (min-width: 1440px) {
+        font-size: 20px;
+        line-height: calc(24 / 20);
+      }
+      @media screen and (min-width: 1920px) {
+        font-size: 24px;
+        line-height: calc(32 / 24);
+      }
+    `}
 `;
 
 export const List = styled.ul`
   display: flex;
   flex-direction: column;
   gap: 8px;
+
+  @media screen and (min-width: 768px) {
+    gap: 10px;
+  }
+  @media screen and (min-width: 1440px) {
+    gap: 14px;
+  }
+  @media screen and (min-width: 1920px) {
+    gap: 8px;
+  }
 `;
 
 export const ListItem = styled.li`
   font-size: 14px;
+  line-height: calc(20 / 14);
   font-weight: 500;
-  line-height: calc(18 / 14);
 
   display: flex;
   gap: 8px;
@@ -35,23 +102,35 @@ export const ListItem = styled.li`
     height: 24px;
   }
   @media screen and (min-width: 768px) {
+    font-size: 15px;
+    line-height: calc(22 / 15);
+  }
+  @media screen and (min-width: 1440px) {
+    font-size: 15px;
+    line-height: calc(18 / 15);
+  }
+  @media screen and (min-width: 1920px) {
     font-size: 16px;
     line-height: calc(24 / 16);
   }
 `;
 
 export const Comment = styled.p`
-  font-size: ${(props) => (props.additionalComment ? "14px" : "16px")};
+  font-size: ${(props) => (props.additionalComment ? "14px" : "15px")};
   font-weight: ${(props) => (props.additionalComment ? 500 : 600)};
   line-height: calc(
-    ${(props) => (props.additionalComment ? 18 / 14 : 24 / 16)}
+    ${(props) => (props.additionalComment ? 20 / 14 : 22 / 15)}
   );
   @media screen and (min-width: 768px) {
-    font-size: ${(props) => (props.additionalComment ? "16px" : "20px")};
-    font-weight: ${(props) => (props.additionalComment ? 500 : 600)};
-    line-height: calc(
-      ${(props) => (props.additionalComment ? 24 / 16 : 28 / 20)}
-    );
+    font-size: "18px";
+    line-height: calc(24 / 18);
+  }
+  @media screen and (min-width: 1440px) {
+    line-height: calc(22 / 18);
+  }
+  @media screen and (min-width: 1920px) {
+    font-size: "20px";
+    line-height: calc(28 / 20);
   }
 `;
 

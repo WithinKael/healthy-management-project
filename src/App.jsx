@@ -57,9 +57,9 @@ function App() {
 
   return (
     <>
-      <Header handleSetActiveLink={handleSetActiveLink} />
+      {/* <Header handleSetActiveLink={handleSetActiveLink} /> */}
       <main>
-        <Hero />
+        {/* <Hero />
         <AboutStudio />
         <AboutMe />
         <WhyChooseUs />
@@ -67,12 +67,12 @@ function App() {
         <Services />
         <Mentor />
         <MentoringSession />
-        <PersonalSupport />
+        <PersonalSupport /> */}
         <ProjectSection />
-        <BusinessTools />
-        <ContactsForm />
+        {/* <BusinessTools />
+        <ContactsForm /> */}
       </main>
-      <Footer handleSetActiveLink={handleSetActiveLink} />
+      {/* <Footer handleSetActiveLink={handleSetActiveLink} /> */}
       <ScrollToTop />
     </>
   );
