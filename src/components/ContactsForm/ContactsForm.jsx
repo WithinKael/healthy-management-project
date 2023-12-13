@@ -5,6 +5,12 @@ import MediaQuery from "react-responsive";
 import useLocalStorage, { options } from "./helpers";
 import computerWebp from "../../images/desktop/computer1x.webp";
 import computer2x from "../../images/desktop/computer@2x.webp";
+import computer1440Jpg from "../../images/desktop1440/computer_1440_1x.jpg";
+import computer1440Webp from "../../images/desktop1440/computer_1440_1x.webp";
+import computer14402x from "../../images/desktop1440/computer_1440@2x.webp";
+import tabletJpg from "../../images/tablet/computer_768_1x.jpg";
+import tabletWebp from "../../images/tablet/computer_768_1x.webp";
+import tablet2x from "../../images/tablet/computer_768@2x.webp";
 import mobileWebp from "../../images/mobile/mob_computer1x.webp";
 import mobile2x from "../../images/mobile/mob_computer@2x.webp";
 
@@ -20,6 +26,7 @@ import {
   Label,
   LabelEmailPhone,
   LabelTextarea,
+  Section,
   StarLabel,
   Text,
   TextError,
@@ -100,37 +107,51 @@ const ContactsForm = () => {
   };
 
   return (
-    <section className="container" id="contact">
+    <Section className="container" id="contact">
       <ContactWrapper>
         <Title>Контакт</Title>
         <ContactBlock>
           <div>
+            <MediaQuery maxWidth={767}>
+              <Img
+                srcSet={`${mobile2x} 2x, ${mobileWebp} 1x`}
+                sizes="(max-width: 767px) 100vw"
+                src={mobileWebp}
+                alt="notebook"
+                loading="lazy"
+              />
+            </MediaQuery>
+            <MediaQuery minWidth={768} maxWidth={1439}>
+              <Img
+                srcSet={`${tablet2x} 2x, ${tabletWebp} 1x`}
+                type="image/webp"
+                sizes="(min-width: 768px) 100vw (max-width: 1439px) 100vw"
+                src={tabletJpg}
+                alt="notebook"
+                loading="lazy"
+              />
+            </MediaQuery>
+            <MediaQuery minWidth={1440} maxWidth={1919}>
+              <Img
+                srcSet={`${computer14402x} 2x, ${computer1440Webp} 1x`}
+                type="image/webp"
+                sizes="(min-width: 1440px) 100vw (max-width: 1919px) 100vw"
+                src={`${computer1440Jpg}`}
+                alt="notebook"
+                loading="lazy"
+              />
+            </MediaQuery>
             <MediaQuery minWidth={1920}>
               <Img
                 srcSet={`${computer2x} 2x, ${computerWebp} 1x`}
+                type="image/webp"
                 sizes="(min-width: 1920px) 100vw"
                 src={computerWebp}
                 alt="notebook"
                 loading="lazy"
               />
             </MediaQuery>
-
-            <MediaQuery minWidth={300} maxWidth={1919}>
-              <Img
-                srcSet={`${mobileWebp} 375w, ${mobile2x} 2x`}
-                sizes="(min-width: 375px) 375px"
-                src={mobileWebp}
-                alt="notebook"
-              />
-            </MediaQuery>
           </div>
-          {/* <picture>
-            <source
-              media="(min-width: 1920px)"
-              srcSet={`${computerWebp} 1x, ${computer2x} 2x`}
-            />
-            <Img src={computerJpg} />
-          </picture> */}
           <FormWrapper>
             <Text>Залишайте контактні дані і ми з вами зв&apos;яжемось</Text>
             <Forma onSubmit={handleSubmit(onSubmit)}>
@@ -248,7 +269,7 @@ const ContactsForm = () => {
                   {...register("comment", {
                     pattern: {
                       value: /^.{0,500}$/,
-                      message: "Максимальна довжина повідомлення 500 символів",
+                      message: "Максимальна кількість 500 символів",
                     },
                   })}
                   value={comment}
@@ -267,7 +288,7 @@ const ContactsForm = () => {
           </FormWrapper>
         </ContactBlock>
       </ContactWrapper>
-    </section>
+    </Section>
   );
 };
 
