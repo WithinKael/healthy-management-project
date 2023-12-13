@@ -1,7 +1,8 @@
 import axios from "axios";
-import { useEffect } from "react";
+import { useEffect, useRef } from "react";
 import Select from "react-select";
 import MediaQuery from "react-responsive";
+import swal from "sweetalert";
 import useLocalStorage, { options } from "./helpers";
 import computerWebp from "../../images/desktop/computer1x.webp";
 import computer2x from "../../images/desktop/computer@2x.webp";
@@ -39,6 +40,7 @@ import customStyles from "./SelectFormStyle";
 import Star from "./Star";
 
 const ContactsForm = () => {
+  const telRef = useRef();
   const [formData, setFormData] = useLocalStorage("key", {
     name: "",
     email: "",
@@ -100,9 +102,22 @@ const ContactsForm = () => {
         comment: "",
       });
       reset();
-      alert("Заявка відправлена!");
+      swal("Вітаю!", "Ваша заявка успішно відправлена!", "success", {
+        buttons: false,
+        timer: 5000,
+      });
+      // alert("Заявка відправлена!");
     } catch (error) {
-      alert("Помилка при відправці заявки");
+      swal(
+        "Вибачте!",
+        "При відправці заявки сталася помилка, спробуйте ще раз!",
+        "error",
+        {
+          buttons: false,
+          timer: 5000,
+        }
+      );
+      // alert("Помилка при відправці заявки");
     }
   };
 
@@ -209,6 +224,7 @@ const ContactsForm = () => {
                   Номер телефону
                   <Star />
                   <InputTel
+                    ref={telRef}
                     type="tel"
                     mask="+38(099)999-99-99"
                     placeholder="Введіть номер телефону"
