@@ -20,6 +20,7 @@ export const Category = styled.h3`
   line-height: calc(24 / 16);
   font-weight: 600;
   display: ${(props) => (props.symbols > 20 ? "block" : "inline")};
+  width: ${(props) => (props.symbols > 20 ? "200px" : "100%")};
 
   @media screen and (min-width: 768px) {
     font-size: 20px;
@@ -28,10 +29,12 @@ export const Category = styled.h3`
   }
   @media screen and (min-width: 1440px) {
     line-height: calc(24 / 20);
+    display: ${(props) => (props.symbols > 20 ? "block" : "inline")};
   }
   @media screen and (min-width: 1920px) {
     font-size: 24px;
     line-height: calc(32 / 24);
+    display: inline;
   }
 `;
 
@@ -43,6 +46,6 @@ export const Icon = styled.svg`
   height: 24px;
 
   position: absolute;
-  right: 28px;
-  top: 28px;
+  right: 24px;
+  top: 24px;
 `;
