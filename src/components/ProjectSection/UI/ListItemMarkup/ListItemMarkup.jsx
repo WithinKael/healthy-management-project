@@ -18,7 +18,7 @@ const ListItemMarkup = ({ dataList, onClick }) => {
       <div>
         <Category symbols={category.length}>{category}</Category>
       </div>
-      <TickList title={title} about={about} />
+      <TickList title={title} about={about} variant="project" />
       {screenWidth === "mobile" && <DetailsBtn>Детальніше</DetailsBtn>}
     </ListItemWrapper>
   );

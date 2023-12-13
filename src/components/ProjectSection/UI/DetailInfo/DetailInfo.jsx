@@ -22,6 +22,7 @@ const DetailInfo = ({ dataList: { details, category } }) => {
           about={item.about}
           comment={item.comment}
           additionalComment={id === 0}
+          variant="projectDetail"
         />
       ))}
     </Wrapper>

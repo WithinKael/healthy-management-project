@@ -16,11 +16,13 @@ const ProjectSection = () => {
   const screenWidth = useScreenWidth();
 
   const [projectList, setProjectList] = useState(
-    screenWidth === "mobile" ? [...data.slice(0, 3)] : [...data]
+    screenWidth === "mobile" || screenWidth === "tablet"
+      ? [...data.slice(0, 1)]
+      : [...data]
   );
   const handleListChange = () => {
-    if (projectList.length > 4) {
-      setProjectList((prev) => prev.slice(0, 3));
+    if (projectList.length > 2) {
+      setProjectList((prev) => prev.slice(0, 1));
     } else {
       setProjectList([...data]);
     }
