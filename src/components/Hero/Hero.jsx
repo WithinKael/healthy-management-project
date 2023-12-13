@@ -2,12 +2,12 @@ import {
   ListItem,
   SectionHero,
   SectionHeroDiv,
-  SectionHeroLinksContact,
-  SectionHeroLinksServices,
   SectionHeroText,
   SectionHeroTextUl,
   SectionHeroTitle,
 } from "./Hero.styled";
+import { listItems } from "./HeroData";
+import SectionHeroLink from "./SectionHeroLink.jsx";
 
 const Hero = () => {
   return (
@@ -21,20 +21,17 @@ const Hero = () => {
           брендів:
         </SectionHeroText>
         <SectionHeroTextUl>
-          <ListItem>медичний менеджмент і маркетинг,</ListItem>
-
-          <ListItem>
-            програми управління здоров&apos;ям для підприємств та бізнесу,
-          </ListItem>
-          <ListItem>менторство</ListItem>
+          {listItems.map((item, index) => (
+            <ListItem key={index}>{item}</ListItem>
+          ))}
         </SectionHeroTextUl>
         <SectionHeroDiv>
-          <SectionHeroLinksContact href="#contact">
+          <SectionHeroLink type="contact" href="#contact">
             Консультація
-          </SectionHeroLinksContact>
-          <SectionHeroLinksServices href="#services">
+          </SectionHeroLink>
+          <SectionHeroLink type="services" href="#services">
             Послуги
-          </SectionHeroLinksServices>
+          </SectionHeroLink>
         </SectionHeroDiv>
       </div>
     </SectionHero>

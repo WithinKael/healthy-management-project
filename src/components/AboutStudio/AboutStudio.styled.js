@@ -239,20 +239,12 @@ export const SectionAboutStudioOurMissionP = styled.p`
   }
 `;
 
-export const SvgIconStarBlack = styled.svg`
-  fill: var(--primary-bluedark);
+export const StarIconWrapper = styled.svg`
   border-radius: 100px;
-  background: rgba(27, 54, 65, 0.2);
   width: 32px;
   height: 32px;
   padding: 3px;
-`;
 
-export const SvgIconStarWhite = styled.svg`
-  fill: var(--background-white);
-  border-radius: 100px;
-  background: rgba(244, 244, 246, 0.2);
-  width: 32px;
-  height: 32px;
-  padding: 3px;
+  fill: ${(props) => props.fill || "currentColor"};
+  background: ${(props) => props.background || "transparent"};
 `;
