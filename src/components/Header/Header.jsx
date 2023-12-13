@@ -13,107 +13,77 @@ import {
 } from "./Header.styled";
 import { useMediaQuery } from "react-responsive";
 import ModalMobaileMenu from "../ModalMobaileMenu/ModalMobaileMenu.jsx";
+import { navItems } from "./HeaderData";
 
 const Header = ({ handleSetActiveLink }) => {
   const [activeLink, setActiveLink] = useState("home");
   const [shownModal, setShownModal] = useState(false);
 
-  const isMobailSvg = useMediaQuery({ query: "(max-width: 767px)" });
   const isTabletSvg = useMediaQuery({
     query: "(min-width: 768px) and (max-width: 1439px)",
   });
   const isMobailAndTablet = useMediaQuery({ query: "(max-width: 1439px)" });
-  const isTablet = useMediaQuery({ query: "(min-width: 1440px)" });
+  const isDesktop1440 = useMediaQuery({ query: "(min-width: 1440px)" });
 
-  const onModal = () => {
-    setShownModal(!shownModal);
+  const onModal = () => setShownModal(!shownModal);
+
+  const handleScroll = () => {
+    const sections = [
+      "home",
+      "aboutUs",
+      "services",
+      "mentoring",
+      "projects",
+      "contact",
+    ];
+    const currentSection = sections.find((section) => {
+      const sectionElement = document.getElementById(section);
+      if (sectionElement) {
+        const rect = sectionElement.getBoundingClientRect();
+        return rect.top <= 120 && rect.bottom >= 120;
+      }
+      return sectionElement;
+    });
+    if (currentSection) {
+      setActiveLink(currentSection);
+    }
   };
 
   useEffect(() => {
-    const handleScroll = () => {
-      const sections = [
-        "home",
-        "aboutUs",
-        "services",
-        "mentoring",
-        "projects",
-        "contact",
-      ];
-      const currentSection = sections.find((section) => {
-        const sectionElement = document.getElementById(section);
-        if (sectionElement) {
-          const rect = sectionElement.getBoundingClientRect();
-          return rect.top <= 120 && rect.bottom >= 120;
-        }
-        return sectionElement;
-      });
-      if (currentSection) {
-        setActiveLink(currentSection);
-      }
-    };
-
     window.addEventListener("scroll", handleScroll);
-
-    return () => {
-      window.removeEventListener("scroll", handleScroll);
-    };
+    return () => window.removeEventListener("scroll", handleScroll);
   }, []);
 
   return (
     <Headers>
       <div className="container">
         <HeaderDiv>
-          {isMobailAndTablet && (
+          {(isMobailAndTablet || isDesktop1440) && (
             <a href="#home">
-              <svg width="40" height="40">
-                <use href={`${svgMobile}#icon-g10`}></use>
+              <svg width={isDesktop1440 ? "227" : "40"} height="40">
+                <use
+                  href={
+                    isDesktop1440
+                      ? `${logo}#logo-black`
+                      : `${svgMobile}#icon-g10`
+                  }
+                ></use>
               </svg>
             </a>
           )}
-          {isTablet && (
-            <a href="#home">
-              <svg width="227" height="40">
-                <use href={`${logo}#logo-black`}></use>
-              </svg>
-            </a>
-          )}
-          {isTablet && (
+
+          {isDesktop1440 && (
             <HeaderNav>
-              <HeaderNavMenu
-                href="#home"
-                className={activeLink === "home" ? "active" : ""}
-                onClick={(e) => handleSetActiveLink("home", e)}
-              >
-                Головна
-              </HeaderNavMenu>
-              <HeaderNavMenu
-                href="#aboutUs"
-                className={activeLink === "aboutUs" ? "active" : ""}
-                onClick={(e) => handleSetActiveLink("aboutUs", e)}
-              >
-                Про нас
-              </HeaderNavMenu>
-              <HeaderNavMenu
-                href="#services"
-                className={activeLink === "services" ? "active" : ""}
-                onClick={(e) => handleSetActiveLink("services", e)}
-              >
-                Послуги
-              </HeaderNavMenu>
-              <HeaderNavMenu
-                href="#mentoring"
-                className={activeLink === "mentoring" ? "active" : ""}
-                onClick={(e) => handleSetActiveLink("mentoring", e)}
-              >
-                Менторство
-              </HeaderNavMenu>
-              <HeaderNavMenu
-                href="#projects"
-                className={activeLink === "projects" ? "active" : ""}
-                onClick={(e) => handleSetActiveLink("projects", e)}
-              >
-                Проєкти
-              </HeaderNavMenu>
+              {navItems.map((item) => (
+                <HeaderNavMenu
+                  key={item.id}
+                  href={`#${item.id}`}
+                  className={activeLink === item.id ? "active" : ""}
+                  onClick={(e) => handleSetActiveLink(item.id, e)}
+                >
+                  {item.label}
+                </HeaderNavMenu>
+              ))}
             </HeaderNav>
           )}
           <HeaderAddress
@@ -123,19 +93,16 @@ const Header = ({ handleSetActiveLink }) => {
           >
             Контакт
           </HeaderAddress>
-          {isMobailSvg && (
-            <ButtonMobileHeader type="button" onClick={() => onModal()}>
-              <SvgMobileHeader>
-                <use href={`${svgMobile}#icon-menuburger`}></use>
-              </SvgMobileHeader>
-            </ButtonMobileHeader>
-          )}
 
-          {isTabletSvg && (
-            <ButtonMobileHeader type="button" onClick={() => onModal()}>
+          {(isMobailAndTablet || isTabletSvg) && (
+            <ButtonMobileHeader type="button" onClick={onModal}>
               <SvgMobileHeader>
                 <use
-                  href={`${svgMobile}#icon-menuburgerhorizontaltablet`}
+                  href={
+                    isTabletSvg
+                      ? `${svgMobile}#icon-menuburgerhorizontaltablet`
+                      : `${svgMobile}#icon-menuburger`
+                  }
                 ></use>
               </SvgMobileHeader>
             </ButtonMobileHeader>
