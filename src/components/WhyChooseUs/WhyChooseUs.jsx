@@ -2,6 +2,7 @@ import {
   ContentTitle,
   ContentWrapper,
   Div,
+  DivSvg,
   Item,
   ItemTitle,
   List,
@@ -18,9 +19,11 @@ const WhyChooseUs = () => {
         <ContentTitle>Чому обирають нас</ContentTitle>
         <List>
           <Item>
-            <Svg>
-              <use href={`${sprite}#hands-shake`}></use>
-            </Svg>
+            <DivSvg>
+              <Svg>
+                <use href={`${sprite}#hands-shake`}></use>
+              </Svg>
+            </DivSvg>
             <Div>
               <ItemTitle>Надійне партнерство та менторство</ItemTitle>
               <Text>
@@ -30,9 +33,11 @@ const WhyChooseUs = () => {
             </Div>
           </Item>
           <Item>
-            <Svg>
-              <use href={`${sprite}#setting`}></use>
-            </Svg>
+            <DivSvg>
+              <Svg>
+                <use href={`${sprite}#setting`}></use>
+              </Svg>
+            </DivSvg>
             <Div>
               <ItemTitle>Індивідуальний підхід</ItemTitle>
               <Text>
@@ -43,9 +48,11 @@ const WhyChooseUs = () => {
             </Div>
           </Item>
           <Item>
-            <Svg>
-              <use href={`${sprite}#icon-lamp`}></use>
-            </Svg>
+            <DivSvg>
+              <Svg>
+                <use href={`${sprite}#icon-lamp`}></use>
+              </Svg>
+            </DivSvg>
             <Div>
               <ItemTitle>Експертні послуги</ItemTitle>
               <Text>
@@ -55,9 +62,11 @@ const WhyChooseUs = () => {
             </Div>
           </Item>
           <Item>
-            <Svg>
-              <use href={`${sprite}#icon-puzzle`}></use>
-            </Svg>
+            <DivSvg>
+              <Svg>
+                <use href={`${sprite}#icon-puzzle`}></use>
+              </Svg>
+            </DivSvg>
             <Div>
               <ItemTitle>Комплексні рішення</ItemTitle>
               <Text>

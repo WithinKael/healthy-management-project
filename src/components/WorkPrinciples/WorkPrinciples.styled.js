@@ -7,8 +7,13 @@ export const SectionPrinciples = styled.section`
   padding-bottom: 40px;
   gap: 24px;
 
+  @media screen and (min-width: 768px) {
+    gap: 16px;
+  }
+
   @media screen and (min-width: 1920px) {
     flex-direction: row;
+    gap: 24px;
     padding-top: 80px;
     padding-bottom: 80px;
   }
@@ -19,10 +24,14 @@ export const PrinciplesDiv = styled.div`
   border-radius: 16px;
   background: var(--background-white);
 
+  @media screen and (min-width: 768px) {
+    padding: 40px;
+    box-shadow: 0px 0px 8px 0px rgba(27, 54, 65, 0.08);
+  }
+
   @media screen and (min-width: 1920px) {
     padding: 80px;
     max-width: 828px;
-    box-shadow: 0px 0px 8px 0px rgba(27, 54, 65, 0.08);
   }
 `;
 
@@ -31,6 +40,10 @@ export const PrinciplesContentWrapper = styled.div`
   flex-direction: column;
   gap: 16px;
   margin-bottom: 24px;
+
+  @media screen and (min-width: 768px) {
+    margin-bottom: 16px;
+  }
 
   @media screen and (min-width: 1920px) {
     gap: 40px;
@@ -44,6 +57,11 @@ export const PrinciplesTitle = styled.h2`
   font-weight: 600;
   line-height: 32px;
 
+  @media screen and (min-width: 768px) {
+    font-size: 32px;
+    line-height: 40px;
+  }
+
   @media screen and (min-width: 1920px) {
     font-size: 48px;
     line-height: 56px;
@@ -55,6 +73,11 @@ export const PrinciplesText = styled.h2`
   font-weight: 500;
   font-size: 15px;
   line-height: 22px;
+
+  @media screen and (min-width: 768px) {
+    font-size: 18px;
+    line-height: 24px;
+  }
 
   @media screen and (min-width: 1920px) {
     font-size: 20px;
@@ -95,8 +118,13 @@ export const ListItemText = styled.p`
   font-size: 15px;
   line-height: 22px;
 
-  @media screen and (min-width: 1920px) {
+  @media screen and (min-width: 768px) {
     width: 100%;
+    font-size: 18px;
+    line-height: 24px;
+  }
+
+  @media screen and (min-width: 1920px) {
     font-size: 20px;
     line-height: 28px;
   }
