@@ -1,5 +1,3 @@
-import Icon from "../../images/sprite.svg";
-
 import {
   SectionAboutStudio,
   SectionAboutStudioTitle,
@@ -12,9 +10,8 @@ import {
   DivSectionOurMission,
   SectionAboutStudioOurMission,
   SectionAboutStudioOurMissionP,
-  SvgIconStarBlack,
-  SvgIconStarWhite,
 } from "./AboutStudio.styled";
+import AboutStudioSvgIcon from "./AboutStudioSvgIcon";
 
 const AboutStudio = () => {
   return (
@@ -35,9 +32,10 @@ const AboutStudio = () => {
           </div>
           <DivSectionOurMission>
             <SectionAboutStudioDivTitle>
-              <SvgIconStarWhite>
-                <use href={`${Icon}#icon-star`}></use>
-              </SvgIconStarWhite>
+              <AboutStudioSvgIcon
+                fill="var(--background-white)"
+                background="rgba(244, 244, 246, 0.2)"
+              />
 
               <SectionAboutStudioOurMission>
                 Наша місія
@@ -50,9 +48,11 @@ const AboutStudio = () => {
           </DivSectionOurMission>
           <DivSection>
             <SectionAboutStudioDivTitle>
-              <SvgIconStarBlack>
-                <use href={`${Icon}#icon-star`}></use>
-              </SvgIconStarBlack>
+              <AboutStudioSvgIcon
+                fill="var(--primary-bluedark)"
+                background="rgba(27, 54, 65, 0.2)"
+              />
+
               <SectionAboutStudioValues>Наші цінності</SectionAboutStudioValues>
             </SectionAboutStudioDivTitle>
             <SectionAboutStudioTextVan>
