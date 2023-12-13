@@ -16,15 +16,22 @@ export const Category = styled.h3`
   padding: 4px 16px;
   border-radius: 16px;
   background: rgba(244, 244, 246, 0.1);
-  font-size: 18px;
+  font-size: 16px;
+  line-height: calc(24 / 16);
   font-weight: 600;
-  line-height: calc(24 / 18);
   display: ${(props) => (props.symbols > 20 ? "block" : "inline")};
 
   @media screen and (min-width: 768px) {
+    font-size: 20px;
+    line-height: calc(28 / 20);
+    display: inline;
+  }
+  @media screen and (min-width: 1440px) {
+    line-height: calc(24 / 20);
+  }
+  @media screen and (min-width: 1920px) {
     font-size: 24px;
     line-height: calc(32 / 24);
-    display: inline;
   }
 `;
 
