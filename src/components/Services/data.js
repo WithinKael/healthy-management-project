@@ -1,4 +1,3 @@
-
 import icon from "../../images/svg/icon.svg";
 import icon2 from "../../images/svg/icon-2.svg";
 import icon3 from "../../images/svg/icon-3.svg";
@@ -6,7 +5,7 @@ import icon4 from "../../images/svg/icon-4.svg";
 
 export const servicesData = [
   {
-    title: "Менторство та консультації",
+    title: `Менторство та\u00A0консультації`,
     about: [
       "Для власників та менеджерів з питань менеджменту та розвитку, медичного маркетингу та комунікацій, з питань програм управління здоров'ям",
       "Стейхолдерам та парнерам з питань медичного менеджменту та маркетингу",
