@@ -29,26 +29,22 @@ const ProjectSection = () => {
   };
 
   return (
-    <SectionWrapper
-      id="projects"
-      className="container"
-      style={{ paddingTop: "80px", paddingBottom: "80px" }}
-    >
+    <SectionWrapper id="projects" className="container">
       <Title>Проєкти</Title>
       <List>
         {projectList.map((item) => (
           <ProjectSectionCard key={item.category} item={item} />
         ))}
       </List>
-      {screenWidth === "mobile" && (
+      {(screenWidth === "mobile" || screenWidth === "tablet") && (
         <ActionBtn onClick={handleListChange}>
-          {projectList.length > 3 ? "Менше проєктів" : "Більше проєктів"}
+          {projectList.length > 2 ? "Менше проєктів" : "Більше проєктів"}
           <Icon>
             <use
               href={
                 icon +
                 `${
-                  projectList.length > 3 ? "#icon-arrowup" : "#icon-arrowdown"
+                  projectList.length > 2 ? "#icon-arrowup" : "#icon-arrowdown"
                 }`
               }
             ></use>
