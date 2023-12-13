@@ -183,24 +183,20 @@ export const SectionHeroDiv = styled.div`
   }
 `;
 
-export const SectionHeroLinksContact = styled.a`
+const SectionHeroLinkBase = styled.a`
   display: flex;
   width: 100%;
   height: 56px;
   padding: 8px 24px;
   justify-content: center;
   align-items: center;
-  gap: 10px;
-  align-self: stretch;
-  color: var(--typography-bluedark, #062136);
+  border-radius: 16px;
+  box-shadow: 0px 0px 8px 0px rgba(248, 248, 248, 0.08);
   font-family: Montserrat;
   font-size: 14px;
   font-style: normal;
   font-weight: 500;
   line-height: 20px;
-  border-radius: 16px;
-  background: var(--primary-yellow);
-  box-shadow: 0px 0px 8px 0px rgba(248, 248, 248, 0.08);
   transition: background 0.5s ease, color 0.5s ease;
 
   &:hover,
@@ -210,48 +206,32 @@ export const SectionHeroLinksContact = styled.a`
     font-weight: 600;
     line-height: 24px;
   }
+`;
+
+export const SectionHeroLinkContact = styled(SectionHeroLinkBase)`
+  color: var(--typography-bluedark, #062136);
+  background: var(--primary-yellow);
 
   @media screen and (min-width: 768px) {
     min-width: 260px;
     font-size: 15px;
     line-height: 24px;
   }
+
   @media screen and (min-width: 1440px) {
     max-width: 193px;
     line-height: 18px;
   }
+
   @media screen and (min-width: 1920px) {
     font-size: 16px;
     line-height: 24px;
   }
 `;
 
-export const SectionHeroLinksServices = styled.a`
-  display: flex;
-  flex-direction: row;
-  width: 100%;
-  height: 56px;
-  padding: 8px 24px;
-  justify-content: center;
-  align-items: center;
-  border-radius: 16px;
-  border: 1px solid var(--system-default-10);
-  box-shadow: 0px 0px 8px 0px rgba(248, 248, 248, 0.08);
+export const SectionHeroLinkServices = styled(SectionHeroLinkBase)`
   color: var(--system-default-10);
-  font-family: Montserrat;
-  font-size: 14px;
-  font-style: normal;
-  font-weight: 500;
-  line-height: 18px;
-  transition: background 0.5s ease, color 0.5s ease;
-
-  &:hover,
-  &:focus {
-    box-shadow: 0px 0px 16px 0px rgba(248, 248, 248, 0.16);
-    font-size: 16px;
-    font-weight: 600;
-    line-height: 24px;
-  }
+  border: 1px solid var(--system-default-10);
 
   @media screen and (min-width: 768px) {
     min-width: 260px;
@@ -267,6 +247,7 @@ export const SectionHeroLinksServices = styled.a`
     max-width: 193px;
     line-height: 18px;
   }
+
   @media screen and (min-width: 1920px) {
     font-size: 16px;
     line-height: 24px;
