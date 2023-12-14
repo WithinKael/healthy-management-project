@@ -1258,6 +1258,8 @@ Valid keys: `+JSON.stringify(Object.keys(F),null,"  "));var A=E(ue,k,ie,le,se+".
 `,n2=P.svg`
   stroke: var(--primary-black);
 `,r2=P.nav`
+  position: fixed;
+  left: 0;
   padding-top: 40px;
   padding-bottom: 40px;
   display: flex;
