@@ -16,37 +16,35 @@ const ProjectSection = () => {
   const screenWidth = useScreenWidth();
 
   const [projectList, setProjectList] = useState(
-    screenWidth === "mobile" ? [...data.slice(0, 3)] : [...data]
+    screenWidth === "mobile" || screenWidth === "tablet"
+      ? [...data.slice(0, 1)]
+      : [...data]
   );
   const handleListChange = () => {
-    if (projectList.length > 4) {
-      setProjectList((prev) => prev.slice(0, 3));
+    if (projectList.length > 2) {
+      setProjectList((prev) => prev.slice(0, 1));
     } else {
       setProjectList([...data]);
     }
   };
 
   return (
-    <SectionWrapper
-      id="projects"
-      className="container"
-      style={{ paddingTop: "80px", paddingBottom: "80px" }}
-    >
+    <SectionWrapper id="projects" className="container">
       <Title>Проєкти</Title>
       <List>
         {projectList.map((item) => (
           <ProjectSectionCard key={item.category} item={item} />
         ))}
       </List>
-      {screenWidth === "mobile" && (
+      {(screenWidth === "mobile" || screenWidth === "tablet") && (
         <ActionBtn onClick={handleListChange}>
-          {projectList.length > 3 ? "Менше проєктів" : "Більше проєктів"}
+          {projectList.length > 2 ? "Менше проєктів" : "Більше проєктів"}
           <Icon>
             <use
               href={
                 icon +
                 `${
-                  projectList.length > 3 ? "#icon-arrowup" : "#icon-arrowdown"
+                  projectList.length > 2 ? "#icon-arrowup" : "#icon-arrowdown"
                 }`
               }
             ></use>

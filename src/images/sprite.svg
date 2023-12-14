@@ -201,7 +201,7 @@
 </symbol>
 
 <symbol id="icon-close" viewBox="0 0 32 32" width="24" height="24">
-<path stroke-linejoin="round" stroke-linecap="round" stroke-miterlimit="4" stroke-width="2.6667" d="M8 8l16 16M8 24l16-16" stroke="#062136"></path>
+<path stroke-linejoin="round" stroke-linecap="round" stroke-miterlimit="4" stroke-width="2.6667" d="M8 8l16 16M8 24l16-16"></path>
 </symbol>
 
 </defs>
