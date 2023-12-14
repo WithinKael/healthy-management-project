@@ -1,4 +1,3 @@
-import Svg from "../../images/svgMobileHeader/symbol-defs.svg";
 import PropTypes from "prop-types";
 import { createPortal } from "react-dom";
 import {
@@ -8,8 +7,9 @@ import {
   MobileMenuContainer,
   Nav,
   NavMenuMobile,
-  SvgMenu,
-} from "./ModalMobaileMenu.js";
+} from "./ModalMobaileMenu.styled.js";
+import { menuItems } from "./ModalMobaileMenuData";
+import ModalMobaileMenuSvgIcon from "./ModalMobaileMenuSvgIcon";
 
 const ModalMobail = document.getElementById("modalMobail");
 
@@ -19,9 +19,7 @@ const ModalMobaileMenu = ({ onClose, handleSetActiveLink }) => {
       <div className="container">
         <DivMobileMenu>
           <a href="#home">
-            <svg width="40" height="40">
-              <use href={`${Svg}#icon-g10`}></use>
-            </svg>
+            <ModalMobaileMenuSvgIcon name="icon-g10" />
           </a>
           <ContactMenu
             href="#contact"
@@ -33,57 +31,25 @@ const ModalMobaileMenu = ({ onClose, handleSetActiveLink }) => {
             Контакт
           </ContactMenu>
           <ButtonMenuMobile type="button" onClick={() => onClose()}>
-            <SvgMenu width="40" height="40">
-              <use href={`${Svg}#icon-close`}></use>
-            </SvgMenu>
+            <ModalMobaileMenuSvgIcon
+              name="icon-close"
+              stroke={"var(--primary-black)"}
+            />
           </ButtonMenuMobile>
         </DivMobileMenu>
         <Nav>
-          <NavMenuMobile
-            href="#home"
-            onClick={(e) => {
-              onClose();
-              handleSetActiveLink("home", e);
-            }}
-          >
-            Головна
-          </NavMenuMobile>
-          <NavMenuMobile
-            href="#aboutUs"
-            onClick={(e) => {
-              onClose();
-              handleSetActiveLink("aboutUs", e);
-            }}
-          >
-            Про нас
-          </NavMenuMobile>
-          <NavMenuMobile
-            href="#services"
-            onClick={(e) => {
-              onClose();
-              handleSetActiveLink("services", e);
-            }}
-          >
-            Послуги
-          </NavMenuMobile>
-          <NavMenuMobile
-            href="#mentoring"
-            onClick={(e) => {
-              onClose();
-              handleSetActiveLink("mentoring", e);
-            }}
-          >
-            Менторство
-          </NavMenuMobile>
-          <NavMenuMobile
-            href="#projects"
-            onClick={(e) => {
-              onClose();
-              handleSetActiveLink("projects", e);
-            }}
-          >
-            Проєкти
-          </NavMenuMobile>
+          {menuItems.map(({ id, label }) => (
+            <NavMenuMobile
+              key={id}
+              href={`#${id}`}
+              onClick={(e) => {
+                onClose();
+                handleSetActiveLink(id, e);
+              }}
+            >
+              {label}
+            </NavMenuMobile>
+          ))}
         </Nav>
       </div>
     </MobileMenuContainer>,
