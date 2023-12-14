@@ -58,6 +58,8 @@ export const SvgMenu = styled.svg`
 `;
 
 export const Nav = styled.nav`
+  position: fixed;
+  left: 0;
   padding-top: 40px;
   padding-bottom: 40px;
   display: flex;
