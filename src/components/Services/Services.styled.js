@@ -19,6 +19,11 @@ export const ServicesContentWrapper = styled.div`
   width: 100%;
   height: auto;
 
+  @media screen and (min-width: 768px) {
+    gap: 16px;
+    padding: 40px;
+  }
+
   @media screen and (min-width: 1920px) {
     gap: 40px;
     padding: 80px;
@@ -32,10 +37,15 @@ export const ServicesTitle = styled.h2`
   font-weight: 600;
   margin-bottom: 16px;
 
+  @media screen and (min-width: 768px) {
+    font-size: 32px;
+    line-height: 40px;
+    margin-bottom: 0px;
+  }
+
   @media screen and (min-width: 1920px) {
     font-size: 48px;
     line-height: 56px;
-    margin-bottom: 0;
   }
 `;
 
@@ -46,11 +56,16 @@ export const ServicesText = styled.p`
   font-weight: 500;
   margin-bottom: 24px;
 
+  @media screen and (min-width: 768px) {
+    font-size: 18px;
+    line-height: 24px;
+    margin-bottom: 0px;
+  }
+
   @media screen and (min-width: 1920px) {
     font-size: 20px;
     line-height: 28px;
     width: 828px;
-    margin-bottom: 0;
   }
 `;
 
@@ -58,6 +73,11 @@ export const Span = styled.span`
   color: var(--primary-yellow);
   font-size: 15px;
   line-height: 22px;
+
+  @media screen and (min-width: 768px) {
+    font-size: 18px;
+    line-height: 24px;
+  }
 
   @media screen and (min-width: 1920px) {
     font-size: 20px;
@@ -72,9 +92,14 @@ export const ServicesList = styled.ul`
   flex-direction: column;
   margin-bottom: 24px;
 
-  @media screen and (min-width: 1920px) {
-    flex-direction: row;
+  @media screen and (min-width: 768px) {
+    gap: 16px;
     margin-bottom: 0;
+  }
+
+  @media screen and (min-width: 1920px) {
+    gap: 24px;
+    flex-direction: row;
   }
 `;
 
@@ -100,6 +125,13 @@ export const IconDiv = styled.div`
   right: 17px;
   top: -15px;
 
+  @media screen and (min-width: 768px) {
+    width: 56px;
+    height: 56px;
+    right: 24px;
+    top: 24px;
+  }
+
   @media screen and (min-width: 1920px) {
     width: 80px;
     height: 80px;
@@ -119,15 +151,20 @@ export const ServicesBtn = styled.a`
   padding: 8px 24px;
   border: none;
   font-size: 14px;
-  font-weight: 500;
   line-height: 20px;
+  font-weight: 500;
   border-radius: 16px;
   box-shadow: 0px 0px 8px 0px rgba(248, 248, 248, 0.08);
   margin-left: auto;
   margin-right: auto;
 
-  @media screen and (min-width: 1920px) {
+  @media screen and (min-width: 768px) {
     width: 260px;
+    font-size: 15px;
+    line-height: 22px;
+  }
+
+  @media screen and (min-width: 1920px) {
     font-size: 16px;
     line-height: 24px;
   }
@@ -142,4 +179,3 @@ export const ServicesBtn = styled.a`
     font-weight: 600;
   }
 `;
-
