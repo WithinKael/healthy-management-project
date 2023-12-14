@@ -1,4 +1,5 @@
 import ReactDOM from "react-dom";
+import MediaQuery from "react-responsive";
 import sprite from "../../images/sprite.svg";
 import { useEffect } from "react";
 import PropTypes from "prop-types";
@@ -13,26 +14,51 @@ import {
   TitleH2,
   TitleAndIconWrapper,
   Svg,
-  ModalImg,
   ModalImgWrapper,
   NameAndPositionWrapper,
+  CrossSvg,
+  SvgWrapper,
 } from "./ModalWindow.styled";
 import {
   julia2x,
+  juliaMob,
+  juliaMob1x,
+  juliaMob2x,
   juliaWebp,
   oleksandr2x,
+  oleksandrMob,
+  oleksandrMob1x,
+  oleksandrMob2x,
   oleksandrWebp,
   olha2x,
+  olhaMob,
+  olhaMob1x,
+  olhaMob2x,
   olhaWebp,
   valentyn2x,
+  valentynMob,
+  valentynMob1x,
+  valentynMob2x,
   valentynWebp,
+  viktoriaMob,
+  viktoriaMob1x,
+  viktoriaMob2x,
   viktoriia2x,
   viktoriiaWebp,
   vyacheslav2x,
+  vyacheslavMob,
+  vyacheslavMob1x,
+  vyacheslavMob2x,
   vyacheslavWebp,
   yaroslav2x,
+  yaroslavMob,
+  yaroslavMob1x,
+  yaroslavMob2x,
   yaroslavWebp,
   yelyzaveta2x,
+  yelyzavetaMob,
+  yelyzavetaMob1x,
+  yelyzavetaMob2x,
   yelyzavetaWebp,
 } from "./ModalWindowImports";
 
@@ -77,20 +103,29 @@ const ModalWindowMarkup = ({ handleClose, isModalOpen }) => {
           <ModalWindow isModalOpen={isModalOpen}>
             <TitleAndIconWrapper>
               <TitleH2>Команда, яка створила сторінку</TitleH2>
-              <Svg onClick={handleClose}>
+              <CrossSvg onClick={handleClose}>
                 <use href={`${sprite}#icon-close`} />
-              </Svg>
+              </CrossSvg>
             </TitleAndIconWrapper>
 
             <TeamList>
               <TeamListItem>
                 <NameLinkedinWrapper>
                   <ModalImgWrapper>
-                    <ModalImg
-                      src={viktoriiaWebp}
-                      srcSet={`${viktoriiaWebp} 1x, ${viktoriia2x} 2x`}
-                      alt="Вікторія Мориц"
-                    />
+                    <MediaQuery minWidth={320} maxWidth={1439}>
+                      <img
+                        srcSet={`${viktoriaMob1x} 1x, ${viktoriaMob2x} 2x`}
+                        src={viktoriaMob}
+                        alt="Вікторія Мориц - Project Manager"
+                      />
+                    </MediaQuery>
+                    <MediaQuery minWidth={1440}>
+                      <img
+                        src={viktoriiaWebp}
+                        srcSet={`${viktoriiaWebp} 1x, ${viktoriia2x} 2x`}
+                        alt="Вікторія Мориц - Project Manager"
+                      />
+                    </MediaQuery>
                   </ModalImgWrapper>
                   <NameAndPositionWrapper>
                     <TitleName>
@@ -100,9 +135,11 @@ const ModalWindowMarkup = ({ handleClose, isModalOpen }) => {
                         rel="noopener noreferrer"
                       >
                         Вікторія Мориц
-                        <svg width="24" height="24">
-                          <use href={`${sprite}#icon-linkedin`} />
-                        </svg>
+                        <SvgWrapper>
+                          <Svg>
+                            <use href={`${sprite}#icon-linkedin`} />
+                          </Svg>
+                        </SvgWrapper>
                       </a>
                     </TitleName>
                     <ParagraphDescription>Project Manager</ParagraphDescription>
@@ -112,11 +149,20 @@ const ModalWindowMarkup = ({ handleClose, isModalOpen }) => {
               <TeamListItem>
                 <NameLinkedinWrapper>
                   <ModalImgWrapper>
-                    <ModalImg
-                      src={juliaWebp}
-                      srcSet={`${juliaWebp} 1x, ${julia2x} 2x`}
-                      alt="Юлія Копитко"
-                    />
+                    <MediaQuery minWidth={320} maxWidth={1439}>
+                      <img
+                        srcSet={`${juliaMob1x} 1x, ${juliaMob2x} 2x`}
+                        src={juliaMob}
+                        alt="Юлія Копитко UX/UI Designer"
+                      />
+                    </MediaQuery>
+                    <MediaQuery minWidth={1440}>
+                      <img
+                        srcSet={`${juliaWebp} 1x, ${julia2x} 2x`}
+                        src={juliaWebp}
+                        alt="Юлія Копитко UX/UI Designer"
+                      />
+                    </MediaQuery>
                   </ModalImgWrapper>
                   <NameAndPositionWrapper>
                     <TitleName>
@@ -126,9 +172,11 @@ const ModalWindowMarkup = ({ handleClose, isModalOpen }) => {
                         rel="noopener noreferrer"
                       >
                         Юлія Копитко
-                        <svg width="24" height="24">
-                          <use href={`${sprite}#icon-linkedin`} />
-                        </svg>
+                        <SvgWrapper>
+                          <Svg>
+                            <use href={`${sprite}#icon-linkedin`} />
+                          </Svg>
+                        </SvgWrapper>
                       </a>
                     </TitleName>
                     <ParagraphDescription>UX/UI Designer</ParagraphDescription>
@@ -138,11 +186,20 @@ const ModalWindowMarkup = ({ handleClose, isModalOpen }) => {
               <TeamListItem>
                 <NameLinkedinWrapper>
                   <ModalImgWrapper>
-                    <ModalImg
-                      src={yaroslavWebp}
-                      srcSet={`${yaroslavWebp} 1x, ${yaroslav2x} 2x`}
-                      alt="Ярослав Лі"
-                    />
+                    <MediaQuery minWidth={320} maxWidth={1439}>
+                      <img
+                        srcSet={`${yaroslavMob1x} 1x, ${yaroslavMob2x} 2x`}
+                        src={yaroslavMob}
+                        alt="Ярослав Лі - Frontend Developer"
+                      />
+                    </MediaQuery>
+                    <MediaQuery minWidth={1440}>
+                      <img
+                        srcSet={`${yaroslavWebp} 1x, ${yaroslav2x} 2x`}
+                        src={yaroslavWebp}
+                        alt="Ярослав Лі - Frontend Developer"
+                      />
+                    </MediaQuery>
                   </ModalImgWrapper>
                   <NameAndPositionWrapper>
                     <TitleName>
@@ -152,9 +209,11 @@ const ModalWindowMarkup = ({ handleClose, isModalOpen }) => {
                         rel="noopener noreferrer"
                       >
                         Ярослав Лі
-                        <svg width="24" height="24">
-                          <use href={`${sprite}#icon-linkedin`} />
-                        </svg>
+                        <SvgWrapper>
+                          <Svg>
+                            <use href={`${sprite}#icon-linkedin`} />
+                          </Svg>
+                        </SvgWrapper>
                       </a>
                     </TitleName>
                     <ParagraphDescription>
@@ -166,11 +225,20 @@ const ModalWindowMarkup = ({ handleClose, isModalOpen }) => {
               <TeamListItem>
                 <NameLinkedinWrapper>
                   <ModalImgWrapper>
-                    <ModalImg
-                      src={yelyzavetaWebp}
-                      srcSet={`${yelyzavetaWebp} 1x, ${yelyzaveta2x} 2x`}
-                      alt="Єлизавета Доманська"
-                    />
+                    <MediaQuery minWidth={320} maxWidth={1439}>
+                      <img
+                        srcSet={`${yelyzavetaMob1x} 1x, ${yelyzavetaMob2x} 2x`}
+                        src={yelyzavetaMob}
+                        alt="Єлизавета Доманська - Frontend Developer"
+                      />
+                    </MediaQuery>
+                    <MediaQuery minWidth={1440}>
+                      <img
+                        srcSet={`${yelyzavetaWebp} 1x, ${yelyzaveta2x} 2x`}
+                        src={yelyzavetaWebp}
+                        alt="Єлизавета Доманська - Frontend Developer"
+                      />
+                    </MediaQuery>
                   </ModalImgWrapper>
                   <NameAndPositionWrapper>
                     <TitleName>
@@ -180,9 +248,11 @@ const ModalWindowMarkup = ({ handleClose, isModalOpen }) => {
                         rel="noopener noreferrer"
                       >
                         Єлизавета Доманська
-                        <svg width="24" height="24">
-                          <use href={`${sprite}#icon-linkedin`} />
-                        </svg>
+                        <SvgWrapper>
+                          <Svg>
+                            <use href={`${sprite}#icon-linkedin`} />
+                          </Svg>
+                        </SvgWrapper>
                       </a>
                     </TitleName>
                     <ParagraphDescription>
@@ -194,11 +264,20 @@ const ModalWindowMarkup = ({ handleClose, isModalOpen }) => {
               <TeamListItem>
                 <NameLinkedinWrapper>
                   <ModalImgWrapper>
-                    <ModalImg
-                      src={oleksandrWebp}
-                      srcSet={`${oleksandrWebp} 1x, ${oleksandr2x} 2x`}
-                      alt="Олександр Наталуха"
-                    />
+                    <MediaQuery minWidth={320} maxWidth={1439}>
+                      <img
+                        srcSet={`${oleksandrMob1x} 1x, ${oleksandrMob2x} 2x`}
+                        src={oleksandrMob}
+                        alt="Олександр Наталуха - Frontend Developer"
+                      />
+                    </MediaQuery>
+                    <MediaQuery minWidth={1440}>
+                      <img
+                        srcSet={`${oleksandrWebp} 1x, ${oleksandr2x} 2x`}
+                        src={oleksandrWebp}
+                        alt="Олександр Наталуха - Frontend Developer"
+                      />
+                    </MediaQuery>
                   </ModalImgWrapper>
                   <NameAndPositionWrapper>
                     <TitleName>
@@ -208,9 +287,11 @@ const ModalWindowMarkup = ({ handleClose, isModalOpen }) => {
                         rel="noopener noreferrer"
                       >
                         Олександр Наталуха
-                        <svg width="24" height="24">
-                          <use href={`${sprite}#icon-linkedin`} />
-                        </svg>
+                        <SvgWrapper>
+                          <Svg>
+                            <use href={`${sprite}#icon-linkedin`} />
+                          </Svg>
+                        </SvgWrapper>
                       </a>
                     </TitleName>
                     <ParagraphDescription>
@@ -222,11 +303,20 @@ const ModalWindowMarkup = ({ handleClose, isModalOpen }) => {
               <TeamListItem>
                 <NameLinkedinWrapper>
                   <ModalImgWrapper>
-                    <ModalImg
-                      src={valentynWebp}
-                      srcSet={`${valentynWebp} 1x, ${valentyn2x} 2x`}
-                      alt="Валентин Гавриленко"
-                    />
+                    <MediaQuery minWidth={320} maxWidth={1439}>
+                      <img
+                        srcSet={`${valentynMob1x} 1x, ${valentynMob2x} 2x`}
+                        src={valentynMob}
+                        alt="Валентин Гавриленко - Frontend Developer"
+                      />
+                    </MediaQuery>
+                    <MediaQuery minWidth={1440}>
+                      <img
+                        srcSet={`${valentynWebp} 1x, ${valentyn2x} 2x`}
+                        src={valentynWebp}
+                        alt="Валентин Гавриленко - Frontend Developer"
+                      />
+                    </MediaQuery>
                   </ModalImgWrapper>
                   <NameAndPositionWrapper>
                     <TitleName>
@@ -236,9 +326,11 @@ const ModalWindowMarkup = ({ handleClose, isModalOpen }) => {
                         rel="noopener noreferrer"
                       >
                         Валентин Гавриленко
-                        <svg width="24" height="24">
-                          <use href={`${sprite}#icon-linkedin`} />
-                        </svg>
+                        <SvgWrapper>
+                          <Svg>
+                            <use href={`${sprite}#icon-linkedin`} />
+                          </Svg>
+                        </SvgWrapper>
                       </a>
                     </TitleName>
                     <ParagraphDescription>
@@ -250,11 +342,20 @@ const ModalWindowMarkup = ({ handleClose, isModalOpen }) => {
               <TeamListItem>
                 <NameLinkedinWrapper>
                   <ModalImgWrapper>
-                    <ModalImg
-                      src={vyacheslavWebp}
-                      srcSet={`${vyacheslavWebp} 1x, ${vyacheslav2x} 2x`}
-                      alt="В´ячеслав Павлюк"
-                    />
+                    <MediaQuery minWidth={320} maxWidth={1439}>
+                      <img
+                        srcSet={`${vyacheslavMob1x} 1x, ${vyacheslavMob2x} 2x`}
+                        src={vyacheslavMob}
+                        alt="В´ячеслав Павлюк - Frontend Developer"
+                      />
+                    </MediaQuery>
+                    <MediaQuery minWidth={1440}>
+                      <img
+                        srcSet={`${vyacheslavWebp} 1x, ${vyacheslav2x} 2x`}
+                        src={vyacheslavWebp}
+                        alt="В´ячеслав Павлюк - Frontend Developer"
+                      />
+                    </MediaQuery>
                   </ModalImgWrapper>
                   <NameAndPositionWrapper>
                     <TitleName>
@@ -264,9 +365,11 @@ const ModalWindowMarkup = ({ handleClose, isModalOpen }) => {
                         rel="noopener noreferrer"
                       >
                         В&#39;ячеслав Павлюк
-                        <svg width="24" height="24">
-                          <use href={`${sprite}#icon-linkedin`} />
-                        </svg>
+                        <SvgWrapper>
+                          <Svg>
+                            <use href={`${sprite}#icon-linkedin`} />
+                          </Svg>
+                        </SvgWrapper>
                       </a>
                     </TitleName>
                     <ParagraphDescription>
@@ -278,11 +381,20 @@ const ModalWindowMarkup = ({ handleClose, isModalOpen }) => {
               <TeamListItem>
                 <NameLinkedinWrapper>
                   <ModalImgWrapper>
-                    <ModalImg
-                      src={olhaWebp}
-                      srcSet={`${olhaWebp} 1x, ${olha2x} 2x`}
-                      alt="Ольга Абент"
-                    />
+                    <MediaQuery minWidth={320} maxWidth={1439}>
+                      <img
+                        srcSet={`${olhaMob1x} 1x, ${olhaMob2x} 2x`}
+                        src={olhaMob}
+                        alt="Ольга Абент - QA Engineer"
+                      />
+                    </MediaQuery>
+                    <MediaQuery minWidth={1440}>
+                      <img
+                        srcSet={`${olhaWebp} 1x, ${olha2x} 2x`}
+                        src={olhaWebp}
+                        alt="Ольга Абент - QA Engineer"
+                      />
+                    </MediaQuery>
                   </ModalImgWrapper>
                   <NameAndPositionWrapper>
                     <TitleName>
@@ -292,9 +404,11 @@ const ModalWindowMarkup = ({ handleClose, isModalOpen }) => {
                         rel="noopener noreferrer"
                       >
                         Ольга Абент
-                        <svg width="24" height="24">
-                          <use href={`${sprite}#icon-linkedin`} />
-                        </svg>
+                        <SvgWrapper>
+                          <Svg>
+                            <use href={`${sprite}#icon-linkedin`} />
+                          </Svg>
+                        </SvgWrapper>
                       </a>
                     </TitleName>
                     <ParagraphDescription>QA Engineer</ParagraphDescription>

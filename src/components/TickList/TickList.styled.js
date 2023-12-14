@@ -114,6 +114,18 @@ export const ListItem = styled.li`
     font-size: 16px;
     line-height: calc(24 / 16);
   }
+
+  ${({ variant }) =>
+    variant === "services" &&
+    css`
+      @media screen and (min-width: 768px) {
+        width: 408px;
+      }
+
+      @media screen and (min-width: 1440px) {
+        width: 100%;
+      }
+    `}
 `;
 
 export const Comment = styled.p`

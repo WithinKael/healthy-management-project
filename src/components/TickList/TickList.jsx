@@ -20,7 +20,7 @@ const TickList = ({
       <Title variant={variant}>{title}</Title>
       <List>
         {about?.map((item) => (
-          <ListItem key={item}>
+          <ListItem key={item} variant={variant}>
             <Icon>
               <use href={icon + "#icon-done"}></use>
             </Icon>

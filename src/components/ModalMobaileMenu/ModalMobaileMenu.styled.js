@@ -53,11 +53,9 @@ export const ContactMenu = styled.a`
   }
 `;
 
-export const SvgMenu = styled.svg`
-  stroke: var(--primary-black);
-`;
-
 export const Nav = styled.nav`
+  position: fixed;
+  left: 0;
   padding-top: 40px;
   padding-bottom: 40px;
   display: flex;
