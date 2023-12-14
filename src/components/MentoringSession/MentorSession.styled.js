@@ -97,7 +97,7 @@ export const StyledParagraph = styled.p`
 
   position: absolute;
   text-align: center;
-  top: 50%;
+  top: 45%;
   left: 50%;
   transform: translate(-50%, -50%);
   z-index: 2;
@@ -109,7 +109,7 @@ export const StyledParagraph = styled.p`
   }
 
   @media screen and (min-width: 1920px) {
-    ustify-content: flex-start;
+    justify-content: flex-start;
     width: 100%;
     font-size: 16px;
     line-height: 1.4;
