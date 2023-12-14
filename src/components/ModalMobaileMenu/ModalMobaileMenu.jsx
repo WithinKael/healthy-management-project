@@ -23,7 +23,15 @@ const ModalMobaileMenu = ({ onClose, handleSetActiveLink }) => {
               <use href={`${Svg}#icon-g10`}></use>
             </svg>
           </a>
-          <ContactMenu href="#contact">Контакт</ContactMenu>
+          <ContactMenu
+            href="#contact"
+            onClick={(e) => {
+              onClose();
+              handleSetActiveLink("contact", e);
+            }}
+          >
+            Контакт
+          </ContactMenu>
           <ButtonMenuMobile type="button" onClick={() => onClose()}>
             <SvgMenu width="40" height="40">
               <use href={`${Svg}#icon-close`}></use>
