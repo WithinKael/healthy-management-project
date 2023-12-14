@@ -50,9 +50,15 @@ const Header = ({ handleSetActiveLink }) => {
   };
 
   useEffect(() => {
+    if (shownModal) {
+      document.body.style.overflow = "hidden";
+    } else {
+      document.body.style.overflow = "auto";
+    }
+
     window.addEventListener("scroll", handleScroll);
     return () => window.removeEventListener("scroll", handleScroll);
-  }, []);
+  }, [shownModal]);
 
   return (
     <Headers>
