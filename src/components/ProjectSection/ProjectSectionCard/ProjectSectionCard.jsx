@@ -14,11 +14,10 @@ const ProjectSectionCard = ({ item }) => {
     }
   };
   return (
-    <ListItem>
-      <ListItemMarkup dataList={item} onClick={mobileOnDetailBtnClick} />
+    <ListItem onClick={mobileOnDetailBtnClick}>
+      <ListItemMarkup dataList={item} />
       <HiddenInfo
         isVisible={isDetailInfoVisible}
-        onClick={mobileOnDetailBtnClick}
         image={item.image}
         className={
           !isDetailInfoVisible && screenWidth === "mobile"

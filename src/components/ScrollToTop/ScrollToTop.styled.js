@@ -8,8 +8,8 @@ export const ScrollToTopButton = styled.button`
   height: 40px;
   position: fixed;
   bottom: var(--scroll-to-top-bottom);
-  right: 24px;
-  padding: 8px;
+  right: calc(100% / 2 - 327px / 2);
+  /* padding: 8px; */
   background-color: var(--primary-yellow);
   box-shadow: 0px 0px 8px 0px rgba(27, 54, 65, 0.08);
   border: none;
@@ -21,18 +21,18 @@ export const ScrollToTopButton = styled.button`
   }
 
   @media screen and (min-width: 768px) {
-    right: 40px;
+    right: calc(100% / 2 - 688px / 2);
   }
 
   @media screen and (min-width: 1440px) {
     width: 48px;
     height: 48px;
-    right: 80px;
+    right: calc(100% / 2 - 1280px / 2);
   }
 
   @media screen and (min-width: 1920px) {
     width: 56px;
     height: 56px;
-    right: 120px;
+    right: calc(100% / 2 - 1680px / 2);
   }
 `;

@@ -231,10 +231,10 @@ export const SectionAboutMeLink = styled.a`
   align-items: center;
   color: var(--primary-bluedark);
   font-family: Montserrat;
-  font-size: 16px;
+  font-size: 15px;
   font-style: normal;
   font-weight: 600;
-  line-height: 32px; /* 200% */
+  line-height: 22px; /* 200% */
 
   &:hover::after {
     content: "";
@@ -247,35 +247,17 @@ export const SectionAboutMeLink = styled.a`
   }
 
   @media screen and (min-width: 768px) {
-    position: relative;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    color: var(--primary-bluedark);
-    font-family: Montserrat;
-    font-size: 20px;
-    font-style: normal;
-    font-weight: 600;
-    line-height: 28px;
-    text-decoration: none;
-
-    &:hover::after {
-      content: "";
-      position: absolute;
-      left: 0;
-      right: 0;
-      bottom: -5px;
-      height: 2px;
-      background-color: var(--primary-bluedark);
-    }
-  }
-
-  @media screen and (min-width: 1400px) {
     font-size: 18px;
 
+    line-height: 24px;
+  }
+
+  @media screen and (min-width: 1440px) {
     line-height: 22px;
   }
   @media screen and (min-width: 1920px) {
+    font-size: 20px;
+    line-height: 28px;
   }
 `;
 

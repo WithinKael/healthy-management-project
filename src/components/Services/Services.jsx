@@ -28,7 +28,7 @@ const Services = () => {
               <TickList
                 title={element.title}
                 about={element.about}
-                additionalComment={true}
+                variant="services"
               />
               <IconDiv>
                 <img src={element.path} alt={element.path} />
