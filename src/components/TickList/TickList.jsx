@@ -8,10 +8,16 @@ import {
   Wrapper,
 } from "./TickList.styled";
 
-const TickList = ({ title, about, comment, additionalComment = false }) => {
+const TickList = ({
+  title,
+  about,
+  comment,
+  variant,
+  additionalComment = false,
+}) => {
   return (
     <Wrapper>
-      <Title forDetail={additionalComment}>{title}</Title>
+      <Title variant={variant}>{title}</Title>
       <List>
         {about?.map((item) => (
           <ListItem key={item}>
