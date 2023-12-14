@@ -125,3 +125,16 @@ textarea {
   clip: rect(0 0 0 0);
   overflow: hidden;
 }
+
+@media (prefers-color-scheme: dark) {
+  #favicon {
+    fill: white;
+  }
+}
+
+@media (prefers-color-scheme: light) {
+  #favicon {
+    fill: #062136;
+  }
+
+}
