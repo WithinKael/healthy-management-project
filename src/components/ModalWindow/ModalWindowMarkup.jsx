@@ -14,10 +14,10 @@ import {
   TitleH2,
   TitleAndIconWrapper,
   Svg,
-  ModalImg,
   ModalImgWrapper,
   NameAndPositionWrapper,
   CrossSvg,
+  SvgWrapper,
 } from "./ModalWindow.styled";
 import {
   julia2x,
@@ -112,11 +112,6 @@ const ModalWindowMarkup = ({ handleClose, isModalOpen }) => {
               <TeamListItem>
                 <NameLinkedinWrapper>
                   <ModalImgWrapper>
-                    {/* <ModalImg
-                      src={viktoriiaWebp}
-                      srcSet={`${viktoriiaWebp} 1x, ${viktoriia2x} 2x`}
-                      alt="Вікторія Мориц"
-                    /> */}
                     <MediaQuery minWidth={320} maxWidth={1439}>
                       <img
                         srcSet={`${viktoriaMob1x} 1x, ${viktoriaMob2x} 2x`}
@@ -140,9 +135,11 @@ const ModalWindowMarkup = ({ handleClose, isModalOpen }) => {
                         rel="noopener noreferrer"
                       >
                         Вікторія Мориц
-                        <Svg>
-                          <use href={`${sprite}#icon-linkedin`} />
-                        </Svg>
+                        <SvgWrapper>
+                          <Svg>
+                            <use href={`${sprite}#icon-linkedin`} />
+                          </Svg>
+                        </SvgWrapper>
                       </a>
                     </TitleName>
                     <ParagraphDescription>Project Manager</ParagraphDescription>
@@ -175,9 +172,11 @@ const ModalWindowMarkup = ({ handleClose, isModalOpen }) => {
                         rel="noopener noreferrer"
                       >
                         Юлія Копитко
-                        <Svg>
-                          <use href={`${sprite}#icon-linkedin`} />
-                        </Svg>
+                        <SvgWrapper>
+                          <Svg>
+                            <use href={`${sprite}#icon-linkedin`} />
+                          </Svg>
+                        </SvgWrapper>
                       </a>
                     </TitleName>
                     <ParagraphDescription>UX/UI Designer</ParagraphDescription>
@@ -210,9 +209,11 @@ const ModalWindowMarkup = ({ handleClose, isModalOpen }) => {
                         rel="noopener noreferrer"
                       >
                         Ярослав Лі
-                        <Svg>
-                          <use href={`${sprite}#icon-linkedin`} />
-                        </Svg>
+                        <SvgWrapper>
+                          <Svg>
+                            <use href={`${sprite}#icon-linkedin`} />
+                          </Svg>
+                        </SvgWrapper>
                       </a>
                     </TitleName>
                     <ParagraphDescription>
@@ -247,9 +248,11 @@ const ModalWindowMarkup = ({ handleClose, isModalOpen }) => {
                         rel="noopener noreferrer"
                       >
                         Єлизавета Доманська
-                        <Svg>
-                          <use href={`${sprite}#icon-linkedin`} />
-                        </Svg>
+                        <SvgWrapper>
+                          <Svg>
+                            <use href={`${sprite}#icon-linkedin`} />
+                          </Svg>
+                        </SvgWrapper>
                       </a>
                     </TitleName>
                     <ParagraphDescription>
@@ -284,9 +287,11 @@ const ModalWindowMarkup = ({ handleClose, isModalOpen }) => {
                         rel="noopener noreferrer"
                       >
                         Олександр Наталуха
-                        <Svg>
-                          <use href={`${sprite}#icon-linkedin`} />
-                        </Svg>
+                        <SvgWrapper>
+                          <Svg>
+                            <use href={`${sprite}#icon-linkedin`} />
+                          </Svg>
+                        </SvgWrapper>
                       </a>
                     </TitleName>
                     <ParagraphDescription>
@@ -321,9 +326,11 @@ const ModalWindowMarkup = ({ handleClose, isModalOpen }) => {
                         rel="noopener noreferrer"
                       >
                         Валентин Гавриленко
-                        <Svg>
-                          <use href={`${sprite}#icon-linkedin`} />
-                        </Svg>
+                        <SvgWrapper>
+                          <Svg>
+                            <use href={`${sprite}#icon-linkedin`} />
+                          </Svg>
+                        </SvgWrapper>
                       </a>
                     </TitleName>
                     <ParagraphDescription>
@@ -358,9 +365,11 @@ const ModalWindowMarkup = ({ handleClose, isModalOpen }) => {
                         rel="noopener noreferrer"
                       >
                         В&#39;ячеслав Павлюк
-                        <Svg>
-                          <use href={`${sprite}#icon-linkedin`} />
-                        </Svg>
+                        <SvgWrapper>
+                          <Svg>
+                            <use href={`${sprite}#icon-linkedin`} />
+                          </Svg>
+                        </SvgWrapper>
                       </a>
                     </TitleName>
                     <ParagraphDescription>
@@ -395,9 +404,11 @@ const ModalWindowMarkup = ({ handleClose, isModalOpen }) => {
                         rel="noopener noreferrer"
                       >
                         Ольга Абент
-                        <Svg>
-                          <use href={`${sprite}#icon-linkedin`} />
-                        </Svg>
+                        <SvgWrapper>
+                          <Svg>
+                            <use href={`${sprite}#icon-linkedin`} />
+                          </Svg>
+                        </SvgWrapper>
                       </a>
                     </TitleName>
                     <ParagraphDescription>QA Engineer</ParagraphDescription>
