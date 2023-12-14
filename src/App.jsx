@@ -71,9 +71,9 @@ function App() {
         <ProjectSection />
         <BusinessTools />
         <ContactsForm />
+        <ScrollToTop />
       </main>
       <Footer handleSetActiveLink={handleSetActiveLink} />
-      <ScrollToTop />
     </>
   );
 }
