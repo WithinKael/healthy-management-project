@@ -1,5 +1,5 @@
 import { ListItem } from "./ProjectSectionCard.styled";
-import ListItemMarkup from "../UI/ListItemMarkup/ListItemMarkup";
+import ListItemMarkup from "../ListItemMarkup/ListItemMarkup";
 import { useState } from "react";
 import { useScreenWidth } from "../../../hooks/useScreenWidth";
 

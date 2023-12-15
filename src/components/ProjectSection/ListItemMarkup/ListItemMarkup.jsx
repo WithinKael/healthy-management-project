@@ -5,10 +5,10 @@ import {
   StyledImage,
   HiddenInfo,
 } from "./ListItemMarkup.styled";
-import { useScreenWidth } from "../../../../hooks/useScreenWidth";
+import { useScreenWidth } from "../../../hooks/useScreenWidth";
 
-import TickList from "../../../TickList/TickList";
 import DetailInfo from "../DetailInfo/DetailInfo";
+import TickList from "../../TickList/TickList";
 
 const ListItemMarkup = ({
   dataList,
