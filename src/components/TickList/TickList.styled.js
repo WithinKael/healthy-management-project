@@ -135,14 +135,14 @@ export const Comment = styled.p`
     ${(props) => (props.additionalComment ? 20 / 14 : 22 / 15)}
   );
   @media screen and (min-width: 768px) {
-    font-size: "18px";
+    font-size: 18px;
     line-height: calc(24 / 18);
   }
   @media screen and (min-width: 1440px) {
     line-height: calc(22 / 18);
   }
   @media screen and (min-width: 1920px) {
-    font-size: "20px";
+    font-size: 20px;
     line-height: calc(28 / 20);
   }
 `;
