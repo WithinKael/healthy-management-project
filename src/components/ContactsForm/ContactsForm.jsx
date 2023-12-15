@@ -103,9 +103,9 @@ const ContactsForm = () => {
         comment: "",
       });
       reset();
-      swal("Вітаю!", "Ваша заявка успішно відправлена!", "success", {
+      swal("Вітаємо!", "Ваша заявка успішно відправлена!", "success", {
         buttons: false,
-        timer: 5000,
+        timer: 3000,
       });
       // alert("Заявка відправлена!");
     } catch (error) {
@@ -115,7 +115,7 @@ const ContactsForm = () => {
         "error",
         {
           buttons: false,
-          timer: 5000,
+          timer: 3000,
         }
       );
       // alert("Помилка при відправці заявки");

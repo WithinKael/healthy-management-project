@@ -20,8 +20,47 @@
   --typography-grey: #c3c4c4;
 }
 
-.body-no-scroll {
-  overflow: hidden;
+.swal {
+  font-family: 'Montserrat', sans-serif !important;
+}
+
+.swal-title {
+  color: #062136;
+  margin-bottom: 8px!important;
+ }
+
+.swal-text {
+   color: #062136;
+   max-width: 420px;
+   padding: 0 10px!important;
+   text-align: center;
+ }
+
+ .swal-modal {
+  border-radius: 16px;
+}
+
+ .swal-icon {
+  border-width: 3px;
+  margin-bottom: 0px;
+}
+
+.swal-icon--success__line--long{
+height: 3px;
+}
+.swal-icon--success__line--tip{
+height: 3px;
+}
+
+.swal-icon--success__line--long {
+right: 6px;
+}
+
+.swal-icon--error__line--left{
+height: 3px;
+}
+.swal-icon--error__line--right{
+height: 3px;
 }
 
 * {
@@ -126,15 +165,6 @@ textarea {
   overflow: hidden;
 }
 
-@media (prefers-color-scheme: dark) {
-  #favicon {
-    fill: white;
-  }
-}
-
-@media (prefers-color-scheme: light) {
-  #favicon {
-    fill: #062136;
-  }
-
-}
+/* .body-no-scroll {
+  overflow: hidden;
+} */
