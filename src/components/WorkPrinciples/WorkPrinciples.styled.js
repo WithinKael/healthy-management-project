@@ -11,9 +11,12 @@ export const SectionPrinciples = styled.section`
     gap: 16px;
   }
 
-  @media screen and (min-width: 1920px) {
+  @media screen and (min-width: 1440px) {
     flex-direction: row;
     gap: 24px;
+  }
+
+  @media screen and (min-width: 1920px) {
     padding-top: 80px;
     padding-bottom: 80px;
   }
@@ -45,6 +48,11 @@ export const PrinciplesContentWrapper = styled.div`
     margin-bottom: 16px;
   }
 
+  @media screen and (min-width: 1440px) {
+    gap: 24px;
+    margin-bottom: 24px;
+  }
+
   @media screen and (min-width: 1920px) {
     gap: 40px;
     margin-bottom: 40px;
@@ -62,13 +70,18 @@ export const PrinciplesTitle = styled.h2`
     line-height: 40px;
   }
 
+  @media screen and (min-width: 1440px) {
+    font-size: 36px;
+    line-height: 48px;
+  }
+
   @media screen and (min-width: 1920px) {
     font-size: 48px;
     line-height: 56px;
   }
 `;
 
-export const PrinciplesText = styled.h2`
+export const PrinciplesText = styled.p`
   color: var(--typography-bluedark);
   font-weight: 500;
   font-size: 15px;
@@ -77,6 +90,10 @@ export const PrinciplesText = styled.h2`
   @media screen and (min-width: 768px) {
     font-size: 18px;
     line-height: 24px;
+  }
+
+  @media screen and (min-width: 1440px) {
+    line-height: 22px;
   }
 
   @media screen and (min-width: 1920px) {
@@ -122,6 +139,10 @@ export const ListItemText = styled.p`
     width: 100%;
     font-size: 18px;
     line-height: 24px;
+  }
+
+  @media screen and (min-width: 1440px) {
+    line-height: 22px;
   }
 
   @media screen and (min-width: 1920px) {
