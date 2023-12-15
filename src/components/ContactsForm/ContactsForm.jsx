@@ -290,10 +290,14 @@ const ContactsForm = () => {
                   name="comment"
                   placeholder="Введіть ваше повідомлення"
                   {...register("comment", {
-                    pattern: {
-                      value: /^.{0,500}$/,
+                    maxLength: {
+                      value: 500,
                       message: "Максимальна кількість 500 символів",
                     },
+                    // pattern: {
+                    //   value: /^.{0,500}$/,
+                    //   message: "Максимальна кількість 500 символів",
+                    // },
                   })}
                   value={comment}
                   onChange={handleChange}

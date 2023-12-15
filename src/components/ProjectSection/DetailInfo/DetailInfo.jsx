@@ -1,7 +1,7 @@
-import TickList from "../../../TickList/TickList";
+import TickList from "../../TickList/TickList";
 import { Category, Icon, Wrapper } from "./DetailInfo.styled";
-import icon from "../../../../images/sprite.svg";
-import { useScreenWidth } from "../../../../hooks/useScreenWidth";
+import icon from "../../../images/sprite.svg";
+import { useScreenWidth } from "../../../hooks/useScreenWidth";
 
 const DetailInfo = ({ dataList: { details, category } }) => {
   const screen = useScreenWidth();
