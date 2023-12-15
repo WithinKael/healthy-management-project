@@ -1,5 +1,4 @@
-import { HiddenInfo, ListItem } from "./ProjectSectionCard.styled";
-import DetailInfo from "../UI/DetailInfo/DetailInfo";
+import { ListItem } from "./ProjectSectionCard.styled";
 import ListItemMarkup from "../UI/ListItemMarkup/ListItemMarkup";
 import { useState } from "react";
 import { useScreenWidth } from "../../../hooks/useScreenWidth";
@@ -15,18 +14,11 @@ const ProjectSectionCard = ({ item }) => {
   };
   return (
     <ListItem onClick={mobileOnDetailBtnClick}>
-      <ListItemMarkup dataList={item} />
-      <HiddenInfo
-        isVisible={isDetailInfoVisible}
-        image={item.image}
-        className={
-          !isDetailInfoVisible && screenWidth === "mobile"
-            ? "visually-hidden"
-            : ""
-        }
-      >
-        <DetailInfo dataList={item} />
-      </HiddenInfo>
+      <ListItemMarkup
+        dataList={item}
+        isDetailInfoVisible={isDetailInfoVisible}
+        setisDetailInfoVisible={setisDetailInfoVisible}
+      />
     </ListItem>
   );
 };

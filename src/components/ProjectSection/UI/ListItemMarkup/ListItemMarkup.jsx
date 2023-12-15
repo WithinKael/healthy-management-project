@@ -3,19 +3,39 @@ import {
   DetailsBtn,
   ListItemWrapper,
   StyledImage,
+  HiddenInfo,
 } from "./ListItemMarkup.styled";
 import { useScreenWidth } from "../../../../hooks/useScreenWidth";
 
 import TickList from "../../../TickList/TickList";
+import DetailInfo from "../DetailInfo/DetailInfo";
 
-const ListItemMarkup = ({ dataList }) => {
+const ListItemMarkup = ({
+  dataList,
+  isDetailInfoVisible,
+  setisDetailInfoVisible,
+}) => {
   const screenWidth = useScreenWidth();
   const { category, title, about = [], image } = dataList;
+
+  const handleHover = (e) => {
+    setisDetailInfoVisible((prev) => !prev);
+    console.dir(e.target);
+  };
 
   return (
     <>
       <ListItemWrapper>
-        <StyledImage src={image} alt={title} />
+        <StyledImage src={image} alt={title} onMouseEnter={handleHover} />
+        <HiddenInfo
+          isVisible={isDetailInfoVisible}
+          image={image}
+          className={isDetailInfoVisible ? "" : "visually-hidden"}
+          onMouseLeave={handleHover}
+        >
+          <DetailInfo dataList={dataList} />
+        </HiddenInfo>
+
         <div>
           <Category symbols={category.length}>{category}</Category>
         </div>
