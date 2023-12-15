@@ -108,6 +108,10 @@ export const StyledParagraph = styled.p`
     left: 42%;
   }
 
+  @media screen and (min-width: 1440px) {
+    top: 50%;
+  }
+
   @media screen and (min-width: 1920px) {
     justify-content: flex-start;
     width: 100%;
