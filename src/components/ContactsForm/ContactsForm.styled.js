@@ -114,6 +114,7 @@ export const Text = styled.h3`
 
   @media screen and (min-width: 768px) {
     font-size: 20px;
+    font-weight: 600;
     line-height: 1.4;
   }
 
@@ -164,7 +165,6 @@ export const Label = styled.label`
   @media screen and (min-width: 1920px) {
     gap: 4px 4px;
     font-size: 16px;
-    font-weight: 500;
     line-height: 1.5;
   }
 `;
@@ -275,7 +275,6 @@ export const LabelEmailPhone = styled.label`
   @media screen and (min-width: 1920px) {
     gap: 4px 4px;
     font-size: 16px;
-    font-weight: 500;
     line-height: 1.5;
   }
 `;
@@ -372,7 +371,6 @@ export const LabelTextarea = styled.label`
     height: 196px;
     gap: 4px 4px;
     font-size: 16px;
-    font-weight: 500;
     line-height: 1.5;
   }
 `;
