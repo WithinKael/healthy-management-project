@@ -3253,7 +3253,7 @@ In order to be iterable, non-array objects must have a [Symbol.iterator]() metho
   }
 
   @media screen and (min-width: 1440px) {
-    gap: 14px 4px;
+    gap: 10px 4px;
     line-height: 1.2;
   }
 
@@ -3271,7 +3271,6 @@ In order to be iterable, non-array objects must have a [Symbol.iterator]() metho
   align-self: stretch;
   align-content: flex-start;
   border-radius: 16px;
-  overflow: hidden;
   border: none;
   box-shadow: 0px 0px 8px 0px rgba(27, 54, 65, 0.08);
   border: 1px solid
