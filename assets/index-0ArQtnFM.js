@@ -2102,6 +2102,10 @@ Valid keys: `+JSON.stringify(Object.keys(F),null,"  "));var A=E(ue,k,ie,le,se+".
     left: 42%;
   }
 
+  @media screen and (min-width: 1440px) {
+    top: 50%;
+  }
+
   @media screen and (min-width: 1920px) {
     justify-content: flex-start;
     width: 100%;
