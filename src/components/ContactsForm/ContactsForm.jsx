@@ -69,7 +69,7 @@ const ContactsForm = () => {
   }, [formData]);
 
   const handleChangeSelect = (selectedOption) => {
-    setValue("service", selectedOption?.value || "");
+    setValue("service", selectedOption || null);
     setFormData({
       ...formData,
       service: selectedOption?.value || "",
@@ -88,6 +88,7 @@ const ContactsForm = () => {
       const formattedData = {
         ...formData,
         phone: formData.phone.replace(/\D/g, "").slice(2),
+        service: selectedService.value,
       };
       await axios.post(
         "https://healthy-management.onrender.com/api/senddata",
@@ -255,6 +256,12 @@ const ContactsForm = () => {
                   name="service"
                   control={control}
                   shouldUnregister={false}
+                  defaultValue={service}
+                  rules={{
+                    validate: (value) => {
+                      return value ? undefined : "Оберіть послугу";
+                    },
+                  }}
                   render={({ field }) => (
                     <Select
                       {...register("service", {
