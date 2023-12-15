@@ -90,10 +90,10 @@ const ContactsForm = () => {
         phone: formData.phone.replace(/\D/g, "").slice(2),
         service: selectedService.value,
       };
-      // await axios.post(
-      //   "https://healthy-management.onrender.com/api/senddata",
-      //   formattedData
-      // );
+      await axios.post(
+        "https://healthy-management.onrender.com/api/senddata",
+        formattedData
+      );
       console.log(formattedData);
       setFormData({
         name: "",
