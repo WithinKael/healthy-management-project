@@ -38,6 +38,12 @@ export const ContentTitle = styled.h2`
     margin-bottom: 16px;
   }
 
+  @media screen and (min-width: 1440px) {
+    font-size: 36px;
+    line-height: 48px;
+    margin-bottom: 24px;
+  }
+
   @media screen and (min-width: 1920px) {
     font-size: 48px;
     line-height: 56px;
@@ -65,8 +71,12 @@ export const Item = styled.li`
     height: 159px;
   }
 
-  @media screen and (min-width: 1920px) {
+  @media screen and (min-width: 1440px) {
     flex-basis: calc((100% - 24px) / 2);
+    height: 142px;
+  }
+
+  @media screen and (min-width: 1920px) {
     padding: 40px;
     gap: 24px;
     height: 200px;
@@ -114,10 +124,14 @@ export const ItemTitle = styled.h3`
     line-height: 28px;
   }
 
+  @media screen and (min-width: 1440px) {
+    line-height: 24px;
+    margin-bottom: 16px;
+  }
+
   @media screen and (min-width: 1920px) {
     font-size: 24px;
     line-height: 32px;
-    margin-bottom: 16px;
   }
 `;
 
@@ -130,6 +144,10 @@ export const Text = styled.p`
   @media screen and (min-width: 768px) {
     font-size: 15px;
     line-height: 22px;
+  }
+
+  @media screen and (min-width: 1440px) {
+    line-height: 18px;
   }
 
   @media screen and (min-width: 1920px) {
