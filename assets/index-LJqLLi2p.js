@@ -1565,6 +1565,12 @@ Valid keys: `+JSON.stringify(Object.keys(F),null,"  "));var A=E(ue,k,ie,le,se+".
     margin-bottom: 16px;
   }
 
+  @media screen and (min-width: 1440px) {
+    font-size: 36px;
+    line-height: 48px;
+    margin-bottom: 24px;
+  }
+
   @media screen and (min-width: 1920px) {
     font-size: 48px;
     line-height: 56px;
@@ -1588,8 +1594,12 @@ Valid keys: `+JSON.stringify(Object.keys(F),null,"  "));var A=E(ue,k,ie,le,se+".
     height: 159px;
   }
 
-  @media screen and (min-width: 1920px) {
+  @media screen and (min-width: 1440px) {
     flex-basis: calc((100% - 24px) / 2);
+    height: 142px;
+  }
+
+  @media screen and (min-width: 1920px) {
     padding: 40px;
     gap: 24px;
     height: 200px;
@@ -1629,10 +1639,14 @@ Valid keys: `+JSON.stringify(Object.keys(F),null,"  "));var A=E(ue,k,ie,le,se+".
     line-height: 28px;
   }
 
+  @media screen and (min-width: 1440px) {
+    line-height: 24px;
+    margin-bottom: 16px;
+  }
+
   @media screen and (min-width: 1920px) {
     font-size: 24px;
     line-height: 32px;
-    margin-bottom: 16px;
   }
 `,$o=P.p`
   color: var(--system-default-10);
@@ -1643,6 +1657,10 @@ Valid keys: `+JSON.stringify(Object.keys(F),null,"  "));var A=E(ue,k,ie,le,se+".
   @media screen and (min-width: 768px) {
     font-size: 15px;
     line-height: 22px;
+  }
+
+  @media screen and (min-width: 1440px) {
+    line-height: 18px;
   }
 
   @media screen and (min-width: 1920px) {
@@ -2733,9 +2751,12 @@ Valid keys: `+JSON.stringify(Object.keys(F),null,"  "));var A=E(ue,k,ie,le,se+".
     gap: 16px;
   }
 
-  @media screen and (min-width: 1920px) {
+  @media screen and (min-width: 1440px) {
     flex-direction: row;
     gap: 24px;
+  }
+
+  @media screen and (min-width: 1920px) {
     padding-top: 80px;
     padding-bottom: 80px;
   }
@@ -2763,6 +2784,11 @@ Valid keys: `+JSON.stringify(Object.keys(F),null,"  "));var A=E(ue,k,ie,le,se+".
     margin-bottom: 16px;
   }
 
+  @media screen and (min-width: 1440px) {
+    gap: 24px;
+    margin-bottom: 24px;
+  }
+
   @media screen and (min-width: 1920px) {
     gap: 40px;
     margin-bottom: 40px;
@@ -2778,11 +2804,16 @@ Valid keys: `+JSON.stringify(Object.keys(F),null,"  "));var A=E(ue,k,ie,le,se+".
     line-height: 40px;
   }
 
+  @media screen and (min-width: 1440px) {
+    font-size: 36px;
+    line-height: 48px;
+  }
+
   @media screen and (min-width: 1920px) {
     font-size: 48px;
     line-height: 56px;
   }
-`,VS=P.h2`
+`,VS=P.p`
   color: var(--typography-bluedark);
   font-weight: 500;
   font-size: 15px;
@@ -2791,6 +2822,10 @@ Valid keys: `+JSON.stringify(Object.keys(F),null,"  "));var A=E(ue,k,ie,le,se+".
   @media screen and (min-width: 768px) {
     font-size: 18px;
     line-height: 24px;
+  }
+
+  @media screen and (min-width: 1440px) {
+    line-height: 22px;
   }
 
   @media screen and (min-width: 1920px) {
@@ -2828,6 +2863,10 @@ Valid keys: `+JSON.stringify(Object.keys(F),null,"  "));var A=E(ue,k,ie,le,se+".
     width: 100%;
     font-size: 18px;
     line-height: 24px;
+  }
+
+  @media screen and (min-width: 1440px) {
+    line-height: 22px;
   }
 
   @media screen and (min-width: 1920px) {
@@ -3395,6 +3434,10 @@ In order to be iterable, non-array objects must have a [Symbol.iterator]() metho
     padding: 40px;
   }
 
+  @media screen and (min-width: 1440px) {
+    gap: 24px;
+  }
+
   @media screen and (min-width: 1920px) {
     gap: 40px;
     padding: 80px;
@@ -3410,6 +3453,11 @@ In order to be iterable, non-array objects must have a [Symbol.iterator]() metho
     font-size: 32px;
     line-height: 40px;
     margin-bottom: 0px;
+  }
+
+  @media screen and (min-width: 1440px) {
+    font-size: 36px;
+    line-height: 48px;
   }
 
   @media screen and (min-width: 1920px) {
@@ -3429,6 +3477,10 @@ In order to be iterable, non-array objects must have a [Symbol.iterator]() metho
     margin-bottom: 0px;
   }
 
+  @media screen and (min-width: 1440px) {
+    line-height: 22px;
+  }
+
   @media screen and (min-width: 1920px) {
     font-size: 20px;
     line-height: 28px;
@@ -3442,6 +3494,10 @@ In order to be iterable, non-array objects must have a [Symbol.iterator]() metho
   @media screen and (min-width: 768px) {
     font-size: 18px;
     line-height: 24px;
+  }
+
+  @media screen and (min-width: 1440px) {
+    line-height: 22px;
   }
 
   @media screen and (min-width: 1920px) {
@@ -3460,9 +3516,14 @@ In order to be iterable, non-array objects must have a [Symbol.iterator]() metho
     margin-bottom: 0;
   }
 
-  @media screen and (min-width: 1920px) {
-    gap: 24px;
+  @media screen and (min-width: 1440px) {
     flex-direction: row;
+    flex-wrap: wrap;
+    gap: 24px;
+  }
+
+  @media screen and (min-width: 1920px) {
+    flex-wrap: nowrap;
   }
 `,CC=P.li`
   position: relative;
@@ -3470,9 +3531,13 @@ In order to be iterable, non-array objects must have a [Symbol.iterator]() metho
   padding: 24px;
   border-radius: 16px;
 
+  @media screen and (min-width: 1440px) {
+    padding: 40px;
+    width: calc((100% - (24px)) / 2);
+  }
+
   @media screen and (min-width: 1920px) {
     width: calc((100% - (24px * 3)) / 4);
-    padding: 40px;
   }
 `,PC=P.div`
   position: absolute;
@@ -3489,6 +3554,13 @@ In order to be iterable, non-array objects must have a [Symbol.iterator]() metho
     height: 56px;
     right: 24px;
     top: 24px;
+  }
+
+  @media screen and (min-width: 1440px) {
+    width: 72px;
+    height: 72px;
+    right: 16px;
+    top: -16px;
   }
 
   @media screen and (min-width: 1920px) {
@@ -3519,6 +3591,10 @@ In order to be iterable, non-array objects must have a [Symbol.iterator]() metho
     width: 260px;
     font-size: 15px;
     line-height: 22px;
+  }
+
+  @media screen and (min-width: 1440px) {
+    line-height: 18px;
   }
 
   @media screen and (min-width: 1920px) {
