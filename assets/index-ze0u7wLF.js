@@ -2477,7 +2477,44 @@ Valid keys: `+JSON.stringify(Object.keys(F),null,"  "));var A=E(ue,k,ie,le,se+".
     height: 808px;
   }
 `,xS=P.div`
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+
+  color: var(--typography-bluedark, #1b3641);
+`,vS=P.h3`
+  font-size: 16px;
+  line-height: calc(24 / 16);
+  font-weight: 600;
+
+  padding: 4px 16px;
+  display: ${e=>e.symbols>20?"block":"inline"};
+  border-radius: 16px;
+  background: rgba(27, 54, 65, 0.2);
+  @media screen and (min-width: 768px) {
+    font-size: 20px;
+    line-height: calc(28 / 20);
+    display: inline;
+  }
+  @media screen and (min-width: 1440px) {
+    line-height: calc(24 / 20);
+    display: ${e=>e.symbols>20?"block":"inline"};
+  }
+  @media screen and (min-width: 1920px) {
+    font-size: 24px;
+    line-height: calc(32 / 24);
+    display: inline;
+  }
+`,yS=P.span`
+  display: block;
+  font-size: 14px;
+  font-weight: 600;
+  line-height: calc(20 / 14);
+  text-align: center;
+`,wS=P.div`
   opacity: ${e=>e.isVisible?1:0};
+  /* transform: translateY(${e=>e.isVisible?"0":"110%"}); */
+
   height: 100%;
   width: 100%;
 
@@ -2497,11 +2534,20 @@ Valid keys: `+JSON.stringify(Object.keys(F),null,"  "));var A=E(ue,k,ie,le,se+".
   background-size: cover;
 
   transition: opacity var(--transition-dur-and-func);
-`,vS=P.div`
+`,bS=P.img`
+  height: 279px;
+  width: 100%;
+  border-radius: 8px;
+  object-fit: cover;
+
+  @media screen and (min-width: 768px) {
+    height: 300px;
+  }
+`,SS=P.div`
   display: flex;
   flex-direction: column;
   gap: 16px;
-`,yS=P.h4`
+`,kS=P.h4`
   font-weight: 600;
 
   /* Вариант "project" */
@@ -2560,7 +2606,7 @@ Valid keys: `+JSON.stringify(Object.keys(F),null,"  "));var A=E(ue,k,ie,le,se+".
         line-height: calc(32 / 24);
       }
     `}
-`,wS=P.ul`
+`,jS=P.ul`
   display: flex;
   flex-direction: column;
   gap: 8px;
@@ -2574,7 +2620,7 @@ Valid keys: `+JSON.stringify(Object.keys(F),null,"  "));var A=E(ue,k,ie,le,se+".
   @media screen and (min-width: 1920px) {
     gap: 8px;
   }
-`,bS=P.li`
+`,OS=P.li`
   font-size: 14px;
   line-height: calc(20 / 14);
   font-weight: 500;
@@ -2608,27 +2654,27 @@ Valid keys: `+JSON.stringify(Object.keys(F),null,"  "));var A=E(ue,k,ie,le,se+".
         width: 100%;
       }
     `}
-`,SS=P.p`
+`,ES=P.p`
   font-size: ${e=>e.additionalComment?"14px":"15px"};
   font-weight: ${e=>e.additionalComment?500:600};
   line-height: calc(
     ${e=>e.additionalComment?20/14:22/15}
   );
   @media screen and (min-width: 768px) {
-    font-size: "18px";
+    font-size: 18px;
     line-height: calc(24 / 18);
   }
   @media screen and (min-width: 1440px) {
     line-height: calc(22 / 18);
   }
   @media screen and (min-width: 1920px) {
-    font-size: "20px";
+    font-size: 20px;
     line-height: calc(28 / 20);
   }
-`,kS=P.svg`
+`,CS=P.svg`
   fill: currentColor;
   stroke: currentColor;
-`,td=({title:e,about:t,comment:n,variant:r,additionalComment:i=!1})=>c.jsxs(vS,{children:[c.jsx(yS,{variant:r,children:e}),c.jsx(wS,{children:t==null?void 0:t.map(o=>c.jsxs(bS,{variant:r,children:[c.jsx(kS,{children:c.jsx("use",{href:ne+"#icon-done"})}),o]},o))}),n&&c.jsx(SS,{additionalComment:i,children:n})]}),jS=P.div`
+`,td=({title:e,about:t,comment:n,variant:r,additionalComment:i=!1})=>c.jsxs(SS,{children:[c.jsx(kS,{variant:r,children:e}),c.jsx(jS,{children:t==null?void 0:t.map(o=>c.jsxs(OS,{variant:r,children:[c.jsx(CS,{children:c.jsx("use",{href:ne+"#icon-done"})}),o]},o))}),n&&c.jsx(ES,{additionalComment:i,children:n})]}),PS=P.div`
   padding: 24px;
   display: flex;
   gap: 24px;
@@ -2638,7 +2684,7 @@ Valid keys: `+JSON.stringify(Object.keys(F),null,"  "));var A=E(ue,k,ie,le,se+".
   @media screen and (min-width: 768px) {
     padding: 40px;
   }
-`,OS=P.h3`
+`,TS=P.h3`
   padding: 4px 16px;
   border-radius: 16px;
   background: rgba(244, 244, 246, 0.1);
@@ -2662,7 +2708,7 @@ Valid keys: `+JSON.stringify(Object.keys(F),null,"  "));var A=E(ue,k,ie,le,se+".
     line-height: calc(32 / 24);
     display: inline;
   }
-`,ES=P.svg`
+`,_S=P.svg`
   fill: currentColor;
   stroke: currentColor;
 
@@ -2672,50 +2718,7 @@ Valid keys: `+JSON.stringify(Object.keys(F),null,"  "));var A=E(ue,k,ie,le,se+".
   position: absolute;
   right: 24px;
   top: 24px;
-`,CS=({dataList:{details:e,category:t}})=>{const n=Is();return c.jsxs(jS,{children:[c.jsxs("div",{children:[c.jsx(OS,{symbols:t.length,children:t}),n==="mobile"&&c.jsx(ES,{children:c.jsx("use",{href:ne+"#icon-close"})})]}),e.map((r,i)=>c.jsx(td,{title:r.title,about:r.about,comment:r.comment,additionalComment:i===0,variant:"projectDetail"},r.title))]})},PS=P.div`
-  display: flex;
-  flex-direction: column;
-  gap: 24px;
-
-  color: var(--typography-bluedark, #1b3641);
-`,TS=P.h3`
-  font-size: 16px;
-  line-height: calc(24 / 16);
-  font-weight: 600;
-
-  padding: 4px 16px;
-  display: ${e=>e.symbols>20?"block":"inline"};
-  border-radius: 16px;
-  background: rgba(27, 54, 65, 0.2);
-  @media screen and (min-width: 768px) {
-    font-size: 20px;
-    line-height: calc(28 / 20);
-    display: inline;
-  }
-  @media screen and (min-width: 1440px) {
-    line-height: calc(24 / 20);
-    display: ${e=>e.symbols>20?"block":"inline"};
-  }
-  @media screen and (min-width: 1920px) {
-    font-size: 24px;
-    line-height: calc(32 / 24);
-    display: inline;
-  }
-`,_S=P.img`
-  height: 279px;
-  width: 100%;
-  border-radius: 8px;
-  object-fit: cover;
-  @media screen and (min-width: 768px) {
-    height: 300px;
-  }
-`,MS=P.span`
-  display: block;
-  font-size: 14px;
-  font-weight: 600;
-  line-height: calc(20 / 14);
-  text-align: center;
-`,AS=({dataList:e})=>{const t=Is(),{category:n,title:r,about:i=[],image:o}=e;return c.jsxs(c.Fragment,{children:[c.jsxs(PS,{children:[c.jsx(_S,{src:o,alt:r}),c.jsx("div",{children:c.jsx(TS,{symbols:n.length,children:n})}),c.jsx(td,{title:r,about:i,variant:"project"})]}),t==="mobile"&&c.jsx(MS,{children:"Детальніше"})]})},RS=({item:e})=>{const[t,n]=L.useState(!1),r=Is(),i=()=>{r==="mobile"&&n(o=>!o)};return c.jsxs(gS,{onClick:i,children:[c.jsx(AS,{dataList:e}),c.jsx(xS,{isVisible:t,image:e.image,className:!t&&r==="mobile"?"visually-hidden":"",children:c.jsx(CS,{dataList:e})})]})},IS=()=>{const e=Is(),[t,n]=L.useState(e==="mobile"||e==="tablet"?[...vl.slice(0,1)]:[...vl]),r=()=>{t.length>2?n(i=>i.slice(0,1)):n([...vl])};return c.jsxs(dS,{id:"projects",className:"container",children:[c.jsx(fS,{children:"Проєкти"}),c.jsx(pS,{children:t.map(i=>c.jsx(RS,{item:i},i.category))}),(e==="mobile"||e==="tablet")&&c.jsxs(hS,{onClick:r,children:[t.length>2?"Менше проєктів":"Більше проєктів",c.jsx(mS,{children:c.jsx("use",{href:ne+`${t.length>2?"#icon-arrowup":"#icon-arrowdown"}`})})]})]})},LS=P.section`
+`,MS=({dataList:{details:e,category:t}})=>{const n=Is();return c.jsxs(PS,{children:[c.jsxs("div",{children:[c.jsx(TS,{symbols:t.length,children:t}),n==="mobile"&&c.jsx(_S,{children:c.jsx("use",{href:ne+"#icon-close"})})]}),e.map((r,i)=>c.jsx(td,{title:r.title,about:r.about,comment:r.comment,additionalComment:i===0,variant:"projectDetail"},r.title))]})},AS=({dataList:e,isDetailInfoVisible:t,setisDetailInfoVisible:n})=>{const r=Is(),{category:i,title:o,about:a=[],image:l}=e,s=u=>{n(h=>!h),console.dir(u.target)};return c.jsxs(c.Fragment,{children:[c.jsxs(xS,{children:[c.jsx(bS,{src:l,alt:o,onMouseEnter:s}),c.jsx(wS,{isVisible:t,image:l,className:t?"":"visually-hidden",onMouseLeave:s,children:c.jsx(MS,{dataList:e})}),c.jsx("div",{children:c.jsx(vS,{symbols:i.length,children:i})}),c.jsx(td,{title:o,about:a,variant:"project"})]}),r==="mobile"&&c.jsx(yS,{children:"Детальніше"})]})},RS=({item:e})=>{const[t,n]=L.useState(!1),r=Is(),i=()=>{r==="mobile"&&n(o=>!o)};return c.jsx(gS,{onClick:i,children:c.jsx(AS,{dataList:e,isDetailInfoVisible:t,setisDetailInfoVisible:n})})},IS=()=>{const e=Is(),[t,n]=L.useState(e==="mobile"||e==="tablet"?[...vl.slice(0,1)]:[...vl]),r=()=>{t.length>2?n(i=>i.slice(0,1)):n([...vl])};return c.jsxs(dS,{id:"projects",className:"container",children:[c.jsx(fS,{children:"Проєкти"}),c.jsx(pS,{children:t.map(i=>c.jsx(RS,{item:i},i.category))}),(e==="mobile"||e==="tablet")&&c.jsxs(hS,{onClick:r,children:[t.length>2?"Менше проєктів":"Більше проєктів",c.jsx(mS,{children:c.jsx("use",{href:ne+`${t.length>2?"#icon-arrowup":"#icon-arrowdown"}`})})]})]})},LS=P.section`
   display: flex;
   flex-direction: column;
   padding-top: 40px;
