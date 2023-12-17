@@ -185,7 +185,9 @@ export const SectionHeroDiv = styled.div`
 
 const SectionHeroLinkBase = styled.a`
   display: flex;
-  width: 100%;
+  // width: 100%;
+
+  min-width: 327px;
   height: 56px;
   padding: 8px 24px;
   justify-content: center;
@@ -219,11 +221,12 @@ export const SectionHeroLinkContact = styled(SectionHeroLinkBase)`
   }
 
   @media screen and (min-width: 1440px) {
-    max-width: 193px;
+    min-width: 193px;
     line-height: 18px;
   }
 
   @media screen and (min-width: 1920px) {
+    min-width: 260px;
     font-size: 16px;
     line-height: 24px;
   }
@@ -244,11 +247,12 @@ export const SectionHeroLinkServices = styled(SectionHeroLinkBase)`
   }
 
   @media screen and (min-width: 1440px) {
-    max-width: 193px;
+    min-width: 193px;
     line-height: 18px;
   }
 
   @media screen and (min-width: 1920px) {
+    min-width: 260px;
     font-size: 16px;
     line-height: 24px;
   }
