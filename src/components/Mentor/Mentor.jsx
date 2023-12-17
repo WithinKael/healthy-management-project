@@ -37,15 +37,6 @@ const Mentor = () => {
     <StyledSection id="mentoring" className="container">
       <ImgSectionWrapper>
         <div>
-          {/* THIS CODE */}
-          {/* <img
-            srcSet={`${mentorPhoto2} 1920w, ${mentorPhotoMobWebp} 375w`}
-            sizes="(min-width: 1920px) 1920px, (min-width: 375px) 375px"
-            src={mentorPhoto1}
-            alt="Ольга Поліщук"
-          /> */}
-          {/* THIS CODE */}
-
           <MediaQuery minWidth={1920}>
             <img
               srcSet={`${mentorPhoto2} 1x, ${mentorPhoto2x} 2x`}

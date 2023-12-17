@@ -32,7 +32,6 @@ export const ImgSectionWrapper = styled.div`
   }
 
   @media screen and (min-width: 1920px) {
-    gap: 24px;
     margin-bottom: 40px;
   }
 `;
@@ -78,20 +77,11 @@ export const AboutWrapper = styled.div`
 
   @media screen and (min-width: 1920px) {
     gap: 24px;
-    max-width: 820px;
+    max-width: 828px;
     height: 392px;
     padding: 40px;
   }
 `;
-
-// export const Img = styled.img`
-//   width: 327px;
-
-//   @media screen and (min-width: 1920px) {
-//     width: 828px;
-//     height: 468px;
-//   }
-// `;
 
 export const TitleH2 = styled.h2`
   font-size: 24px;
@@ -253,7 +243,7 @@ export const DescriptionWrapper = styled.div`
   }
 
   @media screen and (min-width: 1920px) {
-    gap: 40px;
+    gap: 24px;
   }
 `;
 
