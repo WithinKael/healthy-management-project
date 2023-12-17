@@ -1661,7 +1661,6 @@ Valid keys: `+JSON.stringify(Object.keys(F),null,"  "));var A=E(ue,k,ie,le,se+".
   }
 
   @media screen and (min-width: 1920px) {
-    gap: 24px;
     margin-bottom: 40px;
   }
 `,X2=P.div`
@@ -1703,7 +1702,7 @@ Valid keys: `+JSON.stringify(Object.keys(F),null,"  "));var A=E(ue,k,ie,le,se+".
 
   @media screen and (min-width: 1920px) {
     gap: 24px;
-    max-width: 820px;
+    max-width: 828px;
     height: 392px;
     padding: 40px;
   }
@@ -1855,7 +1854,7 @@ Valid keys: `+JSON.stringify(Object.keys(F),null,"  "));var A=E(ue,k,ie,le,se+".
   }
 
   @media screen and (min-width: 1920px) {
-    gap: 40px;
+    gap: 24px;
   }
 `,eS=P.div`
   display: flex;
