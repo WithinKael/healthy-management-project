@@ -1857,6 +1857,12 @@ Valid keys: `+JSON.stringify(Object.keys(F),null,"  "));var A=E(ue,k,ie,le,se+".
   border: 1px solid var(--background-bluedark);
   box-shadow: 0px 0px 8px 0px rgba(27, 54, 65, 0.08);
 
+  &:hover,
+  &focus {
+    font-weight: 600;
+    background: var(--background-white);
+  }
+
   @media screen and (min-width: 768px) {
     width: 260px;
     margin-bottom: 16px;
@@ -1873,12 +1879,6 @@ Valid keys: `+JSON.stringify(Object.keys(F),null,"  "));var A=E(ue,k,ie,le,se+".
     font-size: 16px;
     line-height: 24px;
     margin-bottom: 80px;
-
-    &:hover,
-    &focus {
-      font-weight: 600;
-      background: var(--background-white);
-    }
   }
 `,G2=P.div`
   display: flex;
