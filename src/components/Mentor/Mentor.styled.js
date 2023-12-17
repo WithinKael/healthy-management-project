@@ -216,6 +216,12 @@ export const StyledMentorButton = styled.a`
   border: 1px solid var(--background-bluedark);
   box-shadow: 0px 0px 8px 0px rgba(27, 54, 65, 0.08);
 
+  &:hover,
+  &focus {
+    font-weight: 600;
+    background: var(--background-white);
+  }
+
   @media screen and (min-width: 768px) {
     width: 260px;
     margin-bottom: 16px;
@@ -232,12 +238,6 @@ export const StyledMentorButton = styled.a`
     font-size: 16px;
     line-height: 24px;
     margin-bottom: 80px;
-
-    &:hover,
-    &focus {
-      font-weight: 600;
-      background: var(--background-white);
-    }
   }
 `;
 
