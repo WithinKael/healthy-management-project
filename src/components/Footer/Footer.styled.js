@@ -1,17 +1,7 @@
 import styled from "@emotion/styled";
 
 export const FooterBg = styled.div`
-  /* padding: 40px 0; */
   background-color: var(--background-bluedark);
-
-  @media screen and (min-width: 768px) {
-  }
-
-  @media screen and (min-width: 1440px) {
-  }
-
-  @media screen and (min-width: 1920px) {
-  }
 `;
 
 export const FooterContainer = styled.div`
@@ -80,12 +70,6 @@ export const NavFooter = styled.div`
     flex-direction: row;
     gap: 40px;
   }
-
-  /* @media screen and (min-width: 1440px) {
-  } */
-
-  /* @media screen and (min-width: 1920px) {
-  } */
 `;
 
 export const NavFooterBtn = styled.a`
@@ -146,50 +130,36 @@ export const ContactsFooter = styled.div`
     flex-direction: row;
     gap: 40px;
   }
-
-  /* @media screen and (min-width: 1440px) {
-  } */
-
-  @media screen and (min-width: 1920px) {
-  }
 `;
 
 export const Social = styled.div`
   display: flex;
-  align-items: flex-end;
+  align-items: center;
   gap: 16px;
-
-  /* @media screen and (min-width: 768px) {
-  }
-
-  @media screen and (min-width: 1440px) {
-  } */
-
-  /* @media screen and (min-width: 1920px) {
-  } */
 `;
 
 export const SocialItem = styled.a`
-  padding: 8px;
+  padding: 4px;
 
   & svg {
     display: flex;
-
     justify-content: center;
     align-items: center;
     border-radius: 10px;
     background-color: var(--background-white);
     opacity: 0.8;
   }
+`;
 
-  /* @media screen and (min-width: 768px) {
+export const Instagram = styled.a`
+  padding: 4px;
+
+  & svg {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 10px;
   }
-
-  @media screen and (min-width: 1440px) {
-  }
-
-  @media screen and (min-width: 1920px) {
-  } */
 `;
 
 export const TelEmail = styled.div`
@@ -204,9 +174,6 @@ export const TelEmail = styled.div`
     flex-direction: row;
     gap: 24px;
   }
-
-  /* @media screen and (min-width: 1440px) {
-  } */
 
   @media screen and (min-width: 1920px) {
     flex-direction: column;
@@ -225,9 +192,6 @@ export const Item = styled.a`
     font-size: 15px;
     line-height: 1.2;
   }
-
-  /* @media screen and (min-width: 1440px) {
-  } */
 
   @media screen and (min-width: 1920px) {
     font-size: 16px;
@@ -261,7 +225,4 @@ export const Text = styled.p`
   @media screen and (min-width: 1440px) {
     line-height: 1.67;
   }
-
-  /* @media screen and (min-width: 1920px) {
-  } */
 `;
