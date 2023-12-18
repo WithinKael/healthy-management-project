@@ -11,8 +11,8 @@ export const MobileMenuContainer = styled.div`
 export const DivMobileMenu = styled.div`
   display: flex;
   width: 100%;
-  padding-top: 32px;
-  padding-bottom: 32px;
+  padding-top: 16px;
+  padding-bottom: 16px;
   justify-content: space-between;
   align-items: center;
   border-bottom: 1px solid var(--system-default-20, #dedede);
