@@ -11,7 +11,7 @@ const selectStyles = {
       ...provided,
       display: "flex",
       height: "48px",
-      padding: "12px 16px",
+      padding: "9px 16px",
       alignItems: "center",
       flexShrink: "0",
       gap: "8px",
@@ -34,6 +34,7 @@ const selectStyles = {
       },
 
       "@media screen and (min-width: 768px)": {
+        padding: "13px 16px",
         height: "56px",
       },
 
@@ -102,6 +103,7 @@ const selectStyles = {
     textAlign: "start",
     flex: "1 0 0",
     color: "var(--primary-bluedark)",
+    backgroundColor: "var(--background-white)",
 
     "@media screen and (min-width: 768px)": {
       fontSize: "15px",
@@ -117,6 +119,28 @@ const selectStyles = {
   valueContainer: (provided) => ({
     ...provided,
     padding: "0",
+  }),
+
+  placeholder: (provided) => ({
+    ...provided,
+    fontSize: "14px",
+    fontWeight: "500",
+    lineHeight: "1.43",
+    color: "var(--typography-bluedark)",
+
+    "@media screen and (min-width: 768px)": {
+      fontSize: "15px",
+      lineHeight: "1.47",
+    },
+
+    "@media screen and (min-width: 1440px)": {
+      lineHeight: "1.2",
+    },
+
+    "@media screen and (min-width: 1920px)": {
+      fontSize: "16px",
+      lineHeight: "1.5",
+    },
   }),
 };
 
