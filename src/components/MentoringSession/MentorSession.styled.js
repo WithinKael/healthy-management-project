@@ -77,6 +77,10 @@ export const PersonalWrapper = styled.div`
   display: flex;
   flex-direction: column;
 
+  @media screen and (min-width: 1440px) {
+    min-width: 588px;
+  }
+
   @media screen and (min-width: 1920px) {
     min-width: 740px;
   }
@@ -131,6 +135,11 @@ export const TitleH2 = styled.h2`
   @media screen and (min-width: 768px) {
     font-size: 32px;
     line-height: 40px;
+  }
+
+  @media screen and (min-width: 1440px) {
+    font-size: 36px;
+    line-height: 48px;
   }
 
   @media screen and (min-width: 1920px) {
@@ -229,6 +238,10 @@ export const StyledOrderLink = styled.a`
     width: 260px;
   }
 
+  @media screen and (min-width: 1440px) {
+    width: 193px;
+  }
+
   @media screen and (min-width: 1920px) {
     font-size: 16px;
     margin-top: 28px;
@@ -269,6 +282,10 @@ export const StyledPersonalList = styled.ul`
   @media screen and (min-width: 768px) {
     font-size: 15px;
     line-height: 22px;
+  }
+
+  @media screen and (min-width: 1440px) {
+    line-height: 18px;
   }
 
   @media screen and (min-width: 1920px) {
