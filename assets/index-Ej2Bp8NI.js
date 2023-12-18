@@ -1255,7 +1255,7 @@ Valid keys: `+JSON.stringify(Object.keys(F),null,"  "));var A=E(ue,k,ie,le,se+".
   background-position: center;
   background-image: url(${p2});
   background-size: cover;
-  margin-top: 103px;
+  margin-top: 88px;
   padding-top: 40px;
   padding-bottom: 40px;
 
@@ -1279,6 +1279,7 @@ Valid keys: `+JSON.stringify(Object.keys(F),null,"  "));var A=E(ue,k,ie,le,se+".
 
   @media screen and (min-width: 1440px) {
     background-image: url(${x2});
+    margin-top: 103px;
     padding-top: 236px;
     padding-bottom: 236px;
 
@@ -1291,6 +1292,7 @@ Valid keys: `+JSON.stringify(Object.keys(F),null,"  "));var A=E(ue,k,ie,le,se+".
 
   @media screen and (min-width: 1920px) {
     background-image: url(${d2});
+    margin-top: 133px;
     padding-top: 296px;
     padding-bottom: 296px;
 
