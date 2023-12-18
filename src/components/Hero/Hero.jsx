@@ -6,10 +6,11 @@ import {
   SectionHeroTextUl,
   SectionHeroTitle,
 } from "./Hero.styled";
+import PropTypes from "prop-types";
 import { listItems } from "./HeroData";
 import SectionHeroLink from "./SectionHeroLink.jsx";
 
-const Hero = () => {
+const Hero = ({ handleSetLink }) => {
   return (
     <SectionHero id="home">
       <div className="container">
@@ -26,16 +27,28 @@ const Hero = () => {
           ))}
         </SectionHeroTextUl>
         <SectionHeroDiv>
-          <SectionHeroLink type="contact" href="#contact">
+          <SectionHeroLink
+            type="contact"
+            href="#contact"
+            onClick={(e) => handleSetLink("contact", e)}
+          >
             Консультація
           </SectionHeroLink>
-          <SectionHeroLink type="services" href="#services">
+          <SectionHeroLink
+            type="services"
+            href="#services"
+            onClick={(e) => handleSetLink("services", e)}
+          >
             Послуги
           </SectionHeroLink>
         </SectionHeroDiv>
       </div>
     </SectionHero>
   );
+};
+
+Hero.propTypes = {
+  handleSetLink: PropTypes.func.isRequired,
 };
 
 export default Hero;

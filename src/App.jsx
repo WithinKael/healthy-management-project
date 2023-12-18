@@ -17,6 +17,7 @@ import { useEffect } from "react";
 
 function App() {
   const handleSetActiveLink = (link, event) => {
+    console.log(link);
     event.preventDefault();
 
     const section = document.getElementById(link);
@@ -59,7 +60,7 @@ function App() {
     <>
       <Header handleSetActiveLink={handleSetActiveLink} />
       <main>
-        <Hero />
+        <Hero handleSetLink={handleSetActiveLink} />
         <AboutStudio />
         <AboutMe />
         <WhyChooseUs />

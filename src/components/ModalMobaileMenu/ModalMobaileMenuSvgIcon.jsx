@@ -11,8 +11,8 @@ const ModalMobaileMenuSvgIcon = ({ width, name, stroke }) => {
 
 ModalMobaileMenuSvgIcon.propTypes = {
   name: PropTypes.string.isRequired,
-  stroke: PropTypes.string.isRequired,
-  width: PropTypes.string.isRequired,
+  stroke: PropTypes.string,
+  width: PropTypes.number.isRequired,
 };
 
 export default ModalMobaileMenuSvgIcon;

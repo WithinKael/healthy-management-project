@@ -6,8 +6,8 @@ export const Headers = styled.header`
   left: 0;
   width: 100%;
   z-index: 1000;
-  padding-top: 32px;
-  padding-bottom: 32px;
+  padding-top: 16px;
+  padding-bottom: 16px;
   border-bottom: 1px solid var(--system-default-20, #dedede);
   background-color: var(--system-default-10);
 
@@ -15,6 +15,8 @@ export const Headers = styled.header`
   }
 
   @media screen and (min-width: 1440px) {
+    padding-top: 24px;
+    padding-bottom: 24px;
   }
 
   @media screen and (min-width: 1920px) {
