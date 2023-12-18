@@ -2007,6 +2007,10 @@ Valid keys: `+JSON.stringify(Object.keys(F),null,"  "));var A=E(ue,k,ie,le,se+".
   display: flex;
   flex-direction: column;
 
+  @media screen and (min-width: 1440px) {
+    min-width: 588px;
+  }
+
   @media screen and (min-width: 1920px) {
     min-width: 740px;
   }
@@ -2055,6 +2059,11 @@ Valid keys: `+JSON.stringify(Object.keys(F),null,"  "));var A=E(ue,k,ie,le,se+".
   @media screen and (min-width: 768px) {
     font-size: 32px;
     line-height: 40px;
+  }
+
+  @media screen and (min-width: 1440px) {
+    font-size: 36px;
+    line-height: 48px;
   }
 
   @media screen and (min-width: 1920px) {
@@ -2145,6 +2154,10 @@ Valid keys: `+JSON.stringify(Object.keys(F),null,"  "));var A=E(ue,k,ie,le,se+".
     width: 260px;
   }
 
+  @media screen and (min-width: 1440px) {
+    width: 193px;
+  }
+
   @media screen and (min-width: 1920px) {
     font-size: 16px;
     margin-top: 28px;
@@ -2181,6 +2194,10 @@ Valid keys: `+JSON.stringify(Object.keys(F),null,"  "));var A=E(ue,k,ie,le,se+".
   @media screen and (min-width: 768px) {
     font-size: 15px;
     line-height: 22px;
+  }
+
+  @media screen and (min-width: 1440px) {
+    line-height: 18px;
   }
 
   @media screen and (min-width: 1920px) {
