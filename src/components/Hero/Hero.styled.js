@@ -64,12 +64,6 @@ export const SectionHero = styled.section`
   }
 `;
 
-// export const Container = styled.div`
-//   display: flex;
-//   flex-direction: column;
-//   align-items: center;
-// `;
-
 export const SectionHeroTitle = styled.h1`
   max-width: 289px;
   color: var(--system-default-10);
@@ -185,8 +179,6 @@ export const SectionHeroDiv = styled.div`
 
 const SectionHeroLinkBase = styled.a`
   display: flex;
-  // width: 100%;
-
   min-width: 327px;
   height: 56px;
   padding: 8px 24px;
@@ -211,7 +203,7 @@ const SectionHeroLinkBase = styled.a`
 `;
 
 export const SectionHeroLinkContact = styled(SectionHeroLinkBase)`
-  color: var(--typography-bluedark, #062136);
+  color: var(--typography-bluedark);
   background: var(--primary-yellow);
 
   @media screen and (min-width: 768px) {

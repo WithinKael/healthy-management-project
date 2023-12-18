@@ -1,11 +1,6 @@
 import styled from "@emotion/styled";
 
 export const SectionAboutMe = styled.section`
-  // max-width: 375px;
-  // margin-left: auto;
-  // margin-right: auto;
-  // padding: 24px;
-
   @media screen and (min-width: 768px) {
     padding-top: 40px;
     padding-bottom: 40px;
@@ -28,22 +23,22 @@ export const SectionAboutMeTitle = styled.h2`
   font-size: 32px;
   font-style: normal;
   font-weight: 600;
-  line-height: 40px;
+  line-height: 1.25;
 
   @media screen and (min-width: 768px) {
     margin-bottom: 16px;
     font-size: 36px;
-
-    line-height: 48px;
+    line-height: 1.3;
   }
 
   @media screen and (min-width: 1440px) {
     margin-bottom: 16px;
   }
+
   @media screen and (min-width: 1920px) {
     margin-bottom: 40px;
     font-size: 48px;
-    line-height: 56px;
+    line-height: 1.2;
   }
 `;
 
@@ -60,8 +55,7 @@ export const SectionAboutMeDiv = styled.div`
     justify-content: space-between;
   }
   @media screen and (min-width: 1920px) {
-  //   justify-content: space-between;
-  // }
+  }
 `;
 
 export const SectionAboutMeImg = styled.img`
@@ -69,7 +63,7 @@ export const SectionAboutMeImg = styled.img`
 `;
 
 export const SectionAboutMeDivOl = styled.div`
-  max-width: 327px;
+  min-width: 327px;
   // width: calc((100% - 24px) / 2);
   padding: 40px;
   border-radius: 16px;
@@ -86,6 +80,7 @@ export const SectionAboutMeDivOl = styled.div`
     min-width: 628px;
     padding: 40px;
   }
+
   @media screen and (min-width: 1920px) {
     min-width: 828px;
     padding: 80px;
@@ -98,24 +93,21 @@ export const SectionAboutMeHOl = styled.h3`
   font-size: 32px;
   font-style: normal;
   font-weight: 600;
-  line-height: 40px;
+  line-height: 1.25;
   margin-bottom: 16px;
 
   @media screen and (min-width: 768px) {
-    line-height: 48px;
+    line-height: 1.5;
   }
 
   @media screen and (min-width: 1440px) {
+    color: var(--typography-black);
     font-size: 36px;
   }
+
   @media screen and (min-width: 1920px) {
-    color: var(--typography-black);
-    font-family: Montserrat;
     font-size: 48px;
-    font-style: normal;
-    font-weight: 600;
-    line-height: 56px;
-    margin-bottom: 16px;
+    line-height: 1.2;
   }
 `;
 
@@ -125,7 +117,7 @@ export const SectionAboutMePol = styled.p`
   font-size: 20px;
   font-style: normal;
   font-weight: 600;
-  line-height: 32px;
+  line-height: 1.6;
   margin-bottom: 24px;
 
   @media screen and (min-width: 768px) {
@@ -133,16 +125,12 @@ export const SectionAboutMePol = styled.p`
   }
 
   @media screen and (min-width: 1440px) {
-    line-height: 24px;
+    line-height: 1.2;
     margin-bottom: 24px;
   }
   @media screen and (min-width: 1920px) {
-    color: var(--primary-bluedark);
-    font-family: Montserrat;
     font-size: 24px;
-    font-style: normal;
-    font-weight: 600;
-    line-height: 32px;
+    line-height: 1.3;
     margin-bottom: 40px;
   }
 `;
@@ -157,7 +145,7 @@ export const SectionAboutMeList = styled.li`
   font-size: 14px;
   font-style: normal;
   font-weight: 500;
-  line-height: 18px;
+  line-height: 1.3;
 
   &::before {
     content: "\\2022";
@@ -169,28 +157,17 @@ export const SectionAboutMeList = styled.li`
 
   @media screen and (min-width: 768px) {
     font-size: 15px;
-    line-height: 24px;
+    line-height: 1.6;
   }
 
   @media screen and (min-width: 1440px) {
-    line-height: 18px;
+    line-height: 1.2;
   }
 
   @media screen and (min-width: 1920px) {
-    color: var(--primary-bluedark);
-    font-family: Montserrat;
     font-size: 16px;
-    font-style: normal;
     font-weight: 500;
-    line-height: 24px;
-
-    &::before {
-      content: "\\2022";
-      color: var(--primary-bluedark);
-      display: inline-block;
-      width: 1em;
-      margin-left: -1em;
-    }
+    line-height: 1.5;
   }
 `;
 
@@ -204,16 +181,14 @@ export const SectionAboutMeAdress = styled.ul`
 
   @media screen and (min-width: 768px) {
     margin-top: 16px;
-
     flex-direction: row;
-    // gap: 60px;
-
     align-items: baseline;
   }
 
   @media screen and (min-width: 1440px) {
     margin-top: 24px;
   }
+
   @media screen and (min-width: 1920px) {
     margin-top: 42px;
     display: flex;
@@ -234,7 +209,7 @@ export const SectionAboutMeLink = styled.a`
   font-size: 15px;
   font-style: normal;
   font-weight: 600;
-  line-height: 22px; /* 200% */
+  line-height: 1.5;
 
   &:hover::after {
     content: "";
@@ -248,16 +223,15 @@ export const SectionAboutMeLink = styled.a`
 
   @media screen and (min-width: 768px) {
     font-size: 18px;
-
-    line-height: 24px;
+    line-height: 1.3;
   }
 
   @media screen and (min-width: 1440px) {
-    line-height: 22px;
   }
+
   @media screen and (min-width: 1920px) {
     font-size: 20px;
-    line-height: 28px;
+    line-height: 1.4;
   }
 `;
 
@@ -267,7 +241,7 @@ export const SectionAboutMeSvg = styled.svg`
 
 export const SectionAboutMeDivWidth = styled.div`
   // width: calc((100% - 24px) / 2);
-  max-width: 327px;
+  min-width: 327px;
   border-radius: 16px;
 
   @media screen and (min-width: 768px) {
