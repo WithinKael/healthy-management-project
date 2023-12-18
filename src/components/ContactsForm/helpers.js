@@ -27,10 +27,6 @@ const useLocalStorage = (key, initialValue) => {
 
 export const options = [
   {
-    value: "",
-    label: "Оберіть послугу",
-  },
-  {
     value: "Менторство та консультації",
     label: "Менторство та консультації",
   },

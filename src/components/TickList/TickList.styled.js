@@ -150,4 +150,11 @@ export const Comment = styled.p`
 export const Icon = styled.svg`
   fill: currentColor;
   stroke: currentColor;
+  width: 24px;
+  height: 24px;
+`;
+
+export const SvgWrap = styled.div`
+  width: 24px;
+  height: 24px;
 `;

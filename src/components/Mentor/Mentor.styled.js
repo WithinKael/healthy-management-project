@@ -68,6 +68,7 @@ export const AboutWrapper = styled.div`
 
   @media screen and (min-width: 768px) {
     max-width: 332px;
+    height: 462px;
   }
 
   @media screen and (min-width: 1440px) {
@@ -239,7 +240,7 @@ export const DescriptionWrapper = styled.div`
   @media screen and (min-width: 768px) {
     flex-direction: row;
     align-items: center;
-    justify-content: center;
+    // justify-content: center;
   }
 
   @media screen and (min-width: 1920px) {
@@ -259,15 +260,17 @@ export const ForWHoWrapper = styled.div`
   background-color: var(--background-bluedark);
 
   @media screen and (min-width: 768px) {
+    max-width: 332px;
     height: 462px;
   }
 
   @media screen and (min-width: 1440px) {
-    width: 628px;
+    max-width: 628px;
     height: 292px;
   }
 
   @media screen and (min-width: 1920px) {
+    max-width: 828px;
     height: auto;
     padding: 40px;
     gap: 24px;
@@ -319,6 +322,7 @@ export const StyledForWhoUl = styled.ul`
 
   @media screen and (min-width: 1440px) {
     line-height: 18px;
+    width: 748px;
   }
 
   @media screen and (min-width: 1920px) {
@@ -340,23 +344,6 @@ export const StyledLi = styled.li`
 
   @media screen and (min-width: 1920px) {
     padding-left: 24px;
-    position: relative;
-
-    &::before {
-      content: "";
-      position: absolute;
-      left: 6px;
-      top: 50%;
-      transform: translateY(-50%);
-      width: 3px;
-      height: 3px;
-      background-color: #1b3641;
-      border-radius: 50%;
-    }
-
-    &:first-of-type::before {
-      top: 26%;
-    }
   }
 `;
 
@@ -373,18 +360,5 @@ export const StyledLiWhite = styled.li`
 
   @media screen and (min-width: 1920px) {
     padding-left: 24px;
-    position: relative;
-
-    &::before {
-      content: "";
-      position: absolute;
-      left: 6px;
-      top: 50%;
-      transform: translateY(-50%);
-      width: 3px;
-      height: 3px;
-      border-radius: 50%;
-      background-color: var(--typography-white);
-    }
   }
 `;
