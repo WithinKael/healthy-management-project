@@ -6,8 +6,8 @@ export const Headers = styled.header`
   left: 0;
   width: 100%;
   z-index: 1000;
-  padding-top: 32px;
-  padding-bottom: 32px;
+  padding-top: 16px;
+  padding-bottom: 16px;
   border-bottom: 1px solid var(--system-default-20, #dedede);
   background-color: var(--system-default-10);
 
@@ -15,6 +15,8 @@ export const Headers = styled.header`
   }
 
   @media screen and (min-width: 1440px) {
+    padding-top: 24px;
+    padding-bottom: 24px;
   }
 
   @media screen and (min-width: 1920px) {
@@ -48,7 +50,7 @@ export const HeaderNavMenu = styled.a`
     font-size: 15px;
     font-style: normal;
     font-weight: 500;
-    line-height: 18px;
+    line-height: 1.2;
 
     &:hover::after,
     &:focus::after,
@@ -65,7 +67,7 @@ export const HeaderNavMenu = styled.a`
 
   @media screen and (min-width: 1920px) {
     font-size: 16px;
-    line-height: 24px;
+    line-height: 1.5;
   }
 `;
 
@@ -85,7 +87,7 @@ export const HeaderAddress = styled.a`
   font-size: 14px;
   font-style: normal;
   font-weight: 500;
-  line-height: 20px;
+  line-height: 1.4;
   transition: background 0.5s ease, color 0.5s ease;
 
   &:hover,
@@ -99,23 +101,19 @@ export const HeaderAddress = styled.a`
 
   @media screen and (min-width: 768px) {
     min-width: 161px;
-    height: 56px;
-    background: var(--background-white);
-    color: var(--typography-bluedark);
     font-size: 15px;
-    line-height: 22px;
+    line-height: 1.5;
   }
 
   @media screen and (min-width: 1440px) {
     min-width: 193px;
-    line-height: 18px;
+    line-height: 1.2;
   }
 
   @media screen and (min-width: 1920px) {
     min-width: 260px;
     font-size: 16px;
-    line-height: 24px;
-    transition: background 0.5s ease, color 0.5s ease;
+    line-height: 1.5;
   }
 `;
 

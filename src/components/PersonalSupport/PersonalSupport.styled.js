@@ -83,6 +83,7 @@ export const StyledPersonalParagraph = styled.p`
   }
   @media screen and (min-width: 1440px) {
     left: 54%;
+    width: fit-content;
   }
 
   @media screen and (min-width: 1920px) {

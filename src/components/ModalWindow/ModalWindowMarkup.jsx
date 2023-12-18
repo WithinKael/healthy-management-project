@@ -18,6 +18,7 @@ import {
   NameAndPositionWrapper,
   CrossSvg,
   SvgWrapper,
+  ModalImg,
 } from "./ModalWindow.styled";
 import {
   julia2x,
@@ -70,24 +71,17 @@ const ModalWindowMarkup = ({ handleClose, isModalOpen }) => {
   };
 
   useEffect(() => {
-    const body = document.body;
-
-    const handleBodyOverflow = () => {
-      if (isModalOpen) {
-        body.classList.add("body-no-scroll");
-      } else {
-        body.classList.remove("body-no-scroll");
-      }
-    };
-
     const handleKeyDown = (event) => {
       if (event.code === "Escape" && isModalOpen) {
         handleClose();
       }
     };
 
-    handleBodyOverflow();
+    const handleBodyOverflow = () => {
+      document.body.style.overflow = isModalOpen ? "hidden" : "auto";
+    };
 
+    handleBodyOverflow();
     window.addEventListener("keydown", handleKeyDown);
 
     return () => {
@@ -113,14 +107,14 @@ const ModalWindowMarkup = ({ handleClose, isModalOpen }) => {
                 <NameLinkedinWrapper>
                   <ModalImgWrapper>
                     <MediaQuery minWidth={320} maxWidth={1439}>
-                      <img
+                      <ModalImg
                         srcSet={`${viktoriaMob1x} 1x, ${viktoriaMob2x} 2x`}
                         src={viktoriaMob}
                         alt="Вікторія Мориц - Project Manager"
                       />
                     </MediaQuery>
                     <MediaQuery minWidth={1440}>
-                      <img
+                      <ModalImg
                         src={viktoriiaWebp}
                         srcSet={`${viktoriiaWebp} 1x, ${viktoriia2x} 2x`}
                         alt="Вікторія Мориц - Project Manager"
@@ -150,14 +144,14 @@ const ModalWindowMarkup = ({ handleClose, isModalOpen }) => {
                 <NameLinkedinWrapper>
                   <ModalImgWrapper>
                     <MediaQuery minWidth={320} maxWidth={1439}>
-                      <img
+                      <ModalImg
                         srcSet={`${juliaMob1x} 1x, ${juliaMob2x} 2x`}
                         src={juliaMob}
                         alt="Юлія Копитко UX/UI Designer"
                       />
                     </MediaQuery>
                     <MediaQuery minWidth={1440}>
-                      <img
+                      <ModalImg
                         srcSet={`${juliaWebp} 1x, ${julia2x} 2x`}
                         src={juliaWebp}
                         alt="Юлія Копитко UX/UI Designer"
@@ -187,14 +181,14 @@ const ModalWindowMarkup = ({ handleClose, isModalOpen }) => {
                 <NameLinkedinWrapper>
                   <ModalImgWrapper>
                     <MediaQuery minWidth={320} maxWidth={1439}>
-                      <img
+                      <ModalImg
                         srcSet={`${yaroslavMob1x} 1x, ${yaroslavMob2x} 2x`}
                         src={yaroslavMob}
                         alt="Ярослав Лі - Frontend Developer"
                       />
                     </MediaQuery>
                     <MediaQuery minWidth={1440}>
-                      <img
+                      <ModalImg
                         srcSet={`${yaroslavWebp} 1x, ${yaroslav2x} 2x`}
                         src={yaroslavWebp}
                         alt="Ярослав Лі - Frontend Developer"
@@ -226,14 +220,14 @@ const ModalWindowMarkup = ({ handleClose, isModalOpen }) => {
                 <NameLinkedinWrapper>
                   <ModalImgWrapper>
                     <MediaQuery minWidth={320} maxWidth={1439}>
-                      <img
+                      <ModalImg
                         srcSet={`${yelyzavetaMob1x} 1x, ${yelyzavetaMob2x} 2x`}
                         src={yelyzavetaMob}
                         alt="Єлизавета Доманська - Frontend Developer"
                       />
                     </MediaQuery>
                     <MediaQuery minWidth={1440}>
-                      <img
+                      <ModalImg
                         srcSet={`${yelyzavetaWebp} 1x, ${yelyzaveta2x} 2x`}
                         src={yelyzavetaWebp}
                         alt="Єлизавета Доманська - Frontend Developer"
@@ -265,14 +259,14 @@ const ModalWindowMarkup = ({ handleClose, isModalOpen }) => {
                 <NameLinkedinWrapper>
                   <ModalImgWrapper>
                     <MediaQuery minWidth={320} maxWidth={1439}>
-                      <img
+                      <ModalImg
                         srcSet={`${oleksandrMob1x} 1x, ${oleksandrMob2x} 2x`}
                         src={oleksandrMob}
                         alt="Олександр Наталуха - Frontend Developer"
                       />
                     </MediaQuery>
                     <MediaQuery minWidth={1440}>
-                      <img
+                      <ModalImg
                         srcSet={`${oleksandrWebp} 1x, ${oleksandr2x} 2x`}
                         src={oleksandrWebp}
                         alt="Олександр Наталуха - Frontend Developer"
@@ -304,14 +298,14 @@ const ModalWindowMarkup = ({ handleClose, isModalOpen }) => {
                 <NameLinkedinWrapper>
                   <ModalImgWrapper>
                     <MediaQuery minWidth={320} maxWidth={1439}>
-                      <img
+                      <ModalImg
                         srcSet={`${valentynMob1x} 1x, ${valentynMob2x} 2x`}
                         src={valentynMob}
                         alt="Валентин Гавриленко - Frontend Developer"
                       />
                     </MediaQuery>
                     <MediaQuery minWidth={1440}>
-                      <img
+                      <ModalImg
                         srcSet={`${valentynWebp} 1x, ${valentyn2x} 2x`}
                         src={valentynWebp}
                         alt="Валентин Гавриленко - Frontend Developer"
@@ -343,14 +337,14 @@ const ModalWindowMarkup = ({ handleClose, isModalOpen }) => {
                 <NameLinkedinWrapper>
                   <ModalImgWrapper>
                     <MediaQuery minWidth={320} maxWidth={1439}>
-                      <img
+                      <ModalImg
                         srcSet={`${vyacheslavMob1x} 1x, ${vyacheslavMob2x} 2x`}
                         src={vyacheslavMob}
                         alt="В´ячеслав Павлюк - Frontend Developer"
                       />
                     </MediaQuery>
                     <MediaQuery minWidth={1440}>
-                      <img
+                      <ModalImg
                         srcSet={`${vyacheslavWebp} 1x, ${vyacheslav2x} 2x`}
                         src={vyacheslavWebp}
                         alt="В´ячеслав Павлюк - Frontend Developer"
@@ -382,14 +376,14 @@ const ModalWindowMarkup = ({ handleClose, isModalOpen }) => {
                 <NameLinkedinWrapper>
                   <ModalImgWrapper>
                     <MediaQuery minWidth={320} maxWidth={1439}>
-                      <img
+                      <ModalImg
                         srcSet={`${olhaMob1x} 1x, ${olhaMob2x} 2x`}
                         src={olhaMob}
                         alt="Ольга Абент - QA Engineer"
                       />
                     </MediaQuery>
                     <MediaQuery minWidth={1440}>
-                      <img
+                      <ModalImg
                         srcSet={`${olhaWebp} 1x, ${olha2x} 2x`}
                         src={olhaWebp}
                         alt="Ольга Абент - QA Engineer"

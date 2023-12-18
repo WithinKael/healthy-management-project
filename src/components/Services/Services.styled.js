@@ -24,6 +24,10 @@ export const ServicesContentWrapper = styled.div`
     padding: 40px;
   }
 
+  @media screen and (min-width: 1440px) {
+    gap: 24px;
+  }
+
   @media screen and (min-width: 1920px) {
     gap: 40px;
     padding: 80px;
@@ -41,6 +45,11 @@ export const ServicesTitle = styled.h2`
     font-size: 32px;
     line-height: 40px;
     margin-bottom: 0px;
+  }
+
+  @media screen and (min-width: 1440px) {
+    font-size: 36px;
+    line-height: 48px;
   }
 
   @media screen and (min-width: 1920px) {
@@ -62,6 +71,10 @@ export const ServicesText = styled.p`
     margin-bottom: 0px;
   }
 
+  @media screen and (min-width: 1440px) {
+    line-height: 22px;
+  }
+
   @media screen and (min-width: 1920px) {
     font-size: 20px;
     line-height: 28px;
@@ -77,6 +90,10 @@ export const Span = styled.span`
   @media screen and (min-width: 768px) {
     font-size: 18px;
     line-height: 24px;
+  }
+
+  @media screen and (min-width: 1440px) {
+    line-height: 22px;
   }
 
   @media screen and (min-width: 1920px) {
@@ -97,9 +114,14 @@ export const ServicesList = styled.ul`
     margin-bottom: 0;
   }
 
-  @media screen and (min-width: 1920px) {
-    gap: 24px;
+  @media screen and (min-width: 1440px) {
     flex-direction: row;
+    flex-wrap: wrap;
+    gap: 24px;
+  }
+
+  @media screen and (min-width: 1920px) {
+    flex-wrap: nowrap;
   }
 `;
 
@@ -109,9 +131,13 @@ export const ServicesItem = styled.li`
   padding: 24px;
   border-radius: 16px;
 
+  @media screen and (min-width: 1440px) {
+    padding: 40px;
+    width: calc((100% - (24px)) / 2);
+  }
+
   @media screen and (min-width: 1920px) {
     width: calc((100% - (24px * 3)) / 4);
-    padding: 40px;
   }
 `;
 
@@ -130,6 +156,13 @@ export const IconDiv = styled.div`
     height: 56px;
     right: 24px;
     top: 24px;
+  }
+
+  @media screen and (min-width: 1440px) {
+    width: 72px;
+    height: 72px;
+    right: 16px;
+    top: -16px;
   }
 
   @media screen and (min-width: 1920px) {
@@ -162,6 +195,10 @@ export const ServicesBtn = styled.a`
     width: 260px;
     font-size: 15px;
     line-height: 22px;
+  }
+
+  @media screen and (min-width: 1440px) {
+    line-height: 18px;
   }
 
   @media screen and (min-width: 1920px) {

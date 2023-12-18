@@ -11,8 +11,8 @@ export const MobileMenuContainer = styled.div`
 export const DivMobileMenu = styled.div`
   display: flex;
   width: 100%;
-  padding-top: 32px;
-  padding-bottom: 32px;
+  padding-top: 16px;
+  padding-bottom: 16px;
   justify-content: space-between;
   align-items: center;
   border-bottom: 1px solid var(--system-default-20, #dedede);
@@ -25,7 +25,7 @@ export const ContactMenu = styled.a`
   font-size: 14px;
   font-style: normal;
   font-weight: 500;
-  line-height: 20px;
+  line-height: 1.4;
   display: flex;
   width: 156px;
   height: 56px;
@@ -49,7 +49,7 @@ export const ContactMenu = styled.a`
     width: 161px;
     font-size: 15px;
     font-weight: 500;
-    line-height: 22px;
+    line-height: 1.5;
   }
 `;
 
@@ -66,6 +66,7 @@ export const Nav = styled.nav`
   align-items: center;
   background: var(--background-whitegrey);
   transition: background 0.5s ease, color 0.5s ease;
+  // overflow-y: auto;
 
   &:hover,
   &:focus {
@@ -74,6 +75,10 @@ export const Nav = styled.nav`
     line-height: 24px;
     background: var(--background-white);
     box-shadow: 0px 0px 16px 0px rgba(27, 54, 65, 0.16);
+  }
+
+  @media screen and (min-width: 500px) {
+    // max-height: 300px;
   }
 `;
 
@@ -111,4 +116,16 @@ export const ButtonMenuMobile = styled.button`
   font-size: 100%;
   cursor: pointer;
   background: none;
+`;
+
+export const ModalMobileSvg = styled.svg`
+  height: 40px;
+
+  @media (min-width: 375px) {
+    width: 40px;
+  }
+
+  @media (min-width: 768px) {
+    width: 70px;
+  }
 `;

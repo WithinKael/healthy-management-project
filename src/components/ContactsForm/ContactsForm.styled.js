@@ -363,7 +363,7 @@ export const LabelTextarea = styled.label`
   }
 
   @media screen and (min-width: 1440px) {
-    gap: 14px 4px;
+    gap: 10px 4px;
     line-height: 1.2;
   }
 
@@ -383,7 +383,6 @@ export const Textarea = styled.textarea`
   align-self: stretch;
   align-content: flex-start;
   border-radius: 16px;
-  overflow: hidden;
   border: none;
   box-shadow: 0px 0px 8px 0px rgba(27, 54, 65, 0.08);
   border: 1px solid

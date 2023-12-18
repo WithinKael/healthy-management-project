@@ -1,5 +1,5 @@
 import axios from "axios";
-import { useEffect, useRef } from "react";
+import { useEffect, useRef, useState } from "react";
 import Select from "react-select";
 import MediaQuery from "react-responsive";
 import swal from "sweetalert";
@@ -49,31 +49,36 @@ const ContactsForm = () => {
     comment: "",
   });
   const { name, email, phone, service, comment } = formData;
-  const selectedService = options.find((option) => option.value === service);
+  const [selectedOption, setSelectedOption] = useState(null);
   const {
     register,
     handleSubmit,
     control,
     setValue,
     formState: { errors },
-    reset,
   } = useForm({
     mode: "all",
     shouldFocusError: false,
-    defaultValues: {},
+    defaultValues: formData,
   });
 
   useEffect(() => {
-    const stringifiedContacts = JSON.stringify(formData);
-    localStorage.setItem("key", stringifiedContacts);
-  }, [formData]);
+    const storedService = localStorage.getItem("key")
+      ? JSON.parse(localStorage.getItem("key")).service
+      : "";
+    const initialOption = options.find(
+      (option) => option.value === storedService
+    );
+    setSelectedOption(initialOption);
+  }, []);
 
   const handleChangeSelect = (selectedOption) => {
-    setValue("service", selectedOption || null);
+    setValue("service", selectedOption);
     setFormData({
       ...formData,
-      service: selectedOption?.value || "",
+      service: selectedOption.value,
     });
+    setSelectedOption(selectedOption);
   };
 
   const handleChange = (event) => {
@@ -87,27 +92,26 @@ const ContactsForm = () => {
     try {
       const formattedData = {
         ...formData,
+        name: name.replace(/\s+/g, " ").trim(),
+        email: email.trim(),
         phone: formData.phone.replace(/\D/g, "").slice(2),
-        service: selectedService.value,
+        service: selectedOption?.value,
       };
       await axios.post(
         "https://healthy-management.onrender.com/api/senddata",
         formattedData
       );
-      console.log(formattedData);
       setFormData({
         name: "",
         email: "",
         phone: "",
-        service: "",
         comment: "",
       });
-      reset();
-      swal("Вітаю!", "Ваша заявка успішно відправлена!", "success", {
+      setSelectedOption(null);
+      swal("Вітаємо!", "Ваша заявка успішно відправлена!", "success", {
         buttons: false,
-        timer: 5000,
+        timer: 3000,
       });
-      // alert("Заявка відправлена!");
     } catch (error) {
       swal(
         "Вибачте!",
@@ -115,10 +119,9 @@ const ContactsForm = () => {
         "error",
         {
           buttons: false,
-          timer: 5000,
+          timer: 3000,
         }
       );
-      // alert("Помилка при відправці заявки");
     }
   };
 
@@ -181,7 +184,7 @@ const ContactsForm = () => {
                     required: "Це поле обов'язкове для заповнення",
                     pattern: {
                       value:
-                        /^(?:[a-zA-Zа-яА-ЯґҐєЄіІїЇ'-]{1,32}(?:\s+[a-zA-Zа-яА-ЯґҐєЄіІїЇ'-]{1,32})?|[a-zA-Zа-яА-ЯґҐєЄіІїЇ'-]{1,64})$/,
+                        /^(?:\s*[a-zA-Zа-яА-ЯґҐєЄіІїЇ'-]{1,32}(?:\s+[a-zA-Zа-яА-ЯґҐєЄіІїЇ'-]{1,32})?|\s*[a-zA-Zа-яА-ЯґҐєЄіІїЇ'-]{1,64})\s*$/,
                       message: "Поле повинно містити одне або два слова",
                     },
                   })}
@@ -270,10 +273,11 @@ const ContactsForm = () => {
                       placeholder="Оберіть послугу"
                       {...field}
                       options={options}
+                      isSearchable={false}
                       styles={customStyles}
                       errors={errors.service}
                       onChange={handleChangeSelect}
-                      value={selectedService}
+                      value={selectedOption}
                     />
                   )}
                 />
@@ -290,8 +294,8 @@ const ContactsForm = () => {
                   name="comment"
                   placeholder="Введіть ваше повідомлення"
                   {...register("comment", {
-                    pattern: {
-                      value: /^.{0,500}$/,
+                    maxLength: {
+                      value: 500,
                       message: "Максимальна кількість 500 символів",
                     },
                   })}

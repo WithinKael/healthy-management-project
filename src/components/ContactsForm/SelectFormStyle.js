@@ -34,15 +34,16 @@ const selectStyles = {
       },
 
       "@media screen and (min-width: 768px)": {
+        padding: "17px 16px",
         height: "56px",
       },
 
       "@media screen and (min-width: 1440px)": {
-        padding: "14px 16px",
+        padding: "19px 16px",
       },
 
       "@media screen and (min-width: 1920px)": {
-        padding: "12px 16px",
+        padding: "16px 16px",
       },
     };
   },
@@ -102,6 +103,7 @@ const selectStyles = {
     textAlign: "start",
     flex: "1 0 0",
     color: "var(--primary-bluedark)",
+    backgroundColor: "var(--background-white)",
 
     "@media screen and (min-width: 768px)": {
       fontSize: "15px",
@@ -117,6 +119,28 @@ const selectStyles = {
   valueContainer: (provided) => ({
     ...provided,
     padding: "0",
+  }),
+
+  placeholder: (provided) => ({
+    ...provided,
+    fontSize: "14px",
+    fontWeight: "500",
+    lineHeight: "1.43",
+    color: "var(--typography-bluedark)",
+
+    "@media screen and (min-width: 768px)": {
+      fontSize: "15px",
+      lineHeight: "1.47",
+    },
+
+    "@media screen and (min-width: 1440px)": {
+      lineHeight: "1.2",
+    },
+
+    "@media screen and (min-width: 1920px)": {
+      fontSize: "16px",
+      lineHeight: "1.5",
+    },
   }),
 };
 

@@ -6,6 +6,7 @@ import {
   ContactsFooter,
   FooterBg,
   FooterContainer,
+  Instagram,
   Item,
   NavFooter,
   NavFooterBtn,
@@ -138,15 +139,15 @@ const Footer = ({ handleSetActiveLink }) => {
                 <use href={`${sprite}#facebook`} />
               </svg>
             </SocialItem>
-            <a
+            <Instagram
               href="https://www.instagram.com/healthymanagement_ua/"
               target="_blank"
               rel="noopener noreferrer"
             >
-              <svg width="40" height="40">
+              <svg width="32" height="32">
                 <use href={`${sprite}#instagram`} />
               </svg>
-            </a>
+            </Instagram>
           </Social>
           <TelEmail>
             <Item href="mailto:healthy.managements@gmail.com">

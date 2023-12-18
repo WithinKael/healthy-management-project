@@ -6,6 +6,7 @@ import {
   Icon,
   Comment,
   Wrapper,
+  SvgWrap,
 } from "./TickList.styled";
 
 const TickList = ({
@@ -21,9 +22,11 @@ const TickList = ({
       <List>
         {about?.map((item) => (
           <ListItem key={item} variant={variant}>
-            <Icon>
-              <use href={icon + "#icon-done"}></use>
-            </Icon>
+            <SvgWrap>
+              <Icon>
+                <use href={icon + "#icon-done"}></use>
+              </Icon>
+            </SvgWrap>
             {item}
           </ListItem>
         ))}
