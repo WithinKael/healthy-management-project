@@ -273,6 +273,7 @@ const ContactsForm = () => {
                       placeholder="Оберіть послугу"
                       {...field}
                       options={options}
+                      isSearchable={false}
                       styles={customStyles}
                       errors={errors.service}
                       onChange={handleChangeSelect}
