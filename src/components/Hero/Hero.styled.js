@@ -13,7 +13,7 @@ export const SectionHero = styled.section`
   background-position: center;
   background-image: url(${HeroMobaile1x});
   background-size: cover;
-  margin-top: 103px;
+  margin-top: 88px;
   padding-top: 40px;
   padding-bottom: 40px;
 
@@ -37,6 +37,7 @@ export const SectionHero = styled.section`
 
   @media screen and (min-width: 1440px) {
     background-image: url(${HeroDesktop1440Foto});
+    margin-top: 103px;
     padding-top: 236px;
     padding-bottom: 236px;
 
@@ -49,6 +50,7 @@ export const SectionHero = styled.section`
 
   @media screen and (min-width: 1920px) {
     background-image: url(${HeroDesktop1920Foto1x});
+    margin-top: 133px;
     padding-top: 296px;
     padding-bottom: 296px;
 
