@@ -2159,6 +2159,7 @@ Valid keys: `+JSON.stringify(Object.keys(F),null,"  "));var A=E(ue,k,ie,le,se+".
   color: var(--typography-bluedark);
 
   @media screen and (min-width: 768px) {
+    font-size: 20px;
     margin-bottom: 16px;
   }
 
