@@ -21,13 +21,13 @@ export const SectionAboutStudioTitle = styled.h2`
   font-size: 32px;
   font-style: normal;
   font-weight: 600;
-  line-height: 40px;
+  line-height: 1.25;
   margin-bottom: 16px;
 
   @media screen and (min-width: 768px) {
     font-size: 32px;
     font-weight: 600;
-    line-height: 48px;
+    line-height: 1.5;
   }
 
   @media screen and (min-width: 1440px) {
@@ -37,7 +37,7 @@ export const SectionAboutStudioTitle = styled.h2`
 
   @media screen and (min-width: 1920px) {
     font-size: 48px;
-    line-height: 56px;
+    line-height: 1.5;
     margin-bottom: 40px;
   }
 `;
@@ -50,15 +50,11 @@ export const SectionAboutStudioDiv = styled.div`
 
   @media screen and (min-width: 768px) {
     flex-direction: row;
-    gap: 24px;
-
     flex-wrap: wrap;
-    // margin-bottom: 40px;
   }
 
   @media screen and (min-width: 1440px) {
     flex-wrap: nowrap;
-    gap: 24px;
   }
   @media screen and (min-width: 1920px) {
     flex-direction: row;
@@ -73,24 +69,23 @@ export const SectionAboutStudioText = styled.p`
   font-size: 16px;
   font-style: normal;
   font-weight: 500;
-  line-height: 24px; /* 150% */
+  line-height: 1.5;
   max-width: 327px;
 
   @media screen and (min-width: 768px) {
-    // width: 100%;
     font-size: 18px;
-    line-height: 28px;
+    line-height: 1.5;
     max-width: 688px;
   }
 
   @media screen and (min-width: 1440px) {
-    line-height: 22px;
+    line-height: 1.2;
     max-width: 628px;
   }
 
   @media screen and (min-width: 1920px) {
     font-size: 20px;
-    line-height: 28px;
+    line-height: 1.4;
     max-width: 828px;
   }
 `;
@@ -101,20 +96,20 @@ export const SectionAboutStudioTextVan = styled.p`
   font-size: 14px;
   font-style: normal;
   font-weight: 500;
-  line-height: 18px;
+  line-height: 1.3;
 
   @media screen and (min-width: 768px) {
     font-size: 15px;
-    line-height: 24px;
+    line-height: 1.6;
   }
 
   @media screen and (min-width: 1440px) {
     font-size: 15px;
-    line-height: 18px;
+    line-height: 1.2;
   }
   @media screen and (min-width: 1920px) {
     font-size: 16px;
-    line-height: 24px;
+    line-height: 1.5;
   }
 `;
 
@@ -154,20 +149,20 @@ export const SectionAboutStudioValues = styled.h4`
   font-size: 24px;
   font-style: normal;
   font-weight: 600;
-  line-height: 32px;
+  line-height: 1.3;
 
   @media screen and (min-width: 768px) {
     font-size: 20px;
-    line-height: 32px;
+    line-height: 1.6;
   }
 
   @media screen and (min-width: 1440px) {
-    line-height: 24px;
+    line-height: 1.2;
   }
 
   @media screen and (min-width: 1920px) {
     font-size: 24px;
-    line-height: 32px;
+    line-height: 1.3;
   }
 `;
 
@@ -200,19 +195,19 @@ export const SectionAboutStudioOurMission = styled.h4`
   font-size: 24px;
   font-style: normal;
   font-weight: 600;
-  line-height: 32px;
+  line-height: 1.3;
 
   @media screen and (min-width: 768px) {
     font-size: 20px;
   }
 
   @media screen and (min-width: 1440px) {
-    line-height: 24px;
+    line-height: 1.2;
   }
 
   @media screen and (min-width: 1920px) {
     font-size: 24px;
-    line-height: 32px;
+    line-height: 1.3;
   }
 `;
 
@@ -222,20 +217,20 @@ export const SectionAboutStudioOurMissionP = styled.p`
   font-size: 14px;
   font-style: normal;
   font-weight: 500;
-  line-height: 18px;
+  line-height: 1.3;
 
   @media screen and (min-width: 768px) {
     font-size: 15px;
-    line-height: 24px;
+    line-height: 1.6;
   }
 
   @media screen and (min-width: 1440px) {
-    line-height: 18px;
+    line-height: 1.2;
   }
 
   @media screen and (min-width: 1920px) {
     font-size: 16px;
-    line-height: 24px;
+    line-height: 1.5;
   }
 `;
 
