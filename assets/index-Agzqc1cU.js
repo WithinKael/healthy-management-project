@@ -1693,6 +1693,7 @@ Valid keys: `+JSON.stringify(Object.keys(F),null,"  "));var A=E(ue,k,ie,le,se+".
 
   @media screen and (min-width: 768px) {
     max-width: 332px;
+    height: 462px;
   }
 
   @media screen and (min-width: 1440px) {
@@ -1850,7 +1851,7 @@ Valid keys: `+JSON.stringify(Object.keys(F),null,"  "));var A=E(ue,k,ie,le,se+".
   @media screen and (min-width: 768px) {
     flex-direction: row;
     align-items: center;
-    justify-content: center;
+    // justify-content: center;
   }
 
   @media screen and (min-width: 1920px) {
@@ -1868,15 +1869,17 @@ Valid keys: `+JSON.stringify(Object.keys(F),null,"  "));var A=E(ue,k,ie,le,se+".
   background-color: var(--background-bluedark);
 
   @media screen and (min-width: 768px) {
+    max-width: 332px;
     height: 462px;
   }
 
   @media screen and (min-width: 1440px) {
-    width: 628px;
+    max-width: 628px;
     height: 292px;
   }
 
   @media screen and (min-width: 1920px) {
+    max-width: 828px;
     height: auto;
     padding: 40px;
     gap: 24px;
@@ -1924,6 +1927,7 @@ Valid keys: `+JSON.stringify(Object.keys(F),null,"  "));var A=E(ue,k,ie,le,se+".
 
   @media screen and (min-width: 1440px) {
     line-height: 18px;
+    width: 748px;
   }
 
   @media screen and (min-width: 1920px) {
@@ -1943,23 +1947,6 @@ Valid keys: `+JSON.stringify(Object.keys(F),null,"  "));var A=E(ue,k,ie,le,se+".
 
   @media screen and (min-width: 1920px) {
     padding-left: 24px;
-    position: relative;
-
-    &::before {
-      content: "";
-      position: absolute;
-      left: 6px;
-      top: 50%;
-      transform: translateY(-50%);
-      width: 3px;
-      height: 3px;
-      background-color: #1b3641;
-      border-radius: 50%;
-    }
-
-    &:first-of-type::before {
-      top: 26%;
-    }
   }
 `,Er=P.li`
   display: flex;
@@ -1974,19 +1961,6 @@ Valid keys: `+JSON.stringify(Object.keys(F),null,"  "));var A=E(ue,k,ie,le,se+".
 
   @media screen and (min-width: 1920px) {
     padding-left: 24px;
-    position: relative;
-
-    &::before {
-      content: "";
-      position: absolute;
-      left: 6px;
-      top: 50%;
-      transform: translateY(-50%);
-      width: 3px;
-      height: 3px;
-      border-radius: 50%;
-      background-color: var(--typography-white);
-    }
   }
 `,nS=()=>c.jsxs($2,{id:"mentoring",className:"container",children:[c.jsxs(Y2,{children:[c.jsxs("div",{children:[c.jsx(J,{minWidth:1920,children:c.jsx("img",{srcSet:`${R2} 1x, ${I2} 2x`,sizes:"(min-width: 1920px) 1920px",src:L2,alt:"Ольга Поліщук - ваш ментор в медичній галузі"})}),c.jsx(J,{minWidth:300,maxWidth:767,children:c.jsx("img",{srcSet:`${D2} 1x, ${z2} 2x`,sizes:"(min-width: 375px) 375px",src:F2,alt:"Ольга Поліщук - ваш ментор в медичній галузі"})}),c.jsx(J,{minWidth:768,maxWidth:1439,children:c.jsx("img",{srcSet:`${V2} 1x, ${U2} 2x`,sizes:"(min-width: 768px) 768px",src:N2,alt:"Ольга Поліщук - ваш ментор в медичній галузі"})}),c.jsx(J,{minWidth:1440,maxWidth:1919,children:c.jsx("img",{srcSet:`${W2} 1x, ${B2} 2x`,sizes:"(min-width: 1440px) 100vw (max-width: 1919px) 100vw",src:H2,alt:"Ольга Поліщук - ваш ментор в медичній галузі"})})]}),c.jsxs(X2,{children:[c.jsx(K2,{children:"Менторство"}),c.jsxs(q2,{children:[c.jsxs(np,{children:[c.jsx("b",{children:"Менторство в медичній галузі"})," - почути іншу думку, підтвердити власні гіпотези, зрозуміти вектор розвитку, отримати підтримку та пораду з питань менеджменту і медичного маркетингу"]}),c.jsxs(np,{children:[c.jsx("b",{children:"Менторство"})," - це про взаємодію та чесну комунікацію, про спільні цінності та готовність до росту, про надійне партнерство та довіру"]})]}),c.jsx(G2,{href:"#contact",children:"Дізнатися вартість"})]})]}),c.jsx("div",{children:c.jsxs(Z2,{children:[c.jsxs(Q2,{children:[c.jsx(J2,{children:"Про що це?"}),c.jsxs(tS,{children:[c.jsx(Or,{children:c.jsx("p",{children:"Про прагнення почути чесну іншу думку/та або підтвердити власні гіпотези для власника/керівника"})}),c.jsx(Or,{children:c.jsx("p",{children:"Про бізнес-процеси та їх ефективність"})}),c.jsx(Or,{children:c.jsx("p",{children:"Про вектори розвитку бізнесу або проєкту"})}),c.jsx(Or,{children:c.jsx("p",{children:"Про практичний інструментарій для впровадження змін"})}),c.jsx(Or,{children:c.jsx("p",{children:"Про маркетинг, сервіс та комунікації в медичних бізнесах"})}),c.jsx(Or,{children:c.jsx("p",{children:"Про здоров'я працівників та стратегії підвищенння ефективності бізнесу"})})]})]}),c.jsxs(eS,{children:[c.jsx(tp,{children:"Для кого"}),c.jsxs(rp,{children:[c.jsx(Er,{children:c.jsx("p",{children:"Лідерам, які прагнуть змін"})}),c.jsx(Er,{children:c.jsx("p",{children:"Власникам, які хочуть отримати незалежку експертну думку"})}),c.jsx(Er,{children:c.jsx("p",{children:"Керівникам та маркетологам, яким потрібна підтримка"})}),c.jsx(Er,{children:c.jsx("p",{children:"Лікарям, яким важливо отримати пораду"})})]}),c.jsx(tp,{children:"Формат"}),c.jsxs(rp,{children:[c.jsx(Er,{children:c.jsx("p",{children:"Індивідуальна ментор-сесія (від 1 години)"})}),c.jsx(Er,{children:c.jsx("p",{children:"Персональний супровід на декілька місяців"})})]})]})]})})]}),$g=P.section`
   padding: 40px 24px;
@@ -2360,6 +2334,7 @@ Valid keys: `+JSON.stringify(Object.keys(F),null,"  "));var A=E(ue,k,ie,le,se+".
   }
   @media screen and (min-width: 1440px) {
     left: 54%;
+    width: fit-content;
   }
 
   @media screen and (min-width: 1920px) {
