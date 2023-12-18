@@ -17,6 +17,8 @@ const ModalMobail = document.getElementById("modalMobail");
 const ModalMobaileMenu = ({ onClose, handleSetActiveLink }) => {
   const isMobail = useMediaQuery({ query: "(max-width: 767px)" });
 
+  const maxHeightPercentage = 100;
+  const maxNavHeight = `calc(${maxHeightPercentage}vh - 80px)`;
   return createPortal(
     <MobileMenuContainer>
       <div className="container">
@@ -42,20 +44,22 @@ const ModalMobaileMenu = ({ onClose, handleSetActiveLink }) => {
           </ButtonMenuMobile>
         </DivMobileMenu>
 
-        <Nav>
-          {menuItems.map(({ id, label }) => (
-            <NavMenuMobile
-              key={id}
-              href={`#${id}`}
-              onClick={(e) => {
-                onClose();
-                handleSetActiveLink(id, e);
-              }}
-            >
-              {label}
-            </NavMenuMobile>
-          ))}
-        </Nav>
+        <div>
+          <Nav style={{ maxHeight: maxNavHeight, overflowY: "auto" }}>
+            {menuItems.map(({ id, label }) => (
+              <NavMenuMobile
+                key={id}
+                href={`#${id}`}
+                onClick={(e) => {
+                  onClose();
+                  handleSetActiveLink(id, e);
+                }}
+              >
+                {label}
+              </NavMenuMobile>
+            ))}
+          </Nav>
+        </div>
       </div>
     </MobileMenuContainer>,
     ModalMobail
