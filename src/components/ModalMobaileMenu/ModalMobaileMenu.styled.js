@@ -66,7 +66,7 @@ export const Nav = styled.nav`
   align-items: center;
   background: var(--background-whitegrey);
   transition: background 0.5s ease, color 0.5s ease;
-  overflow-y: auto;
+  // overflow-y: auto;
 
   &:hover,
   &:focus {
@@ -78,7 +78,7 @@ export const Nav = styled.nav`
   }
 
   @media screen and (min-width: 500px) {
-    max-height: 300px;
+    // max-height: 300px;
   }
 `;
 
