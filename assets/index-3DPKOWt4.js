@@ -3005,6 +3005,14 @@ In order to be iterable, non-array objects must have a [Symbol.iterator]() metho
     max-width: 828px;
     padding: 80px;
   }
+
+  @media screen and (-webkit-min-device-pixel-ratio: 0) {
+    select:focus,
+    textarea:focus,
+    input:focus {
+      font-size: 16px;
+    }
+  }
 `,JE=P.h3`
   font-size: 16px;
   font-weight: 500;
