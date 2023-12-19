@@ -2260,6 +2260,7 @@ Valid keys: `+JSON.stringify(Object.keys(F),null,"  "));var A=E(ue,k,ie,le,se+".
 `,iS=({handleSetLink:e})=>c.jsx(Yg,{className:"container",children:c.jsxs(Xg,{children:[c.jsxs(Qg,{children:[c.jsxs(Kg,{children:[c.jsx(qg,{children:"Індивідуальна ментор сесія"}),c.jsx(Zg,{children:"Вирішення вашого індивідуального запиту"}),c.jsx(ex,{children:"від 1 години"}),c.jsx(tx,{href:"#contact",onClick:t=>e("contact",t),children:"Замовити послугу"})]}),c.jsxs(Jg,{children:[c.jsx(Gg,{children:"Питання, з якими можете звернутися"}),c.jsxs(rx,{children:[c.jsx(Yt,{children:"Незалежна думка щодо маркетингу та розвитку"}),c.jsx(Yt,{children:"Порада по створенню відділу маркетингу або оцінка існуючої структури"}),c.jsx(Yt,{children:"Питання по роботі з підрядниками"}),c.jsx(Yt,{children:"Порада щодо оптимізації бізнес-процесів"}),c.jsx(Yt,{children:"Як вірно оцінити ефективність маркетингових дій"}),c.jsx(Yt,{children:"Які інструменти комунікацій використовувати"}),c.jsxs(Yt,{children:["Особисте питання по менеджменту та розвитку з питань управління"," ","здоров'ям"]})]})]})]}),c.jsx(nx,{children:"Шлях проведення менторської сесії"}),c.jsxs(rS,{children:[c.jsxs(Xo,{children:[c.jsx(J,{minWidth:330,maxWidth:767,children:c.jsx(At,{children:c.jsx("use",{href:`${ne}#icon-rectangle-mob`})})}),c.jsx(J,{minWidth:768,maxWidth:1439,children:c.jsx(At,{children:c.jsx("use",{href:`${ne}#icon-rectangle-tab`})})}),c.jsx(J,{minWidth:1440,children:c.jsx(At,{children:c.jsx("use",{href:`${ne}#icon-rectangle`})})}),c.jsx(Qo,{children:"Заповнення брифу"})]}),c.jsxs(Xo,{children:[c.jsx(J,{minWidth:330,maxWidth:767,children:c.jsx(At,{children:c.jsx("use",{href:`${ne}#icon-rectangle-mob`})})}),c.jsx(J,{minWidth:768,maxWidth:1439,children:c.jsx(At,{children:c.jsx("use",{href:`${ne}#icon-rectangle-tab`})})}),c.jsx(J,{minWidth:1440,children:c.jsx(At,{children:c.jsx("use",{href:`${ne}#icon-rectangle`})})}),c.jsx(Qo,{children:"Діагностика ситуації"})]}),c.jsxs(Xo,{children:[c.jsx(J,{minWidth:330,maxWidth:767,children:c.jsx(At,{children:c.jsx("use",{href:`${ne}#icon-rectangle-mob`})})}),c.jsx(J,{minWidth:768,maxWidth:1439,children:c.jsx(At,{children:c.jsx("use",{href:`${ne}#icon-rectangle-tab`})})}),c.jsx(J,{minWidth:1440,children:c.jsx(At,{children:c.jsx("use",{href:`${ne}#icon-rectangle`})})}),c.jsx(Qo,{children:"Проведення сесії"})]}),c.jsxs(Xo,{children:[c.jsx(J,{minWidth:330,maxWidth:767,children:c.jsx(At,{children:c.jsx("use",{href:`${ne}#icon-rectangle-mob`})})}),c.jsx(J,{minWidth:768,maxWidth:1439,children:c.jsx(At,{children:c.jsx("use",{href:`${ne}#icon-rectangle-tab`})})}),c.jsx(J,{minWidth:1440,children:c.jsx(At,{children:c.jsx("use",{href:`${ne}#icon-rectangle`})})}),c.jsx(Qo,{children:"Рекомендації"})]})]})]})}),oS=P.div`
   display: flex;
   flex-direction: column;
+  justify-content: space-between;
   gap: 3px;
 
   @media screen and (min-width: 768px) {
@@ -2270,12 +2271,10 @@ Valid keys: `+JSON.stringify(Object.keys(F),null,"  "));var A=E(ue,k,ie,le,se+".
   }
 
   @media screen and (min-width: 1440px) {
-    max-width: 1200px;
     column-gap: 22px;
   }
 
   @media screen and (min-width: 1920px) {
-    max-width: 1900px;
     width: max-content;
   }
 `,lt=P.svg`
@@ -2300,13 +2299,17 @@ Valid keys: `+JSON.stringify(Object.keys(F),null,"  "));var A=E(ue,k,ie,le,se+".
 `,wi=P.div`
   position: relative;
   height: 60px;
+  width: 100%;
+  @media screen and (min-width: 768px) {
+    width: calc((100% - 24px) / 2);
+  }
 
   @media screen and (min-width: 1440px) {
-    width: 220px;
+    width: calc((100% - (4 * 24px)) / 5);
   }
 
   @media screen and (min-width: 1920px) {
-    min-width: 285px;
+    width: calc((100% - (4 * 24px)) / 5);
   }
 `;P.div`
   min-width: 740px;
