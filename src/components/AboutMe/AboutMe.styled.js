@@ -238,8 +238,8 @@ export const SectionAboutMeLink = styled.a`
 `;
 
 export const SectionAboutMeSvg = styled.svg`
-  margin-left: 8px;
-  fill: var(--primary-bluedark);
+  margin-left: 10px;
+  fill: currentColor;
 `;
 
 export const SectionAboutMeDivWidth = styled.div`
