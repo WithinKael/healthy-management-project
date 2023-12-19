@@ -41,10 +41,11 @@ export const List = styled.ul`
   flex-wrap: wrap;
 `;
 
-export const ActionBtn = styled.span`
+export const ActionBtn = styled.a`
   font-weight: 600;
   font-size: 14px;
   line-height: calc(20 / 14);
+  color: currentColor;
 
   margin-top: 14px;
   padding-top: 24px;
