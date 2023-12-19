@@ -174,8 +174,6 @@ export const StarLabel = styled(Star)`
 `;
 
 export const Input = styled.input`
-  touch-action: manipulation;
-
   display: flex;
   width: 100%;
   height: 48px;
@@ -282,8 +280,6 @@ export const LabelEmailPhone = styled.label`
 `;
 
 export const InputTel = styled(InputMask)`
-  touch-action: manipulation;
-
   display: flex;
   padding: 14px 16px;
   align-items: center;
@@ -380,8 +376,6 @@ export const LabelTextarea = styled.label`
 `;
 
 export const Textarea = styled.textarea`
-  touch-action: manipulation;
-
   display: flex;
   padding: 16px;
   align-items: center;

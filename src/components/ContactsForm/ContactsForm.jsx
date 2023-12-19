@@ -63,19 +63,6 @@ const ContactsForm = () => {
   });
 
   useEffect(() => {
-    const inputElement = document.querySelector("input");
-    console.log(inputElement);
-
-    inputElement.addEventListener("focus", () => {
-      document.body.style.touchAction = "none";
-    });
-
-    inputElement.addEventListener("blur", () => {
-      document.body.style.touchAction = "auto";
-    });
-  }, []);
-
-  useEffect(() => {
     const storedService = localStorage.getItem("key")
       ? JSON.parse(localStorage.getItem("key")).service
       : "";
