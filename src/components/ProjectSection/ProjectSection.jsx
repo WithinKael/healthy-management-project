@@ -12,7 +12,7 @@ import {
 import ProjectSectionCard from "./ProjectSectionCard/ProjectSectionCard";
 import { useEffect, useState } from "react";
 
-const ProjectSection = () => {
+const ProjectSection = ({ handleSetActiveLink }) => {
   const screenWidth = useScreenWidth();
 
   const [projectList, setProjectList] = useState(
@@ -27,9 +27,10 @@ const ProjectSection = () => {
       setProjectList([...data]);
     }
   }, [screenWidth]);
-  const handleListChange = () => {
+  const handleListChange = (e) => {
     if (projectList.length > 2) {
       setProjectList((prev) => prev.slice(0, 1));
+      handleSetActiveLink("projects", e);
     } else {
       setProjectList([...data]);
     }
