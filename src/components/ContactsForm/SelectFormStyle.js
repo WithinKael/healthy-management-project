@@ -11,7 +11,7 @@ const selectStyles = {
       ...provided,
       display: "flex",
       height: "48px",
-      padding: "9px 16px",
+      padding: "12px 16px",
       alignItems: "center",
       flexShrink: "0",
       gap: "8px",
@@ -34,16 +34,16 @@ const selectStyles = {
       },
 
       "@media screen and (min-width: 768px)": {
-        padding: "13px 16px",
+        padding: "17px 16px",
         height: "56px",
       },
 
       "@media screen and (min-width: 1440px)": {
-        padding: "14px 16px",
+        padding: "19px 16px",
       },
 
       "@media screen and (min-width: 1920px)": {
-        padding: "12px 16px",
+        padding: "16px 16px",
       },
     };
   },

@@ -10,7 +10,7 @@ import {
   Icon,
 } from "./ProjectSection.styled";
 import ProjectSectionCard from "./ProjectSectionCard/ProjectSectionCard";
-import { useState } from "react";
+import { useEffect, useState } from "react";
 
 const ProjectSection = () => {
   const screenWidth = useScreenWidth();
@@ -20,6 +20,13 @@ const ProjectSection = () => {
       ? [...data.slice(0, 1)]
       : [...data]
   );
+  useEffect(() => {
+    if (screenWidth === "mobile" || screenWidth === "tablet") {
+      setProjectList([...data.slice(0, 1)]);
+    } else {
+      setProjectList([...data]);
+    }
+  }, [screenWidth]);
   const handleListChange = () => {
     if (projectList.length > 2) {
       setProjectList((prev) => prev.slice(0, 1));
