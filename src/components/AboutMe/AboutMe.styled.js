@@ -63,7 +63,7 @@ export const SectionAboutMeImg = styled.img`
 `;
 
 export const SectionAboutMeDivOl = styled.div`
-  min-width: 327px;
+  max-width: 327px;
   // width: calc((100% - 24px) / 2);
   padding: 24px;
   border-radius: 16px;
@@ -72,6 +72,7 @@ export const SectionAboutMeDivOl = styled.div`
 
   @media screen and (min-width: 768px) {
     // width: calc((100% - 24px) / 2);
+    max-width: 0;
     min-width: 688px;
     padding: 40px;
   }
@@ -243,10 +244,11 @@ export const SectionAboutMeSvg = styled.svg`
 
 export const SectionAboutMeDivWidth = styled.div`
   // width: calc((100% - 24px) / 2);
-  min-width: 327px;
+  max-width: 327px;
   border-radius: 16px;
 
   @media screen and (min-width: 768px) {
+    max-width: 0;
     // width: calc((100% - 24px) / 2);
     min-width: 688px;
     border-radius: 16px;
