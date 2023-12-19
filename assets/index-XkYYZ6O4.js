@@ -303,26 +303,26 @@ Valid keys: `+JSON.stringify(Object.keys(F),null,"  "));var A=E(ue,k,ne,le,ae+".
 `,Ow=P.h2`
   color: var(--typography-bluedark);
   font-family: Montserrat;
-  font-size: 32px;
+  font-size: 24px;
   font-style: normal;
   font-weight: 600;
-  line-height: 1.25;
+  line-height: 1.33;
   margin-bottom: 16px;
 
   @media screen and (min-width: 768px) {
     font-size: 32px;
-    font-weight: 600;
-    line-height: 1.5;
+    line-height: 1.25;
   }
 
   @media screen and (min-width: 1440px) {
     font-size: 36px;
+    line-height: 1.33;
     margin-bottom: 24px;
   }
 
   @media screen and (min-width: 1920px) {
     font-size: 48px;
-    line-height: 1.5;
+    line-height: 1.16;
     margin-bottom: 40px;
   }
 `,Ew=P.div`
@@ -347,7 +347,7 @@ Valid keys: `+JSON.stringify(Object.keys(F),null,"  "));var A=E(ue,k,ne,le,ae+".
 
   /* mobile/h4-medium */
   font-family: Montserrat;
-  font-size: 16px;
+  font-size: 15px;
   font-style: normal;
   font-weight: 500;
   line-height: 1.5;
@@ -375,7 +375,7 @@ Valid keys: `+JSON.stringify(Object.keys(F),null,"  "));var A=E(ue,k,ne,le,ae+".
   font-size: 14px;
   font-style: normal;
   font-weight: 500;
-  line-height: 1.3;
+  line-height: 1.4;
 
   @media screen and (min-width: 768px) {
     font-size: 15px;
@@ -419,10 +419,10 @@ Valid keys: `+JSON.stringify(Object.keys(F),null,"  "));var A=E(ue,k,ne,le,ae+".
 `,_w=P.h4`
   color: var(--primary-bluedark);
   font-family: Montserrat;
-  font-size: 24px;
+  font-size: 16px;
   font-style: normal;
   font-weight: 600;
-  line-height: 1.3;
+  line-height: 1.5;
 
   @media screen and (min-width: 768px) {
     font-size: 20px;
@@ -461,10 +461,10 @@ Valid keys: `+JSON.stringify(Object.keys(F),null,"  "));var A=E(ue,k,ne,le,ae+".
 `,Aw=P.h4`
   color: var(--system-default-10);
   font-family: Montserrat;
-  font-size: 24px;
+  font-size: 16px;
   font-style: normal;
   font-weight: 600;
-  line-height: 1.3;
+  line-height: 1.5;
 
   @media screen and (min-width: 768px) {
     font-size: 20px;
@@ -485,7 +485,7 @@ Valid keys: `+JSON.stringify(Object.keys(F),null,"  "));var A=E(ue,k,ne,le,ae+".
   font-size: 14px;
   font-style: normal;
   font-weight: 500;
-  line-height: 1.3;
+  line-height: 1.4;
 
   @media screen and (min-width: 768px) {
     font-size: 15px;
@@ -1968,31 +1968,29 @@ Valid keys: `+JSON.stringify(Object.keys(F),null,"  "));var A=E(ue,k,ne,le,ae+".
   }
 `,tS=P.div`
   display: flex;
-  flex-direction: column;
-  gap: 3px;
+  justify-content: space-between;
+  flex-wrap: wrap;
 
   @media screen and (min-width: 768px) {
-    flex-direction: row;
-    flex-wrap: wrap;
-    row-gap: 16px;
-    column-gap: 24px;
-  }
-
-  @media screen and (min-width: 1440px) {
-    max-width: 1300px;
-    // justify-content: space-between;
-  }
-
-  @media screen and (min-width: 1920px) {
-    flex-direction: row;
-    max-width: 1900px;
-    width: max-content;
+    row-gap: 14px;
   }
 `,Ho=P.div`
   position: relative;
+  width: 100%;
+
+
+  @media screen and (min-width: 768px) {
+   width: calc((100% - (1 * 24px)) / 2);
+  }
+
+  @media screen and (min-width: 1440px) {
+    width: calc((100% - (3 * 24px)) / 4);
+  }
 
   @media screen and (min-width: 1920px) {
-    min-width: 370px;
+    width: calc((100% - (3 * 24px)) / 4);
+  }
+
   }
 `,Yg=P.div`
   display: flex;
@@ -2300,6 +2298,7 @@ Valid keys: `+JSON.stringify(Object.keys(F),null,"  "));var A=E(ue,k,ne,le,ae+".
   position: relative;
   height: 60px;
   width: 100%;
+
   @media screen and (min-width: 768px) {
     width: calc((100% - 24px) / 2);
   }
