@@ -74,7 +74,7 @@ export const SectionAboutStudioText = styled.p`
 
   @media screen and (min-width: 768px) {
     font-size: 18px;
-    line-height: 1.5;
+    line-height: 1.33;
     max-width: 688px;
   }
 
@@ -100,7 +100,7 @@ export const SectionAboutStudioTextVan = styled.p`
 
   @media screen and (min-width: 768px) {
     font-size: 15px;
-    line-height: 1.6;
+    line-height: 1.5;
   }
 
   @media screen and (min-width: 1440px) {
@@ -153,7 +153,7 @@ export const SectionAboutStudioValues = styled.h4`
 
   @media screen and (min-width: 768px) {
     font-size: 20px;
-    line-height: 1.6;
+    line-height: 1.4;
   }
 
   @media screen and (min-width: 1440px) {
@@ -199,6 +199,7 @@ export const SectionAboutStudioOurMission = styled.h4`
 
   @media screen and (min-width: 768px) {
     font-size: 20px;
+    line-height: 1.4;
   }
 
   @media screen and (min-width: 1440px) {
@@ -221,7 +222,7 @@ export const SectionAboutStudioOurMissionP = styled.p`
 
   @media screen and (min-width: 768px) {
     font-size: 15px;
-    line-height: 1.6;
+    line-height: 1.5;
   }
 
   @media screen and (min-width: 1440px) {
