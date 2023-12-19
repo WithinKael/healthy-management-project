@@ -23,7 +23,13 @@ const ModalMobaileMenu = ({ onClose, handleSetActiveLink }) => {
     <MobileMenuContainer>
       <div className="container">
         <DivMobileMenu>
-          <a href="#home">
+          <a
+            href="#home"
+            onClick={(e) => {
+              onClose();
+              handleSetActiveLink("home", e);
+            }}
+          >
             <ModalMobaileMenuSvgIcon name="icon-g10" width={40} />
           </a>
           <ContactMenu
