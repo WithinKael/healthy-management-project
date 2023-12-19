@@ -63,9 +63,8 @@ Valid keys: `+JSON.stringify(Object.keys(F),null,"  "));var A=E(ue,k,ie,le,se+".
   }
 
   @media screen and (min-width: 1440px) {
-    padding-top: 40px;
-    padding-bottom: 40px;
   }
+
   @media screen and (min-width: 1920px) {
     padding-top: 80px;
     padding-bottom: 80px;
@@ -77,12 +76,12 @@ Valid keys: `+JSON.stringify(Object.keys(F),null,"  "));var A=E(ue,k,ie,le,se+".
   font-size: 32px;
   font-style: normal;
   font-weight: 600;
-  line-height: 1.25;
+  line-height: 40px;
 
   @media screen and (min-width: 768px) {
     margin-bottom: 16px;
-    font-size: 36px;
-    line-height: 1.3;
+    font-size: 32px;
+    line-height: 1.25;
   }
 
   @media screen and (min-width: 1440px) {
@@ -92,7 +91,7 @@ Valid keys: `+JSON.stringify(Object.keys(F),null,"  "));var A=E(ue,k,ie,le,se+".
   @media screen and (min-width: 1920px) {
     margin-bottom: 40px;
     font-size: 48px;
-    line-height: 1.2;
+    line-height: 56px;
   }
 `,G1=P.div`
   display: flex;
@@ -106,8 +105,9 @@ Valid keys: `+JSON.stringify(Object.keys(F),null,"  "));var A=E(ue,k,ie,le,se+".
     flex-direction: row;
     justify-content: space-between;
   }
+
   @media screen and (min-width: 1920px) {
-  }
+  
 `,Z1=P.img`
   border-radius: 18px;
 `,ew=P.div`
@@ -121,33 +121,32 @@ Valid keys: `+JSON.stringify(Object.keys(F),null,"  "));var A=E(ue,k,ie,le,se+".
   @media screen and (min-width: 768px) {
     // width: calc((100% - 24px) / 2);
     min-width: 688px;
-    padding: 73px;
+    padding: 40px;
   }
 
   @media screen and (min-width: 1440px) {
     min-width: 628px;
     padding: 40px;
   }
-
   @media screen and (min-width: 1920px) {
     min-width: 828px;
     padding: 80px;
   }
 `,tw=P.h3`
-  color: var(--primary-bluedark);
+  color: var(--typography-bluedark);
   font-family: Montserrat;
   font-size: 32px;
   font-style: normal;
   font-weight: 600;
-  line-height: 1.25;
+  line-height: 40px;
   margin-bottom: 16px;
 
   @media screen and (min-width: 768px) {
-    line-height: 1.5;
+    color: var(--typography-black);
+    line-height: 1.25;
   }
 
   @media screen and (min-width: 1440px) {
-    color: var(--typography-black);
     font-size: 36px;
   }
 
@@ -161,20 +160,22 @@ Valid keys: `+JSON.stringify(Object.keys(F),null,"  "));var A=E(ue,k,ie,le,se+".
   font-size: 20px;
   font-style: normal;
   font-weight: 600;
-  line-height: 1.6;
+  line-height: 32px;
   margin-bottom: 24px;
 
   @media screen and (min-width: 768px) {
+    line-height: 1.4;
     margin-bottom: 16px;
   }
 
   @media screen and (min-width: 1440px) {
-    line-height: 1.2;
+    line-height: 24px;
     margin-bottom: 24px;
   }
   @media screen and (min-width: 1920px) {
+    color: var(--primary-bluedark);
     font-size: 24px;
-    line-height: 1.3;
+    line-height: 32px;
     margin-bottom: 40px;
   }
 `,rw=P.ul`
@@ -197,7 +198,7 @@ Valid keys: `+JSON.stringify(Object.keys(F),null,"  "));var A=E(ue,k,ie,le,se+".
 
   @media screen and (min-width: 768px) {
     font-size: 15px;
-    line-height: 1.6;
+    line-height: 1.46;
   }
 
   @media screen and (min-width: 1440px) {
@@ -206,7 +207,6 @@ Valid keys: `+JSON.stringify(Object.keys(F),null,"  "));var A=E(ue,k,ie,le,se+".
 
   @media screen and (min-width: 1920px) {
     font-size: 16px;
-    font-weight: 500;
     line-height: 1.5;
   }
 `,ow=P.ul`
@@ -226,7 +226,6 @@ Valid keys: `+JSON.stringify(Object.keys(F),null,"  "));var A=E(ue,k,ie,le,se+".
   @media screen and (min-width: 1440px) {
     margin-top: 24px;
   }
-
   @media screen and (min-width: 1920px) {
     margin-top: 42px;
     display: flex;
@@ -259,12 +258,12 @@ Valid keys: `+JSON.stringify(Object.keys(F),null,"  "));var A=E(ue,k,ie,le,se+".
 
   @media screen and (min-width: 768px) {
     font-size: 18px;
-    line-height: 1.3;
+    line-height: 1.33;
   }
 
   @media screen and (min-width: 1440px) {
+    line-height: 1.2;
   }
-
   @media screen and (min-width: 1920px) {
     font-size: 20px;
     line-height: 1.4;
@@ -356,7 +355,7 @@ Valid keys: `+JSON.stringify(Object.keys(F),null,"  "));var A=E(ue,k,ie,le,se+".
 
   @media screen and (min-width: 768px) {
     font-size: 18px;
-    line-height: 1.5;
+    line-height: 1.33;
     max-width: 688px;
   }
 
@@ -380,7 +379,7 @@ Valid keys: `+JSON.stringify(Object.keys(F),null,"  "));var A=E(ue,k,ie,le,se+".
 
   @media screen and (min-width: 768px) {
     font-size: 15px;
-    line-height: 1.6;
+    line-height: 1.5;
   }
 
   @media screen and (min-width: 1440px) {
@@ -427,7 +426,7 @@ Valid keys: `+JSON.stringify(Object.keys(F),null,"  "));var A=E(ue,k,ie,le,se+".
 
   @media screen and (min-width: 768px) {
     font-size: 20px;
-    line-height: 1.6;
+    line-height: 1.4;
   }
 
   @media screen and (min-width: 1440px) {
@@ -469,6 +468,7 @@ Valid keys: `+JSON.stringify(Object.keys(F),null,"  "));var A=E(ue,k,ie,le,se+".
 
   @media screen and (min-width: 768px) {
     font-size: 20px;
+    line-height: 1.4;
   }
 
   @media screen and (min-width: 1440px) {
@@ -489,7 +489,7 @@ Valid keys: `+JSON.stringify(Object.keys(F),null,"  "));var A=E(ue,k,ie,le,se+".
 
   @media screen and (min-width: 768px) {
     font-size: 15px;
-    line-height: 1.6;
+    line-height: 1.5;
   }
 
   @media screen and (min-width: 1440px) {
