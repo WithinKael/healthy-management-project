@@ -45,15 +45,6 @@ function App() {
           event.target.blur();
         },
       });
-
-      // window.scrollTo({
-      //   top: targetOffset,
-      //   behavior: "smooth",
-      // });
-
-      // setTimeout(() => {
-      //   event.target.blur();
-      // }, 1000);
     }
   };
 
