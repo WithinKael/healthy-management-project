@@ -47,6 +47,7 @@ export const StyledPersonalContainer = styled.div`
   position: relative;
   height: 60px;
   width: 100%;
+
   @media screen and (min-width: 768px) {
     width: calc((100% - 24px) / 2);
   }
