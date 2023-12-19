@@ -1,4 +1,5 @@
 import MediaQuery from "react-responsive";
+import PropTypes from "prop-types";
 import sprite from "../../images/sprite.svg";
 import {
   MentorSessionWrapper,
@@ -60,7 +61,9 @@ const PersonalSupport = ({ handleSetLink }) => {
             <TitleH3>Питання, з якими можете звернутися</TitleH3>
             <StyledPersonalList>
               {questionList.map((item) => (
-                <StyledPersonalListItem>{item}</StyledPersonalListItem>
+                <StyledPersonalListItem key={item}>
+                  {item}
+                </StyledPersonalListItem>
               ))}
             </StyledPersonalList>
           </QuestionWrapper>
@@ -70,7 +73,7 @@ const PersonalSupport = ({ handleSetLink }) => {
         </StyledSessionParagraph>
         <ArrowPersonalWrapper>
           {arrows.map((item) => (
-            <StyledPersonalContainer>
+            <StyledPersonalContainer key={item}>
               <MediaQuery minWidth={330} maxWidth={767}>
                 <StyledPersonalArrowSvg>
                   <use href={`${sprite}#icon-rectangle-mob`} />
@@ -93,6 +96,10 @@ const PersonalSupport = ({ handleSetLink }) => {
       </PersonalSessionSectionWrapper>
     </StyledSection>
   );
+};
+
+PersonalSupport.propTypes = {
+  handleSetLink: PropTypes.func.isRequired,
 };
 
 export default PersonalSupport;
