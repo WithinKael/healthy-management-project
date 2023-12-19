@@ -2022,15 +2022,15 @@ Valid keys: `+JSON.stringify(Object.keys(F),null,"  "));var A=E(ue,k,ne,le,ae+".
   }
 `,$o=P.p`
   display: flex;
-  font-size: 16px;
+  font-size: 14px;
   font-weight: 600;
-  line-height: 1.5;
+  line-height: 1.4;
   min-width: 200px;
 
   position: absolute;
   text-align: center;
   top: 45%;
-  left: 50%;
+  left: 47%;
   transform: translate(-50%, -50%);
   z-index: 2;
   color: var(--typography-white);
@@ -2073,9 +2073,9 @@ Valid keys: `+JSON.stringify(Object.keys(F),null,"  "));var A=E(ue,k,ne,le,ae+".
     line-height: 56px;
   }
 `,Jg=P.h3`
-  font-size: 18px;
+  font-size: 16px;
   font-weight: 600;
-  line-height: 1.3;
+  line-height: 1.5;
   margin-bottom: 24px;
   color: var(--typography-bluedark);
 
@@ -2090,8 +2090,8 @@ Valid keys: `+JSON.stringify(Object.keys(F),null,"  "));var A=E(ue,k,ne,le,ae+".
     margin-bottom: 16px;
   }
 `,qg=P.p`
-  font-size: 16px;
-  line-height: 24px;
+  font-size: 15px;
+  line-height: 22px;
   color: var(--typography-bluedark);
 
   @media screen and (min-width: 768px) {
@@ -2104,9 +2104,9 @@ Valid keys: `+JSON.stringify(Object.keys(F),null,"  "));var A=E(ue,k,ne,le,ae+".
     line-height: 1.4;
   }
 `,Gg=P.p`
-  font-size: 16px;
+  font-size: 15px;
   font-weight: 600;
-  line-height: 24px;
+  line-height: 22px;
   width: fit-content;
   margin-bottom: 12px;
 
@@ -2166,8 +2166,8 @@ Valid keys: `+JSON.stringify(Object.keys(F),null,"  "));var A=E(ue,k,ne,le,ae+".
     width: 260px;
   }
 `,ex=P.p`
-  font-size: 18px;
-  line-height: 1.3;
+  font-size: 16px;
+  line-height: 1.5;
   font-weight: 600;
   margin-bottom: 16px;
 
@@ -2239,7 +2239,7 @@ Valid keys: `+JSON.stringify(Object.keys(F),null,"  "));var A=E(ue,k,ne,le,ae+".
   }
 `,Mt=P.svg`
   @media screen and (min-width: 330px) {
-    width: 260px;
+    width: 279px;
     height: 60px;
   }
 
@@ -2279,7 +2279,7 @@ Valid keys: `+JSON.stringify(Object.keys(F),null,"  "));var A=E(ue,k,ne,le,ae+".
   }
 `,xl=P.svg`
   @media screen and (min-width: 330px) {
-    width: 260px;
+    width: 279px;
     height: 60px;
   }
 
@@ -2319,15 +2319,15 @@ Valid keys: `+JSON.stringify(Object.keys(F),null,"  "));var A=E(ue,k,ne,le,ae+".
   gap: 16px;
 `;const aS=P.p`
   display: flex;
-  font-size: 16px;
+  font-size: 14px;
   font-weight: 600;
-  line-height: 1.5;
+  line-height: 1.4;
   min-width: 200px;
 
   position: absolute;
   text-align: center;
   top: 50%;
-  left: 50%;
+  left: 47%;
   transform: translate(-50%, -50%);
   z-index: 2;
   color: var(--typography-white);
