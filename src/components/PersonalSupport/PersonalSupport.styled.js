@@ -24,7 +24,7 @@ export const ArrowPersonalWrapper = styled.div`
 
 export const StyledPersonalArrowSvg = styled.svg`
   @media screen and (min-width: 330px) {
-    width: 260px;
+    width: 279px;
     height: 60px;
   }
 
@@ -70,15 +70,15 @@ export const PersonalSectionWrapper = styled.div`
 
 export const StyledPersonalParagraph = styled.p`
   display: flex;
-  font-size: 16px;
+  font-size: 14px;
   font-weight: 600;
-  line-height: 1.5;
+  line-height: 1.4;
   min-width: 200px;
 
   position: absolute;
   text-align: center;
   top: 50%;
-  left: 50%;
+  left: 47%;
   transform: translate(-50%, -50%);
   z-index: 2;
   color: var(--typography-white);

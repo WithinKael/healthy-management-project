@@ -94,15 +94,15 @@ export const QuestionWrapper = styled.div`
 
 export const StyledParagraph = styled.p`
   display: flex;
-  font-size: 16px;
+  font-size: 14px;
   font-weight: 600;
-  line-height: 1.5;
+  line-height: 1.4;
   min-width: 200px;
 
   position: absolute;
   text-align: center;
   top: 45%;
-  left: 50%;
+  left: 47%;
   transform: translate(-50%, -50%);
   z-index: 2;
   color: var(--typography-white);
@@ -149,9 +149,9 @@ export const TitleH2 = styled.h2`
 `;
 
 export const TitleH3 = styled.h3`
-  font-size: 18px;
+  font-size: 16px;
   font-weight: 600;
-  line-height: 1.3;
+  line-height: 1.5;
   margin-bottom: 24px;
   color: var(--typography-bluedark);
 
@@ -168,8 +168,8 @@ export const TitleH3 = styled.h3`
 `;
 
 export const PersonalParagraph = styled.p`
-  font-size: 16px;
-  line-height: 24px;
+  font-size: 15px;
+  line-height: 22px;
   color: var(--typography-bluedark);
 
   @media screen and (min-width: 768px) {
@@ -184,9 +184,9 @@ export const PersonalParagraph = styled.p`
 `;
 
 export const ProHourParagraph = styled.p`
-  font-size: 16px;
+  font-size: 15px;
   font-weight: 600;
-  line-height: 24px;
+  line-height: 22px;
   width: fit-content;
   margin-bottom: 12px;
 
@@ -250,8 +250,8 @@ export const StyledOrderLink = styled.a`
 `;
 
 export const StyledSessionParagraph = styled.p`
-  font-size: 18px;
-  line-height: 1.3;
+  font-size: 16px;
+  line-height: 1.5;
   font-weight: 600;
   margin-bottom: 16px;
 
@@ -329,7 +329,7 @@ export const StyledPersonalListItem = styled.li`
 
 export const StyledArrowSvg = styled.svg`
   @media screen and (min-width: 330px) {
-    width: 260px;
+    width: 279px;
     height: 60px;
   }
 
