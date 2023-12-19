@@ -32,31 +32,31 @@ export const PersonalSessionSectionWrapper = styled.div`
 
 export const ArrowWrapper = styled.div`
   display: flex;
-  flex-direction: column;
-  gap: 3px;
+  justify-content: space-between;
+  flex-wrap: wrap;
 
   @media screen and (min-width: 768px) {
-    flex-direction: row;
-    flex-wrap: wrap;
-    row-gap: 16px;
-    column-gap: 24px;
-  }
-
-  @media screen and (min-width: 1440px) {
-    justify-content: space-between;
-  }
-
-  @media screen and (min-width: 1920px) {
-    flex-direction: row;
-    width: max-content;
+    row-gap: 14px;
   }
 `;
 
 export const StyledContainer = styled.div`
   position: relative;
+  width: 100%;
+
+
+  @media screen and (min-width: 768px) {
+   width: calc((100% - (1 * 24px)) / 2);
+  }
+
+  @media screen and (min-width: 1440px) {
+    width: calc((100% - (3 * 24px)) / 4);
+  }
 
   @media screen and (min-width: 1920px) {
-    min-width: 370px;
+    width: calc((100% - (3 * 24px)) / 4);
+  }
+
   }
 `;
 

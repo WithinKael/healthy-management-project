@@ -70,6 +70,9 @@ function App() {
         <MentoringSession />
         <PersonalSupport />
         <ProjectSection handleSetActiveLink={handleSetActiveLink} />
+        <MentoringSession handleSetLink={handleSetActiveLink} />
+        <PersonalSupport handleSetLink={handleSetActiveLink} />
+        <ProjectSection />
         <BusinessTools />
         <ContactsForm />
         <ScrollToTop />

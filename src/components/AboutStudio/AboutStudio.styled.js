@@ -18,26 +18,26 @@ export const SectionAboutStudio = styled.section`
 export const SectionAboutStudioTitle = styled.h2`
   color: var(--typography-bluedark);
   font-family: Montserrat;
-  font-size: 32px;
+  font-size: 24px;
   font-style: normal;
   font-weight: 600;
-  line-height: 1.25;
+  line-height: 1.33;
   margin-bottom: 16px;
 
   @media screen and (min-width: 768px) {
     font-size: 32px;
-    font-weight: 600;
-    line-height: 1.5;
+    line-height: 1.25;
   }
 
   @media screen and (min-width: 1440px) {
     font-size: 36px;
+    line-height: 1.33;
     margin-bottom: 24px;
   }
 
   @media screen and (min-width: 1920px) {
     font-size: 48px;
-    line-height: 1.5;
+    line-height: 1.16;
     margin-bottom: 40px;
   }
 `;
@@ -66,7 +66,7 @@ export const SectionAboutStudioText = styled.p`
 
   /* mobile/h4-medium */
   font-family: Montserrat;
-  font-size: 16px;
+  font-size: 15px;
   font-style: normal;
   font-weight: 500;
   line-height: 1.5;
@@ -74,7 +74,7 @@ export const SectionAboutStudioText = styled.p`
 
   @media screen and (min-width: 768px) {
     font-size: 18px;
-    line-height: 1.5;
+    line-height: 1.33;
     max-width: 688px;
   }
 
@@ -96,11 +96,11 @@ export const SectionAboutStudioTextVan = styled.p`
   font-size: 14px;
   font-style: normal;
   font-weight: 500;
-  line-height: 1.3;
+  line-height: 1.4;
 
   @media screen and (min-width: 768px) {
     font-size: 15px;
-    line-height: 1.6;
+    line-height: 1.5;
   }
 
   @media screen and (min-width: 1440px) {
@@ -146,14 +146,14 @@ export const DivSection = styled.div`
 export const SectionAboutStudioValues = styled.h4`
   color: var(--primary-bluedark);
   font-family: Montserrat;
-  font-size: 24px;
+  font-size: 16px;
   font-style: normal;
   font-weight: 600;
-  line-height: 1.3;
+  line-height: 1.5;
 
   @media screen and (min-width: 768px) {
     font-size: 20px;
-    line-height: 1.6;
+    line-height: 1.4;
   }
 
   @media screen and (min-width: 1440px) {
@@ -192,13 +192,14 @@ export const DivSectionOurMission = styled.div`
 export const SectionAboutStudioOurMission = styled.h4`
   color: var(--system-default-10);
   font-family: Montserrat;
-  font-size: 24px;
+  font-size: 16px;
   font-style: normal;
   font-weight: 600;
-  line-height: 1.3;
+  line-height: 1.5;
 
   @media screen and (min-width: 768px) {
     font-size: 20px;
+    line-height: 1.4;
   }
 
   @media screen and (min-width: 1440px) {
@@ -217,11 +218,11 @@ export const SectionAboutStudioOurMissionP = styled.p`
   font-size: 14px;
   font-style: normal;
   font-weight: 500;
-  line-height: 1.3;
+  line-height: 1.4;
 
   @media screen and (min-width: 768px) {
     font-size: 15px;
-    line-height: 1.6;
+    line-height: 1.5;
   }
 
   @media screen and (min-width: 1440px) {
