@@ -1,6 +1,7 @@
 import MediaQuery from "react-responsive";
 import PropTypes from "prop-types";
 import sprite from "../../images/sprite.svg";
+
 import {
   MentorSessionWrapper,
   PersonalParagraph,
@@ -84,9 +85,14 @@ const PersonalSupport = ({ handleSetLink }) => {
                   <use href={`${sprite}#icon-rectangle-tab`} />
                 </StyledPersonalArrowSvg>
               </MediaQuery>
-              <MediaQuery minWidth={1440}>
+              <MediaQuery minWidth={1440} maxWidth={1919}>
                 <StyledPersonalArrowSvg>
-                  <use href={`${sprite}#icon-rectangle2`} />
+                  <use href={`${sprite}#icon-rectangle-72`} />
+                </StyledPersonalArrowSvg>
+              </MediaQuery>
+              <MediaQuery minWidth={1920}>
+                <StyledPersonalArrowSvg>
+                  <use href={`${sprite}#icon-rectangle-1920-2`} />
                 </StyledPersonalArrowSvg>
               </MediaQuery>
               <StyledPersonalParagraph>{item}</StyledPersonalParagraph>

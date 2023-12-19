@@ -85,9 +85,14 @@ const MentoringSession = ({ handleSetLink }) => {
                 <use href={`${sprite}#icon-rectangle-tab`} />
               </StyledArrowSvg>
             </MediaQuery>
-            <MediaQuery minWidth={1440}>
+            <MediaQuery minWidth={1440} maxWidth={1919}>
               <StyledArrowSvg>
-                <use href={`${sprite}#icon-rectangle`} />
+                <use href={`${sprite}#icon-rectangle-1440`} />
+              </StyledArrowSvg>
+            </MediaQuery>
+            <MediaQuery minWidth={1920}>
+              <StyledArrowSvg>
+                <use href={`${sprite}#icon-rectangle2`} />
               </StyledArrowSvg>
             </MediaQuery>
             <StyledParagraph>Заповнення брифу</StyledParagraph>
@@ -104,9 +109,14 @@ const MentoringSession = ({ handleSetLink }) => {
                 <use href={`${sprite}#icon-rectangle-tab`} />
               </StyledArrowSvg>
             </MediaQuery>
-            <MediaQuery minWidth={1440}>
+            <MediaQuery minWidth={1440} maxWidth={1919}>
               <StyledArrowSvg>
-                <use href={`${sprite}#icon-rectangle`} />
+                <use href={`${sprite}#icon-rectangle-1440`} />
+              </StyledArrowSvg>
+            </MediaQuery>
+            <MediaQuery minWidth={1920}>
+              <StyledArrowSvg>
+                <use href={`${sprite}#icon-rectangle2`} />
               </StyledArrowSvg>
             </MediaQuery>
             <StyledParagraph>Діагностика ситуації</StyledParagraph>
@@ -123,9 +133,14 @@ const MentoringSession = ({ handleSetLink }) => {
                 <use href={`${sprite}#icon-rectangle-tab`} />
               </StyledArrowSvg>
             </MediaQuery>
-            <MediaQuery minWidth={1440}>
+            <MediaQuery minWidth={1440} maxWidth={1919}>
               <StyledArrowSvg>
-                <use href={`${sprite}#icon-rectangle`} />
+                <use href={`${sprite}#icon-rectangle-1440`} />
+              </StyledArrowSvg>
+            </MediaQuery>
+            <MediaQuery minWidth={1920}>
+              <StyledArrowSvg>
+                <use href={`${sprite}#icon-rectangle2`} />
               </StyledArrowSvg>
             </MediaQuery>
             <StyledParagraph>Проведення сесії</StyledParagraph>
@@ -142,9 +157,14 @@ const MentoringSession = ({ handleSetLink }) => {
                 <use href={`${sprite}#icon-rectangle-tab`} />
               </StyledArrowSvg>
             </MediaQuery>
-            <MediaQuery minWidth={1440}>
+            <MediaQuery minWidth={1440} maxWidth={1919}>
               <StyledArrowSvg>
-                <use href={`${sprite}#icon-rectangle`} />
+                <use href={`${sprite}#icon-rectangle-1440`} />
+              </StyledArrowSvg>
+            </MediaQuery>
+            <MediaQuery minWidth={1920}>
+              <StyledArrowSvg>
+                <use href={`${sprite}#icon-rectangle2`} />
               </StyledArrowSvg>
             </MediaQuery>
             <StyledParagraph>Рекомендації</StyledParagraph>

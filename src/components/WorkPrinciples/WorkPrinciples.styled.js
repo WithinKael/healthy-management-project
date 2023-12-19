@@ -126,6 +126,21 @@ export const SvgDone = styled.svg`
   height: 24px;
   fill: var(--background-white);
   stroke-width: 4px;
+
+  @media screen and (min-width: 768px) {
+    width: 25.79px;
+    height: 24px;
+  }
+
+  @media screen and (min-width: 1440px) {
+    width: 26.02px;
+    height: 24px;
+  }
+
+  @media screen and (min-width: 1920px) {
+    width: 25.62px;
+    height: 24px;
+  }
 `;
 
 export const ListItemText = styled.p`
