@@ -3,6 +3,7 @@ import styled from "@emotion/styled";
 export const ArrowPersonalWrapper = styled.div`
   display: flex;
   flex-direction: column;
+  justify-content: space-between;
   gap: 3px;
 
   @media screen and (min-width: 768px) {
@@ -13,12 +14,10 @@ export const ArrowPersonalWrapper = styled.div`
   }
 
   @media screen and (min-width: 1440px) {
-    max-width: 1200px;
     column-gap: 22px;
   }
 
   @media screen and (min-width: 1920px) {
-    max-width: 1900px;
     width: max-content;
   }
 `;
@@ -47,13 +46,17 @@ export const StyledPersonalArrowSvg = styled.svg`
 export const StyledPersonalContainer = styled.div`
   position: relative;
   height: 60px;
+  width: 100%;
+  @media screen and (min-width: 768px) {
+    width: calc((100% - 24px) / 2);
+  }
 
   @media screen and (min-width: 1440px) {
-    width: 220px;
+    width: calc((100% - (4 * 24px)) / 5);
   }
 
   @media screen and (min-width: 1920px) {
-    min-width: 285px;
+    width: calc((100% - (4 * 24px)) / 5);
   }
 `;
 
