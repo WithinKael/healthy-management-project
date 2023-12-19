@@ -104,6 +104,14 @@ export const FormWrapper = styled.div`
     max-width: 828px;
     padding: 80px;
   }
+
+  @media screen and (-webkit-min-device-pixel-ratio: 0) {
+    select:focus,
+    textarea:focus,
+    input:focus {
+      font-size: 16px;
+    }
+  }
 `;
 
 export const Text = styled.h3`
