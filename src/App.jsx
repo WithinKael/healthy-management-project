@@ -17,7 +17,6 @@ import { useEffect } from "react";
 
 function App() {
   const handleSetActiveLink = (link, event) => {
-    console.log(link);
     event.preventDefault();
 
     const section = document.getElementById(link);
