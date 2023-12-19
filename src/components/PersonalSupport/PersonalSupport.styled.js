@@ -35,6 +35,7 @@ export const StyledPersonalArrowSvg = styled.svg`
 
   @media screen and (min-width: 1440px) {
     width: 222px;
+    height: 72px;
   }
 
   @media screen and (min-width: 1920px) {
@@ -53,10 +54,12 @@ export const StyledPersonalContainer = styled.div`
   }
 
   @media screen and (min-width: 1440px) {
+    height: 72px;
     width: calc((100% - (4 * 24px)) / 5);
   }
 
   @media screen and (min-width: 1920px) {
+    height: 80px;
     width: calc((100% - (4 * 24px)) / 5);
   }
 `;
@@ -97,7 +100,7 @@ export const StyledPersonalParagraph = styled.p`
     justify-content: flex-start;
     left: 60%;
     width: 100%;
-    top: 66%;
+    top: 50%;
 
     font-size: 16px;
     line-height: 1.4;
