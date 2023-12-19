@@ -1,3 +1,4 @@
+import PropTypes from "prop-types";
 import TickList from "../TickList/TickList";
 import {
   IconDiv,
@@ -12,7 +13,7 @@ import {
 } from "./Services.styled";
 import { servicesData } from "./data";
 
-const Services = () => {
+const Services = ({ handleSetActiveLink }) => {
   return (
     <SectionServices className="container" id="services">
       <ServicesContentWrapper>
@@ -36,10 +37,19 @@ const Services = () => {
             </ServicesItem>
           ))}
         </ServicesList>
-        <ServicesBtn href="#contact">Замовити консультацію</ServicesBtn>
+        <ServicesBtn
+          href="#contact"
+          onClick={(e) => handleSetActiveLink("contact", e)}
+        >
+          Замовити консультацію
+        </ServicesBtn>
       </ServicesContentWrapper>
     </SectionServices>
   );
+};
+
+Services.propTypes = {
+  handleSetActiveLink: PropTypes.func.isRequired,
 };
 
 export default Services;

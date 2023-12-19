@@ -64,7 +64,7 @@ function App() {
         <AboutMe />
         <WhyChooseUs />
         <WorkPrinciples />
-        <Services />
+        <Services handleSetActiveLink={handleSetActiveLink} />
         <Mentor />
         <MentoringSession handleSetLink={handleSetActiveLink} />
         <PersonalSupport handleSetLink={handleSetActiveLink} />
