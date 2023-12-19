@@ -1,3 +1,4 @@
+import PropTypes from "prop-types";
 import MediaQuery from "react-responsive";
 import sprite from "../../images/sprite.svg";
 import {
@@ -152,6 +153,10 @@ const MentoringSession = ({ handleSetLink }) => {
       </PersonalSessionSectionWrapper>
     </StyledSection>
   );
+};
+
+MentoringSession.propTypes = {
+  handleSetLink: PropTypes.func.isRequired,
 };
 
 export default MentoringSession;
