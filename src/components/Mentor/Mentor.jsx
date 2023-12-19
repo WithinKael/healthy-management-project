@@ -1,4 +1,5 @@
 import MediaQuery from "react-responsive";
+import PropTypes from "prop-types";
 import mentorPhoto2 from "../../images/desktop/pic_mentorstvo1x.webp";
 import mentorPhoto2x from "../../images/desktop/pic_mentorstvo2x.jpg";
 import mentorPhotoJgeg1x from "../../images/desktop/pic_mentorstvo1x.jpg";
@@ -32,7 +33,7 @@ import {
   TitleH3White,
 } from "./Mentor.styled";
 
-const Mentor = () => {
+const Mentor = ({ handleSetLink }) => {
   return (
     <StyledSection id="mentoring" className="container">
       <ImgSectionWrapper>
@@ -85,7 +86,10 @@ const Mentor = () => {
               та довіру
             </Paragraph>
           </ParagraphWrapper>
-          <StyledMentorButton href="#contact">
+          <StyledMentorButton
+            onClick={(e) => handleSetLink("contact", e)}
+            href="#contact"
+          >
             Дізнатися вартість
           </StyledMentorButton>
         </MentorstvoWrapper>
@@ -151,6 +155,10 @@ const Mentor = () => {
       </div>
     </StyledSection>
   );
+};
+
+Mentor.propTypes = {
+  handleSetLink: PropTypes.func.isRequired,
 };
 
 export default Mentor;
