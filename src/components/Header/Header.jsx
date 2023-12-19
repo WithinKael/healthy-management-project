@@ -65,7 +65,7 @@ const Header = ({ handleSetActiveLink }) => {
       <div className="container">
         <HeaderDiv>
           {(isMobailAndTablet || isDesktop1440) && (
-            <a href="#home">
+            <a href="#home" onClick={(e) => handleSetActiveLink("home", e)}>
               <svg width={isDesktop1440 ? "227" : "40"} height="40">
                 <use
                   href={
