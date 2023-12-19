@@ -64,10 +64,14 @@ export const MentorSessionWrapper = styled.div`
   display: flex;
   flex-direction: column;
 
-  @media screen and (min-width: 1290px) {
-    gap: 40px;
-    margin-bottom: 40px;
+  @media screen and (min-width: 1440px) {
+    gap: 24px;
     flex-direction: row;
+  }
+
+  @media screen and (min-width: 1920px) {
+    margin-bottom: 40px;
+    gap: 40px;
   }
 `;
 
@@ -114,6 +118,7 @@ export const StyledParagraph = styled.p`
 
   @media screen and (min-width: 1440px) {
     top: 50%;
+    left: 47%;
   }
 
   @media screen and (min-width: 1920px) {
