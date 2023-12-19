@@ -67,8 +67,8 @@ function App() {
         <WorkPrinciples />
         <Services />
         <Mentor />
-        <MentoringSession />
-        <PersonalSupport />
+        <MentoringSession handleSetLink={handleSetActiveLink} />
+        <PersonalSupport handleSetLink={handleSetActiveLink} />
         <ProjectSection />
         <BusinessTools />
         <ContactsForm />

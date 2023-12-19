@@ -43,11 +43,13 @@ export const ArrowWrapper = styled.div`
   }
 
   @media screen and (min-width: 1440px) {
-    justify-content: space-between;
+    max-width: 1300px;
+    // justify-content: space-between;
   }
 
   @media screen and (min-width: 1920px) {
     flex-direction: row;
+    max-width: 1900px;
     width: max-content;
   }
 `;

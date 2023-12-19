@@ -22,7 +22,7 @@ import {
   StyledPersonalParagraph,
 } from "./PersonalSupport.styled";
 
-const PersonalSupport = () => {
+const PersonalSupport = ({ handleSetLink }) => {
   return (
     <StyledSection className="container">
       <PersonalSessionSectionWrapper>
@@ -33,7 +33,12 @@ const PersonalSupport = () => {
               Пропрацьовуємо ваші запити та досягаємо посавлених цілей
             </PersonalParagraph>
             <ProHourParagraph>від 2 місяців тісної взаємодії</ProHourParagraph>
-            <StyledOrderLink href="#contact">Замовити послугу</StyledOrderLink>
+            <StyledOrderLink
+              onClick={(e) => handleSetLink("contact", e)}
+              href="#contact"
+            >
+              Замовити послугу
+            </StyledOrderLink>
           </PersonalWrapper>
 
           <QuestionWrapper>
