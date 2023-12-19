@@ -220,7 +220,7 @@ export const StyledOrderLink = styled.a`
   color: var(--typography-bluedark);
 
   height: 56px;
-  padding: 8px 24px;
+  padding: 8px 23px;
   border-radius: 16px;
   background-color: var(--primary-yellow);
   box-shadow: 0px 0px 8px 0px rgba(248, 248, 248, 0.08);
