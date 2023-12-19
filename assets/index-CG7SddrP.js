@@ -303,26 +303,26 @@ Valid keys: `+JSON.stringify(Object.keys(F),null,"  "));var A=E(ue,k,ne,le,ae+".
 `,Ow=P.h2`
   color: var(--typography-bluedark);
   font-family: Montserrat;
-  font-size: 24px;
+  font-size: 32px;
   font-style: normal;
   font-weight: 600;
-  line-height: 1.33;
+  line-height: 1.25;
   margin-bottom: 16px;
 
   @media screen and (min-width: 768px) {
     font-size: 32px;
-    line-height: 1.25;
+    font-weight: 600;
+    line-height: 1.5;
   }
 
   @media screen and (min-width: 1440px) {
     font-size: 36px;
-    line-height: 1.33;
     margin-bottom: 24px;
   }
 
   @media screen and (min-width: 1920px) {
     font-size: 48px;
-    line-height: 1.16;
+    line-height: 1.5;
     margin-bottom: 40px;
   }
 `,Ew=P.div`
@@ -347,7 +347,7 @@ Valid keys: `+JSON.stringify(Object.keys(F),null,"  "));var A=E(ue,k,ne,le,ae+".
 
   /* mobile/h4-medium */
   font-family: Montserrat;
-  font-size: 15px;
+  font-size: 16px;
   font-style: normal;
   font-weight: 500;
   line-height: 1.5;
@@ -375,7 +375,7 @@ Valid keys: `+JSON.stringify(Object.keys(F),null,"  "));var A=E(ue,k,ne,le,ae+".
   font-size: 14px;
   font-style: normal;
   font-weight: 500;
-  line-height: 1.4;
+  line-height: 1.3;
 
   @media screen and (min-width: 768px) {
     font-size: 15px;
@@ -419,10 +419,10 @@ Valid keys: `+JSON.stringify(Object.keys(F),null,"  "));var A=E(ue,k,ne,le,ae+".
 `,_w=P.h4`
   color: var(--primary-bluedark);
   font-family: Montserrat;
-  font-size: 16px;
+  font-size: 24px;
   font-style: normal;
   font-weight: 600;
-  line-height: 1.5;
+  line-height: 1.3;
 
   @media screen and (min-width: 768px) {
     font-size: 20px;
@@ -461,10 +461,10 @@ Valid keys: `+JSON.stringify(Object.keys(F),null,"  "));var A=E(ue,k,ne,le,ae+".
 `,Aw=P.h4`
   color: var(--system-default-10);
   font-family: Montserrat;
-  font-size: 16px;
+  font-size: 24px;
   font-style: normal;
   font-weight: 600;
-  line-height: 1.5;
+  line-height: 1.3;
 
   @media screen and (min-width: 768px) {
     font-size: 20px;
@@ -485,7 +485,7 @@ Valid keys: `+JSON.stringify(Object.keys(F),null,"  "));var A=E(ue,k,ne,le,ae+".
   font-size: 14px;
   font-style: normal;
   font-weight: 500;
-  line-height: 1.4;
+  line-height: 1.3;
 
   @media screen and (min-width: 768px) {
     font-size: 15px;
