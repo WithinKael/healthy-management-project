@@ -272,7 +272,7 @@ Valid keys: `+JSON.stringify(Object.keys(F),null,"  "));var A=E(ue,k,ie,le,se+".
   }
 `,uw=P.svg`
   margin-left: 10px;
-  fill: var(--primary-bluedark);
+  fill: currentColor;
 `,cw=P.div`
   // width: calc((100% - 24px) / 2);
   min-width: 327px;
