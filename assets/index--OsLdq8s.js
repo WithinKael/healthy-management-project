@@ -113,7 +113,7 @@ Valid keys: `+JSON.stringify(Object.keys(F),null,"  "));var A=E(ue,k,ne,le,ae+".
 `,ew=P.div`
   min-width: 327px;
   // width: calc((100% - 24px) / 2);
-  padding: 40px;
+  padding: 24px;
   border-radius: 16px;
   background: var(--background-white, #fcfcfc);
   box-shadow: 0px 0px 8px 0px rgba(27, 54, 65, 0.08);
