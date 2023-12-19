@@ -2138,7 +2138,7 @@ Valid keys: `+JSON.stringify(Object.keys(F),null,"  "));var A=E(ue,k,ne,le,ae+".
   color: var(--typography-bluedark);
 
   height: 56px;
-  padding: 8px 24px;
+  padding: 8px 23px;
   border-radius: 16px;
   background-color: var(--primary-yellow);
   box-shadow: 0px 0px 8px 0px rgba(248, 248, 248, 0.08);
