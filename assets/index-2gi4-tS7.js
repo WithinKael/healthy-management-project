@@ -3065,6 +3065,8 @@ In order to be iterable, non-array objects must have a [Symbol.iterator]() metho
 `,GE=P(fn)`
   vertical-align: super;
 `,$p=P.input`
+  touch-action: manipulation;
+
   display: flex;
   width: 100%;
   height: 48px;
@@ -3165,6 +3167,8 @@ In order to be iterable, non-array objects must have a [Symbol.iterator]() metho
     line-height: 1.5;
   }
 `,eC=P(HE)`
+  touch-action: manipulation;
+
   display: flex;
   padding: 14px 16px;
   align-items: center;
@@ -3257,6 +3261,8 @@ In order to be iterable, non-array objects must have a [Symbol.iterator]() metho
     line-height: 1.5;
   }
 `,nC=P.textarea`
+  touch-action: manipulation;
+
   display: flex;
   padding: 16px;
   align-items: center;
