@@ -1,7 +1,4 @@
-import icon from "../../images/svg/icon.svg";
-import icon2 from "../../images/svg/icon-2.svg";
-import icon3 from "../../images/svg/icon-3.svg";
-import icon4 from "../../images/svg/icon-4.svg";
+import sprite from "../../images/sprite.svg";
 
 export const servicesData = [
   {
@@ -10,7 +7,7 @@ export const servicesData = [
       "Для власників та менеджерів з питань менеджменту та розвитку, медичного маркетингу та комунікацій, з питань програм управління здоров'ям",
       "Стейхолдерам та парнерам з питань медичного менеджменту та маркетингу",
     ],
-    path: icon,
+    path: `${sprite}#icon-1`,
   },
   {
     title: "Діагностика",
@@ -19,7 +16,7 @@ export const servicesData = [
       "Аудит маркетингу та сервісу",
       "Аудит системи комунікацій та Сustomer Journey Map",
     ],
-    path: icon2,
+    path: `${sprite}#icon-2`,
   },
   {
     title: "Стратегії",
@@ -29,11 +26,11 @@ export const servicesData = [
       "Розробка стратегій внутрішніх комунікацій",
       "Розробка стратегій управління здоров'ям",
     ],
-    path: icon3,
+    path: `${sprite}#icon-3`,
   },
   {
     title: "Навчання",
     about: ["Медичний маркетинг", "Комунікації та сервіс"],
-    path: icon4,
+    path: `${sprite}#icon-4`,
   },
 ];
