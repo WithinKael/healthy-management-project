@@ -30,11 +30,9 @@ function App() {
 
       if (screenWidth <= 768) {
         targetOffset = rect.top + scrollTop - 80;
-      }
-      if (screenWidth > 768 || screenWidth <= 1440) {
+      } else if (screenWidth <= 1440) {
         targetOffset = rect.top + scrollTop - 80;
-      }
-      if (screenWidth > 1440 || screenWidth <= 1920) {
+      } else if (screenWidth <= 1920) {
         targetOffset = rect.top + scrollTop - 80;
       } else {
         targetOffset = rect.top + scrollTop - 60;
@@ -43,11 +41,19 @@ function App() {
       window.scrollTo({
         top: targetOffset,
         behavior: "smooth",
+        onComplete: () => {
+          event.target.blur();
+        },
       });
 
-      setTimeout(() => {
-        event.target.blur();
-      }, 1000);
+      // window.scrollTo({
+      //   top: targetOffset,
+      //   behavior: "smooth",
+      // });
+
+      // setTimeout(() => {
+      //   event.target.blur();
+      // }, 1000);
     }
   };
 

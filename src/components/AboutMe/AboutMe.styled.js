@@ -238,6 +238,7 @@ export const SectionAboutMeLink = styled.a`
 
 export const SectionAboutMeSvg = styled.svg`
   margin-left: 10px;
+  fill: var(--primary-bluedark);
 `;
 
 export const SectionAboutMeDivWidth = styled.div`
