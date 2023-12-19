@@ -73,10 +73,10 @@ Valid keys: `+JSON.stringify(Object.keys(F),null,"  "));var A=E(ue,k,ne,le,ae+".
   margin-bottom: 24px;
   color: var(--primary-bluedark);
   font-family: Montserrat;
-  font-size: 32px;
+  font-size: 24px;
   font-style: normal;
   font-weight: 600;
-  line-height: 40px;
+  line-height: 1.33;
 
   @media screen and (min-width: 768px) {
     margin-bottom: 16px;
@@ -135,14 +135,15 @@ Valid keys: `+JSON.stringify(Object.keys(F),null,"  "));var A=E(ue,k,ne,le,ae+".
 `,nw=P.h3`
   color: var(--typography-bluedark);
   font-family: Montserrat;
-  font-size: 32px;
+  font-size: 24px;
   font-style: normal;
   font-weight: 600;
-  line-height: 40px;
+  line-height: 1.33;
   margin-bottom: 16px;
 
   @media screen and (min-width: 768px) {
     color: var(--typography-black);
+    font-size: 32px;
     line-height: 1.25;
   }
 
@@ -157,13 +158,14 @@ Valid keys: `+JSON.stringify(Object.keys(F),null,"  "));var A=E(ue,k,ne,le,ae+".
 `,rw=P.p`
   color: var(--primary-bluedark);
   font-family: Montserrat;
-  font-size: 20px;
+  font-size: 16px;
   font-style: normal;
   font-weight: 600;
-  line-height: 32px;
+  line-height: 1.5;
   margin-bottom: 24px;
 
   @media screen and (min-width: 768px) {
+    font-size: 20px;
     line-height: 1.4;
     margin-bottom: 16px;
   }
@@ -186,7 +188,7 @@ Valid keys: `+JSON.stringify(Object.keys(F),null,"  "));var A=E(ue,k,ne,le,ae+".
   font-size: 14px;
   font-style: normal;
   font-weight: 500;
-  line-height: 1.3;
+  line-height: 1.4;
 
   &::before {
     content: "\\2022";
