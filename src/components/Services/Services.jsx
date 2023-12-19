@@ -1,7 +1,7 @@
 import PropTypes from "prop-types";
 import TickList from "../TickList/TickList";
 import {
-  IconDiv,
+  IconSvg,
   SectionServices,
   ServicesBtn,
   ServicesContentWrapper,
@@ -31,9 +31,10 @@ const Services = ({ handleSetActiveLink }) => {
                 about={element.about}
                 variant="services"
               />
-              <IconDiv>
-                <img src={element.path} alt={element.path} />
-              </IconDiv>
+              {/* <img src={element.path} alt={element.path} /> */}
+              <IconSvg>
+                <use href={element.path} />
+              </IconSvg>
             </ServicesItem>
           ))}
         </ServicesList>

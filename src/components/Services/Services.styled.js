@@ -141,7 +141,7 @@ export const ServicesItem = styled.li`
   }
 `;
 
-export const IconDiv = styled.div`
+export const IconSvg = styled.svg`
   position: absolute;
   width: 64px;
   height: 64px;
