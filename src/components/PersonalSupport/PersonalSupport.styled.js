@@ -13,10 +13,12 @@ export const ArrowPersonalWrapper = styled.div`
   }
 
   @media screen and (min-width: 1440px) {
+    max-width: 1200px;
     column-gap: 22px;
   }
 
   @media screen and (min-width: 1920px) {
+    max-width: 1900px;
     width: max-content;
   }
 `;
