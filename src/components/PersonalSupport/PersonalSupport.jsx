@@ -22,7 +22,22 @@ import {
   StyledPersonalParagraph,
 } from "./PersonalSupport.styled";
 
-const PersonalSupport = () => {
+const arrows = [
+  "Заповнення брифу",
+  "Діагностика ситуації",
+  "Визначення зон росту",
+  "Менторинг",
+  "Рекомендації",
+];
+
+const questionList = [
+  "Зануритись в бізнес-процеси та зрозуміти, де є точки зростання",
+  "Зрозуміти що таке маркетинг та як він працює у вашому бізнесі",
+  "Супровід розробки та впровадження стратегій",
+  "Особисті питання по медичному менеджменту, маркетингу та розвитку, управління здоров'ям",
+];
+
+const PersonalSupport = ({ handleSetLink }) => {
   return (
     <StyledSection className="container">
       <PersonalSessionSectionWrapper>
@@ -33,25 +48,20 @@ const PersonalSupport = () => {
               Пропрацьовуємо ваші запити та досягаємо посавлених цілей
             </PersonalParagraph>
             <ProHourParagraph>від 2 місяців тісної взаємодії</ProHourParagraph>
-            <StyledOrderLink href="#contact">Замовити послугу</StyledOrderLink>
+            <StyledOrderLink
+              onClick={(e) => handleSetLink("contact", e)}
+              href="#contact"
+            >
+              Замовити послугу
+            </StyledOrderLink>
           </PersonalWrapper>
 
           <QuestionWrapper>
             <TitleH3>Питання, з якими можете звернутися</TitleH3>
             <StyledPersonalList>
-              <StyledPersonalListItem>
-                Зануритись в бізнес-процеси та зрозуміти, де є точки зростання
-              </StyledPersonalListItem>
-              <StyledPersonalListItem>
-                Зрозуміти що таке маркетинг та як він працює у вашому бізнесі
-              </StyledPersonalListItem>
-              <StyledPersonalListItem>
-                Супровід розробки та впровадження стратегій
-              </StyledPersonalListItem>
-              <StyledPersonalListItem>
-                Особисті питання по медичному менеджменту, маркетингу та
-                розвитку, управління здоров&#39;ям
-              </StyledPersonalListItem>
+              {questionList.map((item) => (
+                <StyledPersonalListItem>{item}</StyledPersonalListItem>
+              ))}
             </StyledPersonalList>
           </QuestionWrapper>
         </MentorSessionWrapper>
@@ -59,104 +69,26 @@ const PersonalSupport = () => {
           Шлях проведення менторського супроводу
         </StyledSessionParagraph>
         <ArrowPersonalWrapper>
-          <StyledPersonalContainer>
-            <MediaQuery minWidth={330} maxWidth={767}>
-              <StyledPersonalArrowSvg>
-                <use href={`${sprite}#icon-rectangle-mob`} />
-              </StyledPersonalArrowSvg>
-            </MediaQuery>
-            <MediaQuery minWidth={768} maxWidth={1439}>
-              <StyledPersonalArrowSvg>
-                <use href={`${sprite}#icon-rectangle-tab`} />
-              </StyledPersonalArrowSvg>
-            </MediaQuery>
-            <MediaQuery minWidth={1440}>
-              <StyledPersonalArrowSvg>
-                <use href={`${sprite}#icon-rectangle2`} />
-              </StyledPersonalArrowSvg>
-            </MediaQuery>
-            <StyledPersonalParagraph>Заповнення брифу</StyledPersonalParagraph>
-          </StyledPersonalContainer>
-
-          <StyledPersonalContainer>
-            <MediaQuery minWidth={330} maxWidth={767}>
-              <StyledPersonalArrowSvg>
-                <use href={`${sprite}#icon-rectangle-mob`} />
-              </StyledPersonalArrowSvg>
-            </MediaQuery>
-            <MediaQuery minWidth={768} maxWidth={1439}>
-              <StyledPersonalArrowSvg>
-                <use href={`${sprite}#icon-rectangle-tab`} />
-              </StyledPersonalArrowSvg>
-            </MediaQuery>
-            <MediaQuery minWidth={1440}>
-              <StyledPersonalArrowSvg>
-                <use href={`${sprite}#icon-rectangle2`} />
-              </StyledPersonalArrowSvg>
-            </MediaQuery>
-            <StyledPersonalParagraph>
-              Діагностика ситуації
-            </StyledPersonalParagraph>
-          </StyledPersonalContainer>
-
-          <StyledPersonalContainer>
-            <MediaQuery minWidth={330} maxWidth={767}>
-              <StyledPersonalArrowSvg>
-                <use href={`${sprite}#icon-rectangle-mob`} />
-              </StyledPersonalArrowSvg>
-            </MediaQuery>
-            <MediaQuery minWidth={768} maxWidth={1439}>
-              <StyledPersonalArrowSvg>
-                <use href={`${sprite}#icon-rectangle-tab`} />
-              </StyledPersonalArrowSvg>
-            </MediaQuery>
-            <MediaQuery minWidth={1440}>
-              <StyledPersonalArrowSvg>
-                <use href={`${sprite}#icon-rectangle2`} />
-              </StyledPersonalArrowSvg>
-            </MediaQuery>
-            <StyledPersonalParagraph>
-              Визначення зон росту
-            </StyledPersonalParagraph>
-          </StyledPersonalContainer>
-
-          <StyledPersonalContainer>
-            <MediaQuery minWidth={330} maxWidth={767}>
-              <StyledPersonalArrowSvg>
-                <use href={`${sprite}#icon-rectangle-mob`} />
-              </StyledPersonalArrowSvg>
-            </MediaQuery>
-            <MediaQuery minWidth={768} maxWidth={1439}>
-              <StyledPersonalArrowSvg>
-                <use href={`${sprite}#icon-rectangle-tab`} />
-              </StyledPersonalArrowSvg>
-            </MediaQuery>
-            <MediaQuery minWidth={1440}>
-              <StyledPersonalArrowSvg>
-                <use href={`${sprite}#icon-rectangle2`} />
-              </StyledPersonalArrowSvg>
-            </MediaQuery>
-            <StyledPersonalParagraph>Менторинг</StyledPersonalParagraph>
-          </StyledPersonalContainer>
-
-          <StyledPersonalContainer>
-            <MediaQuery minWidth={330} maxWidth={767}>
-              <StyledPersonalArrowSvg>
-                <use href={`${sprite}#icon-rectangle-mob`} />
-              </StyledPersonalArrowSvg>
-            </MediaQuery>
-            <MediaQuery minWidth={768} maxWidth={1439}>
-              <StyledPersonalArrowSvg>
-                <use href={`${sprite}#icon-rectangle-tab`} />
-              </StyledPersonalArrowSvg>
-            </MediaQuery>
-            <MediaQuery minWidth={1440}>
-              <StyledPersonalArrowSvg>
-                <use href={`${sprite}#icon-rectangle2`} />
-              </StyledPersonalArrowSvg>
-            </MediaQuery>
-            <StyledPersonalParagraph>Рекомендації</StyledPersonalParagraph>
-          </StyledPersonalContainer>
+          {arrows.map((item) => (
+            <StyledPersonalContainer>
+              <MediaQuery minWidth={330} maxWidth={767}>
+                <StyledPersonalArrowSvg>
+                  <use href={`${sprite}#icon-rectangle-mob`} />
+                </StyledPersonalArrowSvg>
+              </MediaQuery>
+              <MediaQuery minWidth={768} maxWidth={1439}>
+                <StyledPersonalArrowSvg>
+                  <use href={`${sprite}#icon-rectangle-tab`} />
+                </StyledPersonalArrowSvg>
+              </MediaQuery>
+              <MediaQuery minWidth={1440}>
+                <StyledPersonalArrowSvg>
+                  <use href={`${sprite}#icon-rectangle2`} />
+                </StyledPersonalArrowSvg>
+              </MediaQuery>
+              <StyledPersonalParagraph>{item}</StyledPersonalParagraph>
+            </StyledPersonalContainer>
+          ))}
         </ArrowPersonalWrapper>
       </PersonalSessionSectionWrapper>
     </StyledSection>

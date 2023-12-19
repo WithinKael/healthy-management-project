@@ -20,7 +20,7 @@ import {
   TitleH3,
 } from "./MentorSession.styled";
 
-const MentoringSession = () => {
+const MentoringSession = ({ handleSetLink }) => {
   return (
     <StyledSection className="container">
       <PersonalSessionSectionWrapper>
@@ -31,7 +31,12 @@ const MentoringSession = () => {
               Вирішення вашого індивідуального запиту
             </PersonalParagraph>
             <ProHourParagraph>від 1 години</ProHourParagraph>
-            <StyledOrderLink href="#contact">Замовити послугу</StyledOrderLink>
+            <StyledOrderLink
+              href="#contact"
+              onClick={(e) => handleSetLink("contact", e)}
+            >
+              Замовити послугу
+            </StyledOrderLink>
           </PersonalWrapper>
 
           <QuestionWrapper>

@@ -10,9 +10,9 @@ import {
   Icon,
 } from "./ProjectSection.styled";
 import ProjectSectionCard from "./ProjectSectionCard/ProjectSectionCard";
-import { useState } from "react";
+import { useEffect, useState } from "react";
 
-const ProjectSection = () => {
+const ProjectSection = ({ handleSetActiveLink }) => {
   const screenWidth = useScreenWidth();
 
   const [projectList, setProjectList] = useState(
@@ -20,9 +20,17 @@ const ProjectSection = () => {
       ? [...data.slice(0, 1)]
       : [...data]
   );
-  const handleListChange = () => {
+  useEffect(() => {
+    if (screenWidth === "mobile" || screenWidth === "tablet") {
+      setProjectList([...data.slice(0, 1)]);
+    } else {
+      setProjectList([...data]);
+    }
+  }, [screenWidth]);
+  const handleListChange = (e) => {
     if (projectList.length > 2) {
       setProjectList((prev) => prev.slice(0, 1));
+      handleSetActiveLink("projects", e);
     } else {
       setProjectList([...data]);
     }
