@@ -240,7 +240,6 @@ export const DescriptionWrapper = styled.div`
   @media screen and (min-width: 768px) {
     flex-direction: row;
     align-items: center;
-    // justify-content: center;
   }
 
   @media screen and (min-width: 1920px) {
