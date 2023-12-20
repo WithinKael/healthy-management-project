@@ -1836,7 +1836,6 @@ Valid keys: `+JSON.stringify(Object.keys(F),null,"  "));var A=E(ue,k,ie,le,se+".
   @media screen and (min-width: 768px) {
     flex-direction: row;
     align-items: center;
-    // justify-content: center;
   }
 
   @media screen and (min-width: 1920px) {
