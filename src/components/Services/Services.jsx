@@ -31,7 +31,6 @@ const Services = ({ handleSetActiveLink }) => {
                 about={element.about}
                 variant="services"
               />
-              {/* <img src={element.path} alt={element.path} /> */}
               <IconSvg>
                 <use href={element.path} />
               </IconSvg>
