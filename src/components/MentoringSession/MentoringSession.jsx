@@ -64,7 +64,6 @@ const MentoringSession = ({ handleSetLink }) => {
               </StyledPersonalListItem>
               <StyledPersonalListItem>
                 Особисте питання по менеджменту та розвитку з питань управління{" "}
-                {/* <br /> */}
                 здоров&#39;ям
               </StyledPersonalListItem>
             </StyledPersonalList>
