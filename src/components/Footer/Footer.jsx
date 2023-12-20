@@ -37,7 +37,7 @@ const Footer = ({ handleSetActiveLink }) => {
   return (
     <FooterBg id="footer">
       <FooterContainer className="container">
-        <a href="#home">
+        <a href="#home" onClick={(e) => handleSetActiveLink("home", e)}>
           <svg width="227" height="40">
             <use href={`${sprite}#logo-white`} />
           </svg>
