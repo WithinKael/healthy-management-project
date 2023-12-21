@@ -10,7 +10,7 @@ Healthy Management Studio is a dedicated team offering a range of services in me
 
 --
 
-![About us](aboutus.png)
+![About us](about-us.png)
 
 ## Services
 
