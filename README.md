@@ -8,17 +8,15 @@ Welcome to Healthy Management Studio, your partner in strategic development for 
 
 Healthy Management Studio is a dedicated team offering a range of services in medical management, marketing, business consulting, and health strategy creation. We collaborate with medical professionals and businesses to drive success in the healthcare industry.
 
----
+--
 
-(![About us](aboutus.png))
+![About us](aboutus.png)
 
 ## Services
 
 ### 1. Medical Management
 
 Ensure the smooth operation of medical institutions with our expert medical management services. We optimize processes for enhanced efficiency.
-
----
 
 ![Services](services.png)
 
@@ -35,6 +33,8 @@ Streamline your business processes with our consulting services. We provide insi
 Develop comprehensive health strategies tailored to your enterprise. Our strategies promote well-being and align with your business objectives.
 
 ## How We Work
+
+![Why choose us](why-choose-us.png)
 
 - **Collaborative Approach:** We partner with clients to understand goals and challenges, fostering a collaborative environment.
 
