@@ -53,6 +53,7 @@ const PersonalSupport = ({ handleSetLink }) => {
             <StyledOrderLink
               onClick={(e) => handleSetLink("contact", e)}
               href="#contact"
+              aria-label="Scroll to contacts form"
             >
               Замовити послугу
             </StyledOrderLink>

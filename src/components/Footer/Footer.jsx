@@ -37,7 +37,11 @@ const Footer = ({ handleSetActiveLink }) => {
   return (
     <FooterBg id="footer">
       <FooterContainer className="container">
-        <a href="#home" onClick={(e) => handleSetActiveLink("home", e)}>
+        <a
+          href="#home"
+          onClick={(e) => handleSetActiveLink("home", e)}
+          aria-label="Link to start"
+        >
           <svg width="227" height="40">
             <use href={`${sprite}#logo-white`} />
           </svg>
@@ -134,6 +138,7 @@ const Footer = ({ handleSetActiveLink }) => {
               href="https://www.facebook.com/profile.php?id=61551346490841"
               target="_blank"
               rel="noopener noreferrer"
+              aria-label="Link to open Facebook"
             >
               <svg width="32" height="32">
                 <use href={`${sprite}#facebook`} />
@@ -143,6 +148,7 @@ const Footer = ({ handleSetActiveLink }) => {
               href="https://www.instagram.com/healthymanagement_ua/"
               target="_blank"
               rel="noopener noreferrer"
+              aria-label="Link to open Instagram"
             >
               <svg width="32" height="32">
                 <use href={`${sprite}#instagram`} />

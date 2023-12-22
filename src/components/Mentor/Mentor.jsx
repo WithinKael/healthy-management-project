@@ -92,6 +92,7 @@ const Mentor = ({ handleSetLink }) => {
           <StyledMentorButton
             onClick={(e) => handleSetLink("contact", e)}
             href="#contact"
+            aria-label="Scroll to contacts form"
           >
             Дізнатися вартість
           </StyledMentorButton>

@@ -101,7 +101,11 @@ const Header = ({ handleSetActiveLink }) => {
           </HeaderAddress>
 
           {(isMobailAndTablet || isTabletSvg) && (
-            <ButtonMobileHeader type="button" onClick={onModal}>
+            <ButtonMobileHeader
+              type="button"
+              onClick={onModal}
+              aria-label="Open mobile menu"
+            >
               <SvgMobileHeader>
                 <use
                   href={
