@@ -12,7 +12,7 @@ import {
 import sprite from "../../images/sprite.svg";
 import MediaQuery from "react-responsive";
 import MobFotoWithBook1x from "../../images/mobile/mob_olga_with_book1x.webp";
-import MobFotoWithBook2x from "../../images/mobile/mob_olga_with_book@2x.jpg";
+import MobFotoWithBook2x from "../../images/mobile/mob_olga_with_book@2x.webp";
 import MobFotoWithBook from "../../images/mobile/mob_olga_with_book1x.jpg";
 import FotoWithBook1x from "../../images/desktop/olga_with_book1x.webp";
 import FotoWithBook2x from "../../images/desktop/olga_with_book2x.webp";
