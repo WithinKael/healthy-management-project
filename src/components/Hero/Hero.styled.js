@@ -2,8 +2,10 @@ import styled from "@emotion/styled";
 import HeroDesktop1920Foto1x from "../../images/desktop/hero1x.webp";
 import HeroDesktop1920Foto2x from "../../images/desktop/hero@2x.jpg";
 import HeroMobaile1x from "../../images/mobile/hero1x.jpg";
+import HeroWebp from "../../images/mobile/hero1x.webp";
 import HeroMobaile2x from "../../images/mobile/hero@2x.jpg";
 import HeroTabletFoto from "../../images/tablet/hero@1x.jpg";
+import HeroTabletWebp from "../../images/tablet/hero@1x.webp";
 import HeroTabletFoto2x from "../../images/tablet/hero@2x.jpg";
 import HeroDesktop1440Foto from "../../images/desktop1440/hero@1x.jpg";
 import HeroDesktop1440Foto2x from "../../images/desktop1440/hero@2x.jpg";
@@ -11,7 +13,14 @@ import HeroDesktop1440Foto2x from "../../images/desktop1440/hero@2x.jpg";
 export const SectionHero = styled.section`
   background-repeat: no-repeat;
   background-position: center;
-  background-image: url(${HeroMobaile1x});
+  // background-image: url(${HeroMobaile1x});
+
+  @supports (
+    background-image: image-set(url(${HeroWebp}) 1x, url(${HeroMobaile1x}) 1x)
+  ) {
+    background-image: image-set(url(${HeroWebp}) 1x, url(${HeroMobaile1x}) 1x);
+  }
+
   background-size: cover;
   margin-top: 88px;
   padding-top: 40px;
@@ -25,6 +34,17 @@ export const SectionHero = styled.section`
 
   @media screen and (min-width: 768px) {
     background-image: url(${HeroTabletFoto});
+
+    // @supports (
+    //   background-image:
+    //     image-set(url(${HeroTabletWebp}) 1x, url(${HeroTabletFoto}) 1x)
+    // ) {
+    //   background-image: image-set(
+    //     url(${HeroTabletWebp}) 1x,
+    //     url(${HeroTabletFoto}) 1x
+    //   );
+    // }
+
     padding-top: 234px;
     padding-bottom: 234px;
 

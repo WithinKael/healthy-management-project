@@ -6,10 +6,17 @@
     <link rel="icon" type="image/svg+xml" href="/logo5.svg" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link
+    <!-- <link
       href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&display=swap"
       rel="stylesheet"
+    /> -->
+    <link
+      rel="preload"
+      href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&display=swap"
+      as="style"
+      onload="this.onload=null;this.rel='stylesheet'"
     />
+
     <link rel="stylesheet" href="./src/normalize.css" />
     <link rel="stylesheet" href="./src/index.css" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -28,6 +35,7 @@
     <div id="root"></div>
     <div id="modal"></div>
     <div id="modalMobail"></div>
-    <script type="module" src="/src/main.jsx"></script>
+    <!-- <script type="module" src="/src/main.jsx"></script> -->
+    <script type="module" src="/src/main.jsx" async></script>
   </body>
 </html>

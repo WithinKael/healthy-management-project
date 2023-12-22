@@ -27,7 +27,11 @@ const AboutMe = () => {
           <SectionAboutMeDivWidth>
             {mediaQueries.map((media, key) => (
               <MediaQuery key={key} query={media.query}>
-                <SectionAboutMeImg alt="Ольга Поліщук" {...media.imgData} />
+                <SectionAboutMeImg
+                  alt="Ольга Поліщук"
+                  {...media.imgData}
+                  loading="lazy"
+                />
               </MediaQuery>
             ))}
           </SectionAboutMeDivWidth>
