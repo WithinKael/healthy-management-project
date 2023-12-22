@@ -111,6 +111,7 @@ const ModalWindowMarkup = ({ handleClose, isModalOpen }) => {
                         srcSet={`${viktoriaMob1x} 1x, ${viktoriaMob2x} 2x`}
                         src={viktoriaMob}
                         alt="Вікторія Мориц - Project Manager"
+                        loading="lazy"
                       />
                     </MediaQuery>
                     <MediaQuery minWidth={1440}>
@@ -118,6 +119,7 @@ const ModalWindowMarkup = ({ handleClose, isModalOpen }) => {
                         src={viktoriiaWebp}
                         srcSet={`${viktoriiaWebp} 1x, ${viktoriia2x} 2x`}
                         alt="Вікторія Мориц - Project Manager"
+                        loading="lazy"
                       />
                     </MediaQuery>
                   </ModalImgWrapper>
@@ -148,6 +150,7 @@ const ModalWindowMarkup = ({ handleClose, isModalOpen }) => {
                         srcSet={`${juliaMob1x} 1x, ${juliaMob2x} 2x`}
                         src={juliaMob}
                         alt="Юлія Копитко UX/UI Designer"
+                        loading="lazy"
                       />
                     </MediaQuery>
                     <MediaQuery minWidth={1440}>
@@ -155,6 +158,7 @@ const ModalWindowMarkup = ({ handleClose, isModalOpen }) => {
                         srcSet={`${juliaWebp} 1x, ${julia2x} 2x`}
                         src={juliaWebp}
                         alt="Юлія Копитко UX/UI Designer"
+                        loading="lazy"
                       />
                     </MediaQuery>
                   </ModalImgWrapper>
@@ -185,6 +189,7 @@ const ModalWindowMarkup = ({ handleClose, isModalOpen }) => {
                         srcSet={`${yaroslavMob1x} 1x, ${yaroslavMob2x} 2x`}
                         src={yaroslavMob}
                         alt="Ярослав Лі - Frontend Developer"
+                        loading="lazy"
                       />
                     </MediaQuery>
                     <MediaQuery minWidth={1440}>
@@ -192,6 +197,7 @@ const ModalWindowMarkup = ({ handleClose, isModalOpen }) => {
                         srcSet={`${yaroslavWebp} 1x, ${yaroslav2x} 2x`}
                         src={yaroslavWebp}
                         alt="Ярослав Лі - Frontend Developer"
+                        loading="lazy"
                       />
                     </MediaQuery>
                   </ModalImgWrapper>
@@ -224,6 +230,7 @@ const ModalWindowMarkup = ({ handleClose, isModalOpen }) => {
                         srcSet={`${yelyzavetaMob1x} 1x, ${yelyzavetaMob2x} 2x`}
                         src={yelyzavetaMob}
                         alt="Єлизавета Доманська - Frontend Developer"
+                        loading="lazy"
                       />
                     </MediaQuery>
                     <MediaQuery minWidth={1440}>
@@ -231,6 +238,7 @@ const ModalWindowMarkup = ({ handleClose, isModalOpen }) => {
                         srcSet={`${yelyzavetaWebp} 1x, ${yelyzaveta2x} 2x`}
                         src={yelyzavetaWebp}
                         alt="Єлизавета Доманська - Frontend Developer"
+                        loading="lazy"
                       />
                     </MediaQuery>
                   </ModalImgWrapper>
@@ -263,6 +271,7 @@ const ModalWindowMarkup = ({ handleClose, isModalOpen }) => {
                         srcSet={`${oleksandrMob1x} 1x, ${oleksandrMob2x} 2x`}
                         src={oleksandrMob}
                         alt="Олександр Наталуха - Frontend Developer"
+                        loading="lazy"
                       />
                     </MediaQuery>
                     <MediaQuery minWidth={1440}>
@@ -270,6 +279,7 @@ const ModalWindowMarkup = ({ handleClose, isModalOpen }) => {
                         srcSet={`${oleksandrWebp} 1x, ${oleksandr2x} 2x`}
                         src={oleksandrWebp}
                         alt="Олександр Наталуха - Frontend Developer"
+                        loading="lazy"
                       />
                     </MediaQuery>
                   </ModalImgWrapper>
@@ -302,6 +312,7 @@ const ModalWindowMarkup = ({ handleClose, isModalOpen }) => {
                         srcSet={`${valentynMob1x} 1x, ${valentynMob2x} 2x`}
                         src={valentynMob}
                         alt="Валентин Гавриленко - Frontend Developer"
+                        loading="lazy"
                       />
                     </MediaQuery>
                     <MediaQuery minWidth={1440}>
@@ -309,6 +320,7 @@ const ModalWindowMarkup = ({ handleClose, isModalOpen }) => {
                         srcSet={`${valentynWebp} 1x, ${valentyn2x} 2x`}
                         src={valentynWebp}
                         alt="Валентин Гавриленко - Frontend Developer"
+                        loading="lazy"
                       />
                     </MediaQuery>
                   </ModalImgWrapper>
@@ -341,6 +353,7 @@ const ModalWindowMarkup = ({ handleClose, isModalOpen }) => {
                         srcSet={`${vyacheslavMob1x} 1x, ${vyacheslavMob2x} 2x`}
                         src={vyacheslavMob}
                         alt="В´ячеслав Павлюк - Frontend Developer"
+                        loading="lazy"
                       />
                     </MediaQuery>
                     <MediaQuery minWidth={1440}>
@@ -348,6 +361,7 @@ const ModalWindowMarkup = ({ handleClose, isModalOpen }) => {
                         srcSet={`${vyacheslavWebp} 1x, ${vyacheslav2x} 2x`}
                         src={vyacheslavWebp}
                         alt="В´ячеслав Павлюк - Frontend Developer"
+                        loading="lazy"
                       />
                     </MediaQuery>
                   </ModalImgWrapper>
@@ -387,6 +401,7 @@ const ModalWindowMarkup = ({ handleClose, isModalOpen }) => {
                         srcSet={`${olhaWebp} 1x, ${olha2x} 2x`}
                         src={olhaWebp}
                         alt="Ольга Абент - QA Engineer"
+                        loading="lazy"
                       />
                     </MediaQuery>
                   </ModalImgWrapper>
