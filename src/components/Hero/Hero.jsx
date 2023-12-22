@@ -31,6 +31,7 @@ const Hero = ({ handleSetLink }) => {
             type="contact"
             href="#contact"
             onClick={(e) => handleSetLink("contact", e)}
+            aria-label="Scroll to contacts form"
           >
             Консультація
           </SectionHeroLink>
@@ -38,6 +39,7 @@ const Hero = ({ handleSetLink }) => {
             type="services"
             href="#services"
             onClick={(e) => handleSetLink("services", e)}
+            aria-label="Scroll to services section form"
           >
             Послуги
           </SectionHeroLink>

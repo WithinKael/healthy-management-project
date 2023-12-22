@@ -35,6 +35,7 @@ const MentoringSession = ({ handleSetLink }) => {
             <StyledOrderLink
               href="#contact"
               onClick={(e) => handleSetLink("contact", e)}
+              aria-label="Scroll to contacts form"
             >
               Замовити послугу
             </StyledOrderLink>
