@@ -65,7 +65,11 @@ const Header = ({ handleSetActiveLink }) => {
       <div className="container">
         <HeaderDiv>
           {(isMobailAndTablet || isDesktop1440) && (
-            <a href="#home" onClick={(e) => handleSetActiveLink("home", e)}>
+            <a
+              href="#home"
+              onClick={(e) => handleSetActiveLink("home", e)}
+              aria-label="Logo link Healthy Management"
+            >
               <svg width={isDesktop1440 ? "227" : "40"} height="40">
                 <use
                   href={
