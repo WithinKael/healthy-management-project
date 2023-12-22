@@ -143,7 +143,7 @@ export const DivSection = styled.div`
   }
 `;
 
-export const SectionAboutStudioValues = styled.h4`
+export const SectionAboutStudioValues = styled.h3`
   color: var(--primary-bluedark);
   font-family: Montserrat;
   font-size: 16px;
@@ -189,7 +189,7 @@ export const DivSectionOurMission = styled.div`
   }
 `;
 
-export const SectionAboutStudioOurMission = styled.h4`
+export const SectionAboutStudioOurMission = styled.h3`
   color: var(--system-default-10);
   font-family: Montserrat;
   font-size: 16px;

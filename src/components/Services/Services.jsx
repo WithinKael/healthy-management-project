@@ -40,6 +40,7 @@ const Services = ({ handleSetActiveLink }) => {
         <ServicesBtn
           href="#contact"
           onClick={(e) => handleSetActiveLink("contact", e)}
+          aria-label="Scroll to contacts form"
         >
           Замовити консультацію
         </ServicesBtn>

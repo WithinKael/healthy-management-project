@@ -112,7 +112,7 @@ export const SectionHeroTitle = styled.h1`
   }
 `;
 
-export const SectionHeroText = styled.h3`
+export const SectionHeroText = styled.h2`
   color: var(--system-default-10);
   font-family: Montserrat;
   font-size: 16px;
