@@ -4,7 +4,7 @@ import mentorPhoto2 from "../../images/desktop/pic_mentorstvo1x.webp";
 import mentorPhoto2x from "../../images/desktop/pic_mentorstvo2x.jpg";
 import mentorPhotoJgeg1x from "../../images/desktop/pic_mentorstvo1x.jpg";
 import mentorPhotoMobWebp from "../../images/mobile/mob_mentor1x.webp";
-import mentorPhotoMob2x from "../../images/mobile/mob_mentor@2x.jpg";
+import mentorPhotoMob2x from "../../images/mobile/mob_mentor@2x.webp";
 import mentorPhotoMobJpg1x from "../../images/mobile/mob_mentor1x.jpg";
 import mentor768Jpg1x from "../../images/tablet/pic_mentorstvo_768_1x.jpg";
 import mentor768WebP1x from "../../images/tablet/pic_mentorstvo_768_1x.webp";
@@ -44,15 +44,16 @@ const Mentor = ({ handleSetLink }) => {
               sizes="(min-width: 1920px) 1920px"
               src={mentorPhotoJgeg1x}
               alt="Ольга Поліщук - ваш ментор в медичній галузі"
+              loading="lazy"
             />
           </MediaQuery>
-
-          <MediaQuery minWidth={300} maxWidth={767}>
+          <MediaQuery maxWidth={767}>
             <img
-              srcSet={`${mentorPhotoMobWebp} 1x, ${mentorPhotoMob2x} 2x`}
-              sizes="(min-width: 375px) 375px"
+              srcSet={`${mentorPhotoMob2x} 2x, ${mentorPhotoMobWebp} 1x`}
+              sizes="(max-width: 767px) 100vw"
               src={mentorPhotoMobJpg1x}
               alt="Ольга Поліщук - ваш ментор в медичній галузі"
+              loading="lazy"
             />
           </MediaQuery>
           <MediaQuery minWidth={768} maxWidth={1439}>
@@ -61,6 +62,7 @@ const Mentor = ({ handleSetLink }) => {
               sizes="(min-width: 768px) 768px"
               src={mentor768Jpg1x}
               alt="Ольга Поліщук - ваш ментор в медичній галузі"
+              loading="lazy"
             />
           </MediaQuery>
           <MediaQuery minWidth={1440} maxWidth={1919}>
@@ -69,6 +71,7 @@ const Mentor = ({ handleSetLink }) => {
               sizes="(min-width: 1440px) 100vw (max-width: 1919px) 100vw"
               src={mentor1440Jpg1x}
               alt="Ольга Поліщук - ваш ментор в медичній галузі"
+              loading="lazy"
             />
           </MediaQuery>
         </div>
